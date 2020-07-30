@@ -1,0 +1,71 @@
+{% load static %}
+{% load compress %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Reservasi Dulu | Homepage</title>
+    <link rel="shortcut icon" href="{% static 'img/images/ico.ico' %}">
+
+    {% compress css %}
+        {% include 'static/css.html' %}
+        {% block base_head %}{% endblock %}
+    {% endcompress %}
+
+    {% include 'static/cdn' %}
+
+</head>
+
+<body>
+{% include 'shared/navbar.html' with brand_name='Okular' %}
+
+{# message 1 #}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{# message 2 #}
+{% if messages %}
+    <div class="alert alert-success messages">
+        {% for message in messages %}
+            <span{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+            {{ message }}<br/>
+            </span>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{# message 3 #}
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% block content %}
+    {# content goes here #}
+{% endblock %}
+
+{% compress js %}
+    {% include 'static/js.html' %}
+    {% block javascript %}
+
+    {% endblock %}
+{% endcompress %}
+    {% include 'shared/footer.html' %}
+</body>
+
+
+
+</html>
+

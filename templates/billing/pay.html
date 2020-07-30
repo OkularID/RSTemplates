@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container-fluid pos-rel pt-lg-15p pb-lg-15p pl-lg-5p pr-lg-5p tour-banner">
+        <div class="row">
+            <div class="col-lg-12">
+                {% for d1 in d1 %}
+                    {{ d1.user }}
+                    {{ d1.email }}
+                    {{ d1.first_name }}
+                    {{ d1.last_name }}
+                    {{ d1.address }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="w-lg-100p h-lg-100vh bg-lightskyblue2">
+
+    </div>
+{% endblock %}

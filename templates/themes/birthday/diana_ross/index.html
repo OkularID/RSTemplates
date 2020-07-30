@@ -1,0 +1,306 @@
+{% load static %}
+{% load compress %}
+{#{% load front_tags %}#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
+    <title>Template Birthday | Homepage</title>
+    <link rel="shortcut icon" href="images/ico.ico">
+    <!-- Features css -->
+    {% compress css %}
+        {% include 'static/css.html' %}
+    <!-- Customize css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/birthday/template1/style-birthday-1.css' %}">
+    {% endcompress %}
+</head>
+<body>
+    <div id="homepage">
+        <!-- NAVBAR -->
+        <nav>
+            <div class="container-fluid animated fadeInUp">
+                <div class="row d-none d-lg-block">
+                    <div class="offset-lg-3 col-lg-9 pr-lg-0">
+                        <ul class="menu">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#dateandplace">DATE & PLACE</a></li>
+                            <li><a href="#gallery">GALLERY</a></li>
+                            <li><a href="#rsvp">RSVP</a></li>
+                            <li><a href="wishlist.html">WISHLIST</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row d-lg-none pt-3">
+                    <div class="offset-8 col-4 text-right">
+                        <h3 class="text-white">
+                            <i class="fa fa-bars"></i>
+                        </h3>
+                    </div>
+                    <div class="side-nav">
+                        <div class="close-div text-right p-3">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#dateandplace">DATE & PLACE</a></li>
+                            <li><a href="#gallery">GALLERY</a></li>
+                            <li><a href="#rsvp">RSVP</a></li>
+                            <li><a href="wishlist.html">WISHLIST</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Section BANNER -->
+        <section id="banner" class="animated fadeIn">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 px-0 px-lg-0">
+                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{% static 'rsvp/birthday/template1/images/background-01.png' %}" />
+                        <img class="img-fluid w-m-100p d-block d-lg-none" src="{% static 'rsvp/birthday/template1/images/mobile-background-01.png' %}" />
+                        <img class="img-fluid logo boxc d-none d-lg-block" src="{% static 'rsvp/birthday/template1/images/images-01.png' %}" />
+                        <img class="img-fluid logo boxc d-block d-lg-none" src="{% static 'rsvp/birthday/template1/images/mobile-images-01.png' %}" />
+                        <img class="img-fluid motif boxc move-up" src="{% static 'rsvp/birthday/template1/images/images-02.png' %}" />
+                        <img class="img-fluid ornament-01 move-right" src="{% static 'rsvp/birthday/template1/images/ornament-banner-01.png' %}" />
+                        <img class="img-fluid ornament-02 move-left" src="{% static 'rsvp/birthday/template1/images/ornament-banner-02.png' %}" />
+                        <img class="img-fluid ornament-03 move-down" src="{% static 'rsvp/birthday/template1/images/ornament-banner-03.png' %}" />
+                        <a id="chevron-down" class="gobot" href="#about"><img class="img-fluid icon boxc" src="{% static 'rsvp/birthday/template1/images/icon-01.png' %}" /></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section ABOUT -->
+        <section id="about">
+            <div class="container-fluid pt-m-20p pb-m-20p pl-m-10p pr-m-10p pt-lg-10p pb-lg-20p pl-lg-5p pr-lg-5p">
+                <div class="row">
+                    <img class="img-fluid motif1 boxc move-up" src="{% static 'rsvp/birthday/template1/images/ornament-about-02.png' %}" />
+                    <img class="img-fluid motif2 boxc w-lg-100p d-none d-lg-block" src="{% static 'rsvp/birthday/template1/images/ornament-about-01.png' %}" />
+                    <img class="img-fluid motif2 boxc w-m-100p d-block d-lg-none" src="{% static 'rsvp/birthday/template1/images/mobile-ornament-about-01.png' %}" />
+                    <img class="img-fluid motif3 boxc d-none d-lg-block move-left" src="{% static 'rsvp/birthday/template1/images/ornament-about-03.png' %}" />
+                    <div class="wrap d-block d-lg-none">
+                        <img class="img-fluid motif3 boxc move-left" src="{% static 'rsvp/birthday/template1/images/ornament-about-03.png' %}" />
+                    </div>
+                    <div class="col-lg-6 pt-lg-3p d-none d-lg-block">
+                        <img src="{{ x.about_img.url }}" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-m-0 pl-m-15 pt-lg-5p pl-lg-15p">
+                        <h2 class="font-green mb-lg-10p slideanim">
+                            <span>ABOUT</span><br />
+                                {{ x.about_title }}
+                        </h2>
+                            <img class="img-fluid bs mb-m-25p d-block d-lg-none" src="{% static 'rsvp/birthday/template1/images/images-03.png' %}" />
+                        <div class="pl-m-0 pl-lg-10p slideanim">
+                            <p>
+                                {{ x.about }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section DATE & PLACE -->
+        <section id="dateandplace">
+            <div class="container-fluid pt-m-20p pb-m-20p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p bg-yellow">
+                <div class="row">
+                    <img class="img-fluid bg boxc w-lg-100p d-none d-lg-block move-up" src="{% static 'rsvp/birthday/template1/images/background-02.png' %}" />
+                    <img class="img-fluid bg boxc w-m-100p d-block d-lg-none" src="{% static 'rsvp/birthday/template1/images/mobile-background-02.png' %}" />
+                    <img class="img-fluid motif1 boxc move-up" src="{% static 'rsvp/birthday/template1/images/icon-04.png' %}" />
+                    <img class="img-fluid motif2 boxc move-up-slow" src="{% static 'rsvp/birthday/template1/images/icon-05.png' %}" />
+                    <div class="col-lg-3 mb-lg-10p">
+                        <h2 class="font-white slideanim">
+                            <span>DATE</span><br />
+                            & PLACE
+                        </h2>
+                    </div>
+                    <div class="col-lg-9 mb-lg-10p">
+                        <div class="w-m-100p w-lg-50p slideanim">
+                            <p>{{ x.data_places_brief }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="row content">
+                            <div class="col-lg-4 slideanimImage1">
+                                <div class="box bg-green">
+                                    <div class="boxc font-white">
+                                        <span>{{ x.big_date }}</span><br />
+                                        {{ x.month_and_year }}
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <p>
+                                        Start from: <br />
+                                        <b>{{ x.start_from }}</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 slideanimImage2">
+                                <div class="box bg-green">
+                                    <img class="img-fluid w-lg-100p" src="{{ x.place_image.url }}" />
+                                    <div class="detail">
+                                        <a href="" target="_blank">
+                                            <div class="circle">
+                                                <p class="boxc">SEE<br />LOCATION</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <p>
+                                        {{ x.place }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 slideanimImage3">
+                                <div class="box bg-green">
+                                    <img class="img-fluid w-lg-100p" src="{{ x.short_msg_img.url }}" />
+                                </div>
+                                <div class="desc pb-m-0">
+                                    <p>
+                                        {{ x.short_message }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section GALLERY -->
+        <section id="gallery">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 mtext-center pt-m-10p pb-m-10p pt-lg-3p pb-lg-3p pl-lg-5p pr-lg-5p bg-green">
+                        <h2 class="mb-lg-0 font-white slideanim"><span>GALLERY</span></h2>
+                    </div>
+                    <div class="col-lg-12 pl-lg-0 pr-lg-0 d-none d-lg-block">
+                        <div id="js-gallery">
+                            <div class="gallery__hero">
+                                <img class="img-fluid" src="{% static 'rsvp/birthday/template1/images/images-06.png' %}" />
+                            </div>
+                            <div class="gallery__thumbs">
+                                <a href="{{ x.gallery1.url }}" data-gallery="thumb" class="is-active">
+                                    <img class="img-fluid" src="{{ x.gallery1.url }}" />
+                                    <div class="ov"></div>
+                                </a>
+                                <a href="{{ x.gallery2.url }}" data-gallery="thumb">
+                                    <img class="img-fluid" src="{{ x.gallery2.url }}" />
+                                    <div class="ov"></div>
+                                </a>
+
+{#                                <a href="{{ x.gallery3.url }}" data-gallery="thumb">#}
+{#                                    <img class="img-fluid" src="{{ x.gallery3.url }}" /> #}
+{#                                    <div class="ov"></div>#}
+{#                                </a>#}
+{#                                <a href="{{ x.gallery4.url }}" data-gallery="thumb">#}
+{#                                    <img class="img-fluid" src="{{ x.gallery4.url }}" />#}
+{#                                    <div class="ov"></div>#}
+{#                                </a>#}
+
+                                <a href="{{ x.gallery5.url }}" data-gallery="thumb">
+                                    <img class="img-fluid" src="{{ x.gallery5.url }}" />
+                                    <div class="ov"></div>
+                                </a>
+                                <a href="{{ x.gallery6.url }}" data-gallery="thumb">
+                                    <img class="img-fluid" src="{{ x.gallery6.url }}" />
+                                    <div class="ov"></div>
+                                </a>
+                                <a href="{{ x.gallery7.url }}" data-gallery="thumb">
+                                    <img class="img-fluid" src="{{ x.gallery7.url }}" />
+                                    <div class="ov"></div>
+                                </a>
+                                <a href="{{ x.gallery8.url }}" data-gallery="thumb">
+                                    <img class="img-fluid" src="{{ x.gallery8.url }}" />
+                                    <div class="ov"></div>
+                                </a>
+                                <a href="{{ x.gallery9.url }}" data-gallery="thumb">
+                                    <img class="img-fluid" src="{{ x.gallery9.url }}" />
+                                    <div class="ov"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 pl-lg-0 pr-lg-0 d-block d-lg-none">
+                        <div class="one-carousel owl-theme">
+                            <div class="item">
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/birthday/template1/images/images-06.png' %}" />
+                            </div>
+                            <div class="item">
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/birthday/template1/images/images-07.png' %}" />
+                            </div>
+                            <div class="item">
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/birthday/template1/images/images-08.png' %}" />
+                            </div>                            
+                            <div class="item">
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/birthday/template1/images/images-08.png' %}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section RSVP -->
+        <section id="rsvp">
+            <div class="container-fluid pt-m-20p pb-m-20p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p">
+                <div class="row">
+                    <div class="col-lg-4 slideanimLeft">
+                        <h2 class="font-yellow mb-lg-10p">
+                            <span>ARE YOU</span><br />
+                            COMING?
+                        </h2>
+                        <div class="w-m-70p mb-m-15p w-lg-50p">
+                            <p>
+                                I Hope you’d come to the
+                                Party, please confirm your
+                                attendance!
+                            </p>
+                        </div>
+                    </div>
+                    {% include 'attendance/attendance.html' %}
+                </div>
+            </div>
+        </section>
+        <!-- Section THANKS -->
+        <section id="thanks">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 pl-lg-0 pr-lg-0">
+                        <div class="bg"></div>
+                        <img class="img-fluid ornament boxc" src="{% static 'rsvp/birthday/template1/images/ornament-thanks-02.png' %}" />
+                        <div class="boxc desc">
+                            <p>Love, Diana Ross</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer>
+            <div class="container-fluid pt-lg-30 pb-lg-30 pl-lg-5p pr-lg-5p bg-aqua">
+                <div class="row">
+                    <div class="order-2 order-lg-1 col-lg-8 font-white">
+                        <p>All Rights Reserved © This website is made by <b>Reservasi Dulu</b></p>
+                    </div>                
+                    <div class="order-1 order-lg-2 col-lg-4 mtext-center mb-m-5p text-right">
+                        <a href="" class="button-trans">Create a Site</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Features JS -->
+    <script>
+        new WOW().init();
+    </script>
+    <!-- Node Modules JS -->
+
+    {% compress js %}
+        {% include 'static/js.html' %}
+        <!-- Custom JS -->
+        <script type="text/javascript" src="{% static 'rsvp/birthday/template1/app.js' %}"></script>
+    {% endcompress %}
+</body>
+</html>
