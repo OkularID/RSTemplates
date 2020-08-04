@@ -211,6 +211,14 @@
                 </div>
             </div>
         </section>
+
+        <div>
+            {% if user.is_authenticated %}
+             <a href="{% url 'liam_felicia_update' x.site_url %}" class="btn btn-outline-primary btn-sm" type="submit">Edit</a>
+             <a href="{% url 'liam_felicia_delete' x.site_url %}" class="btn btn-outline-primary btn-sm" type="submit">Delete</a>
+             <button class="btn btn-outline-primary btn-sm" type="submit">Share</button>
+            {% endif %}
+        </div>
         <!-- Section RSVP -->
         <section id="rsvp" class="bg-brown">
             <div class="container-fluid pt-m-30p pb-m-30p pt-lg-10p pb-lg-10p pl-lg-10p pr-lg-10p">
