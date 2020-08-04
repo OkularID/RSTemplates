@@ -11,10 +11,7 @@
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <h3>Wedding Form</h3>
-                            {{ form.location1 }}
-                            {# tester using one field to post multiple data #}
-                            {{ form.img1 }} <br>
-                            {{ form.img1 }}
+                            {{ form | crispy }}
                     <button class="btn btn-outline-primary btn-sm" type="submit">Submit</button>
                 </form>
                 </div>
