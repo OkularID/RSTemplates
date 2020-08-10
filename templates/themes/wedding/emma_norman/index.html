@@ -183,26 +183,33 @@
                     <img class="img-fluid motif2" src="images/motif-02.png" />
                     <div class="col-lg-6 pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p">
                         <h2 data-aos="fade-right" data-aos-offset="-1600">
-                            See Our<br />
-                            Precious Moment
+
+                            {{ x.gallery_title }}
+{#                            See Our<br />#}
+{#                            Precious Moment#}
                         </h2>
                         <div class="w-m-100p mt-m-10p w-lg-65p mt-lg-5p">
-                            <p>Here are the moments taken by the most talented photographer, Abdul Rafiq. We are beyond grateful to have these caught moments to treasure from now on!</p>
+                            {{ x.gallery_text }}
+                            {#                            <p>Here are the moments taken by the most talented photographer, Abdul Rafiq. We are beyond grateful to have these caught moments to treasure from now on!</p>#}
                         </div>
                     </div>
                     <div class="col-lg-6 pl-m-0 pr-m-0">
                         <div class="wrap d-none d-lg-block">
                             <div class="img1 boxc">
-                                <img data-aos="fade-left" data-aos-offset="-1500" class="img-fluid bs" src="images/images-05.png" />
+                                {{ x.gallery1.url }}
+{#                                <img data-aos="fade-left" data-aos-offset="-1500" class="img-fluid bs" src="images/images-05.png" />#}
                             </div>
                             <div class="img2 boxc">
-                                <img data-aos="fade-right" data-aos-offset="-1500" class="img-fluid bs" src="images/images-06.png" />
+                                {{ x.gallery2.url }}
+                                {#                                <img data-aos="fade-right" data-aos-offset="-1500" class="img-fluid bs" src="images/images-06.png" />#}
                             </div>
                             <div class="img3 boxc">
-                                <img data-aos="fade-down" data-aos-offset="-1500" class="img-fluid bs" src="images/images-07.png" />
+                                {{ x.gallery3.url }}
+{#                                <img data-aos="fade-down" data-aos-offset="-1500" class="img-fluid bs" src="images/images-07.png" />#}
                             </div>
                             <div class=" img4 boxc">
-                                <img data-aos="fade-up" data-aos-offset="-1500" class="img-fluid bs" src="images/images-08.png" />
+                                {{ x.gallery4.url }}
+{#                                <img data-aos="fade-up" data-aos-offset="-1500" class="img-fluid bs" src="images/images-08.png" />#}
                             </div>
                             <a href="" class="button-default boxc bs">VIEW GALLERY</a>
                         </div>
