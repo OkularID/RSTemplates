@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Avenir";
+    src: url(Avenir.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Palatino";
+    src: url(Palatino.ttf) format("truetype");
+  }
 body {
   position: relative;
   overflow-x: hidden;
