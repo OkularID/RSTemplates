@@ -9,11 +9,9 @@
     <title>Template Gala Dinner | Homepage</title>
     <link rel="shortcut icon" href="images/ico.ico">
     <!-- Customize css -->
-
-    {% include 'static/css.html' %}
-
     {% compress css %}
-        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/lacasa/style_gala_dinner.css' %}">
+        {% include 'static/css.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/lacasadepapel/style_gala_dinner.css' %}">
     {% endcompress %}
     <!-- Features css -->
 
@@ -109,11 +107,11 @@
             <div class="col-lg-12 px-0">
                 <div class="header-home-content text-center">
                     <h1 data-aos="fade-right" class="text-white text-left la-casa">
-                        {{ x.title }}
+                        La Casa
                     </h1>
-{#                    <h1 data-aos="fade-left" class="text-white text-right de-papel mb-lg-5">#}
-{#                        De Papel#}
-{#                    </h1>#}
+                    <h1 data-aos="fade-left" class="text-white text-right de-papel mb-lg-5">
+                        De Papel
+                    </h1>
                     <h4 data-aos="fade-down" class="text-white my-lg-5">
                         GALA DINNER
                     </h4>
@@ -133,11 +131,11 @@
             <div class="col-lg-12 my-lg-5 pt-lg-5">
                 <p class="text-white text-center font-weight-bold mt-5 mb-lg-0 mb-4 title">
                     <i>
-                        {{ x.brief_title }}
+                        You are cordially invited to our annual gala dinner
                     </i>
                 </p>
                 <p class="text-white text-center mt-lg-4 mb-lg-5 w-75 mx-auto">
-                    {{ x.brief }}
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
                 <hr class="hr d-lg-none">
             </div>
@@ -147,17 +145,17 @@
         <div data-aos="fade-up" class="row text-center">
             <div class="col-lg-4 pr-lg-0">
                 <h1 class="text-white">
-                    {{ x.date_day }}
+                    3 December 2020
                 </h1>
             </div>
             <div class="col-lg-4 px-lg-0 middle-time">
                 <h1 class="text-white">
-                    {{ x.date_time }}
+                    18.00-21.00 pm
                 </h1>
             </div>
             <div class="col-lg-4 pl-lg-0">
                 <h1 class="text-white">
-                    {{ x.dresscode }}
+                    Formal Dress
                 </h1>
             </div>
         </div>
@@ -182,14 +180,18 @@
                     </a>
             </div>
             <div class="col-lg-12 px-0">
-                <iframe data-aos="zoom-out" class="img-fluid w-100" src="{{ x.maps }}" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe data-aos="zoom-out" class="img-fluid w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15864.890752409196!2d106.825073!3d-6.2343495!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7b9ffa3205d3c39a!2sBalai%20Kartini!5e0!3m2!1sen!2sid!4v1588572444507!5m2!1sen!2sid" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <div class="position-content">
                 <div data-aos="fade-left" class="content d-none d-lg-block">
                         <h1 class="text-white">
-                            {{ x.location_name }}
+                            At Balai<br>
+                            Kartini
                         </h1>
                         <p class="text-white mt-lg-4 mb-lg-5">
-                            {{ x.location_detail }}
+                            Jl. Gatot Subroto No.Kav. 37, RT.6/RW.3,<br>
+                            Kuningan, Kuningan Tim., Kecamatan<br>
+                            Setiabudi, Kota Jakarta Selatan,<br>
+                            Daerah Khusus Ibukota Jakarta 12950<br>
                         </p>
                         <a href="#" class="text-white">
                             OPEN IN GOOGLE MAPS
@@ -213,91 +215,91 @@
                     <div class="row ml-lg-1">
                         <div class="time-div">
                             <p class="text-white">
-                                {{ x.rundown }}
+                                19.00 :
                             </p> 
                         </div>
-{#                        <div class="col-lg-8 col-10">#}
-{#                            <p class="text-white">#}
-{#                                Doors open - registration, champagne and canapés reception#}
-{#                            </p>#}
-{#                        </div>#}
+                        <div class="col-lg-8 col-10">
+                            <p class="text-white">
+                                Doors open - registration, champagne and canapés reception
+                            </p>
+                        </div>
                     </div>
-{#                    <div class="row ml-lg-1">#}
-{#                        <div class="time-div">#}
-{#                            <p class="text-white">#}
-{#                               19.50 :#}
-{#                            </p> #}
-{#                        </div>#}
-{#                        <div class="col-lg-8 col-10">#}
-{#                            <p class="text-white">#}
-{#                                First call for dinner#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="row ml-lg-1">#}
-{#                        <div class="time-div">#}
-{#                            <p class="text-white">#}
-{#                               20.00 : #}
-{#                            </p> #}
-{#                        </div>#}
-{#                        <div class="col-lg-8 col-10">#}
-{#                            <p class="text-white">#}
-{#                            Second call for dinner#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="row ml-lg-1">#}
-{#                        <div class="time-div">#}
-{#                            <p class="text-white">#}
-{#                               20.15 : #}
-{#                            </p> #}
-{#                        </div>#}
-{#                        <div class="col-lg-8 col-10">#}
-{#                            <p class="text-white">#}
-{#                                Speeches#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="row ml-lg-1">#}
-{#                        <div class="time-div">#}
-{#                            <p class="text-white">#}
-{#                               20.40 : #}
-{#                            </p> #}
-{#                        </div>#}
-{#                        <div class="col-lg-8 col-10">#}
-{#                            <p class="text-white">#}
-{#                               Service begins - silent auction opens for bidding#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="row ml-lg-1">#}
-{#                        <div class="time-div">#}
-{#                            <p class="text-white">#}
-{#                               22.30 : #}
-{#                            </p> #}
-{#                        </div>#}
-{#                        <div class="col-lg-8 col-10">#}
-{#                            <p class="text-white">#}
-{#                               Dinner ends and guests continues networking - entertainment#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    <div class="row ml-lg-1">#}
-{#                        <div class="time-div">#}
-{#                            <p class="text-white">#}
-{#                               01.30 : #}
-{#                            </p> #}
-{#                        </div>#}
-{#                        <div class="col-lg-8 col-10">#}
-{#                            <p class="text-white">#}
-{#                               Carriages#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </div>#}
+                    <div class="row ml-lg-1">
+                        <div class="time-div">
+                            <p class="text-white">
+                               19.50 :
+                            </p> 
+                        </div>
+                        <div class="col-lg-8 col-10">
+                            <p class="text-white">
+                                First call for dinner
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row ml-lg-1">
+                        <div class="time-div">
+                            <p class="text-white">
+                               20.00 : 
+                            </p> 
+                        </div>
+                        <div class="col-lg-8 col-10">
+                            <p class="text-white">
+                            Second call for dinner
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row ml-lg-1">
+                        <div class="time-div">
+                            <p class="text-white">
+                               20.15 : 
+                            </p> 
+                        </div>
+                        <div class="col-lg-8 col-10">
+                            <p class="text-white">
+                                Speeches
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row ml-lg-1">
+                        <div class="time-div">
+                            <p class="text-white">
+                               20.40 : 
+                            </p> 
+                        </div>
+                        <div class="col-lg-8 col-10">
+                            <p class="text-white">
+                               Service begins - silent auction opens for bidding
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row ml-lg-1">
+                        <div class="time-div">
+                            <p class="text-white">
+                               22.30 : 
+                            </p> 
+                        </div>
+                        <div class="col-lg-8 col-10">
+                            <p class="text-white">
+                               Dinner ends and guests continues networking - entertainment
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row ml-lg-1">
+                        <div class="time-div">
+                            <p class="text-white">
+                               01.30 : 
+                            </p> 
+                        </div>
+                        <div class="col-lg-8 col-10">
+                            <p class="text-white">
+                               Carriages
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid save-seat px-5" id="rsvp">
+        <div class="container-fluid save-seat px-5 py-5" id="rsvp">
             <div class="row">
                 <div data-aos="fade-left" class="col-lg-11 offset-lg-1">
                     <h1 class="text-white">
@@ -366,10 +368,10 @@
                 </div>
             </div>
         </div>
-        <div data-aos="fade-up" class="container" id="our">
+        <div data-aos="fade-up" class="container pt-5" id="our">
             <div class="row">
-                <div class="col-lg-12 text-center py-lg-4 pt-4">
-                    <h1 class="text-white">
+                <div class="col-lg-12 text-center py-lg-5 pt-4">
+                    <h1 class="text-white mt-lg-0 mt-5">
                         Our Partners
                     </h1>
                 </div>
@@ -491,7 +493,7 @@
                 <p class="text-white mb-0">
                     lcdp-galadinner@gmail.com
                 </p>
-                <a href="#" class="text-white button-bottom">
+                <a href="e-invitation gala dinner.pdf" target="_blank" class="text-white button-bottom">
                     DOWNLOAD E-INVITATION
                 </a>
             </div>
@@ -550,14 +552,15 @@
       </div>
     </div>
     <!-- Features JS -->
-    {% include 'static/js.html' %}
     <script>
         new WOW().init();
     </script>
-    <!-- Node Modules JS --><!-- Custom JS -->
     {% compress js %}
-        <script type="text/javascript" src="{% static 'rsvp/event/lacasa/app.js' %}"></script>
+        {% include 'static/js.html' %}
+        <!-- Custom JS -->
+        <script type="text/javascript" src="{% static 'rsvp/event/lacasadepapel/app.js' %}"></script>
     {% endcompress %}
+    <!-- Custom JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
