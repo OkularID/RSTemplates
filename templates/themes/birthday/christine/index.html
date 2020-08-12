@@ -1,3 +1,5 @@
+{% load static %}
+{% load compress %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +8,14 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
     <title>Template Birthday | Homepage</title>
     <link rel="shortcut icon" href="images/ico.ico">
-    <!-- Features css -->
-    <link rel="stylesheet" href="../../features/animatecss/animate.min.css">
-    <!--Node Modules css-->
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="../../css/animation.css" >    
-    <link rel="stylesheet" type="text/css" href="../../css/default.css">
-    <link rel="stylesheet" type="text/css" href="style-birthday-1.css">
+    {% compress css %}
+        {% include 'static/css.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/birthday/christine/style-birthday-1.css' %}">
+    {% endcompress %}
+    <!-- Features css -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div id="homepage">
@@ -87,7 +86,10 @@
                         <img class="img-fluid motif3 boxc move-left" src="images/ornament-about-03.png" />
                     </div>
                     <div class="col-lg-6 pt-lg-3p d-none d-lg-block">
-                        <img class="img-fluid images bs move-up-slow" src="images/images-03.png" />
+                        <div class="wrap-images bs move-up-slow">
+                            <img class="img-fluid" src="images/images-03.png" />
+                            <!-- <img class="img-fluid" src="images/images-03.png" data-scroll-zoom /> -->
+                        </div>
                     </div>
                     <div class="col-lg-6 pt-m-0 pl-m-15 pt-lg-5p pl-lg-15p">
                         <h2 class="font-green mb-lg-10p slideanim">
@@ -351,10 +353,7 @@
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
                         <div class="bg"></div>
-                        <img class="img-fluid ornament boxc" src="images/ornament-thanks-02.png" />
-                        <div class="boxc desc">
-                            <p>Love, Diana Ross</p>
-                        </div>
+                        <img class="img-fluid ornament boxc" src="images/thank-you-bottom-06.png" />
                     </div>
                 </div>
             </div>
@@ -374,16 +373,16 @@
         </footer>
     </div>
     <!-- Features JS -->
-    <script type="text/javascript" src="../../features/animatecss/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
-    <!-- Node Modules JS -->
-    <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../node_modules/owl.carousel/dist/owl.carousel.js"></script>
+    {% compress js %}
+        {% include 'static/js.html' %}
+        <!-- Custom JS -->
+        <script type="text/javascript" src="{% static 'rsvp/birthday/christine/app.js' %}"></script>
+    {% endcompress %}
     <!-- Custom JS -->
-    <script type="text/javascript" src="app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 </html>
