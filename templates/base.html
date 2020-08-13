@@ -14,8 +14,6 @@
         {% include 'static/css.html' %}
     {% endcompress %}
 
-    {% include 'static/cdn' %}
-
 </head>
 
 <body>
@@ -57,8 +55,14 @@
     {% include 'shared/footer.html' %}
 
     {% compress js %}
+        <!--This is JS-->
         {% include 'static/js.html' %}
     {% endcompress %}
+
+    {% compress js %}
+        <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    {% endcompress %}
+
 </body>
 </html>
 
