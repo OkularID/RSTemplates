@@ -48,7 +48,7 @@
     outline:0;
   }
   form .btn-form-orange{
-    background: url('../images/05-contact-us/contactus-button.png');
+    background: url('../05-contact-us/contactus-button.png');
     background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -172,7 +172,7 @@
   #navigation .menu ul li a:active,
   #navigation .menu ul li a.active{
     padding-bottom: 10px;
-    background-image: url('../img/images/line.png');
+    background-image: url('../img/line.png');
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% 5px;
