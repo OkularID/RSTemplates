@@ -15,11 +15,11 @@
                     <b>Birthday URL</b>: {{ birthday.slug }}<br>
 
                 <div>
-                    {% if user.is_authenticated %}
-                     <a href="{% url 'birthday_update' birthday.slug %}" class="btn btn-outline-primary btn-sm" type="submit">Edit</a>
-                     <a href="{% url 'birthday_delete' birthday.slug %}" class="btn btn-outline-primary btn-sm" type="submit">Delete</a>
-                     <button class="btn btn-outline-primary btn-sm" type="submit">Share</button>
-                    {% endif %}
+                {% if user.is_authenticated %}
+                    <a href="{% url 'birthday_update' birthday.slug %}" class="btn btn-outline-primary btn-sm" type="submit">Edit</a>
+                    <a href="{% url 'birthday_delete' birthday.slug %}" class="btn btn-outline-primary btn-sm" type="submit">Delete</a>
+                    <button class="btn btn-outline-primary btn-sm" type="submit">Share</button>
+                {% endif %}
                 </div>
             </div>
         </div>

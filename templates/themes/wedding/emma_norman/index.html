@@ -1,5 +1,6 @@
 {% load static %}
 {% load compress %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -283,7 +284,11 @@
                         <p>All Rights Reserved © This website is made by <b>Reservasi Dulu</b></p>
                     </div>                
                     <div class="col-12 mtext-center col-lg-4 text-right">
-                        <a href="" class="button-footer">Create a Site</a>
+                        <a href="" class="button-footer">Share</a>
+
+                            <a href="{% url 'emma_norman_update' x.site_url %}" class="button-footer">Edit</a>
+                            <a href="" class="button-footer">Delete</a>
+                        
                     </div>
                 </div>
             </div>
