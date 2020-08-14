@@ -12,10 +12,7 @@
 
     {% compress css %}
         {% include 'static/css.html' %}
-        {% block base_head %}{% endblock %}
     {% endcompress %}
-
-    {% include 'static/cdn' %}
 
 </head>
 
@@ -55,17 +52,17 @@
 {% block content %}
     {# content goes here #}
 {% endblock %}
-
-{% compress js %}
-    {% include 'static/js.html' %}
-    {% block javascript %}
-
-    {% endblock %}
-{% endcompress %}
     {% include 'shared/footer.html' %}
+
+    {% compress js %}
+        <!--This is JS-->
+        {% include 'static/js.html' %}
+    {% endcompress %}
+
+    {% compress js %}
+        <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    {% endcompress %}
+
 </body>
-
-
-
 </html>
 
