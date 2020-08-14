@@ -1,12 +1,12 @@
 {% load static %}
 {% load compress %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
-    <title>Template Wedding | Homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dylan Rose Preview</title>
     <link rel="shortcut icon" href="images/ico.ico">
     <!-- Customize css -->
     {% compress css %}
@@ -22,7 +22,7 @@
         <nav>
             <div class="d-none d-lg-block">
                 <a class="logo" href="index.html">
-                    <img data-aos="fade-down" class="img-fluid" src="images/logo.png" />
+                    <img data-aos="fade-down" class="img-fluid" src="{% static 'rsvp/wedding/dylan_rose/images/logo.png' %}"  alt=""/>
                 </a>
                 <ul data-aos="fade-right" class="menu">
                     <li><a href="#ourstory">Our Story</a></li>
@@ -34,7 +34,7 @@
             </div>
             <div class="row d-lg-none">
                 <div class="col-8">
-                    <a href="index.html"><img class="img-fluid logo" src="images/logo.png" /></a>
+                    <a href="index.html"><img class="img-fluid logo" src="{% static 'rsvp/wedding/dylan_rose/images/logo.png' %}" /></a>
                 </div>
                 <div class="col-4">
                     <ul class="bars">
@@ -64,8 +64,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="images/images-01.png" />
-                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="images/mobile-images-01.png" />
+                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{% static 'rsvp/wedding/dylan_rose/images/images-01.png' %}" alt=""/>
+{#                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="{% static 'rsvp/wedding/dylan_rose/images/mobile-images-01.png' %}" />#}
                     </div>
                 </div>
             </div>
@@ -74,9 +74,9 @@
         <section id="ourstory">
             <div class="container-fluid pt-m-0 pb-m-0 pt-lg-5p pb-lg-5p">
                 <div class="row">
-                    <img class="img-fluid motif" src="images/icon-01.png" />
+                    <img class="img-fluid motif" src="{% static 'rsvp/wedding/dylan_rose/images/icon-01.png' %}" />
                     <div class="col-lg-7 pt-m-15p pb-m-10p pl-m-10p pr-m-10p pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
-                        <img data-aos="flip-left" class="img-fluid w-lg-100p" src="images/images-02.png" />
+                        <img data-aos="flip-left" class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/dylan_rose/images/images-02.png' %}" />
                     </div>
                     <div data-aos="fade-up" class="col-lg-5 pt-m-0 pb-m-15p pl-m-10p pr-m-10p pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
                         <div class="boxc">
@@ -247,7 +247,7 @@
                 <div class="row">
                     <div class="col-12 mb-m-10p mtext-center col-lg-8">
                         <p><b>All Rights Reserved</b> © This website is made by Reservasi Dulu</p>
-                    </div>                
+                    </div>
                     <div class="col-12 mtext-center col-lg-4 text-right">
                         <a href="" class="button-footer">Create a Site</a>
                     </div>
