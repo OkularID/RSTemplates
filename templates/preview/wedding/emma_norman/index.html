@@ -5,14 +5,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Template Wedding | Homepage</title>
     <link rel="shortcut icon" href="images/ico.ico">
     <!-- Customize css -->
-    {% include 'static/css.html' %}
 
     {% compress css %}
+            {% include 'static/css.html' %}
         <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/emma_norman/style-wedding-4.css' %}">
     {% endcompress %}
 
@@ -22,16 +21,15 @@
     <div id="homepage">
         <!-- Navbar -->
         <nav>
-            <div data-aos="fade-up" class="container-fluid">
-                <div class="row d-none d-lg-block">
+            <div class="container-fluid">
+                <div data-aos="fade-up" class="row d-none d-lg-block">
                     <div class="col-lg-12">
                         <ul class="menu">
                             <li><a href="#ourstory">Our Story</a></li>
                             <li><a href="#invitation">Invitation</a></li>
                             <li>
                                 <a class="logo" href="index.html">
-                                    <img src="{{ x.img_logo.url }}" alt="">
-{#                                    <img class="img-fluid" src="images/logo.png" />#}
+                                    <img class="img-fluid" src="{% static 'rsvp/wedding/emma_norman/images/logo.png' %}" />
                                 </a>
                             </li>
                             <li><a href="#gallery">Gallery</a></li>
@@ -66,15 +64,14 @@
                     <div class="col-lg-12 px-0 px-lg-0">
                         <div class="one-carousel owl-theme">
                             <div class="item">
-                                <img src="{{ x.img_background.url }}" alt="">
-{#                                <img class="img-fluid w-lg-100p" src="images/images-01.png" />#}
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/emma_norman/images/images-01.png' %}" />
                             </div>
-{#                            <div class="item">#}
-{#                                <img class="img-fluid w-lg-100p" src="images/images-01.png" />#}
-{#                            </div>#}
-{#                            <div class="item">#}
-{#                                <img class="img-fluid w-lg-100p" src="images/images-01.png" />#}
-{#                            </div>#}
+                            <div class="item">
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/emma_norman/images/images-01.png' %}" />
+                            </div>
+                            <div class="item">
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/emma_norman/images/images-01.png' %}" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,10 +88,10 @@
             <h4>Menu</h4>
         </section>
         <!-- Section Our Story -->
-        <section id="ourstory">
+        <section>
             <div class="container-fluid pt-m-0 pb-m-0 pl-m-0 pr-m-0 pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p bg-pink">
-                <div class="row">
-                    <img class="img-fluid motif" src="images/motif-01.png" />
+                <div id="ourstory" class="row">
+                    <img class="img-fluid motif" src="{% static 'rsvp/wedding/emma_norman/images/motif-01.png' %}" />
                     <div class="col-lg-7 pl-m-0 pr-m-0">
                         <div data-aos="fade-left" data-aos-offset="-1400" class="position-relative z-index-2">
                             <div class="quote">
@@ -105,12 +102,12 @@
                                 </div>
                             </div>
                         </div>
-                        <img data-aos="fade-up" data-aos-offset="-1400" class="img-fluid w-lg-100p d-none d-lg-block z-index-1 position-relative" src="images/images-02.png" />
+                        <img data-aos="fade-up" data-aos-offset="-1400" class="img-fluid w-lg-100p d-none d-lg-block z-index-1 position-relative" src="{% static 'rsvp/wedding/emma_norman/images/images-02.png' %}" />
                     </div>
                     <div class="col-lg-5 pt-m-20p pb-m-20p pl-m-10p pr-m-10p pt-lg-10p brief">
                         <i>Classically Elegant Wedding</i>
-                        <h3>{{ x.about_title }}</h3>
-                        <p>{{ x.about }}</p>
+                        <h3>Emma & Norman</h3>
+                        <p>Our journey has been so great ever since we met back in 2010, we realize how much we need each other side by side and we will never ever take things for granted, EVER! So we wanted to make sure to seal our relationship and tie the knot! For as you know, we’ve been in a relationship for almost 8 years now, we’ve been through thick and thin together, always got each other’s back. Norman always the one that encourages Emma to create things, and Emma always been the one who supports Norman in his journey. And YOU, always been a special one to us and we hope you will celebrate with us to create an unforgettable moment of all.</p>
                     </div>
                 </div>
             </div>
@@ -120,24 +117,22 @@
             <div class="container-fluid pl-m-0 pr-m-0">
                 <div class="row">
                     <div class="col-lg-6 pl-m-0 pr-m-0 px-lg-0">
-                        <img class="img-fluid bg w-lg-100p" src="{{ x.ceremony_img.url }}" />
+                        <img class="img-fluid bg w-lg-100p" src="{% static 'rsvp/wedding/emma_norman/images/images-03.png' %}" />
                         <div class="boxc st">
                             <h2 data-aos="fade-right" data-aos-offset="-1700">Ceremony</h2>
                             <h4>
-                                {{ x.ceremony_time }}
-{#                                Saturday, 22th July 2020<br />#}
-{#                                11.00 am#}
+                                Saturday, 22th July 2020<br />
+                                11.00 am
                             </h4>
                             <div class="icon">
                                 <div class="line-white boxc l"></div>
                                 <div class="line-white boxc r"></div>
-                                <img class="img-fluid" src="images/icon-01.png" />
+                                <img class="img-fluid" src="{% static 'rsvp/wedding/emma_norman/images/icon-01.png' %}" />
                             </div>
                             <h6>
-                                {{ x.ceremony_location }}
-{#                                Jl. Pantai Suluban, Pecatu, Kuta Sel.,<br />#}
-{#                                Kabupaten Badung, Uluwatu,<br />#}
-{#                                Bali, Indonesia#}
+                                Jl. Pantai Suluban, Pecatu, Kuta Sel.,<br />
+                                Kabupaten Badung, Uluwatu,<br />
+                                Bali, Indonesia
                             </h6>
                             <div class="button">
                                 <div class="line-white boxc l"></div>
@@ -147,24 +142,22 @@
                         </div>
                     </div>
                     <div class="col-lg-6 pl-m-0 pr-m-0 px-lg-0">
-                        <img class="img-fluid bg w-lg-100p" src="{{ x.reception_img.url }}" />
+                        <img class="img-fluid bg w-lg-100p" src="{% static 'rsvp/wedding/emma_norman/images/images-04.png' %}" />
                         <div class="boxc nd">
                             <h2 data-aos="fade-left" data-aos-offset="-1700">Reception</h2>
                             <h4>
-                                {{ x.reception_time }}
-{#                                Saturday, 22th July 2020<br />#}
-{#                                04.00 pm#}
+                                Saturday, 22th July 2020<br />
+                                04.00 pm
                             </h4>
                             <div class="icon">
                                 <div class="line-grey boxc l"></div>
                                 <div class="line-grey boxc r"></div>
-                                <img class="img-fluid" src="images/icon-02.png" />
+                                <img class="img-fluid" src="{% static 'rsvp/wedding/emma_norman/images/icon-02.png' %}" />
                             </div>
                             <h6>
-                                {{ x.reception_location }}
-{#                                Hotel Mulia Bali<br />#}
-{#                                Jl. Seminyak, Kuta, Kabupaten Rahajeng,<br />#}
-{#                                Bali, Indonesia#}
+                                Hotel Mulia Bali<br />
+                                Jl. Seminyak, Kuta, Kabupaten Rahajeng,<br />
+                                Bali, Indonesia
                             </h6>
                             <div class="button">
                                 <div class="line-grey boxc l"></div>
@@ -181,40 +174,33 @@
             <div class="container-fluid pb-m-0 pl-m-0 pr-m-0 pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p bg-lightpink">
                 <div class="row">
                     <div class="motif d-none d-lg-block">E&N</div>
-                    <img class="img-fluid motif2" src="images/motif-02.png" />
+                    <img class="img-fluid motif2" src="{% static 'rsvp/wedding/emma_norman/images/motif-02.png' %}" />
                     <div class="col-lg-6 pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p">
                         <h2 data-aos="fade-right" data-aos-offset="-1600">
-
-                            {{ x.gallery_title }}
-{#                            See Our<br />#}
-{#                            Precious Moment#}
+                            See Our<br />
+                            Precious Moment
                         </h2>
                         <div class="w-m-100p mt-m-10p w-lg-65p mt-lg-5p">
-                            {{ x.gallery_text }}
-                            {#                            <p>Here are the moments taken by the most talented photographer, Abdul Rafiq. We are beyond grateful to have these caught moments to treasure from now on!</p>#}
+                            <p>Here are the moments taken by the most talented photographer, Abdul Rafiq. We are beyond grateful to have these caught moments to treasure from now on!</p>
                         </div>
                     </div>
                     <div class="col-lg-6 pl-m-0 pr-m-0">
                         <div class="wrap d-none d-lg-block">
                             <div class="img1 boxc">
-                                {{ x.gallery1.url }}
-{#                                <img data-aos="fade-left" data-aos-offset="-1500" class="img-fluid bs" src="images/images-05.png" />#}
+                                <img data-aos="fade-left" data-aos-offset="-1500" class="img-fluid bs" src="{% static 'rsvp/wedding/emma_norman/images/images-05.png' %}" />
                             </div>
                             <div class="img2 boxc">
-                                {{ x.gallery2.url }}
-                                {#                                <img data-aos="fade-right" data-aos-offset="-1500" class="img-fluid bs" src="images/images-06.png" />#}
+                                <img data-aos="fade-right" data-aos-offset="-1500" class="img-fluid bs" src="{% static 'rsvp/wedding/emma_norman/images/images-06.png' %}" />
                             </div>
                             <div class="img3 boxc">
-                                {{ x.gallery3.url }}
-{#                                <img data-aos="fade-down" data-aos-offset="-1500" class="img-fluid bs" src="images/images-07.png" />#}
+                                <img data-aos="fade-down" data-aos-offset="-1500" class="img-fluid bs" src="{% static 'rsvp/wedding/emma_norman/images/images-07.png' %}" />
                             </div>
                             <div class=" img4 boxc">
-                                {{ x.gallery4.url }}
-{#                                <img data-aos="fade-up" data-aos-offset="-1500" class="img-fluid bs" src="images/images-08.png" />#}
+                                <img data-aos="fade-up" data-aos-offset="-1500" class="img-fluid bs" src="{% static 'rsvp/wedding/emma_norman/images/images-08.png' %}" />
                             </div>
                             <a href="" class="button-default boxc bs">VIEW GALLERY</a>
                         </div>
-                        <img class="img-fluid w-m-100p d-block d-lg-none" src="images/images-05.png" />
+                        <img class="img-fluid w-m-100p d-block d-lg-none" src="{% static 'rsvp/wedding/emma_norman/images/images-05.png' %}" />
                         <div class="overlay d-block d-lg-none">
                             <a href="" class="boxc text-center">VIEW<br />GALLERY</a>
                         </div>
@@ -227,7 +213,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-5 px-lg-0 d-none d-lg-block">
-                        <img class="img-fluid w-lg-100p" src="images/images-09.png" />
+                        <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/emma_norman/images/images-09.png' %}" />
                         <div class="boxc w-lg-80p text-center">
                             <h2 data-aos="fade-right" data-aos-offset="-1500">
                                 We can’t wait<br />
@@ -282,19 +268,14 @@
                 <div class="row">
                     <div class="col-12 mb-m-10p mtext-center col-lg-8">
                         <p>All Rights Reserved © This website is made by <b>Reservasi Dulu</b></p>
-                    </div>                
+                    </div>
                     <div class="col-12 mtext-center col-lg-4 text-right">
-                        <a href="" class="button-footer">Share</a>
-
-                            <a href="{% url 'emma_norman_update' x.site_url %}" class="button-footer">Edit</a>
-                            <a href="" class="button-footer">Delete</a>
-                        
+                        <a href="" class="button-footer">Create a Site</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-    <!-- Features JS -->
 
     <script>
         new WOW().init();
@@ -307,6 +288,10 @@
         <script type="text/javascript" src="{% static 'rsvp/wedding/emma_norman/app.js' %}"></script>
     {% endcompress %}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+        <script>
+            AOS.init({
+                duration: 1500,
+            });
+        </script>
 </body>
 </html>
