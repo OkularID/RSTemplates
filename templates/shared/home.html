@@ -26,7 +26,7 @@
         <!-- Section Banner -->
         <div class="d-none d-lg-block fadein">
             <div class="container-fluid d-none d-lg-block pl-lg-0 pr-lg-0 home-banner" style="background: url({% static 'img/01-home/home-background-01.png' %});">
-            <div class="container-fluid d-none d-lg-block pl-lg-0 pr-lg-0 home-banner" style="background: url({% static 'img/images/01-home/home-background.png' %});">
+            <div class="container-fluid d-none d-lg-block pl-lg-0 pr-lg-0 home-banner" style="background: url({% static 'img/01-home/home-background.png' %});">
                 <div class="row">
                     <!-- Section 1 -->
                     <div class="col-lg-12 sec-1">
@@ -202,102 +202,10 @@
             </div>
         </div>
         <!-- Section Price & Testimony -->
-        <div class="pos-rel pricetestimony">
             <!-- Section Price -->
-            <div id="price" class="container-fluid pos-rel pt-lg-0 pb-lg-10p pl-lg-5p pr-lg-5p pt-m-20p pb-m-20p pl-m-10p pr-m-10p home-price slideanim">
-                <div class="row">
-                    <div class="col-lg-12 pb-lg-60 pb-m-10p text-center">
-                        <h3><span>The best deal</span> comes<br>with <span>great price</span></h3>
-                    </div>
-                    <div class="col-lg-6 d-none d-lg-block text-center" style="padding-right: 6% !important;">
-                        <img class="img-fluid w-lg-55p mb-lg-5p" src="{% static 'img/01-home/home-image-12.png' %}">
-                        <ul>
-                            <li>Planning Dashboard</li>
-                            <li>Wedding Website</li>
-                            <li>Mobile App</li>
-                            <li>Cover Style Gallery</li>
-                            <li>Unlimited Guest Accounts</li>
-                        </ul>
-                        <a class="button-orange-line" href="{% url 'Register' %}">
-                            <p class="font-orange">Interesting!</p>
-                            <img src="{% static 'img/button-02.png' %}">
-                        </a>
-                    </div>
-                    <div class="col-lg-6 d-none d-lg-block text-center" style="padding-left: 6% !important;">
-                        <img class="img-fluid w-lg-55p mb-lg-5p" src="{% static 'img/01-home/home-image-13.png' %}">
-                        <ul>
-                            <li>Digital Invites and RSVPs</li>
-                            <li>Multiple Admin Accounts</li>
-                            <li>Unlimited Photo Storage</li>
-                            <li>Free Website Hosting</li>
-                            <li>Daily Technical Support</li>
-                        </ul>
-                        <a class="button-orange" href="">
-                            <p class="font-white">Sounds Good!</p>
-                            <img src="{% static 'img/button-01.png' %}">
-                        </a>
-                    </div>
-                    <div class="col-lg-12 d-block d-lg-none">
-                        <div class="one-carousel owl-theme">
-                            <div class="item text-center">
-                                <img class="img-fluid ma-m w-lg-70p mb-lg-5p" src="{% static 'img/01-home/home-image-12.png' %}">
-                                <ul>
-                                    <li>Planning Dashboard</li>
-                                    <li>Wedding Website</li>
-                                    <li>Mobile App</li>
-                                    <li>Cover Style Gallery</li>
-                                    <li>Unlimited Guest Accounts</li>
-                                </ul>
-                                <a class="button-orange-line" href="">
-                                    <p class="font-orange">Interesting!</p>
-                                    <img src="{% static 'img/button-02.png' %}">
-                                </a>
-                            </div>
-                            <div class="item text-center">
-                                <img class="img-fluid ma-m w-lg-70p mb-lg-5p" src="{% static 'img/01-home/home-image-13.png' %}">
-                                <ul>
-                                    <li>Digital Invites and RSVPs</li>
-                                    <li>Multiple Admin Accounts</li>
-                                    <li>Unlimited Photo Storage</li>
-                                    <li>Free Website Hosting</li>
-                                    <li>Daily Technical Support</li>
-                                </ul>
-                                <a class="button-orange" href="{% url 'Register' %}">
-                                    <p class="font-white">Sounds Good!</p>
-                                    <img src="{% static 'img/button-01.png' %}">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <img class="img-fluid motif move-right-fast" src="{% static 'img/01-home/home-image-14.png' %}">
-                </div>
-            </div>
+            {% include 'shared/partials/price_testimony.html' %}
             {% include 'shared/partials/home_theme.html' %}
         <div class="w-lg-100p h-lg-100vh"></div>
     </div>
-
-
-
-
-
-
-
-    {#<div class="container-fluid p-lg-0">#}
-{#    <div class="row">#}
-{#        <div class="col-lg-12">#}
-{#            <div class="banner" style="background: url({% static 'img/background.jpg' %})">#}
-{#                <div class="brief">#}
-{#                    {% include 'search/snippets/search.html' %}#}
-{#                    <h1 class="jumbotron-heading" style="color: white;">Reservasi Dulu</h1>#}
-{#                    <div class="text-white"><p style="font-size: 22px;">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p></div>#}
-{#                    <p>#}
-{#                        <a href="{% url 'products:list' %}" class="btn btn-primary my-2">Explore now</a>#}
-{#                        <a href="{% url 'contact' %}" class="btn btn-secondary my-2">Get in touch</a>#}
-{#                    </p>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
 
 {% endblock %}
