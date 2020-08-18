@@ -25,16 +25,13 @@
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Events</a>
-                            </li>
                         </ul>
                     </div>
                  </div>
                 <div class="col-lg-2 text-right">
                     <a class="button-orange" data-toggle="modal" data-target="#editprofile" href="#">
                         <p class="font-white">Edit Profile</p>
-                        <img src="{% static 'img/images/button-01.png' %}">
+                        <img src="{% static 'img/button-01.png' %}">
                     </a>
                 </div>
                 <div class="col-lg-3">
@@ -148,6 +145,42 @@
                 </div>
             </div>
         </div>
-        <div class="w-lg-100p h-lg-115vh"></div>
     </div>
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row">
+                        <div class="col-lg-6 pb-lg-35 text-center">
+                            <a href="templates-example.html">
+                                <div class="box mb-lg-10"></div>
+                                <h5 class="font-darkgrey"><span>New Year Eve 2020</span></h5>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 pb-lg-35 text-center">
+                            <a href="templates-example.html">
+                                <div class="box mb-lg-10"></div>
+                                <h5 class="font-darkgrey"><span>Happy Hour</span></h5>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 pb-lg-35 text-center">
+                            <a href="templates-example.html">
+                                <div class="box mb-lg-10"></div>
+                                <h5 class="font-darkgrey"><span>Yoga on Tap</span></h5>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 pb-lg-35 text-center">
+                            <a href="templates-example.html">
+                                <div class="box mb-lg-10"></div>
+                                <h5 class="font-darkgrey"><span>Isabella Birthday</span></h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-lg-100p h-lg-115vh"></div>
 {% endblock %}
