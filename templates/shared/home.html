@@ -272,39 +272,7 @@
                     <img class="img-fluid motif move-right-fast" src="{% static 'img/01-home/home-image-14.png' %}">
                 </div>
             </div>
-        <!-- Section Template -->
-        <div class="container-fluid pos-rel pt-lg-10p pb-lg-15p pl-lg-10p pr-lg-10p home-template">
-            <div class="row">
-                <div class="col-lg-12 pb-lg-50 text-center">
-                    <h2>Choose your <span>template</span></h2>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <a href="/b/b1/">test</a>
-                    <div class="box" style="background: #f8b133;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #20ac6b;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #43cdac;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #eb4568;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #53146c;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #1d1d1b;"></div>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <a class="button-orange" href="">
-                        <p class="font-white">More options</p>
-                        <img src="{% static 'img/button-01.png' %}">
-                    </a>
-                </div>
-            </div>
-        </div>
+            {% include 'shared/partials/home_theme.html' %}
         <div class="w-lg-100p h-lg-100vh"></div>
     </div>
 
