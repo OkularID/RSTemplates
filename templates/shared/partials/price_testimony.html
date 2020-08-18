@@ -16,10 +16,17 @@
                     <li>Cover Style Gallery</li>
                     <li>Unlimited Guest Accounts</li>
                 </ul>
-                <a class="button-orange-line" href="">
-                    <p class="font-orange">Interesting!</p>
-                    <img src="{% static 'img/button-02.png' %}">
-                </a>
+                {% if user.is_authenticated %}
+                    <a class="button-orange-line" href="{% url 'account' %}">
+                        <p class="font-orange">Interesting!</p>
+                        <img src="{% static 'img/button-02.png' %}">
+                    </a>
+                {% else %}
+                    <a class="button-orange-line" href="{% url 'register' %}">
+                        <p class="font-orange">Interesting!</p>
+                        <img src="{% static 'img/button-02.png' %}">
+                    </a>
+                {% endif %}
             </div>
             <div class="col-lg-6 d-none d-lg-block text-center" style="padding-left: 6% !important;">
                 <img class="img-fluid w-lg-55p mb-lg-5p" src="{% static 'img/01-home/home-image-13.png' %}">
@@ -30,10 +37,17 @@
                     <li>Free Website Hosting</li>
                     <li>Daily Technical Support</li>
                 </ul>
-                <a class="button-orange" href="">
-                    <p class="font-white">Sounds Good!</p>
-                    <img src="{% static 'img/button-01.png' %}">
-                </a>
+                {% if user.is_authenticated %}
+                    <a class="button-orange" href="{% url 'wedding_page' %}">
+                        <p class="font-white">Sounds Good!</p>
+                        <img src="{% static 'img/button-01.png' %}">
+                    </a>
+                {% else %}
+                    <a class="button-orange" href="{% url 'register' %}">
+                            <p class="font-white">Sounds Good!</p>
+                        <img src="{% static 'img/button-01.png' %}">
+                    </a>
+                {% endif %}
             </div>
 {#            <div class="col-lg-12 d-block d-lg-none">#}
 {#                <div class="one-carousel owl-theme">#}

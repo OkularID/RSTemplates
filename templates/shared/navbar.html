@@ -1,12 +1,13 @@
 {% url 'home' as home_url %}
 {% url 'contact' as contact_url %}
 {% url 'products:list' as product_list_url %}
-{% url 'Login' as login_url %}
-{% url 'Account' as account_url %}
-{% url 'Logout' as logout_url %}
-{% url 'Register' as register_url %}
+{% url 'login' as login_url %}
+{% url 'account' as account_url %}
+{% url 'logout' as logout_url %}
+{% url 'register' as register_url %}
 {% url 'about' as about_url %}
 {% url 'tour' as tour_url %}
+{% url 'faq' as faq_url %}
 {% url 'why' as why_url %}
 {% url 'event_create' as create_event %}
 {% url 'wedding_create' as create_wedding %}
@@ -37,6 +38,7 @@
                                 </ul>
                             </li>
                             <li><a href="{{contact_url}}">Contact Us</a></li>
+                            <li><a href="{{faq_url}}">Faq</a></li>
 {#                            {% if request.user.is_authenticated %}#}
 {#                                <li><a href="{{ account_url }}">Account</a></li>#}
 {#                            {% endif %}#}
