@@ -5,8 +5,21 @@
                 <div class="col-lg-12 pb-lg-50 text-center">
                     <h2>Choose your <span>template</span></h2>
                 </div>
+
+                {% for i in themes %}
+                    <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
+                        <a href="{{ i.theme_ur }}">
+                            {{ x.theme_name }}
+                            <div class="box" style="background: #f8b133;"></div>
+                        </a>
+                    </div>
+                {% endfor %}
+
                 <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #f8b133;"></div>
+                    <a href="/themes/preview/dylan-rose/">
+                        <div class="box" style="background: url({% static 'img/thumbnails/Birthday_Aaron.jpg' %})">
+                        </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
                     <a href="/">
@@ -27,7 +40,7 @@
                     <div class="box" style="background: #1d1d1b;"></div>
                 </div>
                 <div class="col-lg-12 text-center">
-                    <a class="button-orange" href="">
+                    <a class="button-orange" href="/birthday">
                         <p class="font-white">More options</p>
                         <img src="{% static 'img/button-01.png' %}">
                     </a>
