@@ -219,6 +219,7 @@
   #navigation a.getstarted,
   #navigation a.login{
     display: inline-block;
+    margin-right: 10px;
     margin-top: 10px;
   }
   #navigation a.login{margin-right: 10px;}
