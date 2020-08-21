@@ -1,14 +1,14 @@
 {% url 'home' as home_url %}
-{% url 'contact' as contact_url %}
+{#{% url 'contact' as contact_url %}#}
 {% url 'products:list' as product_list_url %}
 {% url 'login' as login_url %}
 {% url 'account' as account_url %}
 {% url 'logout' as logout_url %}
 {% url 'register' as register_url %}
-{% url 'about' as about_url %}
-{% url 'tour' as tour_url %}
-{% url 'faq' as faq_url %}
-{% url 'why' as why_url %}
+{#{% url 'about' as about_url %}#}
+{#{% url 'tour' as tour_url %}#}
+{#{% url 'faq' as faq_url %}#}
+{#{% url 'why' as why_url %}#}
 {% url 'event_create' as create_event %}
 {% url 'wedding_create' as create_wedding %}
 {% url 'birthday_create' as create_birthday %}
@@ -21,24 +21,25 @@
     <nav id="navigation" class="fadein">
         <div class="container-fluid pt-lg-20 pb-lg-20 pl-lg-5p pr-lg-5p">
             <div class="row">
+                {% with url_name=request.resolver_match.url_name %}
                 <div class="col-lg-3 text-center">
                     <a href="{{home_url}}"><img class="logo" src="{% static 'img/logo.png' %}" alt="reservasidulu"></a>
                 </div>
                 <div class="col-lg-6">
                     <div class="menu">
                         <ul>
-                            <li><a href="{{why_url}}">Why Us?</a></li>
-                            <li><a href="{{tour_url}}">Tour</a></li>
-                            <li>
+                            <li class="nav_custom{% if url_name == 'why' %} active {% endif %}"><a href="{% url 'why' %}">Why Us?</a></li>
+                            <li class="nav_custom{% if url_name == 'tour' %} active {% endif %}"><a href="{% url 'tour' %}">Tour</a></li>
+                            <li class="nav_custom{% if url_name == 'birthday' %} active {% elif url_name == 'event' %} active {% elif url_name == 'wedding_page' %} active {% endif %}">
                                 <a href="#">Templates</a>
                                 <ul>
-                                    <li><a href="{% url 'birthday' %}">Birthday</a></li>
-                                    <li><a href="{% url 'event' %}">Event</a></li>
+                                    <li class="nav_custom{% if url_name == 'birthday' %} active {% endif %}"><a href="{% url 'birthday' %}">Birthday</a></li>
+                                    <li class="nav_custom{% if url_name == 'event' %} active {% endif %}"><a href="{% url 'event' %}">Event</a></li>
                                     <li><a href="{% url 'wedding_page' %}">Wedding</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{contact_url}}">Contact Us</a></li>
-                            <li><a href="{{faq_url}}">Faq</a></li>
+                            <li class="nav_custom{% if url_name == 'contact' %} active {% endif %}"><a href="{% url 'contact' %}">Contact Us</a></li>
+                            <li class="nav_custom{% if url_name == 'faq' %} active {% endif %}"><a href="{% url 'faq' %}">Faq</a></li>
 {#                            {% if request.user.is_authenticated %}#}
 {#                                <li><a href="{{ account_url }}">Account</a></li>#}
 {#                            {% endif %}#}
@@ -53,7 +54,7 @@
                         </a>
                         <a class="button-orange login" href="{{ logout_url }}">
                             <p class="font-white">Logout</p>
-                            <img src="{% static 'img/button-01.png' %}">
+                            <img src="{% static 'img/button-02.png' %}">
                         </a>
                     {% else %}
                         <a class="button-orange getstarted" href="{{ register_url }}">
@@ -62,10 +63,11 @@
                         </a>
                         <a class="button-orange login" href="{{ login_url }}">
                             <p class="font-white">Login</p>
-                            <img src="{% static 'img/button-01.png' %}">
+                            <img src="{% static 'img/button-02.png' %}">
                         </a>
                     {% endif %}
                 </div>
+                {% endwith %}
             </div>
         </div>
     </nav>
