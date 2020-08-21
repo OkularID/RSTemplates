@@ -42,7 +42,7 @@
                 <div class="row d-lg-none pt-3">
                     <div class="col-12 text-center">
                         <a class="logo" href="">
-                            <img class="img-fluid" src="images/logo.png" />
+                            <img class="img-fluid" src="{% static 'img/demo/logo.png' %}" />
                         </a>
                     </div>
                     <div class="side-nav">
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img data-aos="fade-up" data-aos-offset="-1400" class="img-fluid w-lg-100p d-none d-lg-block z-index-1 position-relative" src="images/images-02.png" />
+                        <img data-aos="fade-up" data-aos-offset="-1400" class="img-fluid w-lg-100p d-none d-lg-block z-index-1 position-relative" src="{{ x.about_img.url }}" />
                     </div>
                     <div class="col-lg-5 pt-m-20p pb-m-20p pl-m-10p pr-m-10p pt-lg-10p brief">
                         <i>Classically Elegant Wedding</i>
@@ -131,7 +131,7 @@
                             <div class="icon">
                                 <div class="line-white boxc l"></div>
                                 <div class="line-white boxc r"></div>
-                                <img class="img-fluid" src="images/icon-01.png" />
+                                <img class="img-fluid" src="{% static 'img/demo/icon-01.png' %}" />
                             </div>
                             <h6>
                                 {{ x.ceremony_location }}
@@ -158,7 +158,7 @@
                             <div class="icon">
                                 <div class="line-grey boxc l"></div>
                                 <div class="line-grey boxc r"></div>
-                                <img class="img-fluid" src="images/icon-02.png" />
+                                <img class="img-fluid" src="{% static 'img/demo/icon-02.png' %}" />
                             </div>
                             <h6>
                                 {{ x.reception_location }}
@@ -181,7 +181,7 @@
             <div class="container-fluid pb-m-0 pl-m-0 pr-m-0 pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p bg-lightpink">
                 <div class="row">
                     <div class="motif d-none d-lg-block">E&N</div>
-                    <img class="img-fluid motif2" src="images/motif-02.png" />
+                    <img class="img-fluid motif2" src="{% static 'img/demo/motif-02.png' %}" />
                     <div class="col-lg-6 pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p">
                         <h2 data-aos="fade-right" data-aos-offset="-1600">
 
@@ -223,7 +223,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-5 px-lg-0 d-none d-lg-block">
-                        <img class="img-fluid w-lg-100p" src="images/images-09.png" />
+                        <img class="img-fluid w-lg-100p" src="{% static 'img/demo/images-09.png' %}" />
                         <div class="boxc w-lg-80p text-center">
                             <h2 data-aos="fade-right" data-aos-offset="-1500">
                                 We can’t wait<br />
@@ -280,11 +280,10 @@
                         <p>All Rights Reserved © This website is made by <b>Reservasi Dulu</b></p>
                     </div>                
                     <div class="col-12 mtext-center col-lg-4 text-right">
-                        <a href="" class="button-footer">Share</a>
+{#                        <a href="" class="button-footer">Share</a>#}
+{#                        <a href="{% url 'emma_norman_update' x.site_url %}" class="button-footer">Edit</a>#}
+                        <a href="" class="button-footer">Choose Your Themes</a>
 
-                            <a href="{% url 'emma_norman_update' x.site_url %}" class="button-footer">Edit</a>
-                            <a href="" class="button-footer">Delete</a>
-                        
                     </div>
                 </div>
             </div>
