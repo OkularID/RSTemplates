@@ -4,36 +4,70 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <div class="container-fluid pos-rel pt-lg-15p pb-lg-25p pl-lg-10p pr-lg-10p">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin my-5">
-          <div class="card-body">
-            <h5 class="card-title text-center">Sign In</h5>
+    <style>
+    .form .btn-form-orange {
+        background: url(/static/img/05-contact-us/contactus-button.png)
+    }
+    </style>
 
-            <form class="form-signin" method="post" enctype="multipart/form-data">
-              <div class="form-label-group">
-                 {% csrf_token %}
-                  {{form | crispy }}
-              </div>
-
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Remember password</label>
-              </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
-                <div>
-                    <a href="{% url 'password_reset' %}">Forgot Password?</a>
+        <div class="container-fluid pos-rel pt-lg-15p pb-lg-15p pl-lg-10p pr-lg-10p login-form">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-wrapper">
+                        <h3 class="mb-lg-10 text-center"><span>Log</span> In</h3>
+                        <hr class="mb-lg-30">
+                        <form class="mb-lg-30" method="post" enctype="multipart/form-data">
+                                 {% csrf_token %}
+                                  {{form | crispy }}
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input">
+                                <label class="form-check-label">Remember Password</label>
+                            </div>
+                            <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                            <div class="col-lg-12 text-center">
+                                <input class="btn-form-orange" style="background:url({% static 'img/05-contact-us/contactus-button.png' %}); " type="submit" value="LOG IN">
+                            </div>
+                        </form>
+                        <hr>
+                        <p>Don't have an account yet? <a href="{% url 'register' %}">Signup</a> here.</p>
+                    </div>
                 </div>
-              <hr class="my-4">
-                <div>
-                    Don't have an account yet? <a href="{% url 'register' %}">signup</a> here
-                </div>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+
+
+
+{#  <div class="container-fluid pos-rel pt-lg-15p pb-lg-25p pl-lg-10p pr-lg-10p">#}
+{#    <div class="row">#}
+{#      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">#}
+{#        <div class="card card-signin my-5">#}
+{#          <div class="card-body">#}
+{#            <h5 class="card-title text-center">Sign In</h5>#}
+{##}
+{#            <form class="form-signin" method="post" enctype="multipart/form-data">#}
+{#              <div class="form-label-group">#}
+{#                 {% csrf_token %}#}
+{#                  {{form | crispy }}#}
+{#              </div>#}
+{##}
+{#              <div class="custom-control custom-checkbox mb-3">#}
+{#                <input type="checkbox" class="custom-control-input" id="customCheck1">#}
+{#                <label class="custom-control-label" for="customCheck1">Remember password</label>#}
+{#              </div>#}
+{#              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>#}
+{#                <div>#}
+{#                    <a href="{% url 'password_reset' %}">Forgot Password?</a>#}
+{#                </div>#}
+{#              <hr class="my-4">#}
+{#                <div>#}
+{#                    Don't have an account yet? <a href="{% url 'register' %}">signup</a> here#}
+{#                </div>#}
+{#            </form>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+
 <div class="w-lg-100p h-lg-100vh"></div>
 {% endblock %}

@@ -1025,7 +1025,7 @@
   .account-info .profile-head .nav-tabs a.nav-link:hover,
   #myTabContent #profile a:hover h5{color: #ffb64d !important;}
   .account-info .profile-head .nav-tabs .nav-link.active{border-bottom: 2px solid #ffb64d;}
-  #myTabContent{margin-top: -20vh;}
+  #myTabContent{margin-top: -15vh;}
   #myTabContent #home span{float: right;}
   #myTabContent ul{padding-left: 15px;}
   #myTabContent .col-lg-7{padding-left: 0;}

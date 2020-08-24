@@ -65,7 +65,7 @@
                                     <span>:</span>
                                 </div>
                                 <div class="col-lg-9">
-                                    <p>{{ data_user.first_name }}</p>
+                                    <p>{{ user.first_name }}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -74,7 +74,7 @@
                                     <span>:</span>
                                 </div>
                                 <div class="col-lg-9">
-                                    <p>{{ data_user.last_name }}</p>
+                                    <p>{{ user.last_name }}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -83,42 +83,42 @@
                                     <span>:</span>
                                 </div>
                                 <div class="col-lg-9">
-                                    <p>{{ data_user.email }}</p>
+                                    <p>{{ user.email }}</p>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <label>Phone</label>
-                                    <span>:</span>
-                                </div>
-                                <div class="col-lg-9">
-                                    <p>{{ data_user.phone_number }}</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <label>Birthday</label>
-                                    <span>:</span>
-                                </div>
-                                <div class="col-lg-9">
-                                    <p>{{ data_user.birth }}</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <label>Address</label>
-                                    <span>:</span>
-                                </div>
-                                <div class="col-lg-9">
-                                    <p>{{ data_user.zip_code }}</p>
-                                </div>
-                            </div>
+{#                            <div class="row">#}
+{#                                <div class="col-lg-3">#}
+{#                                    <label>Phone</label>#}
+{#                                    <span>:</span>#}
+{#                                </div>#}
+{#                                <div class="col-lg-9">#}
+{#                                    <p>{{ data_user.phone_number }}</p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="row">#}
+{#                                <div class="col-lg-3">#}
+{#                                    <label>Birthday</label>#}
+{#                                    <span>:</span>#}
+{#                                </div>#}
+{#                                <div class="col-lg-9">#}
+{#                                    <p>{{ data_user.birth }}</p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="row">#}
+{#                                <div class="col-lg-3">#}
+{#                                    <label>Address</label>#}
+{#                                    <span>:</span>#}
+{#                                </div>#}
+{#                                <div class="col-lg-9">#}
+{#                                    <p>{{ data_user.zip_code }}</p>#}
+{#                                </div>#}
+{#                            </div>#}
                         </div>
                         {#shit#}
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row">
                                     <div class="col-lg-6 pb-lg-35 text-center">
-                                        <a href="#">
+                                        <a href="/themes/preview/aaron/">
                                             <img class="img_acc" src="{% static 'img/thumbnails/Birthday_Aaron.jpg' %}" alt="">
                                             <h5 class="font-darkgrey"><span>My first birthday</span></h5>
                                         </a>
