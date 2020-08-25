@@ -31,7 +31,7 @@
                             <li class="nav_custom{% if url_name == 'why' %} active {% endif %}"><a href="{% url 'why' %}">Why Us?</a></li>
                             <li class="nav_custom{% if url_name == 'tour' %} active {% endif %}"><a href="{% url 'tour' %}">Tour</a></li>
                             <li class="nav_custom{% if url_name == 'birthday' %} active {% elif url_name == 'event' %} active {% elif url_name == 'wedding_page' %} active {% endif %}">
-                                <a href="#">Templates</a>
+                                <a href="{% url 'all_temp' %}">Templates</a>
                                 <ul>
                                     <li class="nav_custom{% if url_name == 'birthday' %} active {% endif %}"><a href="{% url 'birthday' %}">Birthday</a></li>
                                     <li class="nav_custom{% if url_name == 'event' %} active {% endif %}"><a href="{% url 'event' %}">Event</a></li>

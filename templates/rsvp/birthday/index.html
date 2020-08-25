@@ -24,51 +24,20 @@
         <!-- Section Content -->
         <div id="templates-content" class="container-fluid pos-rel pt-lg-10p pb-lg-15p pl-lg-5p pr-lg-5p templates-content slideanim">
             <div class="row">
+                <style>
+                    ._thumb {
+                        height: 100%;
+                        width: 100%;
+                    }
+                </style>
+                {% for x in preview %}
                 <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
+                    <a href="{{ x.theme_url }}"><div class="box">
+                        <img class="_thumb" src="{{ x.theme_img.url }}" alt="">
+                    </div></a>
                 </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
+                {% endfor %}
+
             </div>
         </div>
         <div class="w-lg-100p h-lg-115vh"></div>
