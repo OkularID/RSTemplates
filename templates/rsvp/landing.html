@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block content %}
     <title>{% block title %} All Templates | ReservasiDulu {% endblock %}</title>
         <!-- Main -->
@@ -87,26 +88,11 @@
                 </style>
                 {% for bitch in x %}
                     <div class="col-lg-4 pb-lg-35">
-                        <a href="{{ bitch.theme_url }}"><div class="box">
+                        <a href="/themes/preview/{{ bitch.theme_url }}"><div class="box">
                             <img class="_thumb" src="{{ bitch.theme_img.url }}" alt="">
                         </div></a>
                     </div>
                 {% endfor %}
-{#                <div class="col-lg-4 pb-lg-35">#}
-{#                    <a href="templates-example.html"><div class="box"></div></a>#}
-{#                </div>#}
-{#                <div class="col-lg-4 pb-lg-35">#}
-{#                    <a href="templates-example.html"><div class="box"></div></a>#}
-{#                </div>#}
-{#                <div class="col-lg-4 pb-lg-35">#}
-{#                    <a href="templates-example.html"><div class="box"></div></a>#}
-{#                </div>#}
-{#                <div class="col-lg-4 pb-lg-35">#}
-{#                    <a href="templates-example.html"><div class="box"></div></a>#}
-{#                </div>#}
-{#                <div class="col-lg-4 pb-lg-35">#}
-{#                    <a href="templates-example.html"><div class="box"></div></a>#}
-{#                </div>#}
             </div>
         </div>
         <!-- Section Suggest -->
@@ -122,7 +108,7 @@
                         <div class="w-lg-85p">
                             <p>We are delighted to hear about your event, tell us your suggestion of another category event that you want us to make! But keep in mind, we will deliver our version of website design.</p>
                         </div>
-                        <a class="button-orange" href="templates-wedding.html">
+                        <a class="button-orange" href="{% url 'contact' %}">
                             <p class="font-white">Suggest an Event</p>
                             <img src="{% static 'img/04-templates/button-03.png' %}">
                         </a>
