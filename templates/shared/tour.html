@@ -12,7 +12,7 @@
                     <div class="col-lg-3 pl-lg-0 pr-lg-0">
                         <div class="boxv sec1">
                             <h2 class="font-white">
-                                <span>Receiving</span><br>is as important<br>as giving</span>
+                                {{ x.section_1_head | safe }}
                             </h2>
                         </div>
                     </div>
@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-lg-3 pl-lg-0 pr-lg-0">
                         <div class="boxv sec2 font-white">
-                            <p>We believe that.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                            <p>{{ x.section_1_subhead | safe }}</p>
                         </div>
                     </div>
                 </div>
@@ -34,20 +34,20 @@
                         <div class="content" style="background: url({% static 'img/03-tour/template.jpg' %});"></div>
                         <!-- <div class="content"><iframe src="https://okular.co.id/"></iframe></div> -->
                         <div class="box1">
-                            <h4><span>Your</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                            <h4>{{ x.section_2_title | safe }}</h4>
+                            <p>{{ x.section_2_text | safe }}</p>
                         </div>
                         <div class="box2">
-                            <h4><span>Date, place and other info about your event</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                            <h4>{{ x.section_3_title | safe }}</h4>
+                            <p>{{ x.section_3_text | safe }}</p>
                         </div>
                         <div class="box3">
-                            <h4><span>Additional information ?</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                            <h4>{{ x.section_4_title | safe }}</h4>
+                            <p>{{ x.section_4_text | safe }}</p>
                         </div>
                         <div class="box4">
-                            <h4><span>RSVP</span></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut</p>
+                            <h4>{{ x.section_5_title | safe }}</h4>
+                            <p>{{ x.section_5_text | safe }}</p>
                         </div>
                     </div>
                 </div>
@@ -63,26 +63,45 @@
                         <div class="boxv">
                             <div class="w-lg-80p">
                                 <h4 class="font-montserrat-italic">Easy to use</h4>
-                                <h3 class="mb-lg-30"><span>RSVP System</span></h3>
+                                <h3 class="mb-lg-30">{{ x.section_5_title | safe }}</h3>
                             </div>
                             <ul id="nav-box" class="mb-lg-30 fadein">
-                                <a class="nav-tab" href="">
-                                    <li><div class="numb">1</div></li>
+                                <a class="nav-tab" target="steps1">
+                                     <li class="active"><div class="numb">2</div></li>
                                 </a>
-                                <a class="nav-tab" href="">
+                                <a class="nav-tab" target="steps2">
                                     <li class="active"><div class="numb">2</div></li>
                                 </a>
-                                <a class="nav-tab" href="">
-                                    <li><div class="numb">3</div></li>
+                                <a class="nav-tab" target="steps3">
+                                    <li class="active"><div class="numb">3</div></li>
                                 </a>
-                                <a class="nav-tab" href="">
-                                    <li><div class="numb">4</div></li>
+                                <a class="nav-tab" target="steps4">
+                                    <li class="active"><div class="numb">4</div></li>
                                 </a>
                             </ul>
-                            <div class="tabs">
-                                <div class="w-lg-80p">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                            <div class="tabs" id="tab-steps1">
+                                <div class="w-lg-80p slideanim">
+                                    <p>{{ x.step1 }}</p>
                                 </div>
+                                <div class="image" style="background: url({{ x.img1.url }});"></div>
+                            </div>
+                            <div class="tabs" id="tab-steps2">
+                                <div class="w-lg-80p slideanim">
+                                    <p>{{ x.step2 }}</p>
+                                </div>
+                                <div class="image" style="background: url({{ x.img2.url }});"></div>
+                            </div>
+                            <div class="tabs" id="tab-steps3">
+                                <div class="w-lg-80p slideanim">
+                                    <p>{{ x.step3 }}</p>
+                                </div>
+                                <div class="image" style="background: url({{ x.img3.url }});"></div>
+                            </div>
+                            <div class="tabs" id="tab-steps4">
+                                <div class="w-lg-80p slideanim">
+                                    <p>{{ x.step4 }}</p>
+                                </div>
+                                <div class="image" style="background: url({{ x.img4.url }});"></div>
                             </div>
                         </div>
                     </div>
@@ -101,9 +120,9 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="boxv">
-                            <h3 class="mb-lg-15"><span>Get started now!</span></h3>
+                            <h3 class="mb-lg-15">{{ x.last_section_title | safe }}</h3>
                             <div class="mb-lg-40 pl-lg-10">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                                <p>{{ x.last_section_text }}</p>
                             </div>
                             <a class="button-orange" href="">
                                 <p class="font-white">Show Me The Templates</p>

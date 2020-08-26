@@ -223,6 +223,7 @@
     margin-top: 10px;
   }
   #navigation a.login{margin-right: 10px;}
+  #navigation a.login:hover p{color:#f8b133 !important;}
   #navigation .getstarted p,
   #navigation .login p{
     margin-top: 13px;
