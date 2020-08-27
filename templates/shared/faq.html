@@ -28,28 +28,27 @@
                 <div class="col-lg-12 pl-lg-0 pr-lg-0">
                     {# Tab title goes here #}
                     <ul class="nav nav-tabs" role="tablist">
-                        {% for i in x %}
+{#                        {% for i in x %}#}
                             <li class="nav-item">
-                                <a class="nav-link" href="#fc-{{ i.name }}" role="tab" data-toggle="tab">{{ i.name }}</a>
+                                <a class="nav-link" href="#fc-Account" role="tab" data-toggle="tab">Account</a>
                             </li>
-                        {% endfor %}
+{#                        {% endfor %}#}
 
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="#fc-transaction" role="tab" data-toggle="tab">Transaction</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="#fc-template" role="tab" data-toggle="tab">Template</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="#fc-payment" role="tab" data-toggle="tab">Payment</a>#}
-{#                        </li>#}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#fc-Transaction" role="tab" data-toggle="tab">Transaction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#fc-Templates" role="tab" data-toggle="tab">Template</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#fc-Payment" role="tab" data-toggle="tab">Payment</a>
+                        </li>
                     </ul>
 
                     {# content goes here #}
                     <div class="tab-content">
                         {% for i in x %}
                         <div role="tabpanel" class="tab-pane animated fadeInUp" id="fc-{{ i.name }}">
-                            <h1>Test {{ i.name }}</h1>
                             <div class="container-fluid pt-lg-10p pb-lg-10p pl-lg-10p pr-lg-10p">
                                 <div class="row">
                                         <div class="col-lg-5">

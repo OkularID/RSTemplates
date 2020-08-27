@@ -1,4 +1,15 @@
   body{position: relative;}
+  /*new*/
+  @font-face{
+    font-family: "Caveat Bold";
+    src: url(../fonts/Caveat-Bold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Caveat Regular";
+    src: url(../fonts/Caveat-Regular.ttf) format("truetype");
+  }
+  .font-skyblue,.font-skyblue p,.font-skyblue a{color: #92dce5 !important;}
+  /*end new*/
   @font-face{
     font-family: "Montserrat Bold";
     src: url(../fonts/Montserrat-Bold.ttf) format("truetype");

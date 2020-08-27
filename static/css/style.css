@@ -214,7 +214,7 @@
     overflow: hidden;
     position: absolute;
     z-index: 1;
-    margin: 15px auto 0;
+    margin: 10px auto 0;
     padding: 0;
     left: 0;
     width: 100%;
@@ -225,6 +225,7 @@
   #navigation .menu ul li .submenu .container-fluid{padding: 35px 5%;}
   #navigation .menu ul li .submenu h2{
     font-family: "Montserrat Bold";
+    font-size: 35px !important;
     color: #fff;
   }
   #navigation .menu ul li .submenu h5 span{
@@ -258,7 +259,10 @@
     display: block;
     padding: 3px 0;
   }
-  #navigation .menu ul li .submenu ul.navtemplates li a{color: #fff;}
+  #navigation .menu ul li .submenu ul.navtemplates li a{
+    font-size: 16px !important;
+    color: #fff;
+  }
   #navigation .menu ul li .submenu ul.navtemplates li a:hover,
   #navigation .menu ul li .submenu ul.navtemplates li a:active,
   #navigation .menu ul li .submenu ul.navtemplates li a.active{
@@ -407,9 +411,9 @@
     width: 25% !important;
     outline: none;
   }
-  .home-banner .sec1,
-  .home-banner .sec2,
-  .home-banner .sec3{
+  .home-banner .sec-1,
+  .home-banner .sec-2,
+  .home-banner .sec-3{
     overflow: hidden;
     width: 100%;
     height: 100vh;
@@ -423,43 +427,52 @@
     width: 100%;
   }
   .home-banner .box-image .image{width: 80%;}
-  .home-banner .sec-3 .box-image .image{width: 85%;}
+  .home-banner .sec-1 .box-image .image{width: 100%;}
   .home-banner .sec-1 .box-image .motif-01{
+    position: absolute;
+    bottom: -5%;
+    right: -100%;
+    width: 25%;
+  }
+  .home-banner .sec-2 .box-image .motif-01{
     position: absolute;
     top: 5%;
     right: -80%;
   }
-  .home-banner .sec-1 .box-image .motif-02{
+  .home-banner .sec-2 .box-image .motif-02{
     position: absolute;
     bottom: 5%;
     right: -94%;
   }
-  .home-banner .sec-2 .box-image .motif-01{
+  .home-banner .sec-3 .box-image .motif-01{
     position: absolute;
     bottom: -50%;
     right: -90%;
-  }
-  .home-banner .sec-3 .box-image .motif-01{
-    position: absolute;
-    bottom: 0%;
-    right: -100%;
   }
   .home-banner .box-desc{
     display: block;
     position: fixed;
     top: 35%;
-    right: 10%;
+    left: 10%;
     width: 550px;
     transition: 50s;
   }
+  .home-banner .sec-1 .box-desc p,
+  .home-banner .sec-2 .box-desc p,
+  .home-banner .sec-3 .box-desc p{
+    font-family: "Caveat Regular";
+    font-size: 32px !important;
+    line-height: 32px !important;
+    color: #ffb64d;
+  }
   /* Home Banner Section 1 */
-  .image-setup{
-    position:relative;
+  .image-setup-1{
+    position: relative;
     height: 100vh;
     opacity: 0;
     transition: opacity .5s .25s ease-out;
   }
-  .image-setup:after{
+  .image-setup-1:after{
     bottom:0;
     content:"";
     left:0;
@@ -467,13 +480,13 @@
     right:0;
     top:0;
   }
-  .image-animation{
+  .image-animation-1{
     z-index:10;
     position:fixed;
     margin:0;
-    bottom:8%;
-    left:50%;
-    width:50%;
+    bottom: 9%;
+    left: 47.5%;
+    width: 49%;
     color:#19292e;
     font-size:120px !important;
     line-height:1;
@@ -492,19 +505,19 @@
     -webkit-transform: translate(-100%, calc(-50% + 1em));
     transform: translate(-100%, calc(-50% + 1em));
   }
-  .image-setup.is-visible{opacity: 1;}
-  .is-visible .image-animation{
+  .image-setup-1.is-visible{opacity: 1;}
+  .is-visible .image-animation-1{
     -webkit-transform: translate(-100%, -50%);
     transform: translate(-100%, -50%);
   }
-  .desc-setup{
+  .desc-setup-1{
     position:relative;
     margin-top: -100vh;
     height: 100vh;
     opacity: 0;
     transition: opacity .5s .25s ease-out;
   }
-  .desc-setup:after{
+  .desc-setup-1:after{
     bottom:0;
     content:"";
     left:0;
@@ -512,7 +525,7 @@
     right:0;
     top:0;
   }
-  .desc-animation{
+  .desc-animation-1{
     z-index:10;
     position:fixed;
     margin:0;
@@ -536,8 +549,8 @@
     -webkit-transform: translate(80%, calc(-50%));
     transform: translate(80%, calc(-50%));
   }
-  .desc-setup.is-visible{opacity: 1;}
-  .is-visible .desc-animation{
+  .desc-setup-1.is-visible{opacity: 1;}
+  .is-visible .desc-animation-1{
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
@@ -562,8 +575,8 @@
     z-index:10;
     position:fixed;
     margin:0;
-    bottom:34%;
-    left:53%;
+    bottom:8%;
+    left:50%;
     width:50%;
     color:#19292e;
     font-size:120px !important;
@@ -653,8 +666,8 @@
     z-index:10;
     position:fixed;
     margin:0;
-    bottom:9%;
-    left:47.5%;
+    bottom:34%;
+    left:53%;
     width:50%;
     color:#19292e;
     font-size:120px !important;
