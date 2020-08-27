@@ -198,23 +198,72 @@
     background-size: 100% 5px;
     transition: .0s;
   }
-  #navigation .menu li:hover ul{display: block;}
-  #navigation .menu ul li ul{
-    display: none;
+    #navigation .menuhov,
+  #navigation .menu,
+  #navigation .menu ul,
+  #navigation .menu ul li{position: unset;}
+  #navigation .menu li:hover .submenu{
+    max-height: 500px;
+    transition: max-height .4s ease-in;
+  }
+  #navigation .menu ul li .submenu{
+    background: url('/static/img/navbar-background.png');
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+    overflow: hidden;
     position: absolute;
     z-index: 1;
-    margin: 7px auto 0;
-    padding: 10px 0 15px;
-    left: -10px;
-    right: 0;
-    width: 130px;
-    text-align: center;
-    background: #fff;
+    margin: 15px auto 0;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    text-align: left;
+    transition: max-height 1s ease-out;
   }
-  #navigation .menu ul li ul li{
+  #navigation .menu ul li .submenu .container-fluid{padding: 35px 5%;}
+  #navigation .menu ul li .submenu h2{
+    font-family: "Montserrat Bold";
+    color: #fff;
+  }
+  #navigation .menu ul li .submenu h5 span{
+    font-size: 16px !important;
+    color: #f8b133;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates{
+    position: absolute;
+    margin: 0 auto;
+    top: -20px;
+    left: 0;
+    right: 9px;
+    width: 120px;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates:before,
+  #navigation .menu ul li .submenu ul.navtemplates:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url('/static/img/navbar-line.png');
+    background-size: 100% 100% !important;
+    width: 2px;
+    height: 100%;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates:after{
+    left: unset;
+    right: 0;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates li{
     display: block;
-    padding: 10px 0 !important;
-    width: 130px;
+    padding: 3px 0;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates li a{color: #fff;}
+  #navigation .menu ul li .submenu ul.navtemplates li a:hover,
+  #navigation .menu ul li .submenu ul.navtemplates li a:active,
+  #navigation .menu ul li .submenu ul.navtemplates li a.active{
+    padding-bottom: 5px;
+    color: #f8b133;
   }
   #navigation a.getstarted,
   #navigation a.login{

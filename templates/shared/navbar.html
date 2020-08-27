@@ -22,23 +22,44 @@
         <div class="container-fluid pt-lg-20 pb-lg-20 pl-lg-5p pr-lg-5p">
             <div class="row">
                 {% with url_name=request.resolver_match.url_name %}
-                <div class="col-lg-3 text-center">
+                <div class="col-lg-3">
                     <a href="{{home_url}}"><img class="logo" src="{% static 'img/logo.png' %}" alt="reservasidulu"></a>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 menuhov">
                     <div class="menu">
                         <ul>
                             <li class="nav_custom{% if url_name == 'why' %} active {% endif %}"><a href="{% url 'why' %}">Why Us?</a></li>
                             <li class="nav_custom{% if url_name == 'tour' %} active {% endif %}"><a href="{% url 'tour' %}">Tour</a></li>
                             <li class="nav_custom{% if url_name == 'birthday' %} active {% elif url_name == 'event' %} active {% elif url_name == 'wedding_page' %} active {% endif %}">
                                 <a href="{% url 'all_temp' %}">Templates</a>
-                                <ul>
-                                    <li class="nav_custom{% if url_name == 'birthday' %} active {% endif %}"><a href="{% url 'birthday' %}">Birthday</a></li>
-                                    <li class="nav_custom{% if url_name == 'event' %} active {% endif %}"><a href="{% url 'event' %}">Event</a></li>
-                                    <li><a href="{% url 'wedding_page' %}">Wedding</a></li>
-                                    <li><a href="#">Free</a></li>
-                                </ul>
+                                <div class="submenu">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <h2>Hi There!</h2>
+                                                <h5><span>Find what you're looking for?</span></h5>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <ul class="navtemplates">
+                                                    <li class="nav_custom{% if url_name == 'birthday' %} active {% endif %}"><a href="{% url 'birthday' %}">Birthday</a></li>
+                                                    <li class="nav_custom{% if url_name == 'event' %} active {% endif %}"><a href="{% url 'event' %}">Event</a></li>
+                                                    <li><a href="{% url 'wedding_page' %}">Wedding</a></li>
+                                                    <li><a href="#">Free</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
+{#                            <li class="nav_custom{% if url_name == 'birthday' %} active {% elif url_name == 'event' %} active {% elif url_name == 'wedding_page' %} active {% endif %}">#}
+{#                                <a href="{% url 'all_temp' %}">Templates</a>#}
+{#                                <ul>#}
+{#                                    <li class="nav_custom{% if url_name == 'birthday' %} active {% endif %}"><a href="{% url 'birthday' %}">Birthday</a></li>#}
+{#                                    <li class="nav_custom{% if url_name == 'event' %} active {% endif %}"><a href="{% url 'event' %}">Event</a></li>#}
+{#                                    <li><a href="{% url 'wedding_page' %}">Wedding</a></li>#}
+{#                                    <li><a href="#">Free</a></li>#}
+{#                                </ul>#}
+{#                            </li>#}
                             <li class="nav_custom{% if url_name == 'faq' %} active {% endif %}"><a href="{% url 'faq' %}">Faq</a></li>
                             <li class="nav_custom{% if url_name == 'contact' %} active {% endif %}"><a href="{% url 'contact' %}">Contact Us</a></li>
 {#                            {% if request.user.is_authenticated %}#}

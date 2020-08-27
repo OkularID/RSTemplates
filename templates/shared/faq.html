@@ -33,6 +33,7 @@
                                 <a class="nav-link" href="#fc-{{ i.name }}" role="tab" data-toggle="tab">{{ i.name }}</a>
                             </li>
                         {% endfor %}
+
 {#                        <li class="nav-item">#}
 {#                            <a class="nav-link" href="#fc-transaction" role="tab" data-toggle="tab">Transaction</a>#}
 {#                        </li>#}
@@ -72,15 +73,16 @@
                                                             <div class="card border-radius-0">
                                                                 <div class="card-header">
                                                                     <a class="card-link collapsed" data-toggle="collapse" href="#howdoisignup3">
-                                                                        How Do I Sign Up? 3
+                                                                        {{ i.sub_title}}
                                                                     </a>
                                                                 </div>
                                                                 <div id="howdoisignup3" class="collapse" data-parent="#faqparent-signuplogintransaction">
                                                                     <div class="card-body">
                                                                         <p>
-                                                                            1. &nbsp&nbsp&nbspSelect the <b>“Log In”</b> button on the top right corner in our website.<br />
-                                                                            2.  &nbsp&nbsp&nbspFill in your email address and password that you already create in <a href="">sign up page.</a><br />
-                                                                            3.  &nbsp&nbsp&nbspClick <b>“Log In”.</b>
+                                                                            {{ i.content | safe }}
+{#                                                                            1. &nbsp&nbsp&nbspSelect the <b>“Log In”</b> button on the top right corner in our website.<br />#}
+{#                                                                            2.  &nbsp&nbsp&nbspFill in your email address and password that you already create in <a href="">sign up page.</a><br />#}
+{#                                                                            3.  &nbsp&nbsp&nbspClick <b>“Log In”.</b>#}
                                                                         </p>
                                                                     </div>
                                                                 </div>
