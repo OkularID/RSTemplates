@@ -1,3 +1,15 @@
+/* Halaman Home */
+.home-template .box{
+    width: 100%;
+    height: 227px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+/* Halaman Why Us */
+#main-whyus .affordablefast .background{top: 40vh;}
+
 .img_acc {
     height: 25vh;
     margin-bottom: 5%;

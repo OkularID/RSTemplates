@@ -309,4 +309,9 @@ $('.faq-sidemenuanim').click(function(){
         scrollTop: $( $(this).attr('href') ).offset().top
     }, 1000);
 });
+$('#faq-content .nav-tabs .nav-item:first .nav-link').addClass('active');
+
+$('#faq-content .tab-content .tab-pane:first').addClass('active');
 // ===============================FAQ PAGE===============================
+
+
