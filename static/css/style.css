@@ -758,7 +758,56 @@
     text-align: center;
   }
   /* Section Invitation */
+  .home-invitation,
+  .home-invitation .container-fluid{overflow: unset !important;}
+  .home-invitation .line{
+    top: unset;
+    bottom: 30%;
+    transform: unset;
+    width: 100%;
+  }
+  .home-invitation .background{
+    margin: 0 auto 10%;
+    width: 70%;
+    height: 16vw;
+  }
+  .home-invitation .image-01{
+    top: 29%;
+    left: 18%;
+    width: 68%;
+  }
+  .home-invitation .image-02{
+    top: 30%;
+    left: 5%;
+    width: 34%;
+  }
+  .home-invitation .image-03{
+    top: 41%;
+    right: 6%;
+    width: 68%;
+  }
   .home-invitation .col-lg-4:hover a{color: #ffb64d !important;}
+  .home-invitation .col-lg-4:hover .home-invitation-card{
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset;
+    transition: all .5s;
+  }
+  .home-invitation .home-invitation-card{
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 80%;
+    height: 60vh;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    transition: all .5s;
+  }
   /* Section Steps */
   .home-steps ul#nav-box{
     padding-left: 0;
@@ -821,6 +870,29 @@
     height: 350px;
   }
   .home-template .button-orange img{width: 230px;}
+  /* Section Free */
+  .home-free .wrap{
+    margin: 0 auto 4%;
+    width: 60%;
+  }
+  .home-free .wrap .title:after{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: url('../images/01-home/home-free-line.png');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+  }
+  .home-free .wrap .desc{
+    float: right;
+    width: 270px;
+  }
+  .home-free .wrap .desc .button-orange img{width: 180px;}
   /* Mobile Home Page*/
   @media screen and (max-width: 846px) {
     #main-home h2,#main-home h3{font-size: 26px !important;}
