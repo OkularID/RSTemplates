@@ -1075,6 +1075,7 @@
   .templates-banner .boxv h5{display: inline-block;}
   .templates-banner .boxv h5:hover{color: #494949 !important;transition: .5s;}
   .templates-banner .boxv img.arrow{width: 6%;}
+  .templates-banner-free .boxv.image.birthday{width: 65%;}
   /* Section Content */
   .templates-content .box,
   #myTabContent .box{
