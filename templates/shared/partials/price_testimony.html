@@ -17,7 +17,7 @@
                     <li>Unlimited Guest Accounts</li>
                 </ul>
                 {% if user.is_authenticated %}
-                    <a class="button-orange-line" href="{% url 'account' %}">
+                    <a class="button-orange-line" href="{% url 'free' %}">
                         <p class="font-orange">Interesting!</p>
                         <img src="{% static 'img/button-02.png' %}">
                     </a>
@@ -38,7 +38,7 @@
                     <li>Daily Technical Support</li>
                 </ul>
                 {% if user.is_authenticated %}
-                    <a class="button-orange" href="{% url 'wedding_page' %}">
+                    <a class="button-orange" href="{% url 'all_temp' %}">
                         <p class="font-white">Sounds Good!</p>
                         <img src="{% static 'img/button-01.png' %}">
                     </a>

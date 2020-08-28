@@ -187,49 +187,49 @@
                 <div class="col-lg-12">
                     <div class="container-fluid pos-rel pl-lg-0 pr-lg-0">
                         <div class="row">
-                            <img class="img-fluid d-none d-lg-block boxc line" src="images/01-home/home-invitation-01.png" />
+                            <img class="img-fluid d-none d-lg-block boxc line" src="{% static 'img/01-home/home-invitation-01.png' %}" />
                             <div class="col-lg-4 mb-m-15p text-center">
-                                <img class="img-fluid d-none d-lg-block background" src="images/01-home/home-invitation-02.png" />
-                                <img class="img-fluid d-none d-lg-block boxc image-01" src="images/01-home/home-invitation-05.png" />
+                                <img class="img-fluid d-none d-lg-block background" src="{% static 'img/01-home/home-invitation-02.png' %}" />
+                                <img class="img-fluid d-none d-lg-block boxc image-01" src="{% static 'img/01-home/home-invitation-05.png' %}" />
                                 <a class="d-none d-lg-block font-darkgrey"><h5><span>Wedding</span></h5></a>
-                                <a class="d-block d-lg-none mb-lg-10" href="templates-wedding.html">
-                                    <img class="img-fluid w-lg-100p w-m-70p" src="images/01-home/home-image-08.png">
+                                <a class="d-block d-lg-none mb-lg-10" href="{% url 'wedding_page' %}">
+                                    <img class="img-fluid w-lg-100p w-m-70p" src="{% static 'img/01-home/home-image-08.png' %}">
                                 </a>
-                                <a class="d-block d-lg-none button-orange" href="templates-wedding.html">
+                                <a class="d-block d-lg-none button-orange" href="{% url 'wedding_page' %}">
                                     <p>Wedding</p>
-                                    <img src="images/button-01.png">
+                                    <img src="{% static 'img/button-01.png' %}">
                                 </a>
-                                <a href="templates-wedding.html">
+                                <a href="{% url 'wedding_page' %}">
                                     <div class="d-none d-lg-block home-invitation-card"></div>
                                 </a>
                             </div>
                             <div class="col-lg-4 mb-m-15p text-center">
-                                <img class="img-fluid d-none d-lg-block background" src="images/01-home/home-invitation-03.png" />
-                                <img class="img-fluid d-none d-lg-block boxc image-02" src="images/01-home/home-invitation-06.png" />
+                                <img class="img-fluid d-none d-lg-block background" src="{% static 'img/01-home/home-invitation-03.png' %}" />
+                                <img class="img-fluid d-none d-lg-block boxc image-02" src="{% static 'img/01-home/home-invitation-06.png' %}" />
                                 <a class="d-none d-lg-block font-darkgrey"><h5><span>Birthday</span></h5></a>
-                                <a class="d-block d-lg-none mb-lg-10" href="templates-birthday.html">
-                                    <img class="img-fluid w-lg-100p w-m-70p" src="images/01-home/home-image-09.png">
+                                <a class="d-block d-lg-none mb-lg-10" href="{% url 'birthday' %}">
+                                    <img class="img-fluid w-lg-100p w-m-70p" src="{% static 'img/01-home/home-image-09.png' %}">
                                 </a>
-                                <a class="d-block d-lg-none button-orange" href="templates-birthday.html">
+                                <a class="d-block d-lg-none button-orange" href="{% url 'birthday' %}">
                                     <p>Birthday</p>
-                                    <img src="images/button-01.png">
+                                    <img src="{% static 'img/button-01.png' %}">
                                 </a>
-                                <a href="templates-birthday.html">
+                                <a href="{% url 'birthday' %}">
                                     <div class="d-none d-lg-block home-invitation-card mid"></div>
                                 </a>
                             </div>
                             <div class="col-lg-4 text-center">
-                                <img class="img-fluid d-none d-lg-block background" src="images/01-home/home-invitation-04.png" />
-                                <img class="img-fluid d-none d-lg-block boxc image-03" src="images/01-home/home-invitation-07.png" />
+                                <img class="img-fluid d-none d-lg-block background" src="{% static 'img/01-home/home-invitation-04.png' %}" />
+                                <img class="img-fluid d-none d-lg-block boxc image-03" src="{% static 'img/01-home/home-invitation-07.png' %}" />
                                 <a class="d-none d-lg-block font-darkgrey"><h5><span>Event</span></h5></a>
-                                <a class="d-block d-lg-none mb-lg-10" href="templates-events.html">
-                                    <img class="img-fluid w-lg-100p w-m-70p" src="images/01-home/home-image-10.png">
+                                <a class="d-block d-lg-none mb-lg-10" href="{% url 'event' %}">
+                                    <img class="img-fluid w-lg-100p w-m-70p" src="{% static 'img/01-home/home-image-10.png' %}">
                                 </a>
-                                <a class="d-block d-lg-none button-orange" href="templates-events.html">
+                                <a class="d-block d-lg-none button-orange" href="{% url 'event' %}">
                                     <p>Event</p>
-                                    <img src="images/button-01.png">
+                                    <img src="{% static 'img/button-01.png' %}">
                                 </a>
-                                <a href="templates-events.html">
+                                <a href="{% url 'event' %}">
                                     <div class="d-none d-lg-block home-invitation-card"></div>
                                 </a>
                             </div>
@@ -318,9 +318,9 @@
                                     <div class="desc">
                                         <p>Yes it’s absolutely okay if you’re not ready! Click the button below to try out our demo account for free!</p>
                                         <div class="col-lg-12 text-center">
-                                            <a class="button-orange" href="templates-wedding.html">
+                                            <a class="button-orange" href="{% url 'free' %}">
                                                 <p class="font-white">I want to try!</p>
-                                                <img src="images/button-01.png">
+                                                <img src="{% static 'img/button-01.png' %}">
                                             </a>
                                         </div>
 
@@ -331,7 +331,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                    <img class="img-fluid w-lg-100p" src="images/01-home/home-free-image-01.png" />
+                    <img class="img-fluid w-lg-100p" src="{% static 'img/01-home/home-free-image-01.png' %}" />
                 </div>
             </div>
         </div>

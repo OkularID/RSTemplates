@@ -883,7 +883,7 @@
     content: '';
     width: 3px;
     height: 100%;
-    background: url('../images/01-home/home-free-line.png');
+    background: url('/static/img/01-home/home-free-line.png');
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: 100% 100% !important;
@@ -1077,17 +1077,27 @@
   .templates-banner .boxv img.arrow{width: 6%;}
   .templates-banner-free .boxv.image.birthday{width: 65%;}
   /* Section Content */
-  .templates-content .box,
-  #myTabContent .box{
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
+  .templatesthumbnail-image{
+    display: block;
+    margin-bottom: 5%;
     width: 100%;
-    height: 35vh;
+    height: 37vh;
+    object-fit: cover;
     border: 1px solid #eaeaea;
-    border-radius: 5px;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,127,1) 0%, rgba(0,212,255,1) 100%);
   }
+  .templatesthumbnail-title,
+  .templatesthumbnail-category{
+    display: block;
+    font-size: 16px !important;
+    line-height: 23px;
+    color: #333333;
+  }
+  .templatesthumbnail-title{
+    margin-bottom: 1%;
+    font-family: "Montserrat Bold";
+  }
+  .templatesthumbnail-title:hover,
+  .templatesthumbnail-category:hover{color: #ffb64d;}
 /* Contact Page */
   .container-fluid.contactus-info{overflow: unset !important;}
   .contactus-info .box-phone{

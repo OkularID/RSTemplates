@@ -87,10 +87,12 @@
                     }
                 </style>
                 {% for bitch in x %}
-                    <div class="col-lg-4 pb-lg-35">
-                        <a href="/themes/preview/{{ bitch.theme_url }}"><div class="box">
-                            <img class="_thumb" src="{{ bitch.theme_img.url }}" alt="">
-                        </div></a>
+                    <div class="col-lg-4 mb-lg-5p">
+                        <a href="">
+                            <img class="templatesthumbnail-image" src="{{ bitch.theme_img.url }}" alt="reservasidulu" />
+                        </a>
+                        <a class="templatesthumbnail-title" href="/themes/preview/{{ bitch.theme_url }}">{{ bitch.theme_name}}</a>
+                        <a class="templatesthumbnail-category" href="/{{ bitch.theme_category | lower }}">{{ bitch.theme_category }} Template</a>
                     </div>
                 {% endfor %}
             </div>

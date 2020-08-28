@@ -31,11 +31,21 @@
                     }
                 </style>
                 {% for x in preview %}
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="/themes/preview/{{ x.theme_url }}"><div class="box">
-                        <img class="_thumb" src="{{ x.theme_img.url }}" alt="">
-                    </div></a>
-                </div>
+
+                    <div class="col-lg-4 mb-lg-5p">
+                        <a href="/themes/preview/{{ x.theme_url }}">
+                            <img class="templatesthumbnail-image" src="{{ x.theme_img.url }}" alt="reservasidulu" />
+                        </a>
+                        <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ x.theme_name}}</a>
+                        <p>{{ x.theme_category }} Template</p>
+    {#                    <a class="templatesthumbnail-category" href="">{{ x.theme_category }} Template</a>#}
+                    </div>
+
+{#                <div class="col-lg-4 pb-lg-35">#}
+{#                    <a href="/themes/preview/{{ x.theme_url }}"><div class="box">#}
+{#                        <img class="_thumb" src="{{ x.theme_img.url }}" alt="">#}
+{#                    </div></a>#}
+{#                </div>#}
                 {% endfor %}
 
             </div>
