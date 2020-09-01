@@ -134,6 +134,36 @@
   }
   .button-orange img,
   .button-orange-line img{width: 150px;}
+  .btn-rectangle{
+    display: block;
+    padding: 1.5% 2%;
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat Bold" !important;
+    color: #fff;
+    background: #f8b133;
+    border: 1px solid #f8b133;
+    border-radius: 5px;
+  }
+  .btn-rectangle:hover{
+    color: #f8b133;
+    background: #fff;
+  }
+  .btn-whiteoutline{
+    display: block;
+    padding: 1.5% 2%;
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat Bold" !important;
+    color: #f8b133;
+    background: #fff;
+    border: 1px solid #f8b133;
+    border-radius: 5px;
+  }
+  .btn-whiteoutline:hover{
+    color: #fff;
+    background: #f8b133;
+  }
 /* Navigation */
   #navigation{
     position: absolute;
