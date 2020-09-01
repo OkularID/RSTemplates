@@ -216,3 +216,101 @@
         top: 33px;
         background-color: #fff;
     }
+
+    /* Login Page */
+  /* Section Content */
+  .reservasidulu-login .wrap,
+  .reservasidulu-signup .wrap{
+    background: url('/static/img/form-background.png');
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    margin: 0 auto;
+    padding: 7% 5% 4%;
+    width: 60%;
+    min-height: 90vh;
+  }
+  .reservasidulu-login .wrap form input,
+  .reservasidulu-signup .wrap form input,
+  .profile-content .wrap form input,
+  .login-content .wrap form input{
+    padding: 2%;
+    height: auto;
+    border: 1px solid #dadada;
+  }
+  .reservasidulu-login .wrap form .btn-form-orange,
+  .reservasidulu-signup .wrap form .btn-form-orange{
+    background: url('/static/img/button-03.png');
+    margin-bottom: 10% !important;
+    padding: 15px 50px;
+    border: unset;
+  }
+  .reservasidulu-login .wrap form p a,
+  .reservasidulu-signup .wrap form p a{
+    font-family: "Montserrat Bold" !important;
+    color: #f8b133 !important;
+  }
+  .reservasidulu-login .wrap form p a:hover,
+  .reservasidulu-signup .wrap form p a:hover{text-decoration: underline !important;}
+  .reservasidulu-login .background,
+  .reservasidulu-signup .background{
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+    .reservasidulu-login .ornament-01{
+    position: absolute;
+    top: 30vh;
+    left: 7vw;
+    width: 34%;
+    z-index: -1;
+  }
+  .reservasidulu-login .ornament-02{
+    position: absolute;
+    bottom: 18vh;
+    right: 1vw;
+    width: 41%;
+  }
+  /* Signup Page */
+  /* Section Content */
+  .reservasidulu-signup form span,
+  .reservasidulu-signup form span ul li{
+    font-family: "Montserrat Regular";
+    font-size: 12px !important;
+    line-height : 24px;
+    color: #939598;
+  }
+  .reservasidulu-signup form span{
+    display: block;
+    margin-bottom: 30px;
+  }
+  .reservasidulu-signup form span ul{padding-left: 15px;}
+  .reservasidulu-signup form label,
+  .reservasidulu-signup form label span{
+      font-family: "Montserrat Bold";
+      font-size: 18px !important;
+      color: #333;
+  }
+  .reservasidulu-signup form label span{
+      display: inline-block;
+      margin: 0 0 0 1%;
+  }
+  .reservasidulu-signup form input{margin-bottom: 1%;}
+  .reservasidulu-signup form small{margin-bottom: 5%;}
+  .reservasidulu-signup form small ul{padding-left: 15px;}
+  .reservasidulu-signup form small ul li{font-size: 12px !important;}
+  .reservasidulu-signup .ornament-01{
+    position: absolute;
+    top: 30vh;
+    left: 5vw;
+    width: 22%;
+    z-index: -1;
+  }
+  .reservasidulu-signup .ornament-02{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 22%;
+  }

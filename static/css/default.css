@@ -11,6 +11,10 @@
   .font-skyblue,.font-skyblue p,.font-skyblue a{color: #92dce5 !important;}
   /*end new*/
   @font-face{
+    font-family: "Montserrat Light";
+    src: url(../fonts/Montserrat-Light.ttf) format("truetype");
+  }
+  @font-face{
     font-family: "Montserrat Bold";
     src: url(../fonts/Montserrat-Bold.ttf) format("truetype");
   }
@@ -189,6 +193,8 @@
   }
 /* Background */
   .bg-white{background-color: #fff !important;}
+  .bg-pink{background-color: #fffad9 !important;}
+  .bg-lightgrey{background-color: #f0f4f6 !important;}
   .bg-skyblue{background: #92dce5 !important;}
   .bg-lightskyblue{background: #e8f6f7 !important;}
   .bg-lightskyblue2{background: #d3eeef !important;}
@@ -196,6 +202,7 @@
   .bg-teal{background: #00aa8f !important;}
 /* Line */
   .line-darkgrey{border: 1px solid #333333;}
+  .line-lightgrey{border: 1px solid #c6c6c6;}
   .line-white{border: 1px solid #fff;}
   .line-gold{border: 1px solid #CBC08F;}
   .line-gr-purple{
