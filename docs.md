@@ -19,6 +19,7 @@
 - "The best deal comes with great price" itu body copy nya udah bener belum yah?
 - Featured template itu tampilannya mirip sama yang terakhir gue kasih (gambarnya persegi bukan persegi panjang)
 - "Are you not ready to sign up?" ga rapi.
+- Buat navigation & banner menghilang saat screen sedang berada disection bawahnya, soalnya pas ke halaman lain dan balik ke halaman homepage, masih nyangkut ornament nya
 
 ## Page Why Us
 - Usahakan ga ada copy yang "orphan"
