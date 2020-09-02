@@ -65,8 +65,8 @@
                         <div class="desc-setup-2 show-on-scroll">
                             <div class="desc-animation-2">
                                 <div class="box-desc">
-                                    <h2 class="mb-lg-15">The caterer is <br>expensive enough, <br><span class="font-skyblue">your invitations <br>don't have to.</span></h2>
-                                    <p>Grab your invitations <br>starting from <u>Rp. 500k</u></p>
+                                    <h2 class="mb-lg-15">{{ x.header_text_2 | safe }}</h2>
+                                    <p>{{ x.sub_header_2 | safe }}</p>
                                 </div>
                             </div>
                         </div>
@@ -85,8 +85,9 @@
                             <div class="desc-animation-2">
                                 <div class="box-desc">
                                     <h2 class="mb-lg-15">
-                                        Finding a venue<br>is hard enough,<br><span class="font-teal">your invitations<br>don't have to.</span></h2>
-                                    <p>Craft your invitations with no<br>head-scratchings</p>
+                                        {{ x.header_text_3 | safe }}
+                                    </h2>
+                                    <p>{{ x.sub_header_3 | safe }}</p>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +130,7 @@
                                 <a class="d-block d-lg-none button-orange" href="{% url 'wedding_page' %}">
                                     <p>Wedding</p>
                                     <img src="{% static 'img/button-01.png' %}">
-                                </a>
+                                </a>jadi pake bluehost?
                                 <a href="{% url 'wedding_page' %}">
                                     <div class="d-none d-lg-block home-invitation-card"></div>
                                 </a>
