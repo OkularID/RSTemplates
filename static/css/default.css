@@ -52,6 +52,10 @@
     font-size :  14px !important;
     line-height : 24px;
   }
+  b,strong{
+    font-weight: unset !important;
+    font-family: "Montserrat Bold" !important;
+  }
   a{transition: all .3s;}
   a:hover{text-decoration: none !important;}
   a[data-toggle="collapse"]{cursor:pointer;}

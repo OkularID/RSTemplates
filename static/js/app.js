@@ -217,7 +217,7 @@ $(document).ready(function() {
     slideSpeed : 2000,
     nav: true,
     dots: false,
-    loop: true,
+    // loop: false,
     autoplay: true,
     // touchDrag  : false,
     // mouseDrag  : true,
