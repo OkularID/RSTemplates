@@ -379,3 +379,108 @@
   /* Section Brief */
   .about-brief h4{line-height: 30px;}
   .about-brief .image{width: 94%;}
+/* How To Page */
+  /* Section Banner */
+  .howto-banner .boxv.desc{
+    top: 58%;
+    left: 6%;
+    right: unset;
+  }
+  .howto-banner .boxv.image{
+    top: 55%;
+    left: unset;
+    right: 0;
+    width: 64%;
+  }
+  /* Tab Navigation*/
+  .tabs-howto #nav-box{
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .tabs-howto #nav-box li{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 17vw;
+  }
+  .tabs-howto #nav-box li .wrap{
+    display: inline-block;
+    width: 47%;
+  }
+  .tabs-howto #nav-box li:last-child{width: 10vw;}
+  .tabs-howto #nav-box li:last-child .wrap{width: 100%;}
+  .tabs-howto #nav-box li:after{
+    margin: 6vh 0 0;
+    content: '';
+    width: 40%;
+    height: 9px;
+    background: url('/static/img/howto/howto-number-line.png');
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: center;
+    float: right;
+  }
+  .tabs-howto #nav-box li:last-child:after{display: none;}
+  .tabs-howto #nav-box li .wrap .nav-tab .image{
+    position: relative;
+    display: inline-block;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 5%;
+    width: 95px;
+    height: 95px;
+    cursor: pointer;
+  }
+  .tabs-howto #nav-box li .wrap .nav-tab .image .boxc{
+    font-family: "Montserrat Bold";
+    font-size: 40px;
+    letter-spacing: 4px;
+    color: #FFB64D;
+  }
+  .tabs-howto #nav-box li .wrap .nav-tab .image.color .boxc{color: #ffffff;}
+  .tabs-howto #nav-box li .wrap .nav-tab .color{display: none !important;}
+  .tabs-howto #nav-box li .wrap .nav-tab.active .color,
+  .tabs-howto #nav-box li .wrap .nav-tab .color:hover,
+  .tabs-howto #nav-box li .wrap .nav-tab .color.active{display: inline-block !important;}
+  .tabs-howto #nav-box li .wrap .nav-tab.active .icon,
+  .tabs-howto #nav-box li .wrap .nav-tab .icon.active{display: none !important;}
+  .tabs-howto #nav-box li .desc{
+    margin: 0 auto;
+    width: 100px;
+  }
+  /* Tab Content */
+  .tabs-howto .tabs .image-01{width: 73%;}
+  .tabs-howto .tabs .image-02{width: 81%;}
+  .tabs-howto .tabs .image-03{width: 83%;}
+  .tabs-howto .tabs .image-04{width: 82%;}
+  .tabs-howto .tabs .ornament-01,
+  .tabs-howto .tabs .ornament-02,
+  .tabs-howto .tabs .ornament-03,
+  .tabs-howto .tabs .ornament-04{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  .tabs-howto .tabs .ornament-01{
+    margin: 0 auto;
+    right: 0;
+    left: 45%;
+    width: 65%;
+  }
+  .tabs-howto .tabs .ornament-02{
+    top: -21vh;
+    left: -19vw;
+    width: 67%;
+  }
+  .tabs-howto .tabs .ornament-03{
+    top: -16vh;
+    left: -8vw;
+    width: 86%;
+  }
+  .tabs-howto .tabs .ornament-04{
+    top: -8vh;
+    left: 2vw;
+    width: 78%;
+  }

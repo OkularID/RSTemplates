@@ -315,3 +315,22 @@ $('#faq-content .tab-content .tab-pane:first').addClass('active');
 // ===============================FAQ PAGE===============================
 
 
+// ===============================HOW TO PAGE===============================
+$(document).ready(function() {
+  $('.nav-tab').click(function() {
+      $(this).find('.color').addClass('active');
+      $(this).find('.icon').addClass('active');
+  }, function() {
+      $(this).find('.color').removeClass('active');
+      $(this).find('.icon').removeClass('active');
+  });
+  $('.nav-tab').hover(function() {
+      $(this).find('.color').addClass('active');
+      $(this).find('.icon').addClass('active');
+      $(this).find('.arrow-up.color').removeClass('active');
+  }, function() {
+      $(this).find('.color').removeClass('active');
+      $(this).find('.icon').removeClass('active');
+  });
+});
+// ===============================HOW TO PAGE===============================
