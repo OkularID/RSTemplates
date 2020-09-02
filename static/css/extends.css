@@ -484,3 +484,24 @@
     left: 2vw;
     width: 78%;
   }
+
+  /*navbar account*/
+  #navigation.account .logo{
+    display: inline-block;
+    padding-top: 0;
+    width: 25%;
+}
+#navigation.account .nav-accountlogo h5{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+#navigation.account .nav-accountlogo .line{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    width: 2px;
+    height: 70%;
+    background: #939598;
+}
+#navigation.account .nav-account .line{border-right: 2px solid #333333;}
