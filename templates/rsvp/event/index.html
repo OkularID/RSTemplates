@@ -3,6 +3,7 @@
 
 
 {% block content %}
+    <title>{% block title %} Event | ReservasiDulu {% endblock %}</title>
     <!-- Main -->
     <div id="main-templates">
         <!-- Section Banner -->
@@ -24,51 +25,28 @@
         <!-- Section Content -->
         <div id="templates-content" class="container-fluid pos-rel pt-lg-10p pb-lg-15p pl-lg-5p pr-lg-5p templates-content slideanim">
             <div class="row">
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
+                <style>
+                    ._thumb {
+                        height: 100%;
+                        width: 100%;
+                    }
+                </style>
+                {% for x in preview %}
+                <div class="col-lg-4 mb-lg-5p">
+                    <a href="/themes/preview/{{ x.theme_url }}">
+                        <img class="templatesthumbnail-image" src="{{ x.theme_img.url }}" alt="reservasidulu" />
+                    </a>
+                    <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ x.theme_name}}</a>
+                    <p>{{ x.theme_category }} Template</p>
+{#                    <a class="templatesthumbnail-category" href="">{{ x.theme_category }} Template</a>#}
                 </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
-                <div class="col-lg-4 pb-lg-35">
-                    <a href="templates-example.html"><div class="box"></div></a>
-                </div>
+
+{#                    <div class="col-lg-4 pb-lg-35">#}
+{#                        <a href="/themes/preview/{{ x.theme_url }}"><div class="box">#}
+{#                            <img class="_thumb" src="{{ x.theme_img.url }}" alt="">#}
+{#                        </div></a>#}
+{#                    </div>#}
+                {% endfor %}
             </div>
         </div>
         <div class="w-lg-100p h-lg-115vh"></div>

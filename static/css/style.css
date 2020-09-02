@@ -134,6 +134,36 @@
   }
   .button-orange img,
   .button-orange-line img{width: 150px;}
+  .btn-rectangle{
+    display: block;
+    padding: 1.5% 2%;
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat Bold" !important;
+    color: #fff;
+    background: #f8b133;
+    border: 1px solid #f8b133;
+    border-radius: 5px;
+  }
+  .btn-rectangle:hover{
+    color: #f8b133;
+    background: #fff;
+  }
+  .btn-whiteoutline{
+    display: block;
+    padding: 1.5% 2%;
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat Bold" !important;
+    color: #f8b133;
+    background: #fff;
+    border: 1px solid #f8b133;
+    border-radius: 5px;
+  }
+  .btn-whiteoutline:hover{
+    color: #fff;
+    background: #f8b133;
+  }
 /* Navigation */
   #navigation{
     position: absolute;
@@ -154,6 +184,21 @@
     list-style-type: none;
     text-align: center;
   }
+
+  /*customize*/
+  #navigation .menu ul li.active a{
+    padding-bottom: 10px;
+    background-image: url(../img/line.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 5px;
+    transition: .0s;
+  }
+  #navigation .menu ul li ul li a,
+  #navigation .menu ul li.active ul li a{background-image: unset;}
+
+
+
   #navigation .menu ul li,
   #footer ul.menu li,
   #footer ul.social li{
@@ -161,6 +206,10 @@
     display: inline;
     padding: 0 10px;
   }
+  #navigation .menu ul li {
+    padding: 0 15px;
+  }
+
   #navigation .menu ul li a,
   #footer ul.menu li a{
     text-transform: capitalize;
@@ -169,8 +218,9 @@
     color : #494949;
   }
   #navigation .menu ul li a:hover,
-  #navigation .menu ul li a:active,
-  #navigation .menu ul li a.active{
+  #navigation .menu ul li ul li a:hover{
+  /*#navigation .menu ul li a:active,*/
+  /*#navigation .menu ul li a.active{*/
     padding-bottom: 10px;
     background-image: url('../img/line.png');
     background-repeat: no-repeat;
@@ -178,30 +228,85 @@
     background-size: 100% 5px;
     transition: .0s;
   }
-  #navigation .menu li:hover ul{display: block;}
-  #navigation .menu ul li ul{
-    display: none;
+    #navigation .menuhov,
+  #navigation .menu,
+  #navigation .menu ul,
+  #navigation .menu ul li{position: unset;}
+  #navigation .menu li:hover .submenu{
+    max-height: 500px;
+    transition: max-height .4s ease-in;
+  }
+  #navigation .menu ul li .submenu{
+    background: url('/static/img/navbar-background.png');
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+    overflow: hidden;
     position: absolute;
     z-index: 1;
-    margin: 7px auto 0;
-    padding: 10px 0 15px;
-    left: -10px;
-    right: 0;
-    width: 130px;
-    text-align: center;
-    background: #fff;
+    margin: 10px auto 0;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    text-align: left;
+    transition: max-height 1s ease-out;
   }
-  #navigation .menu ul li ul li{
+  #navigation .menu ul li .submenu .container-fluid{padding: 35px 5%;}
+  #navigation .menu ul li .submenu h2{
+    font-family: "Montserrat Bold";
+    font-size: 35px !important;
+    color: #fff;
+  }
+  #navigation .menu ul li .submenu h5 span{
+    font-size: 16px !important;
+    color: #f8b133;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates{
+    position: absolute;
+    margin: 0 auto;
+    top: -20px;
+    left: 0;
+    right: 9px;
+    width: 120px;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates:before,
+  #navigation .menu ul li .submenu ul.navtemplates:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-image: url('/static/img/navbar-line.png');
+    background-size: 100% 100% !important;
+    width: 2px;
+    height: 100%;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates:after{
+    left: unset;
+    right: 0;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates li{
     display: block;
-    padding: 10px 0 !important;
-    width: 130px;
+    padding: 3px 0;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates li a{
+    font-size: 16px !important;
+    color: #fff;
+  }
+  #navigation .menu ul li .submenu ul.navtemplates li a:hover,
+  #navigation .menu ul li .submenu ul.navtemplates li a:active,
+  #navigation .menu ul li .submenu ul.navtemplates li a.active{
+    padding-bottom: 5px;
+    color: #f8b133;
   }
   #navigation a.getstarted,
   #navigation a.login{
     display: inline-block;
+    margin-right: 10px;
     margin-top: 10px;
   }
   #navigation a.login{margin-right: 10px;}
+  #navigation a.login:hover p{color:#f8b133 !important;}
   #navigation .getstarted p,
   #navigation .login p{
     margin-top: 13px;
@@ -209,6 +314,9 @@
     font-size : 18px !important;
     letter-spacing: 0.5px;
     color : #FDFFFC !important;
+  }
+  #navigation .login p{
+    color: #494949 !important;
   }
   #navigation .getstarted img{
     /*width: 180px;*/
@@ -333,9 +441,9 @@
     width: 25% !important;
     outline: none;
   }
-  .home-banner .sec1,
-  .home-banner .sec2,
-  .home-banner .sec3{
+  .home-banner .sec-1,
+  .home-banner .sec-2,
+  .home-banner .sec-3{
     overflow: hidden;
     width: 100%;
     height: 100vh;
@@ -349,43 +457,52 @@
     width: 100%;
   }
   .home-banner .box-image .image{width: 80%;}
-  .home-banner .sec-3 .box-image .image{width: 85%;}
+  .home-banner .sec-1 .box-image .image{width: 100%;}
   .home-banner .sec-1 .box-image .motif-01{
+    position: absolute;
+    bottom: -5%;
+    right: -100%;
+    width: 25%;
+  }
+  .home-banner .sec-2 .box-image .motif-01{
     position: absolute;
     top: 5%;
     right: -80%;
   }
-  .home-banner .sec-1 .box-image .motif-02{
+  .home-banner .sec-2 .box-image .motif-02{
     position: absolute;
     bottom: 5%;
     right: -94%;
   }
-  .home-banner .sec-2 .box-image .motif-01{
+  .home-banner .sec-3 .box-image .motif-01{
     position: absolute;
     bottom: -50%;
     right: -90%;
-  }
-  .home-banner .sec-3 .box-image .motif-01{
-    position: absolute;
-    bottom: 0%;
-    right: -100%;
   }
   .home-banner .box-desc{
     display: block;
     position: fixed;
     top: 35%;
-    right: 10%;
+    left: 10%;
     width: 550px;
     transition: 50s;
   }
+  .home-banner .sec-1 .box-desc p,
+  .home-banner .sec-2 .box-desc p,
+  .home-banner .sec-3 .box-desc p{
+    font-family: "Caveat Regular";
+    font-size: 32px !important;
+    line-height: 32px !important;
+    color: #ffb64d;
+  }
   /* Home Banner Section 1 */
-  .image-setup{
-    position:relative;
+  .image-setup-1{
+    position: relative;
     height: 100vh;
     opacity: 0;
     transition: opacity .5s .25s ease-out;
   }
-  .image-setup:after{
+  .image-setup-1:after{
     bottom:0;
     content:"";
     left:0;
@@ -393,13 +510,13 @@
     right:0;
     top:0;
   }
-  .image-animation{
+  .image-animation-1{
     z-index:10;
     position:fixed;
     margin:0;
-    bottom:8%;
-    left:50%;
-    width:50%;
+    bottom: 9%;
+    left: 47.5%;
+    width: 49%;
     color:#19292e;
     font-size:120px !important;
     line-height:1;
@@ -418,19 +535,19 @@
     -webkit-transform: translate(-100%, calc(-50% + 1em));
     transform: translate(-100%, calc(-50% + 1em));
   }
-  .image-setup.is-visible{opacity: 1;}
-  .is-visible .image-animation{
+  .image-setup-1.is-visible{opacity: 1;}
+  .is-visible .image-animation-1{
     -webkit-transform: translate(-100%, -50%);
     transform: translate(-100%, -50%);
   }
-  .desc-setup{
+  .desc-setup-1{
     position:relative;
     margin-top: -100vh;
     height: 100vh;
     opacity: 0;
     transition: opacity .5s .25s ease-out;
   }
-  .desc-setup:after{
+  .desc-setup-1:after{
     bottom:0;
     content:"";
     left:0;
@@ -438,7 +555,7 @@
     right:0;
     top:0;
   }
-  .desc-animation{
+  .desc-animation-1{
     z-index:10;
     position:fixed;
     margin:0;
@@ -462,8 +579,8 @@
     -webkit-transform: translate(80%, calc(-50%));
     transform: translate(80%, calc(-50%));
   }
-  .desc-setup.is-visible{opacity: 1;}
-  .is-visible .desc-animation{
+  .desc-setup-1.is-visible{opacity: 1;}
+  .is-visible .desc-animation-1{
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
@@ -488,8 +605,8 @@
     z-index:10;
     position:fixed;
     margin:0;
-    bottom:34%;
-    left:53%;
+    bottom:8%;
+    left:50%;
     width:50%;
     color:#19292e;
     font-size:120px !important;
@@ -579,8 +696,8 @@
     z-index:10;
     position:fixed;
     margin:0;
-    bottom:9%;
-    left:47.5%;
+    bottom:34%;
+    left:53%;
     width:50%;
     color:#19292e;
     font-size:120px !important;
@@ -671,7 +788,56 @@
     text-align: center;
   }
   /* Section Invitation */
+  .home-invitation,
+  .home-invitation .container-fluid{overflow: unset !important;}
+  .home-invitation .line{
+    top: unset;
+    bottom: 30%;
+    transform: unset;
+    width: 100%;
+  }
+  .home-invitation .background{
+    margin: 0 auto 10%;
+    width: 70%;
+    height: 16vw;
+  }
+  .home-invitation .image-01{
+    top: 29%;
+    left: 18%;
+    width: 68%;
+  }
+  .home-invitation .image-02{
+    top: 30%;
+    left: 5%;
+    width: 34%;
+  }
+  .home-invitation .image-03{
+    top: 41%;
+    right: 6%;
+    width: 68%;
+  }
   .home-invitation .col-lg-4:hover a{color: #ffb64d !important;}
+  .home-invitation .col-lg-4:hover .home-invitation-card{
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset;
+    transition: all .5s;
+  }
+  .home-invitation .home-invitation-card{
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 80%;
+    height: 60vh;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    transition: all .5s;
+  }
   /* Section Steps */
   .home-steps ul#nav-box{
     padding-left: 0;
@@ -734,6 +900,29 @@
     height: 350px;
   }
   .home-template .button-orange img{width: 230px;}
+  /* Section Free */
+  .home-free .wrap{
+    margin: 0 auto 4%;
+    width: 60%;
+  }
+  .home-free .wrap .title:after{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: url('/static/img/01-home/home-free-line.png');
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+  }
+  .home-free .wrap .desc{
+    float: right;
+    width: 270px;
+  }
+  .home-free .wrap .desc .button-orange img{width: 180px;}
   /* Mobile Home Page*/
   @media screen and (max-width: 846px) {
     #main-home h2,#main-home h3{font-size: 26px !important;}
@@ -916,18 +1105,29 @@
   .templates-banner .boxv h5{display: inline-block;}
   .templates-banner .boxv h5:hover{color: #494949 !important;transition: .5s;}
   .templates-banner .boxv img.arrow{width: 6%;}
+  .templates-banner-free .boxv.image.birthday{width: 65%;}
   /* Section Content */
-  .templates-content .box,
-  #myTabContent .box{
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
+  .templatesthumbnail-image{
+    display: block;
+    margin-bottom: 5%;
     width: 100%;
-    height: 35vh;
+    height: 37vh;
+    object-fit: cover;
     border: 1px solid #eaeaea;
-    border-radius: 5px;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,255,127,1) 0%, rgba(0,212,255,1) 100%);
   }
+  .templatesthumbnail-title,
+  .templatesthumbnail-category{
+    display: block;
+    font-size: 16px !important;
+    line-height: 23px;
+    color: #333333;
+  }
+  .templatesthumbnail-title{
+    margin-bottom: 1%;
+    font-family: "Montserrat Bold";
+  }
+  .templatesthumbnail-title:hover,
+  .templatesthumbnail-category:hover{color: #ffb64d;}
 /* Contact Page */
   .container-fluid.contactus-info{overflow: unset !important;}
   .contactus-info .box-phone{
@@ -1001,7 +1201,7 @@
   .account-info .profile-head .nav-tabs a.nav-link:hover,
   #myTabContent #profile a:hover h5{color: #ffb64d !important;}
   .account-info .profile-head .nav-tabs .nav-link.active{border-bottom: 2px solid #ffb64d;}
-  #myTabContent{margin-top: -20vh;}
+  #myTabContent{margin-top: -15vh;}
   #myTabContent #home span{float: right;}
   #myTabContent ul{padding-left: 15px;}
   #myTabContent .col-lg-7{padding-left: 0;}

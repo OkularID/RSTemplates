@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-
+<title>{% block title %} Contact | ReservasiDulu {% endblock %}</title>
     <div id="main-contactus">
         <!-- Section Banner -->
         <div class="container-fluid pos-rel pt-lg-15p pb-lg-10p pl-lg-10p pr-lg-10p contactus-banner fadein">
@@ -24,18 +24,12 @@
                 <div class="col-lg-6 slideanim">
                     <div class="w-lg-90p">
                         <h4 class="font-montserrat-italic">Any Question?</h4>
-                        <h3 class="mb-lg-30"><span>Send</span> Us A Message</h3>
+                        <h3 class="mb-lg-30"><span>Send</span> Us a Message</h3>
                         <div class="line-darkgrey w-lg-100p mb-lg-30"></div>
-                        <form>
-                            <label>Name*</label>
-                            <input type="text" name="name" required>
-                            <label>Phone*</label>
-                            <input type="text" name="phone" required>
-                            <label>Email</label>
-                            <input type="email" name="email" required>
-                            <label>Message</label>
-                            <textarea name="message" rows="5" required></textarea>
-                            <input class="btn-form-orange" type="submit" value="Send to Us">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <input style="background:url({% static 'img/05-contact-us/contactus-button.png' %}); " class="btn-form-orange" type="submit" value="Submit">
                         </form>
                     </div>
                 </div>

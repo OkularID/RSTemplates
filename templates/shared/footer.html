@@ -18,13 +18,13 @@
                         <img class="baloon" src="{% static 'img/gotop-04.png' %}">
                     </div>
                     <ul class="menu">
-                        <li><a href="why-us.html">About</a></li>
-                        <li><a href="tour.html">How-to</a></li>
-                        <li><a href="templates.html">Templates</a></li>
-                        <li><a href="index.html#price">Pricing</a></li>
-                        <li><a href="templates-wedding.html">Blog</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>
-                        <li><a href="index.html">Terms and Conditions</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'how' %}">How-to</a></li>
+                        <li><a href="{% url 'all_temp' %}">Templates</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="{% url 'tos' %}">Terms and Conditions</a></li>
                     </ul>
                 </div>
             </div>
@@ -32,14 +32,11 @@
         <div class="container-fluid pl-lg-5p pr-lg-5p">
             <div class="row">
                 <div class="col-lg-3">
-                    <a href="index.html"><img class="img-fluid logo" src="{% static 'img/logo-white.png' %}" alt="reservasidulu"></a>
+                    <a href="/"><img class="img-fluid logo" src="{% static 'img/logo-white.png' %}" alt="reservasidulu"></a>
                 </div>
                 <div class="col-lg-6 pl-lg-0">
                     <div class="brief w-lg-50p">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <br>
                         <p>
-                            T: <a href="tel:+62812345567">0812345567</a><br>
                             E: <a href="mailto:hello@reservasidulu.com">hello@reservasidulu.com</a>
                         </p>
                     </div>

@@ -301,3 +301,17 @@ $(document).ready(function() {
     }
   })
 })
+
+// ===============================FAQ PAGE===============================
+// FAQ Slow Target
+$('.faq-sidemenuanim').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 1000);
+});
+$('#faq-content .nav-tabs .nav-item:first .nav-link').addClass('active');
+
+$('#faq-content .tab-content .tab-pane:first').addClass('active');
+// ===============================FAQ PAGE===============================
+
+

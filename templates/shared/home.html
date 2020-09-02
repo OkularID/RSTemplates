@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-<title>Home Page Template</title>
+<title>ReservasiDulu</title>
 
 {% block base_head %}
 {#<link rel='stylesheet' href='{% static "css/main.css" %}' >#}
@@ -26,12 +26,35 @@
         <!-- Section Banner -->
         <div class="d-none d-lg-block fadein">
             <div class="container-fluid d-none d-lg-block pl-lg-0 pr-lg-0 home-banner" style="background: url({% static 'img/01-home/home-background-01.png' %});">
-            <div class="container-fluid d-none d-lg-block pl-lg-0 pr-lg-0 home-banner" style="background: url({% static 'img/images/01-home/home-background.png' %});">
+            <div class="container-fluid d-none d-lg-block pl-lg-0 pr-lg-0 home-banner" style="background: url({% static 'img/01-home/home-background.png' %});">
                 <div class="row">
+
+
                     <!-- Section 1 -->
                     <div class="col-lg-12 sec-1">
-                        <div class="image-setup show-on-scroll is-visible">
-                            <div class="image-animation">
+                        <div class="image-setup-1 show-on-scroll is-visible">
+                            <div class="image-animation-1">
+                                <div class="box-image">
+                                    <img class="image" src="{% static 'img/01-home/home-banner-ornament-01.png' %}">
+                                    <img class="motif-01" src="{% static 'img/01-home/home-banner-ornament-02.png' %}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desc-setup-1 show-on-scroll is-visible">
+                            <div class="desc-animation-1">
+                                <div class="box-desc animated fadeInRight" style="animation-delay: 2s !important;">
+                                    <h2 class="mb-lg-15">
+                                        {{ x.header_text_1 | safe }}
+                                    </h2>
+                                    <p>{{ x.sub_header_1 | safe }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Section 2 -->
+                    <div class="col-lg-12 sec-2">
+                        <div class="image-setup-2 show-on-scroll">
+                            <div class="image-animation-2">
                                 <div class="box-image">
                                     <img class="image" src="{% static 'img/01-home/home-image.png' %}">
                                     <img class="motif-01" src="{% static 'img/01-home/home-image-02.png' %}">
@@ -39,52 +62,31 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="desc-setup show-on-scroll is-visible">
-                            <div class="desc-animation">
-                                <div class="box-desc animated fadeInRight" style="animation-delay: 2s !important;">
-                                    <h2 class="mb-lg-15">The caterer is expensive enough, <span class="font-orange">your invitations don’t have to.</span></h2>
-                                    <p>Grab your invitations starting<br>from Rp. 500k</p>
+                        <div class="desc-setup-2 show-on-scroll">
+                            <div class="desc-animation-2">
+                                <div class="box-desc">
+                                    <h2 class="mb-lg-15">The caterer is <br>expensive enough, <br><span class="font-skyblue">your invitations <br>don't have to.</span></h2>
+                                    <p>Grab your invitations <br>starting from <u>Rp. 500k</u></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Section 2 -->
-                    <div class="col-lg-12 sec-2">
-                        <div class="image-setup-2 show-on-scroll">
-                            <div class="image-animation-2">
+                    <!-- Section 3 -->
+                    <div class="col-lg-12 sec-3">
+                        <div class="image-setup-3 show-on-scroll">
+                            <div class="image-animation-3">
                                 <div class="box-image">
                                     <img class="image" src="{% static 'img/01-home/home-image-04.png' %}">
                                     <img class="motif-01" src="{% static 'img/01-home/home-image-05.png' %}">
                                 </div>
                             </div>
                         </div>
-                        <div class="desc-setup-2 show-on-scroll">
+                        <div class="desc-setup-3 show-on-scroll">
                             <div class="desc-animation-2">
                                 <div class="box-desc">
                                     <h2 class="mb-lg-15">
-                                        Finding a venue<br>is hard enough,<br><span class="font-teal">your invitations<br>don’t have to.</span></h2>
+                                        Finding a venue<br>is hard enough,<br><span class="font-teal">your invitations<br>don't have to.</span></h2>
                                     <p>Craft your invitations with no<br>head-scratchings</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Section 3 -->
-                    <div class="col-lg-12 sec-3">
-                        <div class="image-setup-3 show-on-scroll">
-                            <div class="image-animation-3">
-                                <div class="box-image">
-                                    <img class="image" src="{% static 'img/01-home/home-image-06.png' %}">
-                                    <img class="motif-01" src="{% static 'img/01-home/home-image-07.png' %}">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="desc-setup-3 show-on-scroll">
-                            <div class="desc-animation-3">
-                                <div class="box-desc">
-                                    <h2 class="mb-lg-15">Waiting for ‘the one’<br>is long enough,<br><span class="font-pink">your invitations<br>don’t have to.</span></h2>
-                                    <p>Build your invitation for less than 30 mins*</p>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +100,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="quote font-white slideanim">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare justo felis, et congue augue lacinia id. Praesent elit dolor, posuere ac congue vel, condimentum quis lacus. Nulla a lorem pretium justo blandit posuere malesuada enim pellentesque at. Etiam aliquet ut velit id tempor.</p>
+                        <p>{{ x.section_2_text | safe }}</p>
                         <img class="motif l-lg-0" src="{% static 'img/quote-left.png' %}">
                         <img class="motif r-lg-0" src="{% static 'img/quote-right.png' %}">
                     </div>
@@ -108,36 +110,58 @@
         </div>
 
         <!-- Section Invitation -->
-        <div class="container-fluid pos-rel pt-lg-10p pb-lg-10p pl-lg-10p pr-lg-10p home-invitation">
-            <div class="row">
-                <div class="col-lg-12 pb-lg-50 text-center">
+        <div class="container-fluid pos-rel pt-lg-10p pb-lg-10p pl-lg-10p pr-lg-10p pt-m-20p pb-m-20p home-invitation">
+            <div class="row slideanim">
+                <div class="col-lg-12 mb-lg-5p pb-lg-50 pb-m-10p text-center">
                     <h2><span>I want to make</span> an invitation for ____</h2>
                 </div>
                 <div class="col-lg-12">
                     <div class="container-fluid pos-rel pl-lg-0 pr-lg-0">
                         <div class="row">
-                            <div class="col-lg-4">
-                                <a class="d-lg-block mb-lg-10 text-center" href="{% url 'wedding_page' %}">
-                                    <img class="img-fluid w-lg-100p" src="{% static 'img/01-home/home-image-08.png' %}">
+                            <img class="img-fluid d-none d-lg-block boxc line" src="{% static 'img/01-home/home-invitation-01.png' %}" />
+                            <div class="col-lg-4 mb-m-15p text-center">
+                                <img class="img-fluid d-none d-lg-block background" src="{% static 'img/01-home/home-invitation-02.png' %}" />
+                                <img class="img-fluid d-none d-lg-block boxc image-01" src="{% static 'img/01-home/home-invitation-05.png' %}" />
+                                <a class="d-none d-lg-block font-darkgrey"><h5><span>Wedding</span></h5></a>
+                                <a class="d-block d-lg-none mb-lg-10" href="{% url 'wedding_page' %}">
+                                    <img class="img-fluid w-lg-100p w-m-70p" src="{% static 'img/01-home/home-image-08.png' %}">
                                 </a>
-                                <a class="font-darkgrey text-center" href="{% url 'wedding_page' %}">
-                                    <h5><span>Wedding</span></h5>
+                                <a class="d-block d-lg-none button-orange" href="{% url 'wedding_page' %}">
+                                    <p>Wedding</p>
+                                    <img src="{% static 'img/button-01.png' %}">
+                                </a>
+                                <a href="{% url 'wedding_page' %}">
+                                    <div class="d-none d-lg-block home-invitation-card"></div>
                                 </a>
                             </div>
-                            <div class="col-lg-4">
-                                <a class="d-lg-block mb-lg-10 text-center" href="{% url 'birthday' %}">
-                                    <img class="img-fluid w-lg-100p" src="{% static 'img/01-home/home-image-09.png' %}">
+                            <div class="col-lg-4 mb-m-15p text-center">
+                                <img class="img-fluid d-none d-lg-block background" src="{% static 'img/01-home/home-invitation-03.png' %}" />
+                                <img class="img-fluid d-none d-lg-block boxc image-02" src="{% static 'img/01-home/home-invitation-06.png' %}" />
+                                <a class="d-none d-lg-block font-darkgrey"><h5><span>Birthday</span></h5></a>
+                                <a class="d-block d-lg-none mb-lg-10" href="{% url 'birthday' %}">
+                                    <img class="img-fluid w-lg-100p w-m-70p" src="{% static 'img/01-home/home-image-09.png' %}">
                                 </a>
-                                <a class="font-darkgrey text-center" href="{% url 'birthday' %}">
-                                    <h5><span>Birthday</span></h5>
+                                <a class="d-block d-lg-none button-orange" href="{% url 'birthday' %}">
+                                    <p>Birthday</p>
+                                    <img src="{% static 'img/button-01.png' %}">
+                                </a>
+                                <a href="{% url 'birthday' %}">
+                                    <div class="d-none d-lg-block home-invitation-card mid"></div>
                                 </a>
                             </div>
-                            <div class="col-lg-4">
-                                <a class="d-lg-block mb-lg-10 text-center" href="{% url 'event' %}">
-                                    <img class="img-fluid w-lg-100p" src="{% static 'img/01-home/home-image-10.png' %}">
+                            <div class="col-lg-4 text-center">
+                                <img class="img-fluid d-none d-lg-block background" src="{% static 'img/01-home/home-invitation-04.png' %}" />
+                                <img class="img-fluid d-none d-lg-block boxc image-03" src="{% static 'img/01-home/home-invitation-07.png' %}" />
+                                <a class="d-none d-lg-block font-darkgrey"><h5><span>Event</span></h5></a>
+                                <a class="d-block d-lg-none mb-lg-10" href="{% url 'event' %}">
+                                    <img class="img-fluid w-lg-100p w-m-70p" src="{% static 'img/01-home/home-image-10.png' %}">
                                 </a>
-                                <a class="font-darkgrey text-center" href="{% url 'event' %}">
-                                    <h5><span>Event</span></h5>
+                                <a class="d-block d-lg-none button-orange" href="{% url 'event' %}">
+                                    <p>Event</p>
+                                    <img src="{% static 'img/button-01.png' %}">
+                                </a>
+                                <a href="{% url 'event' %}">
+                                    <div class="d-none d-lg-block home-invitation-card"></div>
                                 </a>
                             </div>
                         </div>
@@ -145,7 +169,7 @@
                 </div>
             </div>
         </div>
-        <!-- Section Steps -->
+
         <!-- Section Steps -->
         <div class="container-fluid pos-rel pt-lg-5p pb-lg-15p pl-lg-10p pr-lg-0 pt-m-20p pb-m-20p home-steps">
             <div class="row">
@@ -170,27 +194,31 @@
                                 </a>
                             </ul>
                             <div class="tabs" id="tab-steps1">
-                                <h4><span>Step 1, Choose Template</span></h4>
+                                <h4><span>{{ x.step_1_title}}</span></h4>
                                 <div class="w-lg-95p">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare justo felis, et congue augue lacinia id. Praesent elit dolor, posuere ac congue vel, condimentum quis lacus.</p>
+                                    {{ x.step_1_text | safe }}
+{#                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare justo felis, et congue augue lacinia id. Praesent elit dolor, posuere ac congue vel, condimentum quis lacus.</p>#}
                                 </div>
                             </div>
                             <div class="tabs" id="tab-steps2">
-                                <h4><span>Step 2, Choose Template</span></h4>
+                                <h4><span>{{ x.step_2_title}}</span></h4>
                                 <div class="w-lg-95p">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare justo felis, et congue augue lacinia id. Praesent elit dolor, posuere ac congue vel, condimentum quis lacus.</p>
+                                    {{ x.step_2_text | safe }}
+{#                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare justo felis, et congue augue lacinia id. Praesent elit dolor, posuere ac congue vel, condimentum quis lacus.</p>#}
                                 </div>
                             </div>
                             <div class="tabs" id="tab-steps3">
-                                <h4><span>Step 3, Choose Template</span></h4>
+                                <h4><span>{{ x.step_3_title }}</span></h4>
                                 <div class="w-lg-95p">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare justo felis, et congue augue lacinia id. Praesent elit dolor, posuere ac congue vel, condimentum quis lacus.</p>
+                                    {{ x.step_3_text | safe }}
+{#                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare justo felis, et congue augue lacinia id. Praesent elit dolor, posuere ac congue vel, condimentum quis lacus.</p>#}
                                 </div>
                             </div>
                             <div class="tabs" id="tab-steps4">
-                                <h4><span>Step 4, Choose Template</span></h4>
+                                <h4><span>{{ x.step_4_title }}</span></h4>
                                 <div class="w-lg-95p">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare justo felis, et congue augue lacinia id. Praesent elit dolor, posuere ac congue vel, condimentum quis lacus.</p>
+                                    {{ x.step_4_text | safe }}
+{#                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare justo felis, et congue augue lacinia id. Praesent elit dolor, posuere ac congue vel, condimentum quis lacus.</p>#}
                                 </div>
                             </div>
                         </div>
@@ -202,134 +230,45 @@
             </div>
         </div>
         <!-- Section Price & Testimony -->
-        <div class="pos-rel pricetestimony">
             <!-- Section Price -->
-            <div id="price" class="container-fluid pos-rel pt-lg-0 pb-lg-10p pl-lg-5p pr-lg-5p pt-m-20p pb-m-20p pl-m-10p pr-m-10p home-price slideanim">
-                <div class="row">
-                    <div class="col-lg-12 pb-lg-60 pb-m-10p text-center">
-                        <h3><span>The best deal</span> comes<br>with <span>great price</span></h3>
-                    </div>
-                    <div class="col-lg-6 d-none d-lg-block text-center" style="padding-right: 6% !important;">
-                        <img class="img-fluid w-lg-55p mb-lg-5p" src="{% static 'img/01-home/home-image-12.png' %}">
-                        <ul>
-                            <li>Planning Dashboard</li>
-                            <li>Wedding Website</li>
-                            <li>Mobile App</li>
-                            <li>Cover Style Gallery</li>
-                            <li>Unlimited Guest Accounts</li>
-                        </ul>
-                        <a class="button-orange-line" href="{% url 'Register' %}">
-                            <p class="font-orange">Interesting!</p>
-                            <img src="{% static 'img/button-02.png' %}">
-                        </a>
-                    </div>
-                    <div class="col-lg-6 d-none d-lg-block text-center" style="padding-left: 6% !important;">
-                        <img class="img-fluid w-lg-55p mb-lg-5p" src="{% static 'img/01-home/home-image-13.png' %}">
-                        <ul>
-                            <li>Digital Invites and RSVPs</li>
-                            <li>Multiple Admin Accounts</li>
-                            <li>Unlimited Photo Storage</li>
-                            <li>Free Website Hosting</li>
-                            <li>Daily Technical Support</li>
-                        </ul>
-                        <a class="button-orange" href="">
-                            <p class="font-white">Sounds Good!</p>
-                            <img src="{% static 'img/button-01.png' %}">
-                        </a>
-                    </div>
-                    <div class="col-lg-12 d-block d-lg-none">
-                        <div class="one-carousel owl-theme">
-                            <div class="item text-center">
-                                <img class="img-fluid ma-m w-lg-70p mb-lg-5p" src="{% static 'img/01-home/home-image-12.png' %}">
-                                <ul>
-                                    <li>Planning Dashboard</li>
-                                    <li>Wedding Website</li>
-                                    <li>Mobile App</li>
-                                    <li>Cover Style Gallery</li>
-                                    <li>Unlimited Guest Accounts</li>
-                                </ul>
-                                <a class="button-orange-line" href="">
-                                    <p class="font-orange">Interesting!</p>
-                                    <img src="{% static 'img/button-02.png' %}">
-                                </a>
-                            </div>
-                            <div class="item text-center">
-                                <img class="img-fluid ma-m w-lg-70p mb-lg-5p" src="{% static 'img/01-home/home-image-13.png' %}">
-                                <ul>
-                                    <li>Digital Invites and RSVPs</li>
-                                    <li>Multiple Admin Accounts</li>
-                                    <li>Unlimited Photo Storage</li>
-                                    <li>Free Website Hosting</li>
-                                    <li>Daily Technical Support</li>
-                                </ul>
-                                <a class="button-orange" href="{% url 'Register' %}">
-                                    <p class="font-white">Sounds Good!</p>
-                                    <img src="{% static 'img/button-01.png' %}">
-                                </a>
+            {% include 'shared/partials/price_testimony.html' %}
+            {% include 'shared/partials/home_theme.html' %}
+
+
+        <!-- Section Free -->
+        <div class="container-fluid pos-rel pt-lg-5p pb-lg-15p pl-lg-0 pr-lg-0 home-free slideanim">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="wrap">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6 title">
+                                    <h3>Are you <br><span>not ready</span> to <br>sign up yet?</h3>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="desc">
+                                        <p>Yes it’s absolutely okay if you’re not ready! Click the button below to try out our demo account for free!</p>
+                                        <div class="col-lg-12 text-center">
+                                            <a class="button-orange" href="{% url 'free' %}">
+                                                <p class="font-white">I want to try!</p>
+                                                <img src="{% static 'img/button-01.png' %}">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <img class="img-fluid motif move-right-fast" src="{% static 'img/01-home/home-image-14.png' %}">
                 </div>
-            </div>
-        <!-- Section Template -->
-        <div class="container-fluid pos-rel pt-lg-10p pb-lg-15p pl-lg-10p pr-lg-10p home-template">
-            <div class="row">
-                <div class="col-lg-12 pb-lg-50 text-center">
-                    <h2>Choose your <span>template</span></h2>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <a href="/b/b1/">test</a>
-                    <div class="box" style="background: #f8b133;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #20ac6b;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #43cdac;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #eb4568;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #53146c;"></div>
-                </div>
-                <div class="col-lg-4 pb-lg-40 pl-lg-30 pr-lg-30">
-                    <div class="box" style="background: #1d1d1b;"></div>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <a class="button-orange" href="">
-                        <p class="font-white">More options</p>
-                        <img src="{% static 'img/button-01.png' %}">
-                    </a>
+                <div class="col-lg-12 pl-lg-0 pr-lg-0">
+                    <img class="img-fluid w-lg-100p" src="{% static 'img/01-home/home-free-image-01.png' %}" />
                 </div>
             </div>
         </div>
+
+
         <div class="w-lg-100p h-lg-100vh"></div>
     </div>
-
-
-
-
-
-
-
-    {#<div class="container-fluid p-lg-0">#}
-{#    <div class="row">#}
-{#        <div class="col-lg-12">#}
-{#            <div class="banner" style="background: url({% static 'img/background.jpg' %})">#}
-{#                <div class="brief">#}
-{#                    {% include 'search/snippets/search.html' %}#}
-{#                    <h1 class="jumbotron-heading" style="color: white;">Reservasi Dulu</h1>#}
-{#                    <div class="text-white"><p style="font-size: 22px;">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p></div>#}
-{#                    <p>#}
-{#                        <a href="{% url 'products:list' %}" class="btn btn-primary my-2">Explore now</a>#}
-{#                        <a href="{% url 'contact' %}" class="btn btn-secondary my-2">Get in touch</a>#}
-{#                    </p>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
 
 {% endblock %}

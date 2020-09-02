@@ -4,16 +4,29 @@
 
 {% block content %}
 
-    <div class="container-fluid pos-rel pt-lg-15p pb-lg-25  p pl-lg-10p pr-lg-10p">
+    <div class="container-fluid pos-rel pt-lg-15p pb-lg-25 pl-lg-5p pr-lg-5p">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-5">
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <h3>Emma Norman Form</h3>
+                    <h3>Form</h3>
                         {{ form | crispy }}
                     <button class="btn btn-outline-primary btn-sm" type="submit">Submit</button>
                 </form>
             </div>
+            <style>
+                ._desktop {
+                    width: 100%;
+                }
+            </style>
+{#            <div class="col-lg-7 preview-theme">#}
+{#                    <h3>Preview</h3>#}
+{#                    <div class="_desktop">#}
+{#                        {% include 'preview/wedding/emma_norman/index.html' %}#}
+{#                    </div>#}
+                        {# {{ form | crispy }}#}
+{#                </form>#}
+{#            </div>#}
         </div>
     </div>
     <div class="w-lg-100p h-lg-150vh"></div>
