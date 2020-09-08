@@ -51,6 +51,7 @@
     font-family: "Montserrat Regular";
     font-size :  14px !important;
     line-height : 24px;
+    outline: none;
   }
   b,strong{
     font-weight: unset !important;
@@ -70,6 +71,8 @@
 /* Fonts */
   .font-white,.font-white p,.font-white a{color: #fff !important;}
   .font-orange,.font-orange p,.font-orange a{color: #ffb64d !important;}
+  .font-orange2,.font-orange2 p,.font-orange2 a{color: #f8b133 !important;}
+  .font-skyblue,.font-skyblue p,.font-skyblue a{color: #92dce5 !important;}
   .font-darkgrey,.font-darkgrey p,.font-darkgrey a{color: #333333 !important;}
   .font-teal,.font-teal p,.font-teal a{color: #00aa8f !important;}
   .font-pink,.font-pink p,.font-pink a{color: #eb4568 !important;}
@@ -1216,6 +1219,7 @@
     .w-lg-150{width: 150px !important;}
     .w-lg-175{width: 175px !important;}
     .w-lg-200{width: 200px !important;}
+    .w-lg-300{width: 300px !important;}
   @media screen and (max-width: 846px) {
     /* Width Mobile */
       .w-m-0{width: 0px !important;}

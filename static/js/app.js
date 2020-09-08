@@ -1,19 +1,68 @@
-// ============Function===============
-// Home Banner Navigation
+// ================================================HOMEPAGE BANNER================================================
 $(document).ready(function(){
   // show first
   $("#navigation").show();
-  // fade in
-  $(function () {
-    $(window).scroll(function () {
+  $(".home-banner-ornament").show();
+  // Function navigation and ornament
+  function classOnScroll(){
+    // Navigation hide show on scroll and resize
       if ($(this).scrollTop() > 2200) {
         $('#navigation').fadeOut();
       } else {
         $('#navigation').fadeIn();
       }
-    });
-  });
+    // Ornament hide show on scroll and resize
+      if ($(this).scrollTop() > 2100) {
+        $('.home-banner-ornament').addClass('fadeOutLeft');
+        $('.home-banner-ornament').removeClass('fadeInLeft');
+      } else {
+        $('.home-banner-ornament').removeClass('fadeOutLeft');
+        $('.home-banner-ornament').addClass('fadeInLeft');
+      }
+    // Navigation hide show on scroll and resize
+      // Detect request animation frame
+      var scroll = window.requestAnimationFrame ||
+          // IE Fallback
+          function(callback){ window.setTimeout(callback, 1000/60)};
+      var elementsToShow = document.querySelectorAll('.show-on-scroll');
+      function loop() {
+        Array.prototype.forEach.call(elementsToShow, function(element){
+          if (isElementInViewport(element)) {
+            element.classList.add('is-visible');
+          } else {
+            element.classList.remove('is-visible');
+          }
+        });
+        scroll(loop);
+      }
+      // Call the loop for the first time
+      loop();
+      // Helper function from: http://stackoverflow.com/a/7557433/274826
+      function isElementInViewport(el) {
+        // special bonus for those using jQuery
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+          el = el[0];
+        }
+        var rect = el.getBoundingClientRect();
+        return (
+            (rect.top <= 0
+                && rect.bottom >= 900) //bottomfadeout
+            ||
+            (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+            ||
+            (rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+        );
+      }
+  }
+  //Run on first site run
+  classOnScroll();
+  //Run on scroll and resize
+  $(window).on('scroll resize',classOnScroll);
 });
+// ================================================HOMEPAGE BANNER================================================
+// ================================================FUNCTION================================================
 // Move Down
 $('#chevron-down').click(function(){
     $('html, body').animate({
@@ -91,44 +140,6 @@ $(document).ready(function() {
     $(".fa-times").removeClass("active");
     $(".sidenav").addClass("slideOut");
   })
-})
-// ======================HOMEPAGE HEADER====================================
-$(document).ready(function() {
-  // Detect request animation frame
-  var scroll = window.requestAnimationFrame ||
-      // IE Fallback
-      function(callback){ window.setTimeout(callback, 1000/60)};
-  var elementsToShow = document.querySelectorAll('.show-on-scroll');
-  function loop() {
-    Array.prototype.forEach.call(elementsToShow, function(element){
-      if (isElementInViewport(element)) {
-        element.classList.add('is-visible');
-      } else {
-        element.classList.remove('is-visible');
-      }
-    });
-    scroll(loop);
-  }
-  // Call the loop for the first time
-  loop();
-  // Helper function from: http://stackoverflow.com/a/7557433/274826
-  function isElementInViewport(el) {
-    // special bonus for those using jQuery
-    if (typeof jQuery === "function" && el instanceof jQuery) {
-      el = el[0];
-    }
-    var rect = el.getBoundingClientRect();
-    return (
-        (rect.top <= 0
-            && rect.bottom >= 900) //bottomfadeout
-        ||
-        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-        ||
-        (rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-    );
-  }
 })
 // ============Animation===============
   $(window).scroll(function() {
@@ -334,3 +345,16 @@ $(document).ready(function() {
   });
 });
 // ===============================HOW TO PAGE===============================
+
+// ===============================LANDING TEMPLATE PAGE===============================
+$(document).ready(function() {
+  $(this).find('.cathov').hide();
+  $('.catwrap').hover(function() {
+      $(this).find('.catdef').hide();
+      $(this).find('.cathov').show();
+  }, function() {
+      $(this).find('.catdef').show();
+      $(this).find('.cathov').hide();
+  });
+});
+// ===============================LANDING TEMPLATE PAGE===============================
