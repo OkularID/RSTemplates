@@ -46,6 +46,13 @@
 - (DONE) Bagian rsvp, tab dihilangkan
 
 ## Page Edit Templates
+- (DONE) Di Main Info itu jadinya dia tanyain :
+		 * Nama Bride
+		 * Nama Groom (trus nanti URL nya dari nama mereka)
+		 * Title
+		 * Hastag
+- (DONE) Trus di Main Info ada : Theme tapi not editable.
+- (DONE) Kalau ada text box >> Wedding Theme itu langsung diapus soalnya ga ada.
 
 ## Ko David
 - (DONE) Dropdown templates geser ke bawah.
