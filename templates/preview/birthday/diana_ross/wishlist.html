@@ -1,3 +1,5 @@
+{% load static %}
+{% load compress %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,25 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
     <title>Template Birthday | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <link rel="shortcut icon" href="{% static 'rsvp/birthday/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="../../css/animation.css" >    
-    <link rel="stylesheet" type="text/css" href="../../css/default.css">
-    <link rel="stylesheet" type="text/css" href="style-birthday-1.css">
+    {% compress css %}
+        {% include 'static/css.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/birthday/diana_ross/style-birthday-1.css' %}">
+    {% endcompress %}
     <!-- Features css -->
-    <link rel="stylesheet" href="../../features/animatecss/animate.min.css">
-    <!--Node Modules css-->
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div id="wishlist">
         <!-- Section WISHLIST -->
         <section id="content-wishlist">
-            <img class="img-fluid w-lg-100p bg1 d-none d-lg-block move-up" src="images/background-03.png" />
-            <img class="img-fluid w-lg-100p bg2 d-none d-lg-block move-up" src="images/background-04.png" />
+            <img class="img-fluid w-lg-100p bg1 d-none d-lg-block move-up" src="{% static 'rsvp/birthday/images/background-03.png' %}" />
+            <img class="img-fluid w-lg-100p bg2 d-none d-lg-block move-up" src="{% static 'rsvp/birthday/images/background-04.png' %}" />
             <div class="container-fluid pt-m-20p pb-m-20p pl-m-10p pr-m-10p pt-lg-20p pb-lg-10p pl-lg-5p pr-lg-5p">
                 <div class="row">
                     <div class="col-lg-4 mb-lg-10p animated fadeInLeft">
@@ -47,56 +46,56 @@
                         <div class="row">
                             <div class="col-6 col-lg-4 mb-lg-5p text-center animated fadeInUp">
                                 <a href="" data-toggle="modal" data-target="#wishlist-popup">
-                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="images/ornament-banner-02.png" />
+                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="{% static 'rsvp/birthday/images/ornament-banner-02.png' %}" />
                                     <p class="title">SHOES</p>
                                 </a>
                             </div>
                             <div class="col-6 col-lg-4 mb-lg-5p text-center animated fadeInUp">
                                 <a href="" data-toggle="modal" data-target="#wishlist-popup">
-                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="images/ornament-about-03.png" />
+                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="{% static 'rsvp/birthday/images/ornament-about-03.png' %}" />
                                     <p class="title">ACCESSORIES</p>
                                 </a>
                             </div>
                             <div class="col-6 col-lg-4 mb-lg-5p text-center animated fadeInUp">
                                 <a href="" data-toggle="modal" data-target="#wishlist-popup">
-                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="images/ornament-banner-01.png" />
+                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="{% static 'rsvp/birthday/images/ornament-banner-01.png' %}" />
                                     <p class="title">SWEATER</p>
                                 </a>
                             </div>
                             <div class="col-6 col-lg-4 mb-lg-5p text-center animated fadeInUp">
                                 <a href="" data-toggle="modal" data-target="#wishlist-popup">
-                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="images/ornament-about-03.png" />
+                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="{% static 'rsvp/birthday/images/ornament-about-03.png' %}" />
                                     <p class="title">MAKEUP</p>
                                 </a>
                             </div>
                             <div class="col-6 col-lg-4 mb-lg-5p text-center animated fadeInUp">
                                 <a href="" data-toggle="modal" data-target="#wishlist-popup">
-                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="images/ornament-banner-01.png" />
+                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="{% static 'rsvp/birthday/images/ornament-banner-01.png' %}" />
                                     <p class="title">SKIN CARE</p>
                                 </a>
                             </div>
                             <div class="col-6 col-lg-4 mb-lg-5p text-center animated fadeInUp">
                                 <a href="" data-toggle="modal" data-target="#wishlist-popup">
-                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="images/ornament-banner-02.png" />
+                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="{% static 'rsvp/birthday/images/ornament-banner-02.png' %}" />
                                     <p class="title">STUFF FOR
                                         MY DOGGO</p>
                                 </a>
                             </div>
                             <div class="col-6 col-lg-4 mb-lg-5p text-center animated fadeInUp">
                                 <a href="" data-toggle="modal" data-target="#wishlist-popup">
-                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="images/ornament-banner-01.png" />
+                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="{% static 'rsvp/birthday/images/ornament-banner-01.png' %}" />
                                     <p class="title">PINK CARDIGAN</p>
                                 </a>
                             </div>
                             <div class="col-6 col-lg-4 mb-lg-5p text-center animated fadeInUp">
                                 <a href="" data-toggle="modal" data-target="#wishlist-popup">
-                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="images/ornament-banner-02.png" />
+                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="{% static 'rsvp/birthday/images/ornament-banner-02.png' %}" />
                                     <p class="title">HEADBANDS</p>
                                 </a>
                             </div>
                             <div class="col-6 col-lg-4 mb-lg-5p text-center animated fadeInUp">
                                 <a href="" data-toggle="modal" data-target="#wishlist-popup">
-                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="images/ornament-banner-01.png" />
+                                    <img class="img-fluid w-lg-100p mb-lg-5p" src="{% static 'rsvp/birthday/images/ornament-banner-01.png' %}" />
                                     <p class="title">STATIONERY</p>
                                 </a>
                             </div>
@@ -107,8 +106,8 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                                                    <img class="img-fluid d-none d-lg-block w-lg-100p" src="images/popup-new-bg-04.png" />
-                                                    <img class="img-fluid d-block d-lg-none w-lg-100p" src="images/popup-02.png" />
+                                                    <img class="img-fluid d-none d-lg-block w-lg-100p" src="{% static 'rsvp/birthday/images/popup-new-bg-04.png' %}" />
+                                                    <img class="img-fluid d-block d-lg-none w-lg-100p" src="{% static 'rsvp/birthday/images/popup-02.png' %}" />
                                                     <div class="boxc">
                                                         <h2 class="font-green mb-lg-5p">
                                                             YOU CHOOSE TO<br>
@@ -146,8 +145,8 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                                                    <img class="img-fluid d-none d-lg-block w-lg-100p" src="images/popup-new-bg-04-03.png" />
-                                                    <img class="img-fluid d-block d-lg-none w-lg-100p" src="images/popup-02.png" />
+                                                    <img class="img-fluid d-none d-lg-block w-lg-100p" src="{% static 'rsvp/birthday/images/popup-new-bg-04-03.png' %}" />
+                                                    <img class="img-fluid d-block d-lg-none w-lg-100p" src="{% static 'rsvp/birthday/images/popup-02.png' %}" />
                                                     <div class="boxc">
                                                         <h2 class="font-green">
                                                             <span class="font-weight-bold">
@@ -197,17 +196,18 @@
             </div>
         </footer>
     </div>
-    <!-- Features JS -->
-    <script type="text/javascript" src="../../features/animatecss/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <!-- Node Modules JS -->
-    <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../node_modules/owl.carousel/dist/owl.carousel.js"></script>
-    <!-- Custom JS -->
-    <script type="text/javascript" src="app.js"></script>
+        <!-- Features JS -->
+        <script>
+            new WOW().init();
+        </script>
+        {% compress js %}
+            {% include 'static/js.html' %}
+            <!-- Custom JS -->
+            <script type="text/javascript" src="{% static 'rsvp/birthday/diana_ross/app.js' %}"></script>
+        {% endcompress %}
+        <!-- Custom JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
 
 </body>
 </html>
