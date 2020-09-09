@@ -25,11 +25,9 @@
 <div id="main-home">
         <!-- Section Banner -->
         <div class="d-none d-lg-block fadein">
-            <div class="container-fluid d-none d-lg-block pl-lg-0 pr-lg-0 home-banner" style="background: url({% static 'img/01-home/home-background-01.png' %});">
-            <div class="container-fluid d-none d-lg-block pl-lg-0 pr-lg-0 home-banner" style="background: url({% static 'img/01-home/home-background.png' %});">
+            <div class="container-fluid pos-rel d-none d-lg-block pl-lg-0 pr-lg-0 home-banner" style="background: url('images/01-home/home-background-01.png');">
+                <img class="img-fluid home-banner-ornament animated" style="animation-duration: 200ms;" src="images/01-home/homepage-banner-ornament.png" />
                 <div class="row">
-
-
                     <!-- Section 1 -->
                     <div class="col-lg-12 sec-1">
                         <div class="image-setup-1 show-on-scroll is-visible">
@@ -42,7 +40,7 @@
                         </div>
                         <div class="desc-setup-1 show-on-scroll is-visible">
                             <div class="desc-animation-1">
-                                <div class="box-desc animated fadeInRight" style="animation-delay: 2s !important;">
+                                <div class="box-desc animated fadeInRight" style="animation-delay: 1s !important;">
                                     <h2 class="mb-lg-15">
                                         {{ x.header_text_1 | safe }}
                                     </h2>
@@ -100,7 +98,7 @@
         <div class="container-fluid pos-rel pt-lg-10p pb-lg-10p pl-lg-15p pr-lg-15p pl-m-5p pr-m-5p home-brief">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="quote font-white slideanim">
+                    <div class="quote font-darkgrey slideanim">
                         <p>{{ x.section_2_text | safe }}</p>
                         <img class="motif l-lg-0" src="{% static 'img/quote-left.png' %}">
                         <img class="motif r-lg-0" src="{% static 'img/quote-right.png' %}">
@@ -111,7 +109,7 @@
         </div>
 
         <!-- Section Invitation -->
-        <div class="container-fluid pos-rel pt-lg-10p pb-lg-10p pl-lg-10p pr-lg-10p pt-m-20p pb-m-20p home-invitation">
+        <div class="container-fluid pos-rel pt-lg-15p pb-lg-10p pl-lg-10p pr-lg-10p pt-m-20p pb-m-20p home-invitation">
             <div class="row slideanim">
                 <div class="col-lg-12 mb-lg-5p pb-lg-50 pb-m-10p text-center">
                     <h2><span>I want to make</span> an invitation for ____</h2>
@@ -175,7 +173,7 @@
         <div class="container-fluid pos-rel pt-lg-5p pb-lg-15p pl-lg-10p pr-lg-0 pt-m-20p pb-m-20p home-steps">
             <div class="row">
                 <div class="col-lg-5 pb-m-5p pr-m-15p slideanim">
-                    <div class="boxv">
+                    <div class="pt-lg-30p">
                         <div class="w-lg-80p">
                             <h3 class="mb-lg-30 mb-m-15p"><span>Reservasi Dulu</span> is as easy as A, B, C, D <i class="font-montserrat-italic font-lg-11">literally</i></h3>
                         </div>
@@ -241,6 +239,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="wrap">
+<<<<<<< HEAD
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-lg-6 title">
@@ -257,6 +256,19 @@
                                         </div>
                                     </div>
                                 </div>
+=======
+                        <div class="boxc line"></div>
+                        <div class="title">
+                            <h3>Are you <br><span>not ready</span> to <br>sign up yet?</h3>
+                        </div>
+                        <div class="desc">
+                            <p>Yes it’s absolutely okay if you’re not ready! Click the button below to try out our demo account for free!</p>
+                            <div class="col-lg-12 text-center">
+                                <a class="button-orange" href="{% url 'free' %}">
+                                    <p class="font-white">I want to try!</p>
+                                    <img src="{% static 'img/button-01.png' %}">
+                                </a>
+>>>>>>> 670a8bd4d4f0d8b52daf7c12382b5959a13e0440
                             </div>
                         </div>
                     </div>
