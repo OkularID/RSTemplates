@@ -18,7 +18,7 @@
 
 <body>
 {% with url_name=request.resolver_match.url_name %}
-    {% if url_name == 'account'  %}
+    {% if url_name == 'account' and 'w/create/*' %}
         {% include 'shared/nav.html' %}
     {% else %}
         {% include 'shared/navbar.html' with brand_name='Okular' %}
