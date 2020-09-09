@@ -1,0 +1,23 @@
+{% load static %}
+<nav id="navigation" class="account fadein">
+    <div class="container-fluid pt-lg-20 pb-lg-20 pl-lg-5p pr-lg-5p">
+        <div class="row">
+            <div class="col-lg-9 nav-accountlogo pt-lg-20">
+                <a href="{% url 'home' %}"><img class="logo" src="{% static 'img/logo.png' %}" alt="reservasidulu"></a>
+                <div class="line"></div>
+                <h5><b>My Account</b></h5>
+            </div>
+            <div class="col-lg-3 pl-lg-0 nav-account pt-lg-10">
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-7 line">
+                        <h5><b>{{ user.username }}</b></h5>
+                        <p class="mb-lg-0">{{ user.first_name }} {{ user.last_name }}</p>
+                    </div>
+                    <div class="col-lg-3 text-right">
+                        <a href="{% url 'logout' %}"><img class="img-fluid" src="{% static 'img/account-icon.png' %}" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -17,7 +17,13 @@
 </head>
 
 <body>
-{% include 'shared/navbar.html' with brand_name='Okular' %}
+{% with url_name=request.resolver_match.url_name %}
+    {% if url_name == 'account'  %}
+        {% include 'shared/nav.html' %}
+    {% else %}
+        {% include 'shared/navbar.html' with brand_name='Okular' %}
+    {% endif %}
+{% endwith %}
 
 {# message 1 #}
 {% if messages %}

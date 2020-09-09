@@ -217,7 +217,7 @@ $(document).ready(function() {
     slideSpeed : 2000,
     nav: true,
     dots: false,
-    // loop: false,
+    loop: true,
     autoplay: true,
     // touchDrag  : false,
     // mouseDrag  : true,
@@ -302,6 +302,7 @@ $(document).ready(function() {
   })
 })
 
+
 // ===============================FAQ PAGE===============================
 // FAQ Slow Target
 $('.faq-sidemenuanim').click(function(){
@@ -310,10 +311,9 @@ $('.faq-sidemenuanim').click(function(){
     }, 1000);
 });
 $('#faq-content .nav-tabs .nav-item:first .nav-link').addClass('active');
-
 $('#faq-content .tab-content .tab-pane:first').addClass('active');
-// ===============================FAQ PAGE===============================
 
+// ===============================FAQ PAGE===============================
 
 // ===============================HOW TO PAGE===============================
 $(document).ready(function() {

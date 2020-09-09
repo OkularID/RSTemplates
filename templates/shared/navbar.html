@@ -1,24 +1,12 @@
 {% url 'home' as home_url %}
-{#{% url 'contact' as contact_url %}#}
-{% url 'products:list' as product_list_url %}
 {% url 'login' as login_url %}
 {% url 'account' as account_url %}
 {% url 'logout' as logout_url %}
 {% url 'register' as register_url %}
-{#{% url 'about' as about_url %}#}
-{#{% url 'tour' as tour_url %}#}
-{#{% url 'faq' as faq_url %}#}
-{#{% url 'why' as why_url %}#}
-{% url 'event_create' as create_event %}
-{% url 'wedding_create' as create_wedding %}
-{% url 'birthday_create' as create_birthday %}
-
-{% url 'cart:home' as cart_url %}
 
 
 {% load static %}
-
-    <nav id="navigation" class="fadein">
+<nav id="navigation" class="fadein">
         <div class="container-fluid pt-lg-20 pb-lg-20 pl-lg-5p pr-lg-5p">
             <div class="row">
                 {% with url_name=request.resolver_match.url_name %}
@@ -51,20 +39,8 @@
                                     </div>
                                 </div>
                             </li>
-{#                            <li class="nav_custom{% if url_name == 'birthday' %} active {% elif url_name == 'event' %} active {% elif url_name == 'wedding_page' %} active {% endif %}">#}
-{#                                <a href="{% url 'all_temp' %}">Templates</a>#}
-{#                                <ul>#}
-{#                                    <li class="nav_custom{% if url_name == 'birthday' %} active {% endif %}"><a href="{% url 'birthday' %}">Birthday</a></li>#}
-{#                                    <li class="nav_custom{% if url_name == 'event' %} active {% endif %}"><a href="{% url 'event' %}">Event</a></li>#}
-{#                                    <li><a href="{% url 'wedding_page' %}">Wedding</a></li>#}
-{#                                    <li><a href="#">Free</a></li>#}
-{#                                </ul>#}
-{#                            </li>#}
                             <li class="nav_custom{% if url_name == 'faq' %} active {% endif %}"><a href="{% url 'faq' %}">Faq</a></li>
                             <li class="nav_custom{% if url_name == 'contact' %} active {% endif %}"><a href="{% url 'contact' %}">Contact Us</a></li>
-{#                            {% if request.user.is_authenticated %}#}
-{#                                <li><a href="{{ account_url }}">Account</a></li>#}
-{#                            {% endif %}#}
                         </ul>
                     </div>
                 </div>
@@ -93,112 +69,3 @@
             </div>
         </div>
     </nav>
-
-
-
-
-
-{#    <nav id="navigation">#}
-{#        <div class="container-fluid pt-lg-20 pb-lg-20 pl-lg-5p pr-lg-5p">#}
-{#            <div class="row">#}
-{#                <div class="col-lg-3 text-center">#}
-{#                    <a href="{{ home_url }}"><img class="logo" src="{% static 'img/logo.png' %}" alt="reservasidulu"></a>#}
-{#                </div>#}
-{#                <div class="col-lg-5">#}
-{#                    <div class="menu">#}
-{#                        <ul>#}
-{#                            <li><a href="{{ why_url }}">Why Us?</a></li>#}
-{#                            <li><a href="{{ tour_url }}">Tour</a></li>#}
-{#                            <li><a href="">Templates</a></li>#}
-{#                            <li><a href="{{ contact_url }}">Contact Us</a></li>#}
-{#                        </ul>#}
-{#                    </div>#}
-{#                </div>#}
-{#                <div class="col-lg-4 text-center">#}
-{#                    {% if request.user.is_authenticated %}#}
-{#                        <a class="button-orange getstarted" href="{{ account_url }}">#}
-{#                            <p class="font-white">Account</p>#}
-{#                            <img src="{% static 'img/button-01.png' %}">#}
-{#                        </a>#}
-{#                        <a class="button-orange getstarted" href="{{ logout_url }}">#}
-{#                            <p class="font-white">Logout</p>#}
-{#                            <img src="{% static 'img/button-01.png' %}">#}
-{#                        </a>#}
-{#                    {% else %}#}
-{#                        <a class="button-orange getstarted" href="{{ register_url }}">#}
-{#                            <p class="font-white">Get Started</p>#}
-{#                            <img src="{% static 'img/button-01.png' %}">#}
-{#                        </a>#}
-{#                        <a class="button-orange getstarted" href="{{ login_url }}">#}
-{#                            <p class="font-white">Login</p>#}
-{#                            <img src="{% static 'img/button-01.png' %}">#}
-{#                        </a>#}
-{#                    {% endif %}#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </nav>#}
-<header>
-
-
-
-{#  <div class="collapse bg-dark" id="navbarHeader">#}
-{#    <div class="container">#}
-{#      <div class="row">#}
-{#        <div class="col-sm-8 col-md-7 py-4">#}
-{#          <h4 class="text-white">About</h4>#}
-{#          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>#}
-{#        </div>#}
-{#        <div class="col-sm-4 offset-md-1 py-4">#}
-{#          <h4 class="text-white"><a style="color: #ffffff;" href="{{ contact_url }}">Contact</a> </h4>#}
-{#          <ul class="list-unstyled">#}
-{#            <li><a href="#" class="text-white">Follow on Twitter</a></li>#}
-{#            <li><a href="#" class="text-white">Like on Facebook</a></li>#}
-{#            <li><a href="#" class="text-white">Email me</a></li>#}
-{#          </ul>#}
-{#        </div>#}
-{#      </div>#}
-{#    </div>#}
-{#  </div>#}
-{#  <div class="navbar navbar-dark bg-light shadow-sm">#}
-{#    <div class="container d-flex">#}
-{#        <a href="{{ home_url }}" class="navbar-brand text-dark d-flex align-items-center">#}
-{#            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>#}
-{#            <strong>Okular</strong>#}
-{#        </a>#}
-{#            {% include 'search/snippets/search-form.html' %}#}
-{#        <ul class="menu">#}
-{#            <li><a href="{{ product_list_url }}">Explore</a></li>#}
-{#            <li><a href="{{ about_url }}">About</a></li>#}
-{#            {% if request.user.is_authenticated %}#}
-{#                <li class="dropdown">#}
-{#                    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
-{#                    Account#}
-{#                    </a>#}
-{#                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">#}
-{#                        <a class="dropdown-item {% if request.path == account_url %}active{% endif %}" href="{{ account_url }}">User</a>#}
-{#                        <a class="dropdown-item" href="{{ account_url }}#billing">Billing</a>#}
-{#                        <a class="dropdown-item" href="{% url "account:user-product-history" %}">History</a>#}
-{#                        <a class='dropdown-item' href='{% url "library" %}'>Library</a>#}
-{#                        <div class="dropdown-divider"></div>#}
-{#                        <a class="dropdown-item" href="{{ logout_url }}">Logout</a>#}
-{#                    </div>#}
-{#                </li>#}
-{#            {% else %}#}
-{#                <li class="{% if request.path == register_url %}active{% endif %}">#}
-{#                    <a href="{{ register_url }}">Register</a>#}
-{#                </li>#}
-{#                <li class="{% if request.path == login_url %}active{% endif %}">#}
-{#                    <a href="{{ login_url }}">Login</a>#}
-{#                </li>#}
-{#            {% endif %}#}
-{#                <li class="{% if request.path == cart_url %}active{% endif %}">#}
-{#                    <a href="{{ cart_url }}"><span class='navbar-cart-count'>{{ request.session.cart_items }}</span> <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>#}
-{#                </li>#}
-{#        </ul>#}
-{#      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">#}
-{#        <i style="color: #1b1e21 !important;" class="fa fa-bars"></i>#}
-{#      </button>#}
-{#    </div>#}
-{#  </div>#}
-</header>
