@@ -1,0 +1,197 @@
+{% load static %}
+{% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
+    <title>Template Birthday | Homepage</title>
+    <link rel="shortcut icon" href="{% static 'rsvp/birthday/aaron/images/ico.ico">
+    <!-- Customize css -->
+    {% compress css %}
+        {% include 'static/css.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/birthday/aaron/style-birthday-4.css' %}">
+    {% endcompress %}
+    <!-- Features css -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div id="pagewishlist">
+        <!-- Section BANNER -->
+        <section id="banner">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 pl-lg-0 pr-lg-0">
+                        <div class="box">
+                            <div class="subtitle">the</div>
+                            <div class="title">Wish List</div>
+                        </div>
+                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{% static 'rsvp/birthday/aaron/images/images-13.png' %}" />
+                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="{% static 'rsvp/birthday/aaron/images/mobile-images-03.png' %}" />
+                        <img class="img-fluid w-lg-100p d-none d-lg-block motif" src="{% static 'rsvp/birthday/aaron/images/motif-10.png' %}" />
+                        <img class="img-fluid d-none d-lg-block motif2" src="{% static 'rsvp/birthday/aaron/images/motif-top-09.png' %}" />
+                        <img class="img-fluid d-block d-lg-none mmotif" src="{% static 'rsvp/birthday/aaron/images/mobile-motif-05.png' %}" />
+                        <img class="img-fluid w-lg-100p d-block d-lg-none mmotif2" src="{% static 'rsvp/birthday/aaron/images/mobile-motif-06.png' %}" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section WISH -->
+        <section id="wish">
+            <div class="container-fluid pt-m-40p pb-m-20p pt-lg-10p pl-lg-10p pr-lg-10p">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-6 text-center text-center">
+                        <p>
+                            You can choose and select gift ideas from the list below so<br>
+                            others will not need to give the same gift.<br>
+                        </p>
+                        <p>
+                            It is not mandatory to give things from this list. If you’re prefer<br>
+                            to give other gift please select the “others” option. Your<br>
+                            presence is much more important and needed.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="wish2">
+            <div class="container-fluid pt-m-20p pb-lg-5p pl-lg-10p pr-lg-10p">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="row pb-5 pt-lg-15p">
+                            <div class="col-lg-12">
+                                <h2 class="font-darkblue mb-lg-5">
+                                    Choose One!
+                                </h2>
+                            </div>
+                            <div class="row position-realtive z-index-3">
+                                <div class="col-6 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Baby Stroller</a>
+                                </div>
+                                <div class="col-6 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Baby Clothes</a>
+                                </div>
+                                <div class="col-6 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Baby Bottles</a>
+                                </div>
+                                <div class="col-6 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Diapers</a>
+                                </div>
+                                <div class="col-6 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Baby Onesies</a>
+                                </div>
+                                <div class="col-6 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Baby Snacks</a>
+                                </div>
+                                <div class="col-6 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Formula Milk</a>
+                                </div>
+                                <div class="col-6 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Baby Shoes</a>
+                                </div>
+                                <div class="col-6 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Baby Toys</a>
+                                </div>
+                                <div class="col-6 offset-lg-4 col-lg-4 py-4 py-lg-5">
+                                    <a data-toggle="modal" data-target="#ebrochure">Others</a>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="ebrochure">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-12 text-center pb-m-10p pb-lg-5p pl-lg-0 pr-lg-0">
+                                                    <img class="img-fluid w-lg-100p d-none motif" src="{% static 'rsvp/birthday/aaron/images/motif-12.png' %}" />
+                                                    <img class="img-fluid d-block d-lg-none mmotif" src="{% static 'rsvp/birthday/aaron/images/mobile-motif-08.png' %}" />
+                                                    <div class="box bs">
+                                                        <a class="close button-default" data-dismiss="modal">X</a>
+                                                        <h3 class="mb-m-5 font-krub-r"><span>you choose to give this gift:</span></h3>
+                                                        <h2 class="mb-m-5p mb-lg-5">Baby Snack</h2>
+                                                        <div class="mt-m-10p mt-lg-5">
+                                                            <p>Please input your email address<br> 
+                                                                to continue the confirmation*
+                                                            </p>
+                                                            <div class="form-group w-50 mx-auto">
+                                                                <input type="text" name="your-name" class="form-control mb-m-5p" required="">
+                                                            </div>
+                                                            <div class="form-group py-5">
+                                                                <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#ebrochure_thankyou"  class="button-cyan">
+                                                                    Confirm The Gift
+                                                                </a>
+                                                            </div>
+                                                            <p class="font-lightgrey font-small" style="font-size: 13px !important;">
+                                                                <span class="mr-3 font-lightgrey">
+                                                                    *Required
+                                                                </span>
+                                                                Note: you cannot change your gift selection once you’ve confirmed one.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="ebrochure_thankyou">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-12 text-center pb-m-10p pl-lg-0 pr-lg-0">
+                                                    <img class="img-fluid w-lg-100p d-none motif" src="{% static 'rsvp/birthday/aaron/images/motif-12.png' %}" />
+                                                    <img class="img-fluid d-block d-lg-none mmotif" src="{% static 'rsvp/birthday/aaron/images/mobile-motif-08.png' %}" />
+                                                    <div class="box bs  pt-lg-15p pb-lg-15p">
+                                                        <a class="close button-default" data-dismiss="modal">X</a>
+                                                        <h3 class="mb-m-5 font-krub-r"><span>thank you</span></h3>
+                                                        <h2 class="mb-m-5p mb-lg-5">For the Gift</h2>
+                                                        <div class="mt-m-10p mt-lg-5">
+                                                            <p>Remember, your presence is much<br>
+                                                                more important and needed!
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="ornament-bottom" src="{% static 'rsvp/birthday/aaron/images/bottom-ornament-wishlist-08.png' %}" alt="">
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="container-fluid pt-m-10p pb-m-15p pl-m-10p pr-m-10p pt-lg-30 pb-lg-30 pl-lg-5p pr-lg-5p">
+                <div class="row">
+                    <div class="col-12 mb-m-10p mtext-center col-lg-8">
+                        <p>All Rights Reserved © This website is made by <span>Reservasi Dulu</span></p>
+                    </div>                
+                    <div class="col-12 mtext-center col-lg-4 text-right">
+                        <a href="" class="button-footer">Create a Site</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Features JS -->
+        <!-- Features JS -->
+        <script>
+            new WOW().init();
+        </script>
+        {% compress js %}
+            {% include 'static/js.html' %}
+            <!-- Custom JS -->
+            <script type="text/javascript" src="{% static 'rsvp/birthday/aaron/app.js' %}"></script>
+        {% endcompress %}
+        <!-- Custom JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</body>
+</html>
