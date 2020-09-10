@@ -288,6 +288,7 @@ input[type=number] {
 		top: 30%;
 		right: 0;
 	}
-	.thank-you{
+	.thank-you {
 		background-image: url(images/thank-you-bg-mobile-02.jpg);
+	}
 }
