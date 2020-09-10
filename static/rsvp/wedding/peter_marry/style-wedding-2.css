@@ -1,11 +1,3 @@
-@font-face {
-    font-family: "Overpass Light";
-    src: url(Overpass-Light.ttf) format("truetype");
-  }
-  @font-face {
-    font-family: "ZillaSlab SemiBold";
-    src: url(ZillaSlab-SemiBold.ttf) format("truetype");
-  }
 	body{
 		overflow-x: hidden;
 	}
@@ -57,7 +49,13 @@
 	}
 	.nav-wedding-2 ul li{
     	display: inline;
-  	}
+	}
+	.nav-wedding-2 ul li:hover{
+		border-bottom: 2px solid #596E79;
+	}
+	.nav-wedding-2 ul li:hover a{
+		font-weight: bold;
+	}   
   	.nav-wedding-2 ul li a{
   		color: #596E79;
   	}
@@ -76,9 +74,13 @@
 	    font-weight: bold;
 	    padding: 5px 20px;
 	    border-radius: 25px;
-	    letter-spacing: 0.8px;
+		letter-spacing: 0.8px;
+		transition: all .3s;
   	}
-  	
+  	.button-border-white:hover{
+		background-color: #fff;
+		color: #596e79;
+	  }
   	.content-header-home{
   		position: absolute;
 		transform: translateX(-50%);
@@ -172,6 +174,10 @@
 		border: none;
 		border-bottom: 2px solid #C7B198;
 		background: none;
+		transition: all .3s;
+	}
+	.rsvp-section .form-group .button-submit:hover{
+		color: #C7B198;
 	}
 	.img-mobile{
 		object-fit: cover;
@@ -201,8 +207,11 @@
 	}
 	.accomodation .button-location{
 		color: #284c5b;
-		font-weight: bold;
 		border-bottom: 2px solid #c7b198;
+		font-family: "Overpass Bold";
+	}
+	.accomodation .button-location:hover{
+		color: #c7b198;
 	}
 	.accomodation .garis{
 		position: absolute;

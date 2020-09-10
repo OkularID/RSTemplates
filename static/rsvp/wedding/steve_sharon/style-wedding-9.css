@@ -30,6 +30,9 @@
 		font-family: "Spartan Light";
 		color: #C0A28A;
 	}
+	a{
+		transition: all .3s;
+	}
 	h1{font-size: 72px !important;}
 	h2{font-size: 70px !important;}
 	h3{font-size: 60px !important;}
@@ -39,7 +42,7 @@
 	p,a,label,th,td,li, input{
 		font-family: "TitilliumWeb Light";
 		font-size: 15px !important;
-		line-height: 23px !important;
+		line-height: 26px !important;
 		color: #808285 !important;
 	}
 	.container-fluid{position: relative;}
@@ -57,6 +60,10 @@
 		width: 100%;
 		border: 1px solid #808285;
 		border-radius: 50px;
+	}
+	.button-default:hover{
+		background-color: #808285;
+		color: #fff !important;
 	}
 	.button-default img{
 		position: absolute;
@@ -112,9 +119,10 @@
 		padding-right: 0;
 	}
 	nav ul li a{
-		font-size: 13px !important;
+		font-size: 15px !important;
 		letter-spacing: 0.96px;
 		color: #808285;
+		transition: all .3s;
 	}
 	nav ul li a:hover,
 	nav ul li a:active,
@@ -122,7 +130,7 @@
 		padding-bottom: 5px;
 		color: #808285;
 		border-bottom: 2px solid #808285;
-		transition: .0s;
+		transition: all .3s;
 	}
 	@media screen and (max-width: 846px) {
 		nav{
@@ -241,7 +249,7 @@
         #home .link-rsvp{
             position: absolute;
             padding: 2% 3% 2% 5%;
-            bottom: 10%;
+            bottom: 30.6%;
             left: 0;
             width: 25%;
             border-top: 1px solid #808285;
@@ -261,7 +269,7 @@
         }
         #home .link-gallery{
             position: absolute;
-            bottom: 13.3%;
+            bottom: 34%;
             right: 7%;
             width: 20%;
         }
@@ -409,8 +417,11 @@
             right: 0;
             width: 30%;
         }
-    /* Accommodation */
-        #accommodation{border-bottom: 1px solid #bcbec0;}
+	/* Accommodation */
+		.border-bottom-gray{
+			border-bottom: 1px solid #bcbec0;
+		}
+        #accommodation{}
         #accommodation h5{
             line-height: 40px !important;
             letter-spacing: 5.2px;
@@ -443,7 +454,11 @@
         }
         #gallery .three-carousel .owl-prev{left: -7%;}
         #gallery .three-carousel .owl-next{right: -7%;}
-        #gallery .three-carousel .item{padding: 2%;}
+		#gallery .three-carousel .item{padding: 2%;}
+		.gallery-close{
+			position: absolute;
+			right: -60px;
+		}
     /* Countdown */
         #countdown .motif{
             position: absolute;
@@ -470,7 +485,7 @@
         }
         #countdown .desc{
             font-family: "TitilliumWeb SemiBold";
-            font-size: 36px;
+            font-size: 27px;
             color: #FFFFFF;
         }
     /* RSVP */
@@ -541,7 +556,8 @@
         #rsvp form .radio-toolbar input[type="radio"]{
           opacity: 0;
           position: fixed;
-          width: 0;
+		  width: 0;
+		  transition: all .3s;
         }
         #rsvp form .radio-toolbar label{
             display: inline-block;
@@ -552,7 +568,8 @@
             color: #fff !important;
             background-color: #808285;
             border: 1px solid #808285;
-            border-radius: 50px;
+			border-radius: 50px;
+			transition: all .3s;
         }
         #rsvp form .radio-toolbar label:hover,
         #rsvp form .radio-toolbar input[type="radio"]:checked + label,
@@ -576,7 +593,8 @@
         #rsvp form .button-default{
             display: inline-block;
             width: 45%;
-            padding: 2% 4%;
+			padding: 2% 4%;
+			letter-spacing: 0.7px;
         }
         #rsvp form .button-default img{top: 30%;}
         #rsvp form .button-wrap{
@@ -588,8 +606,12 @@
             padding: 5% 10%;
             width: 100%;
             text-align: left;
-            background: transparent;
-        }
+			background: transparent;
+			transition: all .3s;
+		}
+		#rsvp form .button-wrap input.button-default:hover{
+			background-color: #808285;
+		}
         #rsvp form .button-wrap img{
             position: absolute;
             top: 40%;
@@ -617,7 +639,7 @@
             height: 100%
         }
         #rsvp #ebrochure.modal .modal-dialog .modal-content h4{
-            margin-bottom: 10%;
+            margin-bottom: 4%;
             width: 330px;
             font-size: 30px !important;
             line-height: 40px;
