@@ -527,7 +527,7 @@
 /* How To Page */
   /* Section Banner */
   .howto-banner .boxv.desc{
-    top: 58%;
+    top: 50%;
     left: 6%;
     right: unset;
   }
