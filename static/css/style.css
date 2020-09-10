@@ -1,4 +1,5 @@
 /* Form */
+.container-fluid{overflow: hidden !important;}
   .form-wrapper{
     padding: 10%;
     margin: 0 auto;
