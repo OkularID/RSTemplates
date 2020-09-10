@@ -38,7 +38,6 @@
     font-family: "Montserrat SemiBold";
     src: url(../fonts/Montserrat-SemiBold.ttf) format("truetype");
   }
-  .container-fluid{overflow: hidden !important;}
   /* Header, Paragraf, Anchor Desktop */
   h1, h2, h3, h4, h5, h6{font-family: "Montserrat Regular";}
   h1 span,h2 span,h3 span,h4 span,h5 span,h6 span{font-family: "Montserrat Bold";}
