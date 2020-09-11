@@ -18,8 +18,10 @@
 
 <body>
 {% with url_name=request.resolver_match.url_name %}
-    {% if url_name == 'account' and 'w/create/*' %}
+    {% if url_name == 'account' %}
         {% include 'shared/nav.html' %}
+{#    {% elif url_name == 'emma_norman_create' %}#}
+{#        {% include 'shared/nav.html' %}#}
     {% else %}
         {% include 'shared/navbar.html' with brand_name='Okular' %}
     {% endif %}
