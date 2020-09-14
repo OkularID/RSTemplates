@@ -1,99 +1,73 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block content %}
-    <title>{% block title %}FAQ | ReservasiDulu {% endblock %}</title>
-    <!-- Main -->
-    <div id="main-templates">
-        <!-- Section Banner -->
-        <div class="container-fluid pos-rel pt-lg-0 pb-lg-0 pl-lg-0 pr-lg-0 templates-banner faq-banner fadein">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
+    <title>Reservasi Dulu | FAQ</title>
+    <link rel="shortcut icon" href="images/ico.ico">
+    <!-- Customize css -->
+    <link rel="stylesheet" type="text/css" href="css/animation.css" >    
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Features css -->
+    <link rel="stylesheet" href="features/animatecss/animate.min.css">
+    <!--Node Modules css-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="top"></div>
+    <nav id="navigation" class="fadein">
+        <div class="container-fluid pt-lg-20 pb-lg-20 pl-lg-5p pr-lg-5p">
             <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-fluid w-lg-100p" src="{% static 'img/faq/faq-background.png' %}" alt="reservasidulu" />
-                    <img class="img-fluid boxv image birthday" src="{% static 'img/faq/faq-image.png' %}" alt="reservasidulu" />
-                    <div class="boxv desc animated fadeInRight" style="animation-delay: 1s !important;">
-                        <h2 class="font-white mb-lg-30">Your Answer for<br><span>Frequently<br>Ask Question</span></h2>
-                        <a id="chevron-down" href="#faq-content">
-                            <h5 class="font-white mr-lg-15">Scroll down</h5>
-                            <img class="arrow" src="{% static 'img/arrow-down.png' %}">
-                        </a>
-                    </div>
+                <div class="col-lg-3">
+                    <a href="index.html"><img class="logo" src="images/logo.png" alt="reservasidulu"></a>
                 </div>
-            </div>
-        </div>
-        <!-- Section Content -->
-        <div id="faq-content" class="container-fluid pos-rel faq-content">
-            <div class="row">
-                <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                    {# Tab title goes here #}
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#fc-Account" role="tab" data-toggle="tab">Account</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#fc-Transaction" role="tab" data-toggle="tab">Transaction</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#fc-Templates" role="tab" data-toggle="tab">Template</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#fc-Payment" role="tab" data-toggle="tab">Payment</a>
-                        </li>
-                    </ul>
-
-                    {# content goes here #}
-                    <div class="tab-content">
-                    {% for i in x %}
-                        <div role="tabpanel" class="tab-pane animated fadeInUp" id="fc-{{ i.category | safe}}">
-                            <div class="container-fluid pt-lg-10p pb-lg-10p pl-lg-10p pr-lg-10p">
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <div class="faq-sidemenu">
-                                            <ul>
-                                                <li><a class="faq-sidemenuanim" href="#{{ i.title }}">{{ i.title }}</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 faq-accordion">
-                                        <!-- Item -->
-                                        <div class="container-fluid item">
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div id="signuplogintransaction" class="faq-target"></div>
-                                                    <h3 class="mb-lg-5p title slideanim">{{ i.title }}</h3>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <div id="faqparent-signuplogintransaction" class="shadow-lightgray">
-                                                        <div class="card border-radius-0">
-                                                            <div class="card-header">
-                                                                <a class="card-link collapsed" data-toggle="collapse" href="#howdoisignup3">
-                                                                    {{ i.sub_title }}
-                                                                </a>
-                                                            </div>
-                                                            <div id="howdoisignup3" class="collapse" data-parent="#faqparent-signuplogintransaction">
-                                                                <div class="card-body">
-                                                                    <p>
-                                                                        {{ i.content | safe }}
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                <div class="col-lg-6 menuhov">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="why-us.html">Why Us?</a></li>
+                            <li><a href="tour.html">Tour</a></li>
+                            <li>
+                                <a href="templates-landing.html">Templates</a>
+                                <div class="submenu">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <h2>Hi There!</h2>
+                                                <h5><span>Find what you’re looking for?</span></h5>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <ul class="navtemplates">
+                                                    <li><a href="templates-wedding.html">Wedding</a></li>
+                                                    <li><a href="templates-birthday.html">Birthday</a></li>
+                                                    <li><a href="templates-events.html">Events</a></li>
+                                                    <li><a href="templates-free.html">Free</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                </div>
-                            </div>
-                    {% endfor %}
+                            </li>
+                            <li><a class="active" href="faq.html">Faq</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
                     </div>
+                </div>
+                <div class="col-lg-3 pl-lg-0 pr-lg-0 text-center">
+                    <a class="button-orange getstarted" href="signup.html">
+                        <p class="font-white">Get Started</p>
+                        <img src="images/button-01.png">
+                    </a>
+                    <a class="button-orange login" href="login.html">
+                        <p class="font-white">Login</p>
+                        <img src="images/button-02.png">
+                    </a>
                 </div>
             </div>
         </div>
-
-
-        <div class="w-lg-100p h-lg-115vh"></div>
-    </div>
-
-{% endblock %}
+    </nav>
