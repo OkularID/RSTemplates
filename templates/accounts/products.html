@@ -21,14 +21,16 @@
                                         <div class="boxc info">
                                             <div class="title">{{ i.theme.theme_name }}</div>
                                             <div class="category">{{ i.theme.theme_category }}</div>
-                                            <div class="date">{{ i.theme.created }}</div>
+{#                                            <div class="date">{{ i.theme_data.created }}</div>#}
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
+{#                                        {% for shit in u_theme %}#}
                                         <div class="boxc">
                                             <a class="btn-whiteoutline" href="">edit</a>
-                                            <a class="btn-rectangle" href="/{{ i.theme.theme_path }}/">preview</a>
+                                            <a class="btn-rectangle" href="{{ i }}">preview</a>
                                         </div>
+{#                                        {% endfor %}#}
                                     </div>
                                 </div>
                             </div>
