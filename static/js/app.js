@@ -392,3 +392,6 @@ $('.templates-steps .nav-tabs').on('click', 'li', function() {
   $(this).addClass('active');
 });
 // ===============================EDIT TEMPLATES PAGE===============================
+$('#mySelect').on('change', function (e) {
+  $('#myTab li a').eq($(this).val()).tab('show'); 
+});
