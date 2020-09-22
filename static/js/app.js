@@ -1,3 +1,7 @@
+// Preloader
+  $(window).on('load', () => {
+    $('.preloader').delay(5000).fadeOut();
+  })
 // ================================================HOMEPAGE BANNER================================================
 $(document).ready(function(){
   // show first
