@@ -54,10 +54,10 @@
                     <div class="templates-carousel owl-theme">
                          {% for x in preview %}
                             <div class="item">
-                                <a href="/{{ x.theme_url }}">
+                                <a href="/themes/preview/{{ x.theme_url }}">
                                     <img class="templatesthumbnail-image" src="{{ x.theme_img.url }}" alt="reservasidulu" />
                                 </a>
-                                <a class="templatesthumbnail-title" href="/{{ x.theme_name }}">{{ x.theme_name}}</a>
+                                <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ x.theme_name}}</a>
                                 {#<a class="templatesthumbnail-category" href="/{{ x.theme_category | lower }}">{{ x.theme_category }} Templates</a>#}
                             </div>
                         {% endfor %}

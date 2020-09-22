@@ -7,10 +7,10 @@
 
                 {% for i in preview %}
                     <div class="col-lg-4 d-none d-lg-block mb-lg-5p">
-                        <a href="/{{ i.theme_url }}">
+                        <a href="/themes/preview/{{ x.theme_url }}">
                             <img class="templatesthumbnail-image" src="{{ i.theme_img.url }}" alt="reservasidulu" />
                         </a>
-                        <a class="templatesthumbnail-title" href="/{{ i.theme_name }}">{{ i.theme_name}}</a>
+                        <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ i.theme_name}}</a>
                         <a class="templatesthumbnail-category" href="/{{ i.theme_category | lower }}">{{ i.theme_category }} Templates</a>
                     </div>
                 {% endfor %}
@@ -55,10 +55,10 @@
                     <div class="templates-carousel owl-theme">
                         {% for i in preview %}
                             <div class="item">
-                                <a href="/{{ i.theme_url }}">
+                                <a href="/themes/preview/{{ x.theme_url }}">
                                     <img class="templatesthumbnail-image" src="{{ i.theme_img.url }}" alt="reservasidulu" />
                                 </a>
-                                <a class="templatesthumbnail-title" href="/{{ i.theme_name }}">{{ i.theme_name}}</a>
+                                <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ i.theme_name}}</a>
                                 <a class="templatesthumbnail-category" href="/{{ i.theme_category | lower }}">{{ i.theme_category }} Templates</a>
                             </div>
                         {% endfor %}
