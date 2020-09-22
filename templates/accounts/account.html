@@ -7,7 +7,7 @@
 <title>{% block title %} My Account {% endblock %}</title>
     <!-- Main -->
 
-    <div id="main-templates">
+    <div id="main-templates" class="main-account">
         <!-- Section User Navigation -->
         <div class="navspace"></div>
         <div class="container-fluid pos-rel user-navigation d-none d-lg-block pl-lg-5p pr-lg-5p">
@@ -28,37 +28,37 @@
             </div>
         </div>
         <!-- Section User Content -->
-        <div class="container-fluid pos-rel user-content profile-content pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p bg-lightgrey">
+        <div class="container-fluid pos-rel user-content profile-content pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
             <div class="row">
                 <div class="col-lg-12">
                     <h3 class="mb-lg-2p">My Profile</h3>
                     <div class="w-lg-100p line-lightgrey mb-lg-5p"></div>
                     <div class="wrap">
-                        <div class="container-fluid">
+                        <div class="container-fluid pl-m-0 pr-m-0">
                             <div class="row">
                                 <div class="col-lg-3">
-                                    <img  class="profile-picture" src="{{user.profile.picture.url}}" alt="">
+                                    <img class="profile-picture" src="{{user.profile.picture.url}}" alt="">
                                 </div>
                                 <div class="col-lg-9">
                                     <h3>{{ user.username }}</h3>
-                                    <h5 class="mb-lg-4p"><b>{{ user.first_name }} {{ user.last_name }}</b></h5>
-                                    <a class="btn-whiteoutline" data-toggle="modal" data-target="#editprofile" href="#">Change Profile Picture</a>
+                                    <h5 class="name mb-lg-4p"><b>{{ user.first_name }} {{ user.last_name }}</b></h5>
+                                    <a class="btn-whiteoutline mt-m-15p mb-m-15p" data-toggle="modal" data-target="#editprofile" href="#">Change Profile Picture</a>
                                     {#<a target="#editprofile" class="btn-whiteoutline">Change Profile Picture</a>#}
                                 </div>
                                 <div class="col-lg-12 mt-lg-5p">
-                                    <h5 class="mb-lg-1p"><b>Email Address</b></h5>
-                                    <h5 class="mb-lg-5p">{{ user.email }}</h5>
-                                    <h5 class="mb-lg-1p"><b>First Name</b></h5>
-                                    <h5 class="mb-lg-5p">{{ user.first_name }}</h5>
-                                    <h5 class="mb-lg-1p"><b>Last Name</b></h5>
-                                    <h5 class="mb-lg-5p">{{ user.last_name }}</h5>
+                                    <h5 class="mb-lg-1p mb-m-3p"><b>Email Address</b></h5>
+                                    <h5 class="mb-lg-5p mb-m-10p">{{ user.email }}</h5>
+                                    <h5 class="mb-lg-1p mb-m-3p"><b>First Name</b></h5>
+                                    <h5 class="mb-lg-5p mb-m-10p">{{ user.first_name }}</h5>
+                                    <h5 class="mb-lg-1p mb-m-3p"><b>Last Name</b></h5>
+                                    <h5 class="mb-lg-5p mb-m-10p">{{ user.last_name }}</h5>
                                     {% for i in data_user %}
-                                        <h5 class="mb-lg-1p"><b>Phone Number</b></h5>
-                                        <h5 class="mb-lg-5p">{{ i.phone_number }}</h5>
-                                        <h5 class="mb-lg-1p"><b>Address</b></h5>
-                                        <h5 class="mb-lg-5p">{{ i.address }}</h5>
-                                        {#<h5 class="mb-lg-1p"><b>Province</b></h5>#}
-                                        {#<h5 class="mb-lg-5p">Jakarta</h5>#}
+                                        <h5 class="mb-lg-1p mb-m-3p"><b>Phone Number</b></h5>
+                                        <h5 class="mb-lg-5p mb-m-10p">{{ i.phone_number }}</h5>
+                                        <h5 class="mb-lg-1p mb-m-3p"><b>Address</b></h5>
+                                        <h5 class="mb-lg-5p mb-m-10p">{{ i.address }}</h5>
+                                        {#<h5 class="mb-lg-1p mb-m-3p"><b>Province</b></h5>#}
+                                        {#<h5 class="mb-lg-5p mb-m-10p">Jakarta</h5>#}
                                     {% endfor %}
                                     <a class="btn-rectangle" data-toggle="modal" data-target="#editprofile" href="#">Edit Profile</a>
                                 </div>
@@ -213,8 +213,8 @@
                                     {#<form method="post" enctype="multipart/form-data">#}
                                         {% csrf_token %}
                                         {#<fieldset>#}
-                                            {{ user_form|crispy }}
-                                            {{ profile_form|crispy }}
+                                            {#{{ user_form|crispy }}#}
+                                            {#{{ profile_form|crispy }}#}
                                         {#</fieldset>#}
                                         {#<div class="col-lg-12 text-center">#}
                                             {#<button class="btn btn-outline-primary btn-sm" type="submit">Submit Change</button>#}
