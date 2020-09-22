@@ -2,12 +2,12 @@
 <nav id="navigation" class="account fadein">
     <div class="container-fluid pt-lg-20 pb-lg-20 pl-lg-5p pr-lg-5p">
         <div class="row">
-            <div class="col-lg-9 nav-accountlogo pt-lg-20">
+            <div class="col-lg-9 d-none d-lg-block nav-accountlogo pt-lg-20">
                 <a href="{% url 'home' %}"><img class="logo" src="{% static 'img/logo.png' %}" alt="reservasidulu"></a>
                 <div class="line"></div>
                 <h5><b>My Account</b></h5>
             </div>
-            <div class="col-lg-3 pl-lg-0 nav-account pt-lg-10">
+            <div class="col-lg-3 d-none d-lg-block pl-lg-0 nav-account pt-lg-10">
                 <div class="row">
                     <div class="offset-lg-2 col-lg-7 line">
                         <h5><b>{{ user.username }}</b></h5>
@@ -19,5 +19,35 @@
                 </div>
             </div>
         </div>
+        <div class="row d-lg-none navigation-mobile">
+            <div class="col-8">
+                <a href="index.html"><img class="logo" src="{% static 'img/logo.png' %}" alt="reservasidulu"></a>
+            </div>
+            <div class="col-4 bars">
+                <div id="toggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <h5><b>Menu</b></h5>
+            </div>
+            <div class="side-nav">
+                <img class="img-fluid close-icon" src="{% static 'img/close.png' %}" />
+                <div class="profile">
+                    <h5><b>{{ user.username }}</b></h5>
+                    <p>{{ user.first_name }} {{ user.last_name }}</p>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="nav_custom{% if url_name == 'my_products' %} active {% endif %}"><a href="{% url 'my_products' %}">My Products</a></li>
+                        <li class="nav_custom{% if url_name == 'my_guest' %} active {% endif %}"><a href="{% url 'my_guest' %}">My Guests</a></li>
+                        <li class="nav_custom{% if url_name == 'account' %} active {% endif %}"><a href="{% url 'account' %}">Profile</a></li>
+                        <li class="nav_custom{% if url_name == 'login_info' %} active {% endif %}"><a href="{% url 'login_info' %}">Login Info</a></li>
+                    </ul>
+                </div>
+                <a class="btn-rectangle" href="">Back To Home</a>
+            </div>
+        </div>
     </div>
+    <img class="navline" src="{% static 'img/mobile/nav-line.png' %}" />
 </nav>
