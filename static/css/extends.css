@@ -629,3 +629,370 @@
     left: 2vw;
     width: 78%;
   }
+
+
+/*=================================================MOBILE=================================================*/
+@media screen and (max-width: 846px) {
+  /* Page Home */
+    /* Heading */
+    h3{font-size: 25px !important;}
+    /* Button */
+    .button-orange p, .button-orange-line p{font-size: 12px !important;}
+    /* Section Banner */
+    .home-banner{
+      background-size: 100% 50% !important;
+      background-position: 100% 100% !important;
+      width: 100% !important;
+      height: 500vh;
+    }
+    .home-banner .home-banner-ornament{
+      margin: 0 auto;
+      top: unset;
+      bottom: 3%;
+      left: 0;
+      right: 10%;
+      width: 40%;
+    }
+    .desc-animation-1,
+    .desc-animation-2,
+    .desc-animation-3{top: 20%;}
+    .home-banner .box-desc{
+      left: -70%;
+      width: 70vw;
+    }
+    #main-home .home-banner .sec-1 .box-desc h2,
+    #main-home .home-banner .sec-2 .box-desc h2,
+    #main-home .home-banner .sec-3 .box-desc h2{
+      font-size: 20px !important;
+      line-height: 27px;
+    }
+    .home-banner .sec-1 .box-desc p,
+    .home-banner .sec-2 .box-desc p,
+    .home-banner .sec-3 .box-desc p{
+      font-size: 20px !important;
+      line-height: 25px !important;
+    }
+    .home-banner .sec-1 .box-image .motif-01,
+    .home-banner .sec-2 .box-image .motif-01,
+    .home-banner .sec-2 .box-image .motif-02,
+    .home-banner .sec-3 .box-image .motif-01{display: none;}
+    .image-animation-1{
+      bottom: 5%;
+      left: 86%;
+      width: 75%;
+    }
+    .image-animation-2{
+      bottom: 21%;
+      left: 100%;
+      width: 85%;
+    }
+    .image-animation-3{
+      bottom: 11%;
+      left: 99%;
+      width: 85%;
+    }
+    /* Section Brief */
+    .home-brief .background{top: -110vh;}
+    .home-brief .quote{
+      margin-top: -9vh;
+      padding: 10%;
+      width: 100%;
+    }
+    .home-brief .quote .motif-01,
+    .home-brief .quote .motif-02{width: 10%;}
+    .home-brief .quote .motif-01{
+      position: absolute;
+      top: -2vh;
+      left: 2vw !important;
+      transform: rotate(40deg);
+    }
+    .home-brief .quote .motif-02{
+      position: absolute;
+      top: unset;
+      bottom: -2vh;
+      right: 2vw !important;
+      transform: rotate(40deg);
+    }
+    /* Section Invitation */
+    .home-invitation h2{
+      margin: 0 auto;
+      width: 240px;
+    }
+    .home-invitation a{
+      font-family: "Montserrat Bold";
+      font-size: 16px !important;
+      color: #2B303A;
+    }
+    .home-invitation .col-lg-12 .col-lg-4:hover a{color: #f8b133;}
+    .home-invitation .button-orange p{top: 25%;}
+    .home-invitation .button-orange img{width: 50%;}
+    /* Section Steps */
+    .home-steps h3{width: 195px;}
+    .home-steps .boxv{
+      position: relative;
+      margin: 0 auto;
+      top: unset;
+      transform: unset;
+    }
+    .home-steps ul#nav-box{
+      width: 80%;
+      text-align: center;
+    }
+    .home-steps .tabs-home-steps .tabs{width: 80%;}
+    /* Background PriceTestimoni */
+    #main-home .pricetestimony .background{
+      top: 0;
+      height: 100%;
+    }
+    /* Section Price */
+    .home-price h3{text-align: left;}
+    .home-price .button-orange img,
+    .home-price .button-orange-line img,
+    .home-template .button-orange img{width: 150px;}
+    /* Section Testimoni */
+    .home-testimony .box1 #sync1{
+      margin-bottom: 40vh;
+      left: 30vw;
+      top: 10vh;
+      width: 39vw;
+      height: 17vh;
+    }
+    .home-testimony .box1 #sync1 .item,
+    .home-testimony .box1 #sync1 img{
+      width: 39vw;
+      height: 17vh;
+    }
+    .home-testimony .box1 .pic{
+      padding-right: 5%;
+      top: 10vh;
+      text-align: right;
+    }
+    /* Template */
+    .home-template h2{text-align: left;}
+    .templates-carousel .owl-prev{
+      top: 20vh;
+      left: -12vw;
+    }
+    .templates-carousel .owl-next{
+      top: 20vh;
+      right: -12vw;
+    }
+    /* Free */
+    .home-free .wrap .title,
+    .home-free .wrap .desc{
+      padding: 0 10%;
+      width: 100%;
+      text-align: left;
+    }
+    .home-free .wrap .title{margin-bottom: 5%;}
+    .home-free .wrap .desc{margin-bottom: 10%;}
+    .home-free .wrap .line{display: none;}
+    .home-free .wrap .desc .button-orange img{width: 160px;}
+  /* Page Why Us */
+    .pr-m-13p{padding-right: 13% !important;}
+    #main-whyus{padding-top: 22%;}
+    /* Heading */
+    h3{font-size: 25px !important;}
+    /* Banner */
+    .whyus-banner .boxv{
+      position: relative;
+      margin-bottom: 15%;
+      top: unset;
+      transform: unset;
+    }
+    /* Brief */
+    .whyus-brief h3{
+      width: 240px;
+      font-size: 28px !important;
+    }
+    .whyus-brief .container1{margin: 0 0 10%;}
+    /* Affordable */
+    #main-whyus .affordablefast .background{top: 68%;}
+    .whyus-affordable .boxv,
+    .whyus-fast .boxv,
+    .whyus-started .boxv{
+      position: relative;
+      top: unset;
+      transform: unset;
+    }
+    /* Started */
+    .whyus-started h3{
+      position: absolute;
+      top: 25%;
+      right: 15%;
+      width: 165px;
+      font-size: 26px !important;
+      text-align: right;
+    }
+    .whyus-started .boxv{padding: 0 10%;}
+    .whyus-started .button-orange{
+      display: block;
+      margin: 0 auto;
+    }
+    .whyus-started .button-orange p{
+      top: 20%;
+      font-size: 12px !important;
+    }
+    .whyus-started .button-orange img{width: 200px;}
+  /* Page Tour */
+    #main-tour{padding-top: 22%;}
+    .pl-m-13p{padding-left: 13% !important;}
+    .pr-m-13p{padding-right: 13% !important;}
+    /* Heading */
+    h3{font-size: 25px !important;}
+    /* Banner */
+    .tour-banner .boxv,
+    .tour-ask .boxv{
+      position: relative;
+      top: unset !important;
+      transform: unset !important;
+    }
+    .tour-banner .boxv.sec1,
+    .tour-banner .boxv.sec2{
+      left: unset;
+      width: 100%;
+    }
+    /* Template */
+    .tour-template .frame{
+      display: none;
+      margin-left: unset;
+      width: 50%;
+      height: 100.8vh;
+    }
+    .tour-template ul#nav-box{width: 100% !important;}
+    .tour-template .box1{
+      padding: 20% 3%;
+      top: 0;
+      left: 50%;
+      right: unset;
+      width: 45%;
+    }
+    .tour-template .content{
+      z-index: 1;
+      margin: 0;
+      top: 2px;
+      width: 49%;
+      height: 100vh;
+    }
+    /* Steps */
+    .home-steps ul#nav-box .nav-tab li .numb{
+      margin-right: 0;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      font-size: 12px;
+    }
+    /* RSVP */
+    .tour-rsvp .frame{
+      width: 80%;
+      float: right;
+    }
+    .tour-rsvp .image{
+      top: 5% !important;
+      right: 0;
+      width: 50%;
+      height: 44%;
+    }
+    /* Ask */
+    .whyus-started.tour-ask .boxv{padding: 0;}
+    .tour-ask h3{
+      position: absolute;
+      top: 0;
+      left: 16%;
+      width: 160px;
+      font-size: 26px !important;
+    }
+    .tour-ask .button-orange{display: block;}
+    .tour-ask .button-orange p{
+      top: 20%;
+      font-size: 12px !important;
+    }
+    .tour-ask .button-orange img{width: 180px;}
+    .tour-ask .motif-01{
+      top: 20%;
+      left: -300%;
+      width: 60%;
+    }
+    .tour-ask .motif-02{
+      top: 60%;
+      left: -10%;
+      width: 40%;
+    }
+    #main-tour .rsvpask .background{height: 100vh;}
+  /* Page Templates Wedding, Birthday, Event */
+    #main-templates{padding-top: 22%;}
+    .pl-m-13p{padding-left: 13% !important;}
+    .pr-m-13p{padding-right: 13% !important;}
+    /* Heading */
+    h3{font-size: 25px !important;}
+    /* Banner */
+    .templates-banner .boxv{
+      position: relative;
+      margin: 0 auto;
+      top: unset !important;
+      transform: unset !important;
+      right: 0 !important;
+      width: 80%;
+    }
+    .templates-banner .background{
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .templates-banner .boxv.image{
+      left: 0;
+      width: 100%;
+    }
+    /* Content */
+    .templates-carousel .owl-prev{
+      top: 50%;
+      left: -12vw;
+    }
+    .templates-carousel .owl-next{
+      top: 50%;
+      right: -12vw;
+    }
+  /* Page Contact */
+    #main-contactus{padding-top: 22%;}
+    .pl-m-13p{padding-left: 13% !important;}
+    .pr-m-13p{padding-right: 13% !important;}
+    /* Heading */
+    h3{font-size: 25px !important;}
+    /* Banner */
+    .contactus-banner .boxv{
+      position: relative;
+      margin-bottom: 10%;
+      padding-left: 0 !important;
+      top: unset !important;
+      transform: unset !important;
+    }
+    .contactus-banner h2{font-size: 28px !important;}
+    /* Form */
+    .contactus-wrap{
+      float: unset !important;
+      width: 100% !important;
+    }
+    .contactus-wrap textarea{margin-bottom: 10%;}
+    .contactus-wrap .btn-form-orange{
+      display: block;
+      float: unset !important;
+      margin: 0 auto;
+    }
+    .contactus-info h4{font-size: 10px !important;}
+    .contactus-info .box-phone{
+      margin: 0 0 10%;
+      width: 100%;
+    }
+    .contactus-info .box-phone a{font-size: 28px !important;}
+  /* Page My Product */
+  /* Page My Product Edit */
+  /* Page My Guest */
+  /* Page My Guest 2 */
+  /* Page Profile */
+  /* Page Profile Edit */
+  /* Page Login Info */
+  /* Page Change Password */
+}
+/*=================================================MOBILE=================================================*/

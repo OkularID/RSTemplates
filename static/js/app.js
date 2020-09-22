@@ -126,21 +126,14 @@ $(function(tabs){
   });
 });
 // Navbar Mobile
-$(document).ready(function() {
-  $('.bars').click(function() {
-    $(".bars").addClass("active");
-    $(".fa-times").addClass("active");
-    $(".sidenav").removeClass("slideOut");
-    $(".sidenav").addClass("slideIn");
-  })
-})
-$(document).ready(function() {
-  $('.fa-times').click(function(){
-    $(".bars").removeClass("active");
-    $(".fa-times").removeClass("active");
-    $(".sidenav").addClass("slideOut");
-  })
-})
+  $(document).ready(function() {
+    $('nav .bars').click(function() {
+      $(".side-nav").addClass("active");
+    })
+    $('.close-icon').click(function() {
+      $(".side-nav").removeClass("active");
+    })
+  });
 // ============Animation===============
   $(window).scroll(function() {
     $(".slideanim").each(function(){
@@ -228,7 +221,7 @@ $(document).ready(function() {
     slideSpeed : 2000,
     nav: true,
     dots: false,
-    // loop: false,
+    loop: true,
     autoplay: true,
     // touchDrag  : false,
     // mouseDrag  : true,
@@ -311,6 +304,30 @@ $(document).ready(function() {
       }
     }
   })
+  $('.templates-carousel').addClass('owl-carousel owl-theme').owlCarousel({
+    margin: 0,
+    responsiveClass: true,
+    autoplay: true,
+    loop: true,
+    responsive:{
+      0: {
+        items: 1,
+        navText: ["<img src='/static/img/mobile/templates-arrow-left.png'>","<img src='/static/img/mobile/templates-arrow-right.png'>"],
+        dots: false,
+        nav: true
+      },
+      600: {
+        items: 1,
+        dots: true,
+        nav: true
+      },
+      1000: {
+        items: 1,
+        dots: false,
+        nav: true
+      }
+    }
+  })
 })
 
 // ===============================FAQ PAGE===============================
@@ -321,7 +338,6 @@ $('.faq-sidemenuanim').click(function(){
     }, 1000);
 });
 $('#faq-content .nav-tabs .nav-item:first .nav-link').addClass('active');
-
 $('#faq-content .tab-content .tab-pane:first').addClass('active');
 // ===============================FAQ PAGE===============================
 
