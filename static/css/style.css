@@ -1072,9 +1072,9 @@
   }
   .home-invitation .col-lg-4:hover a{color: #ffb64d !important;}
   .home-invitation .col-lg-4:hover .home-invitation-card{
-    -webkit-box-shadow: unset;
-    -moz-box-shadow: unset;
-    box-shadow: unset;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
     transition: all .5s;
   }
   .home-invitation .home-invitation-card{
@@ -1087,9 +1087,9 @@
     width: 80%;
     height: 60vh;
     border-radius: 50px;
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
     transition: all .5s;
   }
   /* Section Steps */
