@@ -33,7 +33,7 @@
                 </style>
 
                 {% for i in themes %}
-                    <div class="col-lg-4 mb-lg-5p">
+                    <div class="col-lg-4 mb-lg-5p d-none d-lg-block">
                         <a href="/{{ i.theme_url }}">
                             <img class="templatesthumbnail-image" src="{{ i.theme_img.url }}" alt="reservasidulu" />
                         </a>
@@ -45,7 +45,7 @@
                 <!-- Mobile -->
                 <div class="col-12 d-block d-lg-none mb-m-5p pl-m-10p pr-m-10p">
                     <div class="templates-carousel owl-theme">
-                         {% for i in preview %}
+                         {% for i in themes %}
                             <div class="item">
                                 <a href="/themes/preview/{{ i.theme_url }}">
                                     <img class="templatesthumbnail-image" src="{{ i.theme_img.url }}" alt="reservasidulu" />

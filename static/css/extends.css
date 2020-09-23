@@ -890,7 +890,7 @@ ul.messages, .alert{display: none;}
       height: 100vh;
     }
     /* Steps */
-    .home-steps ul#nav-box .nav-tab li .numb{
+    .tour-template .home-steps ul#nav-box .nav-tab li .numb{
       margin-right: 0;
       padding: 0;
       width: 30px;
@@ -970,23 +970,26 @@ ul.messages, .alert{display: none;}
       right: -12vw;
     }
   /* Page Templates Landing */
-    .templates-banner .boxv.image.birthday {
+    .templates-banner .boxv.image.birthday{
+      position: absolute;
+      top: 190px !important;
       left: 0;
-      width: 100%;
-      top: 190px;
+      width: 93%;
     }
-    .templates-banner .boxv.desc {
-      top: 5%;
-      right: unset;
+    .templates-banner.templates-banner-landing .boxv.desc,
+    .templates-banner.templates-banner-free .boxv.desc{
+      position: absolute;
+      top: 5% !important;
+      right: unset !important;
       left: 15%;
     }
-    .landing-category .ornament-01 {
+    .landing-category .ornament-01{
       position: absolute;
       top: 1%;
       left: 0;
       width: 100%;
     }
-    .landing-freetemplates .image {
+    .landing-freetemplates .image{
       width: 100%;
     }
     .boxv {
@@ -995,15 +998,20 @@ ul.messages, .alert{display: none;}
       top: unset;
       transform: none;
     }
-  /* Page Templates Free */
-    .templates-banner-free .boxv.image.birthday {
+    .landing-category .catwrap .catdef,.landing-category .catwrap .cathov{height: 50vh;}
+    .landing-category .button-orange, .landing-freetemplates .button-orange, .landing-suggest .button-orange{width: 100%;}
+    .landing-category .button-orange img,.landing-freetemplates .button-orange img,.landing-suggest .button-orange img{width: 70%;}
+    .landing-suggest .boxv{
+      position: relative;
+      left: unset;
       width: 100%;
-      left: 0;
     }
-    .templates-banner .boxv.desc {
-      top: 5%;
-      right: unset;
-      left: 15%;
+  /* Page Templates Free */
+    .templates-banner-free .boxv.image.birthday{
+      position: absolute;
+      top: 170px !important;
+      left: 0;
+      width: 93%;
     }
   /* Page FAQ */
     h3 {
@@ -1021,17 +1029,19 @@ ul.messages, .alert{display: none;}
     .faq-content .tab-content .faq-sidemenu ul li {
       padding-bottom: 10px;
     }
-    .faq-banner .boxv.desc {
-      top: 6%;
-      right: unset;
+    .faq-banner .boxv.desc{
+      position: absolute;
+      top: 6% !important;
+      right: unset !important;
       left: 15%;
     }
-    .faq-banner .boxv.image.birthday {
-      top: unset;
+    .faq-banner .boxv.image.birthday{
+      position: absolute;
+      top: unset !important;
+      bottom: 10vh;
       left: unset;
-      width: 80%;
-      bottom: 0;
-      right: 0;
+      right: 0 !important;
+      width: 100%;
     }
     .nav-faq-mobile{
       margin-top: 250px;
