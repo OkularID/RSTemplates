@@ -29,12 +29,13 @@
                         </form>
                     </div>
                 </div>
-                <img class="img-fluid ornament-01" src="{% static 'img/login-image-01.png' %}" />
-                <img class="img-fluid ornament-02" src="{% static 'img/login-image-02.png' %}" />
-                <img class="background" src="{% static 'img/login-background.png' %}" />
+                <img class="img-fluid ornament-01 d-none" src="{% static 'img/login-image-01.png' %}" />
+                <img class="img-fluid ornament-02 d-none" src="{% static 'img/login-image-02.png' %}" />
+                <img class="background d-none d-lg-block" src="{% static 'img/login-background.png' %}" />
+                <img class="background d-lg-none" src="{% static 'img/login-background-mobile-04.png' %}" />
             </div>
         </div>
-        <div class="w-lg-100p h-lg-115vh" style="background: #d7f6ff;"></div>
+        <div class="w-lg-100p h-lg-100vh" style="background: #d7f6ff;"></div>
     </div>
 
 {% endblock %}

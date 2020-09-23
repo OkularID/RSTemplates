@@ -6,14 +6,34 @@
 
 {% block content %}
 
-        <div id="main-templates">
+    <!-- Main -->
+    <div id="main-templates" class="main-account">
+        <!-- Section User Navigation -->
+        <div class="navspace"></div>
+        <div class="container-fluid pos-rel user-navigation d-none d-lg-block pl-lg-5p pr-lg-5p">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul>
+                        <li><a href="{% url 'my_products' %}">My Products</a></li>
+                        <li><a href="{% url 'my_guests' %}">My Guests</a></li>
+                        <li><a class="active" href="{% url 'account' %}">Profile</a></li>
+                        <li><a href="">Login Info</a></li>
 
-        {% include 'shared/partials/form_nav.html' %}
+                        {#<li><a class="active" href="#profile">Profile</a></li>#}
+                        {#<li><a href="{% url 'my_products' %}">My Products</a></li>#}
+                        {#<li><a href="#">My Guests</a></li>#}
+                        {#<li><a href="login-info.html">Login Info</a></li>#}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {#{% include 'shared/partials/form_nav.html' %}#}
 
 
 
         <!-- Section User Content -->
-        <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p bg-lightgrey">
+        <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
             <div class="row">
                 <div class="col-lg-12">
                     <h3 class="mb-lg-2p">Edit Templates</h3>
@@ -23,27 +43,27 @@
                                 <div class="col-lg-12">
                                     <form method="post" enctype="multipart/form-data">
                                     {% csrf_token %}
-                                    <!-- Navigation Dots -->
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li role="presentation" class="active">
-                                            <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"></a>
-                                        </li>
-                                        <li role="presentation" class="disabled">
-                                            <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"></a>
-                                        </li>
-                                        <li role="presentation" class="disabled">
-                                            <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"></a>
-                                        </li>
-                                        <li role="presentation" class="disabled">
-                                            <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"></a>
-                                        </li>
-                                        <li role="presentation" class="disabled">
-                                            <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab"></a>
-                                        </li>
-                                        <li role="presentation" class="disabled">
-                                            <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>
-                                        </li>
-                                    </ul>
+                                        <!-- Navigation Dots -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>
+                                            </li>
+                                        </ul>
                                         <div class="tab-content" id="main_form">
                                             <div class="tab-pane active" role="tabpanel" id="step1">
                                                 <div class="container-fluid">
@@ -185,8 +205,8 @@
                                                                 <h5 class="mb-lg-4p"><b>RSVP</b></h5>
                                                                 <label>Choose images for RSVP Section</label>
                                                                 {{ form.rsvp_img }}
-{#                                                                <label>RSVP Copy</label>#}
-{#                                                                <textarea name="ourstory" class="form-control" rows="8"></textarea>#}
+                                                                {#<label>RSVP Copy</label>#}
+                                                                {#<textarea name="ourstory" class="form-control" rows="8"></textarea>#}
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <button type="submit" class="btn-rectangle"> Submit</button>
