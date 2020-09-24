@@ -1,0 +1,74 @@
+{% load static %}
+        <div class="container-fluid pos-rel pb-lg-15p pl-lg-10p pr-lg-10p pt-m-25p pb-m-30p home-template slideanim">
+            <div class="row">
+                <div class="col-lg-12 pb-m-10p pb-lg-50 text-center">
+                    <h2>Featured <span>Template</span></h2>
+                </div>
+
+                {% for i in preview %}
+                    <div class="col-lg-4 d-none d-lg-block mb-lg-5p">
+                        <a href="/themes/preview/{{ x.theme_url }}">
+                            <img class="templatesthumbnail-image" src="{{ i.theme_img.url }}" alt="reservasidulu" />
+                        </a>
+                        <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ i.theme_name}}</a>
+                        <a class="templatesthumbnail-category" href="/{{ i.theme_category | lower }}">{{ i.theme_category }} Templates</a>
+                    </div>
+                {% endfor %}
+
+                {#<div class="col-lg-4 mb-lg-5p">#}
+                    {#<a href="">#}
+                        {#<img class="templatesthumbnail-image" src="{% static 'img/Birthday_Aaron.jpg' %}" alt="reservasidulu" />#}
+                    {#</a>#}
+                    {#<a class="templatesthumbnail-title" href="">Blooming Feelings</a>#}
+                    {#<a class="templatesthumbnail-category" href="templates-wedding.html">Wedding Template</a>#}
+                {#</div>#}
+                {#<div class="col-lg-4 mb-lg-5p">#}
+                    {#<a href="">#}
+                        {#<img class="templatesthumbnail-image" src="{% static 'img/Birthday_Aaron.jpg' %}" alt="reservasidulu" />#}
+                    {#</a>#}
+                    {#<a class="templatesthumbnail-title" href="">Happy Dinosaur</a>#}
+                    {#<a class="templatesthumbnail-category" href="templates-birthday.html">Birthday Template</a>#}
+                {#</div>#}
+                {#<div class="col-lg-4 mb-lg-5p">#}
+                    {#<a href="">#}
+                        {#<img class="templatesthumbnail-image" src="{% static 'img/Birthday_Aaron.jpg' %}" alt="reservasidulu" />#}
+                    {#</a>#}
+                    {#<a class="templatesthumbnail-title" href="">Pastel Party</a>#}
+                    {#<a class="templatesthumbnail-category" href="templates-wedding.html">Wedding Template</a>#}
+                {#</div>#}
+                {#<div class="col-lg-4 mb-lg-5p">#}
+                    {#<a href="">#}
+                        {#<img class="templatesthumbnail-image" src="{% static 'img/Birthday_Aaron.jpg' %}" alt="reservasidulu" />#}
+                    {#</a>#}
+                    {#<a class="templatesthumbnail-title" href="">Royal Invitation</a>#}
+                    {#<a class="templatesthumbnail-category" href="templates-event.html">Event Template</a>#}
+                {#</div>#}
+                {#<div class="col-lg-4 mb-lg-5p">#}
+                    {#<a href="">#}
+                        {#<img class="templatesthumbnail-image" src="{% static 'img/Birthday_Aaron.jpg' %}" alt="reservasidulu" />#}
+                    {#</a>#}
+                    {#<a class="templatesthumbnail-title" href="">Colors Delight</a>#}
+                    {#<a class="templatesthumbnail-category" href="templates-event.html">Event Template</a>#}
+                {#</div>#}
+
+                <div class="col-12 d-block d-lg-none mb-m-5p pl-m-10p pr-m-10p">
+                    <div class="templates-carousel owl-theme">
+                        {% for i in preview %}
+                            <div class="item">
+                                <a href="/themes/preview/{{ x.theme_url }}">
+                                    <img class="templatesthumbnail-image" src="{{ i.theme_img.url }}" alt="reservasidulu" />
+                                </a>
+                                <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ i.theme_name}}</a>
+                                <a class="templatesthumbnail-category" href="/{{ i.theme_category | lower }}">{{ i.theme_category }} Templates</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <a class="button-orange" href="{% url 'all_temp' %}">
+                        <p class="font-white">More options</p>
+                        <img src="{% static 'img/button-01.png' %}">
+                    </a>
+                </div>
+            </div>
+        </div>

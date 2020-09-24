@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>{% block title %} My Guests | Reservasi Dulu {% endblock %}</title>
+	
+	<!-- Main -->
+    <div id="main-templates" class="main-account">
+        <!-- Section User Navigation -->
+        <div class="navspace"></div>
+        <div class="container-fluid pos-rel user-navigation d-none d-lg-block pl-lg-5p pr-lg-5p">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul>
+                        <li><a href="{% url 'my_products' %}">My Products</a></li>
+                        <li><a class="active" href="{% url 'my_guests' %}">My Guests</a></li>
+                        <li><a href="{% url 'account' %}">Profile</a></li>
+                        <li><a href="">Login Info</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Section User Content -->
+        <div class="container-fluid pos-rel user-content my-guest-content pt-lg-5p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="mb-lg-2p">My Guest</h3>
+                    <div class="w-lg-100p line-lightgrey"></div>
+                </div>
+                <!-- Header Info -->
+                <div class="col-lg-12 info pl-m-0 pr-m-0">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block pl-lg-0 pr-lg-5p header-attending">
+                                <h3 class="subtitle">Attending</h3>
+                                <div class="num">2304</div>
+                                <a href="">See who’s attending</a>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block pl-lg-5p pr-lg-0 sna">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-12 submitted">
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <h3 class="subtitle">RSVP Submitted</h3>
+                                                    <a href="">See who’ve submitted</a>
+                                                </div>
+                                                <div class="col-lg-4"><h3 class="num-sm"><span>1907</span></h3></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 notattending">
+                                            <div class="row">
+                                                <div class="col-lg-8">
+                                                    <h3 class="subtitle">Not Attending</h3>
+                                                    <a href="">See who’s not attending</a>
+                                                </div>
+                                                <div class="col-lg-4"><h3 class="num-sm"><span>9</span></h3></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 d-block d-lg-none header-attending">
+                                <h3 class="subtitle">Attending</h3>
+                            </div>
+                            <div class="col-6 d-block d-lg-none header-attending text-right">
+                                <div class="num">2304</div>
+                                <a href="">See who’s attending</a>
+                            </div>
+                            <div class="col-12 d-block d-lg-none"><div class="line"></div></div>
+                            <div class="col-8 d-block d-lg-none header-attending">
+                                <h3 class="subtitle">RSVP Submitted</h3>
+                                <a href="">See who’ve submitted</a>
+                            </div>
+                            <div class="col-4 d-block d-lg-none header-attending text-right">
+                                <h3 class="num-sm"><span>1907</span></h3>
+                            </div>
+                            <div class="col-12 d-block d-lg-none"><div class="line"></div></div>
+                            <div class="col-8 d-block d-lg-none header-attending">
+                                <h3 class="subtitle">Not Attending</h3>
+                                <a href="">See who’s not attending</a>
+                            </div>
+                            <div class="col-4 d-block d-lg-none header-attending text-right">
+                                <h3 class="num-sm"><span>9</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table Attending -->
+                <div class="col-lg-12 table-attending mb-lg-3p mb-m-20p">
+                    <div class="w-lg-100p line-lightgrey mb-lg-3p mb-m-20p"></div>
+                    <h3 class="mb-lg-2p">Attending</h3>
+                    <div class="card">
+                        <table class="table my-guest-table">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Full Name</th>
+                                    <th>Email</th>
+                                    <th>Phone Number</th>
+                                    <th>No. of Guest</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>John</td>
+                                    <td>John@gmail.com</td>
+                                    <td>0812 7654 3210</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Table Not Attending -->
+                <div class="col-lg-12 table-notattending">
+                    <h3 class="mb-lg-2p">Not Attending (9)</h3>
+                    <div class="card">
+                        <table class="table my-guest-table">
+                            <thead>
+                                <tr>
+                                    <th>Full Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>John</td></tr>
+                                <tr><td>John</td></tr>
+                                <tr><td>John</td></tr>
+                                <tr><td>John</td></tr>
+                                <tr><td>John</td></tr>
+                                <tr><td>John</td></tr>
+                                <tr><td>John</td></tr>
+                                <tr><td>John</td></tr>
+                                <tr><td>John</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-115vh bg-lightgrey"></div>
+    </div>
+
+{% endblock %}

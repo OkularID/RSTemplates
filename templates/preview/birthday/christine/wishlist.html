@@ -1,0 +1,267 @@
+{% load static %}
+{% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
+    <title>Template Birthday | Homepage</title>
+    <link rel="shortcut icon" href="images/ico.ico">
+    <!-- Customize css -->
+    {% compress css %}
+        {% include 'static/css.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/birthday/christine/style-birthday-1.css' %}">
+    {% endcompress %}
+    <!-- Features css -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="wishpage">
+        <nav>
+            <div class="container-fluid">
+                <div class="row d-none d-lg-block">
+                    <div class="offset-lg-3 col-lg-9 pr-lg-0">
+                        <ul class="menu">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="index.html#about">ABOUT</a></li>
+                            <li><a href="index.html#dateandplace">DATE & PLACE</a></li>
+                            <li><a href="index.html#rsvp">RSVP</a></li>
+                            <li><a href="wishlist.html">WISH LIST</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row d-lg-none pt-3">
+                        <div class="offset-8 col-4 text-right">
+                            <h3 class="text-white">
+                                <i class="fa fa-bars"></i>
+                            </h3>
+                        </div>
+                        <div class="side-nav">
+                            <div class="close-div text-right p-3">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </div>
+                            <ul class="menu">
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="index.html#about">ABOUT</a></li>
+                                <li><a href="index.html#dateandplace">DATE & PLACE</a></li>
+                                <li><a href="index.html#rsvp">RSVP</a></li>
+                                <li><a href="wishlist.html">WISH LIST</a></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Section Banner -->
+        <section id="banner-wishlist">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 pl-lg-0 pr-lg-0">
+                        <img class="img-fluid d-none d-lg-block w-lg-100p" src="{% static 'rsvp/birthday/christine/images/wishlist-01.png' %}" />
+                        <img class="img-fluid d-block d-lg-none w-lg-100p" src="{% static 'rsvp/birthday/christine/images/mobile-wishlist-01.png' %}" />
+                        <div class="box">
+                            <div class="subtitle ts">Gift</div>
+                            <div class="title ts">Ideas</div>
+                            <div class="line-gold w-m-55p mb-m-30 w-lg-25p mb-lg-50 ml-lg-5p"></div>
+                            <div class="w-lg-70p">
+                                <p>If you are confused of what to get for my birthday, here’s a list of the things I might need. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Wish -->
+        <section id="wish">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-lg-7 pl-m-5p pr-m-5p pl-lg-10p pr-lg-0">
+                        <p class="text-white">
+                            You can choose and select gift ideas from the list below so others<br>
+                            will not need to give the same gift.<br>
+                            <br>
+                            It is not mandatory to give things from this list. If you’re prefer to<br>
+                            give other gift please select the “others” option. Your presence is<br>
+                            much more important and needed.<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Brief -->
+        <section id="brief-wishlist">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 d-none d-lg-block pl-lg-0 pr-lg-0">
+                        <img class="img-fluid w-lg-100p" src="{% static 'rsvp/birthday/christine/images/wishlist-02.png' %}" />
+                        <div class="boxc">
+                            <div class="row">
+                                <div class="col-lg-11 pr-5 text-right">
+                                    <h2 class="title ts">
+                                        Choose One!
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <ul class="list-unstyled">
+                                    <li class="item-wishlist">
+                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
+                                            BABY STROLLER
+                                        </a>
+                                    </li>
+                                    <li class="item-wishlist">
+                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
+                                            BABY CLOTHES
+                                        </a>
+                                    </li>
+                                    <li class="item-wishlist">
+                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
+                                            PLUSHIES
+                                        </a>
+                                    </li>
+                                    <li class="item-wishlist">
+                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
+                                            BABY ONSIE
+                                        </a>
+                                    </li>
+                                    <li class="item-wishlist">
+                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
+                                            BABY BOTTLE
+                                        </a>
+                                    </li>
+                                    <li class="item-wishlist">
+                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
+                                            BLANKETS
+                                        </a>
+                                    </li>
+                                    <li class="item-wishlist">
+                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
+                                            DIAPER
+                                        </a>
+                                    </li>
+                                    <li class="item-wishlist">
+                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
+                                            STORY BOOK
+                                        </a>
+                                    </li>
+                                    <li class="item-wishlist">
+                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
+                                            FUN TOYS
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="col-lg-7">
+                                    <p class="text-white">
+                                        DIDN’T FIND ONE YOU PREFER? CLICK THIS:
+                                    </p>
+                                </div>
+                                <div class="col-lg-5 px-0">
+                                    <div class="item-wishlist custom">
+                                        <a href="#">
+                                            Others
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-block d-lg-none pl-m-0 pr-m-0 bg bg-bluesky font-grey">
+                        <img class="img-fluid motif w-m-100p" src="{% static 'rsvp/birthday/christine/images/mobile-wishlist-03.png' %}" />
+                        <div class="w-m-60p ma-m text-center">
+                            <div class="mb-m-20">
+                                <p>You can choose and select gift ideas from the list above so others will not need to give the same gift.</p>
+                            </div>
+                            <div class="line-white w-m-25p ma-m mb-m-20"></div>
+                            <div class="mb-m-20">
+                                <p>However, It is not mandatory for  you to select one from the list. Your presence is much more important and needed.</p>
+                            </div>
+                        </div>                    
+                        <img class="img-fluid w-lg-100p" src="{% static 'rsvp/birthday/christine/images/mobile-wishlist-04.png' %}" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="email_wishlist">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 text-center pl-lg-0 pr-lg-0">
+                                    <a class="close" data-dismiss="modal">
+                                        <img class="img-fluid icon" src="{% static 'rsvp/birthday/christine/images/popup-03.png' %}" />    
+                                    </a>
+                                    <h3 class="font-grey pt-5 mt-5">You choose to give this gift:</h3>
+                                    <h2 class="font-bluesky"><strong>BABY STROLLER</strong></h2>
+                                    <hr class="bg-muted w-25 my-5">
+                                    <div class="w-lg-75p ma-lg font-grey">
+                                        <p>Please input your email address<br>
+                                            to continue the confirmation*</p>
+                                    </div>
+                                    <div class="form-group px-5 py-4 w-50 mx-auto">
+                                        <input type="text" class="form-control form-text">
+                                    </div>
+                                    <div class="button-wrap pb-3">
+                                        <a href="#" data-toggle="modal" data-target="#wishlist" data-dismiss="modal" class="button-bluesky">
+                                            Confirm the gift
+                                        </a>
+                                    </div>
+                                    <p class="text-gray text-center pt-5 font-small">
+                                        <span class="mr-3">*Required</span> Note: you cannot change your gift selection once you’ve confirmed one.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="wishlist">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 text-center pl-lg-0 pr-lg-0">
+                                    <a class="close" data-dismiss="modal">
+                                        <img class="img-fluid icon" src="{% static 'rsvp/birthday/christine/images/popup-03.png' %}" />    
+                                    </a>
+                                    <img class="img-fluid image ml-lg-10p" src="{% static 'rsvp/birthday/christine/images/popup-01.png' %}" />
+                                    <p class="font-bluesky font-lg-21"><b>Thank you for the gift!</b></p>
+                                    <div class="w-lg-75p ma-lg mb-lg-10p font-grey">
+                                        <p> Remember, your presence is much more<br>
+                                            important and needed!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="container-fluid pl-m-5p pr-m-5p pl-lg-15p pr-lg-15p">
+                <div class="row">
+                    <div class="col-8 col-lg-8 pt-lg-5px">
+                        <p>All Rights Reserved This website is made by Reservasi Dulu</p>
+                    </div>                
+                    <div class="col-4 col-lg-4">
+                        <a href="" class="button-trans">create a site</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+    <!-- Features JS -->
+    <script>
+        new WOW().init();
+    </script>
+    {% compress js %}
+        {% include 'static/js.html' %}
+        <!-- Custom JS -->
+        <script type="text/javascript" src="{% static 'rsvp/birthday/christine/app.js' %}"></script>
+    {% endcompress %}
+    <!-- Custom JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</body>
+</html>

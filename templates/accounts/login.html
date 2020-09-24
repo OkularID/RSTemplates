@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <style>
+    .form .btn-form-orange {
+        background: url(/static/img/05-contact-us/contactus-button.png)
+    }
+    </style>
+
+
+        <div id="main-login">
+        <!-- Section Content -->
+        <div class="container-fluid pos-rel pt-lg-15p pb-lg-20p pl-lg-5p pr-lg-5p reservasidulu-login">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="wrap">
+                        <h2 class="text-center mb-lg-10p"><span>Login</span></h2>
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                              {{form | crispy }}
+                            <input type="checkbox" name="rememberme" class="d-lg-inline mr-lg-1p" value="rememberme">
+                            <label class="d-lg-inline"> Remember Password</label>
+                            <a class="d-lg-block mb-lg-5p" href="{% url 'password_reset' %}">Forgot Password?</a>
+                            <input class="btn-form-orange d-lg-block ma-lg" type="submit" value="Login">
+                            <p>Don’t have an account yet? <a href="{% url 'register' %}">Sign Up</a> here</p>
+                        </form>
+                    </div>
+                </div>
+                <img class="img-fluid ornament-01 d-none" src="{% static 'img/login-image-01.png' %}" />
+                <img class="img-fluid ornament-02 d-none" src="{% static 'img/login-image-02.png' %}" />
+                <img class="background d-none d-lg-block" src="{% static 'img/login-background.png' %}" />
+                <img class="background d-lg-none" src="{% static 'img/login-background-mobile-04.png' %}" />
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-100vh" style="background: #d7f6ff;"></div>
+    </div>
+
+{% endblock %}

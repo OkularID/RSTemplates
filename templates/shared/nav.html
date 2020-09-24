@@ -1,0 +1,54 @@
+{% load static %}
+<nav id="navigation" class="account fadein">
+    <div class="container-fluid pt-lg-20 pb-lg-20 pl-lg-5p pr-lg-5p">
+        <div class="row">
+            <div class="col-lg-9 d-none d-lg-block nav-accountlogo pt-lg-20">
+                <a href="{% url 'home' %}"><img class="logo" src="{% static 'img/logo.png' %}" alt="reservasidulu"></a>
+                <div class="line"></div>
+                <h5><b>My Account</b></h5>
+            </div>
+            <div class="col-lg-3 d-none d-lg-block pl-lg-0 nav-account pt-lg-10">
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-7 line">
+                        <h5><b>{{ user.username }}</b></h5>
+                        <p class="mb-lg-0">{{ user.first_name }} {{ user.last_name }}</p>
+                    </div>
+                    <div class="col-lg-3 text-right">
+                        <a href="{% url 'logout' %}"><img class="img-fluid" src="{% static 'img/account-icon.png' %}" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-lg-none navigation-mobile">
+            <div class="col-8">
+                <a href="{% url 'home' %}"><img class="logo" src="{% static 'img/logo.png' %}" alt="reservasidulu"></a>
+            </div>
+            <div class="col-4 bars">
+                <div id="toggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+                <h5><b>Menu</b></h5>
+            </div>
+            <div class="side-nav">
+                <img class="img-fluid close-icon" src="{% static 'img/close.png' %}" />
+                <div class="profile">
+                    <h5><b>{{ user.username }}</b></h5>
+                    <p>{{ user.first_name }} {{ user.last_name }}</p>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="{% url 'my_products' %}">My Products</a></li>
+                        <li><a href="{% url 'my_guests' %}">My Guests</a></li>
+                        <li><a href="{% url 'account' %}">Profile</a></li>
+                        <li><a href="">Login Info</a></li>
+                        <li><a href="">Log Out</a></li>
+                    </ul>
+                </div>
+                <a class="btn-rectangle" href="">Back To Home</a>
+            </div>
+        </div>
+    </div>
+    <img class="navline" src="{% static 'img/mobile/nav-line.png' %}" />
+</nav>
