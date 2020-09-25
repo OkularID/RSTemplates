@@ -1,0 +1,38 @@
+{% load static %}
+{% load compress %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} Form | ReservasiDulu {% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'img/ico.ico' %}">
+
+    {% compress css %}
+        {% include 'static/css.html' %}
+    {% endcompress %}
+
+
+</head>
+<body>
+
+{% include 'shared/nav.html' %}
+
+    {% block content %}
+{#        content #}
+    {% endblock %}
+
+    {% include 'shared/footer.html' %}
+    {% compress js %}
+        <!--This is JS-->
+        {% include 'static/js.html' %}
+    {% endcompress %}
+
+    {% compress js %}
+        <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    {% endcompress %}
+</body>
+</html>
