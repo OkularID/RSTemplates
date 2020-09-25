@@ -6,9 +6,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul>
-                        <li class="nav_custom{% if url_name == 'my_products' %} active {% endif %}" ><a href="{% url 'my_products' %}">My Products</a></li>
-                        <li class="nav_custom{% if url_name == 'my_guests' %} active {% endif %}" ><a href="{% url 'my_guests' %}">My Guests</a></li>
-                        <li class="nav_custom{% if url_name == 'account' %} active {% endif %}" ><a href="{% url 'account' %}">Profile</a></li>
+                        <li><a class="nav_custom{% if url_name == 'my_products' %} active {% endif %}" href="{% url 'my_products' %}">My Products</a></li>
+                        <li><a class="nav_custom{% if url_name == 'my_guests' %} active {% endif %}" href="{% url 'my_guests' %}">My Guests</a></li>
+                        <li><a class="nav_custom{% if url_name == 'account' %} active {% endif %}" href="{% url 'account' %}">Profile</a></li>
                     </ul>
                 </div>
             </div>
