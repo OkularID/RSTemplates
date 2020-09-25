@@ -18,7 +18,7 @@
                         <h2 class="font-white mb-lg-30">Wide Range<br>of Templates<br><span>For Your Events</span></h2>
                         <a id="chevron-down" href="#templates-content">
                             <h5 class="font-white mr-lg-15">Scroll down</h5>
-                            <img class="arrow" src="images/arrow-down.png">
+                            <img class="arrow" src="{% static 'img/arrow-down.png' %}">
                         </a>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                 </style>
                 {% for bitch in x %}
                     <div class="col-lg-4 mb-lg-5p">
-                        <a href="">
+                        <a href="/themes/preview/{{ bitch.theme_url }}">
                             <img class="templatesthumbnail-image" src="{{ bitch.theme_img.url }}" alt="reservasidulu" />
                         </a>
                         <a class="templatesthumbnail-title" href="/themes/preview/{{ bitch.theme_url }}">{{ bitch.theme_name}}</a>
