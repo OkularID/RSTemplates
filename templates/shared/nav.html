@@ -38,13 +38,15 @@
                     <p>{{ user.first_name }} {{ user.last_name }}</p>
                 </div>
                 <div class="menu">
-                    <ul>
-                        <li><a href="{% url 'my_products' %}">My Products</a></li>
-                        <li><a href="{% url 'my_guests' %}">My Guests</a></li>
-                        <li><a href="{% url 'account' %}">Profile</a></li>
-                        <li><a href="">Login Info</a></li>
-                        <li><a href="">Log Out</a></li>
-                    </ul>
+                    {% with url_name=request.resolver_match.url_name %}
+                        <ul>
+                            <li class="nav_custom{% if url_name == 'my_products' %} active {% endif %}" ><a href="{% url 'my_products' %}">My Products</a></li>
+                            <li class="nav_custom{% if url_name == 'my_guests' %} active {% endif %}" ><a href="{% url 'my_guests' %}">My Guests</a></li>
+                            <li class="nav_custom{% if url_name == 'my_products' %} active {% endif %}" ><a href="{% url 'account' %}">Profile</a></li>
+                            <li><a href="">Login Info</a></li>
+                            <li><a href="">Log Out</a></li>
+                        </ul>
+                    {% endwith %}
                 </div>
                 <a class="btn-rectangle" href="">Back To Home</a>
             </div>
