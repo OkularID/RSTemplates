@@ -1,4 +1,4 @@
-{% extends 'shared/partials/bangsat.html' %}
+{% extends 'base_form.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -9,7 +9,7 @@
     <!-- Main -->
     <div id="main-templates" class="main-account">
         <!-- Section User Navigation -->
-        {% include 'shared/partials/kontol.html' %}
+        {% include 'shared/partials/base_form_nav.html' %}
         <!-- Section User Content -->
         <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
             <div class="row">
@@ -72,7 +72,8 @@
                                                         <div class="col-lg-5">
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Header</b></h5>
-                                                                {{ form.site_url }}
+                                                                <label>Site URL *</label>
+                                                                    {{ form.site_url }}
                                                                 <label>Title *</label>
                                                                     {{ form.title }}
                                                                     {{ form.img_logo }}

@@ -1,0 +1,36 @@
+{% load static %}
+{% load compress %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} E-Invitation | ReservasiDulu {% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'img/ico.ico' %}">
+
+    {% compress css %}
+        {% include 'static/css.html' %}
+    {% endcompress %}
+
+</head>
+<body>
+
+{% include 'shared/nav.html' %}
+
+    {% block content %}
+{#        content #}
+    {% endblock %}
+
+    {% include 'shared/footer.html' %}
+    {% compress js %}
+        <!--This is JS-->
+        {% include 'static/js.html' %}
+    {% endcompress %}
+
+    {% compress js %}
+        <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    {% endcompress %}
+</body>
+</html>
