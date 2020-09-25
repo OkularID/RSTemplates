@@ -21,6 +21,10 @@
 {% with url_name=request.resolver_match.url_name %}
     {% if url_name == 'account' %}
         {% include 'shared/nav.html' %}
+    {% elif url_name == 'my_products' %}
+        {% include 'shared/nav.html' %}
+    {% elif url_name == 'my_guests' %}
+        {% include 'shared/nav.html' %}
     {% else %}
         {% include 'shared/navbar.html' with brand_name='Okular' %}
     {% endif %}
