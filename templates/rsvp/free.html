@@ -34,10 +34,10 @@
 
                 {% for i in free_themes %}
                     <div class="col-lg-4 mb-lg-5p">
-                        <a href="/{{ i.theme_url }}">
+                        <a href="/themes/preview/{{ i.theme_url }}">
                             <img class="templatesthumbnail-image" src="{{ i.theme_img.url }}" alt="reservasidulu" />
                         </a>
-                        <a class="templatesthumbnail-title" href="/{{ i.theme_name }}">{{ i.theme_name}}</a>
+                        <a class="templatesthumbnail-title" href="/themes/preview/{{ i.theme_url }}">{{ i.theme_name}}</a>
                         <a class="templatesthumbnail-category" href="/{{ i.theme_category | lower }}">{{ i.theme_category }} Templates</a>
                     </div>
                 {% endfor %}
