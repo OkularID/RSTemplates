@@ -30,31 +30,4 @@
         <div class="w-lg-100p h-lg-100vh" style="background: #fffad9;"></div>
     </div>
 
-
-    {#<style>#}
-    {#.signup-form form span {#}
-        {#display: inline-block;#}
-        {#margin-left: 3px;#}
-        {#margin-bottom: 5px;#}
-    {#}#}
-    {#</style>#}
-    {#<div class="main-signup">#}
-        {#<div class="container-fluid pos-rel pt-lg-15p pb-lg-15p pl-lg-10p pr-lg-10p signup-form">#}
-            {#<div class="row">#}
-                {#<div class="col-lg-12">#}
-                    {#<div class="form-wrapper">#}
-                        {#<h3 class="mb-lg-10 text-center"><span>Sign</span> Up</h3>#}
-                        {#<hr class="mb-lg-30">#}
-                        {#<form class="mb-lg-30" method="post" enctype="multipart/form-data">#}
-                            {#{% csrf_token %}#}
-                            {#{{ form|crispy }}#}
-                            {#<input class="btn-form-orange" style="background:url({% static 'img/05-contact-us/contactus-button.png' %}); " type="submit" value="Submit">#}
-                        {#</form>#}
-                        {#<hr>#}
-                        {#<p>Already have an account? <a href="{% url 'login' %}">Login</a> here.</p>#}
-                    {#</div>#}
-                {#</div>#}
-            {#</div>#}
-        {#</div>#}
-    {#</div>#}
 {% endblock %}
