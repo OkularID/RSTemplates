@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load compress %}
+
+{% block content %}
+	{%if is_pay is True%}
+		<span>Checkout Berhasil</span><br>
+		<span>Status : {{payment.status}}</span><br>
+		{%if payment.payment_bank == "mandiri" %}
+			<span>Bill Key : {{payment.bill_key}}</span><br>
+			<span>Biller Code : {{payment.biller_code}}</span>
+		{%else%}
+
+			<span>Va Number : {{payment.va_number}}</span>
+		{% endif%}
+	{%else%}
+		<span>Checkout Berhasil dipublish</span>
+		<br><span>Ini barang Gratis</span>
+	{%endif%}
+{% endblock %}
