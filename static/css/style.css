@@ -1050,9 +1050,10 @@
   }
   /* Section Brief */
   .container-fluid.home-brief{overflow: unset !important;}
+  .home-brief .col-lg-12{z-index: 2;}
   .home-brief .background{
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: -100vh;
     left: 0;
     width: 100%;
@@ -1095,9 +1096,9 @@
   }
   .home-invitation .col-lg-4:hover a{color: #ffb64d !important;}
   .home-invitation .col-lg-4:hover .home-invitation-card{
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
     transition: all .5s;
   }
   .home-invitation .home-invitation-card{
@@ -1110,9 +1111,9 @@
     width: 80%;
     height: 60vh;
     border-radius: 50px;
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
     transition: all .5s;
   }
   /* Section Steps */
@@ -1231,20 +1232,39 @@
   }
   /* Section Template */
   .tour-template .frame{
-    margin-left: 11.8%;
-    width: 93.6%;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    width: 52.4%;
     height: 385vh;
+  }
+  .tour-template .ornament-01{
+    position: absolute;
+    z-index: 3;
+    margin: 0 auto;
+    top: 55%;
+    left: 0;
+    right: 60%;
+    width: 15%;
+  }
+  .tour-template .ornament-02{
+    position: absolute;
+    z-index: 3;
+    margin: 0 auto;
+    bottom: 0;
+    left: 77%;
+    right: 0;
+    width: 28%;
   }
   .tour-template .content{
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     margin: 0 auto;
     top: 3px;
     left: 0;
     right: 0;
     width: 40.8vw;
-    /*height: 227vh;*/
-    height: 350vh;
+    height: 384vh;
     background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
