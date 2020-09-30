@@ -104,9 +104,9 @@
                         <div class="mt-lg-15p">
                             <div class="w-lg-80p slideanim">
                                 <h4 class="font-montserrat-italic">Easy to use</h4>
-                                <h3 class="mb-lg-30"><span>{{ x.section_5_title | safe }}</span></h3>
+                                <h3 class="mb-lg-30">{{ x.section_5_title | safe }}</h3>
                                 <div class="w-lg-100p slideanim d-none d-lg-block">
-                                    <p>{{ x.section_5_text }}</p>
+                                    <p>{{ x.section_5_text | safe}}</p>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                         <div class="image" style="background: url('{% static 'img/03-tour/animation-tour.gif' %}');"></div>
                     </div>
                     <div class="col-12 pl-m-13p pr-m-13p d-block d-lg-none">
-                        <p>{{ x.section_5_text }}</p>
+                        <p>{{ x.section_5_text | safe }}</p>
                     </div>
                 </div>
             </div>
