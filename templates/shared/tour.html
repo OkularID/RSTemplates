@@ -89,22 +89,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="box1">
-                            <h4>{{ x.section_2_title | safe }}</h4>
-                            <p>{{ x.section_2_text | safe }}</p>
-                        </div>
-                        <div class="box2">
-                            <h4>{{ x.section_3_title | safe }}</h4>
-                            <p>{{ x.section_3_text | safe }}</p>
-                        </div>
-                        <div class="box3">
-                            <h4>{{ x.section_4_title | safe }}</h4>
-                            <p>{{ x.section_4_text | safe }}</p>
-                        </div>
-                        <div class="box4">
-                            <h4>{{ x.section_5_title | safe }}</h4>
-                            <p>{{ x.section_5_text | safe }}</p>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -122,47 +106,9 @@
                                 <h4 class="font-montserrat-italic">Easy to use</h4>
                                 <h3 class="mb-lg-30"><span>{{ x.section_5_title | safe }}</span></h3>
                                 <div class="w-lg-100p slideanim d-none d-lg-block">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                                    <p>{{ x.section_5_text }}</p>
                                 </div>
                             </div>
-                            <!-- <ul id="nav-box" class="mb-lg-30 fadein">
-                                <a class="nav-tab" target="steps1">
-                                     <li class="active"><div class="numb">1</div></li>
-                                </a>
-                                <a class="nav-tab" target="steps2">
-                                    <li class="active"><div class="numb">2</div></li>
-                                </a>
-                                <a class="nav-tab" target="steps3">
-                                    <li class="active"><div class="numb">3</div></li>
-                                </a>
-                                <a class="nav-tab" target="steps4">
-                                    <li class="active"><div class="numb">4</div></li>
-                                </a>
-                            </ul>
-                            <div class="tabs" id="tab-steps1">
-                                <div class="w-lg-80p slideanim">
-                                    <p>{{ x.step1 }}</p>
-                                </div>
-                                <div class="image" style="background: url({{ x.img1.url }});"></div>
-                            </div>
-                            <div class="tabs" id="tab-steps2">
-                                <div class="w-lg-80p slideanim">
-                                    <p>{{ x.step2 }}</p>
-                                </div>
-                                <div class="image" style="background: url({{ x.img2.url }});"></div>
-                            </div>
-                            <div class="tabs" id="tab-steps3">
-                                <div class="w-lg-80p slideanim">
-                                    <p>{{ x.step3 }}</p>
-                                </div>
-                                <div class="image" style="background: url({{ x.img3.url }});"></div>
-                            </div>
-                            <div class="tabs" id="tab-steps4">
-                                <div class="w-lg-80p slideanim">
-                                    <p>{{ x.step4 }}</p>
-                                </div>
-                                <div class="image" style="background: url({{ x.img4.url }});"></div>
-                            </div> -->
                         </div>
                     </div>
                     <div class="col-lg-8">
@@ -170,7 +116,7 @@
                         <div class="image" style="background: url('{% static 'img/03-tour/animation-tour.gif' %}');"></div>
                     </div>
                     <div class="col-12 pl-m-13p pr-m-13p d-block d-lg-none">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+                        <p>{{ x.section_5_text }}</p>
                     </div>
                 </div>
             </div>
@@ -180,7 +126,7 @@
                     <div class="col-lg-7 text-left">
                         <img class="img-fluid d-none d-lg-block w-lg-85p slideanimLeft" src="{% static 'img/03-tour/tour-image-04.png' %}" alt="reservasidulu">
                         <img class="img-fluid d-block d-lg-none float-right w-lg-70p mb-m-10p slideanimX" src="{% static 'img/mobile/mobile-tour-04.png' %}" alt="reservasidulu">
-                        <h3 class="d-block d-lg-none"><span>Get started now!</span></h3>
+                        <h3 class="d-block d-lg-none"><span>Let's Get Started!</span></h3>
                     </div>
                     <div class="col-lg-5 pl-m-13p pr-m-13p slideanim">
                         <div class="boxv">
@@ -189,7 +135,7 @@
                                 <p>{{ x.last_section_text }}</p>
                             </div>
                             <a class="button-orange" href="{% url 'all_temp' %}">
-                                <p class="font-white">Give Us a Call</p>
+                                <p class="font-white">Let's Get Started!</p>
                                 <img src="{% static 'img/02-why-us/whyus-button.png' %}">
                             </a>
                         </div>
