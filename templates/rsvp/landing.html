@@ -93,7 +93,18 @@
                         width: 100%;
                     }
                 </style>
-                {% for bitch in x %}
+
+{#                {% for bitch in x %}#}
+{#                    <div class="col-lg-4 mb-lg-5p">#}
+{#                        <a href="/themes/preview/{{ bitch.theme_url }}">#}
+{#                            <img class="templatesthumbnail-image" src="{{ bitch.theme_img.url }}" alt="reservasidulu" />#}
+{#                        </a>#}
+{#                        <a class="templatesthumbnail-title" href="/themes/preview/{{ bitch.theme_url }}">{{ bitch.theme_name}}</a>#}
+{#                        <a class="templatesthumbnail-category" href="/{{ bitch.theme_category | lower }}">{{ bitch.theme_category }} Template</a>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+
+                {% for bitch in fucking_free %}
                     <div class="col-lg-4 mb-lg-5p">
                         <a href="/themes/preview/{{ bitch.theme_url }}">
                             <img class="templatesthumbnail-image" src="{{ bitch.theme_img.url }}" alt="reservasidulu" />
@@ -102,6 +113,7 @@
                         <a class="templatesthumbnail-category" href="/{{ bitch.theme_category | lower }}">{{ bitch.theme_category }} Template</a>
                     </div>
                 {% endfor %}
+
 
                 <!-- Mobile -->
                 <div class="col-12 d-block d-lg-none mb-m-5p pl-m-10p pr-m-10p">
