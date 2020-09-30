@@ -5,17 +5,28 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<title>{% block title %} Billing | ReservasiDulu {% endblock %}</title>
+<div id="main-contactus">
+    <div id="contactus-form" class="container-fluid pos-rel pt-lg-5p pb-lg-10p pl-lg-10p pr-lg-10p pb-m-20p contactus-form">
+        <div class="row">
+            <div class="col-lg-12">
+                <div>
+                    Theme Name: {{theme_data.theme.theme_name}}<br>
+                    Theme Price : {{theme_data.theme.theme_price}}<br>
+                    <div>
+                        <span>Payment Method :</span> <br>
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <button type="submit">Checkout</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-lg-100p h-lg-115vh"></div>
+</div>
 
-    Theme Name: {{theme_data.theme.theme_name}}<br>
-	Theme Price : {{theme_data.theme.theme_price}}<br>
-
-	<div>
-		<span>Payment Method :</span> <br>
-		<form method="post" enctype="multipart/form-data">
-			{% csrf_token %}
-			{{ form | crispy }}
-			<button type="submit">Checkout</button>
-		</form>
-	</div>
 
 {% endblock %}

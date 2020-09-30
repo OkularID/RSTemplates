@@ -3,18 +3,31 @@
 {% load compress %}
 
 {% block content %}
-	{%if is_pay is True%}
-		<span>Checkout Berhasil</span><br>
-		<span>Status : {{payment.status}}</span><br>
-		{%if payment.payment_bank == "mandiri" %}
-			<span>Bill Key : {{payment.bill_key}}</span><br>
-			<span>Biller Code : {{payment.biller_code}}</span>
-		{%else%}
+<title>{% block title %} Payment Status | ReservasiDulu {% endblock %}</title>
+<div id="main-contactus">
+    <div id="contactus-form" class="container-fluid pos-rel pt-lg-5p pb-lg-10p pl-lg-10p pr-lg-10p pb-m-20p contactus-form">
+        <div class="row">
+            <div class="col-lg-12">
+                <div>
+                    {%if is_pay is True%}
+                        <span>Checkout Berhasil</span><br>
+                        <span>Status : {{payment.status}}</span><br>
+                        {%if payment.payment_bank == "mandiri" %}
+                            <span>Bill Key : {{payment.bill_key}}</span><br>
+                            <span>Biller Code : {{payment.biller_code}}</span>
+                        {%else%}
 
-			<span>Va Number : {{payment.va_number}}</span>
-		{% endif%}
-	{%else%}
-		<span>Checkout Berhasil dipublish</span>
-		<br><span>Ini barang Gratis</span>
-	{%endif%}
+                            <span>Va Number : {{payment.va_number}}</span>
+                        {% endif%}
+                    {%else%}
+                        <span>Checkout Berhasil dipublish</span>
+                        <br><span>Ini barang Gratis</span>
+                    {%endif%}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-lg-100p h-lg-115vh"></div>
+</div>
+
 {% endblock %}
