@@ -569,7 +569,7 @@
     transition: all .5s;
   }
   #footer ul.menu{margin-bottom: 5%;}
-  #footer ul.menu li{padding: 0 35px;}
+  #footer ul.menu li{padding: 0 30px;}
   #footer ul.menu li a{font-family: "Montserrat Medium";color: #fff;}
   #footer a:hover,
   #footer ul.menu li a:hover{color: #494949;}
