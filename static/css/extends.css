@@ -1,4 +1,4 @@
- Halaman Home */
+/* Halaman Home */
 .home-template .box{
     width: 100%;
     height: 227px;
@@ -1270,3 +1270,22 @@ ul.messages, .alert{display: none;}
     .user-content.login-content .btn-rectangle{padding: 5%;}
 }
 /*=================================================MOBILE=================================================
+
+/* Privacy Policy and TOS */
+.policy-content .title,.tos-content .title{margin-bottom: 5%;text-align: center;}
+.policy-content h4,.tos-content h4{margin-bottom: 1%;}
+.policy-content p,.tos-content p{margin-bottom: 5px;}
+.policy-content ul,.tos-content ul{padding-left: 15px;}
+
+/* Billing */
+.billing-content input[type="text"],
+.billing-content select{
+  padding: 1.5% 2% !important;
+  width: 100% !important;
+  height: auto !important;
+  font-family: "Montserrat Regular";
+  font-size: 14px !important;
+  line-height: 24px !important;
+  color: #6d6e71 !important;
+  border: 1px solid #dadada !important;
+}
