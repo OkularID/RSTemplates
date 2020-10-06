@@ -6,15 +6,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
-    <title>Template Event 5 | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <title>Template Event | Homepage</title>
+    <link rel="shortcut icon" href="{% static 'rsvp/event/10year_reunion/images/ico.ico' %}">
     <!-- Customize css -->
     {% compress css %}
-        {% include 'static/css.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/default.css">
+        <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/10year_reunion/style_event_5.css' %}">
     {% endcompress %}
-    <!-- Features css -->
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target="#navbar-example" data-offset="1">
@@ -46,7 +50,7 @@
             <div class="row d-lg-none">
                 <div class="col-2 offset-9 text-right pr-1 pt-3">
                     <div class="menu-icon">
-                        <img class="img-fluid" src="images/menu-button-04.png">
+                        <img class="img-fluid" src="{% static 'rsvp/event/10year_reunion/images/menu-button-04.png' %}">
                     </div>
                 </div>
                 <div class="side-menu text-center">
@@ -81,29 +85,28 @@
     <div class="container-fluid header position-relative" id="about">
         <div class="row">
                 <div class="content-left">
-                    <img data-aos="zoom-out" src="images/header-image-content-04-04-04.png">
+                    <img data-aos="zoom-out" src="{{ x.banner_image.url }}">
                     <div class="title">
                             <h1 data-aos="fade-down" data-aos-offset=-200 class="text-dark-blue font-permanentmarker font-60-px">
-                                hawkins high
+                                {{ x.banner_name }}
                             </h1>
                     </div>
                 </div>
                 <div class="content-right">
                     <div data-aos="fade-left">
                     <h1 class="text-white font-gochihand font-40-px">
-                        # 10 Year Reunion
+                        {{ x.banner_hastag1 }}
                     </h1>
                     <h1 class="title text-dark-blue font-permanentmarker font-100-px mr-5">
-                        Class Of<br>
-                        <span class="font-130-px">2018</span>
+                        {{ x.banner_title }}<br>
+                        <span class="font-130-px">{{ x.banner_year }}</span>
                     </h1>
                     </div>
                 </div>
                 <div class="bottom-content">
                     <div data-aos="zoom-out">
                     <h1 class="text-dark-blue font-gochihand font-50-px">
-                        # Let’s walk down<br>
-                        the memory lane
+                        {{ x.banner_hastag2 }}
                     </h1>
                     </div>
                 </div>
@@ -124,18 +127,18 @@
             <div class="col-lg-5 text-center">
                 <div class="day">
                     <h1 class="text-blue font-gochihand mb-lg-5 mb-4">
-                        # Cheers to the old times!
+                        {{ x.date_hastag }}
                     </h1>
                     <h1 class="text-blue font-100-px mb-0">
-                        SAT
+                        {{ x.date_day }}
                     </h1>
-                    <img src="images/border-date-08.png">
+                    <img src="{% static 'rsvp/event/10year_reunion/images/border-date-08.png' %}">
                     <h1 class="text-blue mb-0 font-50-px">
-                        24.10.2020
+                        {{ x.date_date }}
                     </h1>
-                    <img class="line-margin" src="images/border-date-08.png">
+                    <img class="line-margin" src="{% static 'rsvp/event/10year_reunion/images/border-date-08.png' %}">
                     <h2 class="text-blue mt-lg-3">
-                        06 - 09 pm
+                        {{ x.date_time }}
                     </h2>
                 </div>
             </div>
@@ -146,17 +149,14 @@
             <div class="col-lg-5 offset-lg-1 text-center order-lg-1 order-2">
                 <div class="day">
                     <h1 class="text-blue font-gochihand mb-5">
-                        # Gather ‘round, people!
+                        {{ x.place_hastag }}
                     </h1>
                     <h1 class="text-blue mb-0">
-                        <span class="font-baloo-semibold font-50-px">Plaza Mutiara</span><br>
-                        Time Square
+                        <span class="font-baloo-semibold font-50-px">{{ x.place_at }}</span><br>
                     </h1>
-                    <img class="mb-4 mt-lg-0 mt-4" src="images/border-place-09.png">
+                    <img class="mb-4 mt-lg-0 mt-4" src="{% static 'rsvp/event/10year_reunion/images/border-place-09.png' %}">
                     <h2 class="text-blue">
-                        Jl. DR. Ide Anak Agung Gde Agung,<br>
-                        Kuningan, Setia Budi, Jakarta<br>
-                        Selatan, DKI Jakarta 12950
+                        {{ x.place_address }}
                     </h2>
                 </div>
             </div>
@@ -176,113 +176,113 @@
                     <h1 class="text-dark-blue font-gochihand font-60-px">
                         # Rundown
                     </h1>
-                    <img src="images/border-white-10.png">
+                    <img src="{% static 'rsvp/event/10year_reunion/images/border-white-10.png' %}">
                 </div>
                 <div class="row">
                     <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
                         <p class="text-white mb-lg-3 mb-1">
-                            05.00 pm
+                            {{ x.rundown_time1 }}
                         </p>
                     </div>
                     <div class="col-lg-4 col-5">
                         <p class="text-white mb-lg-3 mb-1">
-                            Registration
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
-                        <p class="text-white mb-lg-3 mb-1">
-                            05.30 pm
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-5">
-                        <p class="text-white mb-lg-3 mb-1">
-                            Event Opening
+                            {{ x.rundown_event1 }}
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
                         <p class="text-white mb-lg-3 mb-1">
-                            05.40 pm
+                            {{ x.rundown_time2 }}
                         </p>
                     </div>
                     <div class="col-lg-4 col-5">
                         <p class="text-white mb-lg-3 mb-1">
-                            Welcome speech
+                            {{ x.rundown_event2 }}
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
                         <p class="text-white mb-lg-3 mb-1">
-                            05.50 pm
+                            {{ x.rundown_time3 }}
                         </p>
                     </div>
                     <div class="col-lg-4 col-5">
                         <p class="text-white mb-lg-3 mb-1">
-                            Photo session
+                            {{ x.rundown_event3 }}
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
                         <p class="text-white mb-lg-3 mb-1">
-                            06.30 pm
+                            {{ x.rundown_time4 }}
                         </p>
                     </div>
                     <div class="col-lg-4 col-5">
                         <p class="text-white mb-lg-3 mb-1">
-                            Fun and games
+                            {{ x.rundown_event4 }}
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
                         <p class="text-white mb-lg-3 mb-1">
-                            07.00 pm
+                            {{ x.rundown_time5 }}
                         </p>
                     </div>
                     <div class="col-lg-4 col-5">
                         <p class="text-white mb-lg-3 mb-1">
-                            Karaoke Time
+                            {{ x.rundown_event5 }}
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
                         <p class="text-white mb-lg-3 mb-1">
-                            07.30 pm
+                            {{ x.rundown_time6 }}
                         </p>
                     </div>
                     <div class="col-lg-4 col-5">
                         <p class="text-white mb-lg-3 mb-1">
-                            Door Prize
+                            {{ x.rundown_event6 }}
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
                         <p class="text-white mb-lg-3 mb-1">
-                            07.45 pm
+                            {{ x.rundown_time7 }}
                         </p>
                     </div>
                     <div class="col-lg-4 col-5">
                         <p class="text-white mb-lg-3 mb-1">
-                            Closing Speech
+                            {{ x.rundown_event7 }}
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
                         <p class="text-white mb-lg-3 mb-1">
-                            08.00 pm
+                            {{ x.rundown_time8 }}
                         </p>
                     </div>
                     <div class="col-lg-4 col-5">
                         <p class="text-white mb-lg-3 mb-1">
-                            Free time
+                            {{ x.rundown_event8 }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 pl-lg-4 offset-lg-0 col-4 offset-2">
+                        <p class="text-white mb-lg-3 mb-1">
+                            {{ x.rundown_time9 }}
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-5">
+                        <p class="text-white mb-lg-3 mb-1">
+                            {{ x.rundown_event9 }}
                         </p>
                     </div>
                 </div>
@@ -342,11 +342,11 @@
                     </a>
                 </div>
                 <a class="d-inline-block mt-5 mb-4" href="#" data-toggle="modal" data-target="#form-submit">
-                    <img src="images/button-11.png">
+                    <img src="{% static 'rsvp/event/10year_reunion/images/button-11.png' %}">
                 </a>
                 <br>
-                <a  class="d-inline-block" href="invitation-01.jpg" target="_blank">
-                    <img src="images/button-12.png">
+                <a class="d-inline-block" href="{{ x.inv_pdf.url }}" target="_blank">
+                    <img src="{% static 'rsvp/event/10year_reunion/images/button-12.png' %}">
                 </a>
             </div>
         </div>
@@ -371,10 +371,10 @@
         <div class="modal-content py-lg-5 thank-you">
             <div class="row my-5">
                 <div class="col-lg-1 offset-lg-10 text-center d-none d-lg-block">
-                    <img class="img-fluid" src="images/close-button-13.png" data-dismiss="modal">
+                    <img class="img-fluid" src="{% static 'rsvp/event/10year_reunion/images/close-button-13.png' %}" data-dismiss="modal">
                 </div>
                 <div class="col-2 offset-9 text-right d-lg-none">
-                    <img class="img-fluid" src="images/close-button-13.png" data-dismiss="modal">
+                    <img class="img-fluid" src="{% static 'rsvp/event/10year_reunion/images/close-button-13.png' %}" data-dismiss="modal">
                 </div>
             </div>
             <div class="row text-center">
@@ -392,16 +392,15 @@
         </div>
       </div>
     </div>
-    <!-- Features JS -->
+
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
     {% compress js %}
         {% include 'static/js.html' %}
-        <!-- Custom JS -->
         <script type="text/javascript" src="{% static 'rsvp/event/10year_reunion/app.js' %}"></script>
     {% endcompress %}
-    <!-- Custom JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

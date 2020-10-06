@@ -6,15 +6,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
-    <title>Template Event 6 | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <title>Template Event | Homepage</title>
+    <link rel="shortcut icon" href="{% static 'rsvp/event/20year_reunion/images/ico.ico' %}">
     <!-- Customize css -->
     {% compress css %}
-        {% include 'static/css.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/default.css">
+        <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/20year_reunion/style_event_6.css' %}">
     {% endcompress %}
-    <!-- Features css -->
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target="#navbar-example">
@@ -34,7 +38,7 @@
                         </li>
                         <li class="mx-5">
                             <a href="#rundown" class="nav-link logo">
-                                <img src="images/logo-04.png">
+                                <img src="{% static 'rsvp/event/20year_reunion/images/logo-04.png' %}">
                             </a>
                         </li>
                         <li class="mx-5">
@@ -52,11 +56,11 @@
             </div>
             <div class="row d-lg-none">
                 <div class="col-3 offset-5 pl-0 pt-3">
-                    <img class="img-fluid" src="images/logo-04.png">
+                    <img class="img-fluid" src="{% static 'rsvp/event/20year_reunion/images/logo-04.png' %}">
                 </div>
                 <div class="col-2 offset-2 text-center pr-4 pt-3">
                     <div class="menu-icon">
-                        <img class="img-fluid" src="images/menu-icon-03.png">
+                        <img class="img-fluid" src="{% static 'rsvp/event/20year_reunion/images/menu-icon-03.png' %}">
                     </div>
                 </div>
                 <div class="side-menu text-center">
@@ -93,12 +97,12 @@
             <div class="col-lg-12 px-0" data-aos="zoom-out">
                 <div class="carousel-header owl-theme">
                     <div class="item">
-                        <img class="d-none d-lg-block banner-desktop" src="images/desktop-header-04.jpg">
-                        <img class="d-lg-none" src="images/mobile-header-04.jpg">
+                        <img class="d-none d-lg-block banner-desktop" src="{% static 'rsvp/event/20year_reunion/images/desktop-header-04.jpg' %}">
+                        <img class="d-lg-none" src="{% static 'rsvp/event/20year_reunion/images/mobile-header-04.jpg' %}">
                     </div>
                     <div class="item">
-                        <img class="d-none d-lg-block banner-desktop" src="images/desktop-header-04.jpg">
-                        <img class="d-lg-none" src="images/mobile-header-04.jpg">
+                        <img class="d-none d-lg-block banner-desktop" src="{% static 'rsvp/event/20year_reunion/images/desktop-header-04.jpg' %}">
+                        <img class="d-lg-none" src="{% static 'rsvp/event/20year_reunion/images/mobile-header-04.jpg' %}">
                     </div>
                 </div>
             </div>
@@ -110,18 +114,18 @@
                 <div class="row">
                 <div class="col-lg-5 pl-lg-5 content-left order-2 order-lg-1">
                     <div class="image-position">
-                        <img data-aos="fade-up" data-aos-offset="-500" data-aos-anchor-placement=".about" class="ml-lg-3 img-fluid" src="images/brief-image-content-05.jpg">
+                        <img data-aos="fade-up" data-aos-offset="-500" data-aos-anchor-placement=".about" class="ml-lg-3 img-fluid" src="{% static 'rsvp/event/20year_reunion/images/brief-image-content-05.jpg' %}">
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 col-11 offset-1 content-right pr-0 pb-lg-5 order-1 order-lg-2">
-                    <img data-aos="fade-left" data-aos-offset="-500" data-aos-anchor-placement=".about" class="img-fluid w-100 content pl-lg-0 pl-5" src="images/brief-image-content-06.jpg">
+                    <img data-aos="fade-left" data-aos-offset="-500" data-aos-anchor-placement=".about" class="img-fluid w-100 content pl-lg-0 pl-5" src="{% static 'rsvp/event/20year_reunion/images/brief-image-content-06.jpg' %}">
                     <h1 class="text-white mt-5 ml-lg-5 ml-3">
                         Hawkins High
                     </h1>
                     <h3 class="text-pink ml-lg-5 ml-3 font-jost-light">
                         Class of 1995
                     </h3>
-                    <img src="images/about-line-07.png" class="line my-4">
+                    <img src="{% static 'rsvp/event/20year_reunion/images/about-line-07.png' %}" class="line my-4">
                     <p class="text-white ml-lg-5 ml-3 mb-5">
                         It’s hard to believe it’s been 20 years!<br>
                         Come and reminisce with the class, join us<br>
@@ -145,7 +149,7 @@
                 <h3 data-aos="fade-down" data-aos-offset="-400" class="text-pink font-jost-light">
                     Date, Time & Place
                 </h3>
-                <img class="my-5" src="images/date-line-08.png">
+                <img class="my-5" src="{% static 'rsvp/event/20year_reunion/images/date-line-08.png' %}">
             </div>
         </div>
         <div class="row mb-5">
@@ -174,7 +178,7 @@
             <div class="col-12 col-lg-6">
                 <div class="row">
                     <div data-aos="fade-down" data-aos-offset="-350" class="col-6 px-0">
-                        <img class="img-fluid w-100" src="images/date-image-content-09.jpg">
+                        <img class="img-fluid w-100" src="{% static 'rsvp/event/20year_reunion/images/date-image-content-09.jpg' %}">
                     </div>
                     <div data-aos="fade-up" data-aos-offset="-350" class="col-6 bg-yellow box-yellow">
                         <h1 class="text-white">
@@ -189,14 +193,14 @@
                         </h1>
                     </div>
                     <div data-aos="fade-down" data-aos-offset="-350" class="col-6 px-0">
-                        <img class="img-fluid w-100" src="images/date-image-content-10.jpg">
+                        <img class="img-fluid w-100" src="{% static 'rsvp/event/20year_reunion/images/date-image-content-10.jpg' %}">
                     </div>
                 </div>
             </div>
             <div class="col-12  col-lg-6">
                 <div class="row">
                     <div data-aos="fade-down" data-aos-offset="-350" class="col-6 px-0">
-                        <img class="img-fluid w-100" src="images/date-image-content-11.jpg">
+                        <img class="img-fluid w-100" src="{% static 'rsvp/event/20year_reunion/images/date-image-content-11.jpg' %}">
                     </div>
                     <div  data-aos="fade-up" data-aos-offset="-400" class="col-6 bg-yellow box-yellow">
                         <h1 class="text-white">
@@ -211,7 +215,7 @@
                         </h1>
                     </div>
                     <div data-aos="fade-down" data-aos-offset="-350" class="col-6 px-0">
-                        <img class="img-fluid w-100" src="images/date-image-content-12.jpg">
+                        <img class="img-fluid w-100" src="{% static 'rsvp/event/20year_reunion/images/date-image-content-12.jpg' %}">
                     </div>
                 </div>
             </div>
@@ -230,7 +234,7 @@
         </div>
         <div class="row">
             <div data-aos="fade-right" data-aos-offset="-350" class="col-lg-6 py-4 pl-lg-5 pl-0">
-                <img class="ml-lg-4" src="images/rundown-line-14.png">
+                <img class="ml-lg-4" src="{% static 'rsvp/event/20year_reunion/images/rundown-line-14.png' %}">
             </div>
         </div>
         <div class="row">
@@ -345,7 +349,7 @@
                         </h1>
                         </div>
                         <div class="col-lg-12 px-0 py-3">
-                            <img src="images/rsvp-line-04.png">
+                            <img src="{% static 'rsvp/event/20year_reunion/images/rsvp-line-04.png' %}">
                         </div>
                         <div class="col-lg-5 offset-lg-1">
                             <p class="text-dark-blue">
@@ -409,7 +413,7 @@
                 </p>
             </div>
             <div class="offset-lg-5 col-lg-2 order-lg-2 order-1 text-center py-lg-0 py-3">
-                <a href="#" class="border-white text-white rounded-pill py-1 px-3 font-jost">
+                <a href="{% url '20year_reunion_create' x.theme_url %}" class="border-white text-white rounded-pill py-1 px-3 font-jost">
                     CREATE A SITE
                 </a>
             </div>
@@ -437,7 +441,7 @@
                         <h1 class="text-dark-blue">
                              See You There!
                         </h1>
-                        <img class="my-4" src="images/submit-line-05.png">
+                        <img class="my-4" src="{% static 'rsvp/event/20year_reunion/images/submit-line-05.png' %}">
                         <h3 class="text-white mx-lg-0 mx-4 px-lg-0 px-1 font-jost-light d-none d-lg-block">
                             We will take notes of your attendance,<br>
                             please check your email for further notice.
@@ -452,16 +456,15 @@
         </div>
       </div>
     </div>
-    <!-- Features JS -->
+
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
     {% compress js %}
         {% include 'static/js.html' %}
-        <!-- Custom JS -->
         <script type="text/javascript" src="{% static 'rsvp/event/20year_reunion/app.js' %}"></script>
     {% endcompress %}
-    <!-- Custom JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

@@ -10,11 +10,15 @@
     <link rel="shortcut icon" href="{% static 'rsvp/event/seminary/images/ico.ico' %}">
     <!-- Customize css -->
     {% compress css %}
-        {% include 'static/css.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/default.css">
+        <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/seminary/style_event_4.css' %}">
     {% endcompress %}
-    <!-- Features css -->
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target="#navbar-example" data-offset="1">
@@ -1038,9 +1042,7 @@
                 </p>
             </div>
             <div class="offset-lg-5 col-lg-2 order-lg-2 order-1 text-center py-lg-0 py-3">
-                <a href="#" class="button rounded-pill">
-                    CREATE A SITE
-                </a>
+                <a href="{% url 'seminary_create' x.theme_url %}" class="button rounded-pill">CREATE A SITE</a>
             </div>
         </div>
     </div>
@@ -1076,16 +1078,15 @@
         </div>
       </div>
     </div>
-    <!-- Features JS -->
+
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
     {% compress js %}
         {% include 'static/js.html' %}
-        <!-- Custom JS -->
         <script type="text/javascript" src="{% static 'rsvp/event/seminary/app.js' %}"></script>
     {% endcompress %}
-    <!-- Custom JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
