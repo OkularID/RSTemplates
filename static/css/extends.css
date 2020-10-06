@@ -1279,7 +1279,8 @@ ul.messages, .alert{display: none;}
 
 /* Billing */
 .billing-content input[type="text"],
-.billing-content select{
+.billing-content select,
+.changepassword-content input[type="text"]{
   padding: 1.5% 2% !important;
   width: 100% !important;
   height: auto !important;
@@ -1289,3 +1290,4 @@ ul.messages, .alert{display: none;}
   color: #6d6e71 !important;
   border: 1px solid #dadada !important;
 }
+.changepassword-content input[type="text"]{padding: 1% 2%;}

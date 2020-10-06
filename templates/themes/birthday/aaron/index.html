@@ -1,3 +1,5 @@
+{% load static %}
+{% load compress %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,28 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
     <title>Template Birthday | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <link rel="shortcut icon" href="{% static 'rsvp/birthday/aaron/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="../../css/animation.css" >    
-    <link rel="stylesheet" type="text/css" href="../../css/default.css">
-    <link rel="stylesheet" type="text/css" href="style-birthday-4.css">
-    <!-- Features css -->
-    <link rel="stylesheet" href="../../features/animatecss/animate.min.css">
-    <!--Node Modules css-->
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    {% compress css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/default.css">
+        <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/birthday/aaron/style-birthday-4.css' %}">
+    {% endcompress %}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
     <div id="homepage">
         <!-- Navbar -->    
         <nav>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-3 d-none d-lg-block">
-                        <a href="index.html"><img data-aos="fade-right" class="img-fluid logo" src="images/logo.png" /></a>
+                        <a href="index.html"><img data-aos="fade-right" class="img-fluid logo" src="{{ x.img_logo.url }}" /></a>
                     </div>
                     <div data-aos="fade-left" class="col-lg-9 d-none d-lg-block">
                         <ul class="menu">
@@ -40,7 +43,7 @@
                 </div>
                 <div class="row pt-3">
                     <div class="col-8 d-lg-none">
-                        <a href="index.html"><img class="img-fluid logo" src="images/logo.png" /></a>
+                        <a href="index.html"><img class="img-fluid logo" src="{{ x.img_logo.url }}" /></a>
                     </div>
                     <div class="col-4 d-lg-none text-right">
                         <h3 class="text-white">
@@ -68,12 +71,12 @@
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
                             <div class="box">
-                                <div data-aos="fade-up" class="subtitle">you are</div>
-                                <div data-aos="fade-up" class="title">Eagerly Invited</div>
+                                <div data-aos="fade-up" class="subtitle">{{ x.banner_subtitle }}</div>
+                                <div data-aos="fade-up" class="title">{{ x.banner_title }}</div>
                             </div>
-                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="images/images-01.png" />
-                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="images/mobile-images-01.png" />
-                        <img class="img-fluid w-lg-100p motif" src="images/motif-01.png" />
+                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{{ x.banner_bg.url }}" />
+                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="{{ x.banner_bg_mobile.url }}" />
+                        <img class="img-fluid w-lg-100p motif" src="{% static 'rsvp/birthday/aaron/images/motif-01.png' %}" />
                     </div>
                 </div>
             </div>
@@ -83,27 +86,27 @@
             <div class="container-fluid pt-m-30p pt-lg-20p pb-lg-10p pl-lg-10p pr-lg-10p">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="mb-m-15p mb-lg-5p">Aaron’s <span>1<sup>st</sup></span> Birthday</h1>
+                        <h1 class="mb-m-15p mb-lg-5p">{{ x.about_name }}’s <span>{{ x.about_age }}</span> Birthday</h1>
                         <div class="gallery">
                             <div class="box">
-                                <img data-aos="fade-up"  class="img-fluid" src="images/images-02.png" />
-                                <img data-aos="fade-up"  class="img-fluid horizontal" src="images/images-07.png" />
+                                <img data-aos="fade-up"  class="img-fluid" src="{{ x.about_image1.url }}" />
+                                <img data-aos="fade-up"  class="img-fluid horizontal" src="{{ x.about_image6.url }}" />
                             </div>
                             <div class="box">
-                                <img data-aos="fade-up" class="img-fluid horizontal" src="images/images-03.png" />
-                                <img data-aos="fade-up" class="img-fluid" src="images/images-08.png" />
+                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{ x.about_image2.url }}" />
+                                <img data-aos="fade-up" class="img-fluid" src="{{ x.about_image7.url }}" />
                             </div>
                             <div class="box">
-                                <img data-aos="fade-up" class="img-fluid" src="images/images-04.png" />
-                                <img data-aos="fade-up" class="img-fluid horizontal" src="images/images-09.png" />
+                                <img data-aos="fade-up" class="img-fluid" src="{{ x.about_image3.url }}" />
+                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{ x.about_image8.url }}" />
                             </div>
                             <div class="box">
-                                <img data-aos="fade-up" class="img-fluid horizontal" src="images/images-05.png" />
-                                <img data-aos="fade-up" class="img-fluid" src="images/images-10.png" />
+                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{ x.about_image4.url }}" />
+                                <img data-aos="fade-up" class="img-fluid" src="{{ x.about_image9.url }}" />
                             </div>
                             <div class="box">
-                                <img data-aos="fade-up" class="img-fluid" src="images/images-06.png" />
-                                <img data-aos="fade-up" class="img-fluid horizontal" src="images/images-11.png" />
+                                <img data-aos="fade-up" class="img-fluid" src="{{ x.about_image5.url }}" />
+                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{ x.about_image10.url }}" />
                             </div>
                         </div>
                         <div class="mgallery d-block d-lg-none">
@@ -111,36 +114,36 @@
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-6">
-                                            <img class="img-fluid" src="images/images-02.png" />
-                                            <img class="img-fluid horizontal" src="images/images-07.png" />
+                                            <img class="img-fluid" src="{{ x.about_image1.url }}" />
+                                            <img class="img-fluid horizontal" src="{{ x.about_image6.url }}" />
                                         </div>
                                         <div class="col-6">
-                                            <img class="img-fluid horizontal" src="images/images-03.png" />
-                                            <img class="img-fluid" src="images/images-08.png" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <img class="img-fluid" src="images/images-04.png" />
-                                            <img class="img-fluid horizontal" src="images/images-09.png" />
-                                        </div>
-                                        <div class="col-6">
-                                            <img class="img-fluid horizontal" src="images/images-05.png" />
-                                            <img class="img-fluid" src="images/images-10.png" />
+                                            <img class="img-fluid horizontal" src="{{ x.about_image2.url }}" />
+                                            <img class="img-fluid" src="{{ x.about_image7.url }}" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-6">
-                                            <img class="img-fluid" src="images/images-06.png" />
-                                            <img class="img-fluid horizontal" src="images/images-11.png" />
+                                            <img class="img-fluid" src="{{ x.about_image3.url }}" />
+                                            <img class="img-fluid horizontal" src="{{ x.about_image8.url }}" />
                                         </div>
                                         <div class="col-6">
-                                            <img class="img-fluid horizontal" src="images/images-07.png" />
-                                            <img class="img-fluid" src="images/images-02.png" />
+                                            <img class="img-fluid horizontal" src="{{ x.about_image4.url }}" />
+                                            <img class="img-fluid" src="{{ x.about_image9.url }}" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="img-fluid" src="{{ x.about_image5.url }}" />
+                                            <img class="img-fluid horizontal" src="{{ x.about_image10.url }}" />
+                                        </div>
+                                        <div class="col-6">
+                                            <img class="img-fluid horizontal" src="" />
+                                            <img class="img-fluid" src="" />
                                         </div>
                                     </div>
                                 </div>
@@ -153,42 +156,40 @@
         <!-- Section DATE & PLACE -->
         <section id="dateandplace">
             <div class="container-fluid pt-m-45p pb-m-35p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p text-center bg-lightgreen">
-                <img data-aos="fade-left" class="img-fluid motif" src="images/motif-02.png" />
-                <img class="img-fluid d-block d-lg-none mmotif3" src="images/mobile-motif-03.png" />
+                <img data-aos="fade-left" class="img-fluid motif" src="{% static 'rsvp/birthday/aaron/images/motif-02.png' %}" />
+                <img class="img-fluid d-block d-lg-none mmotif3" src="{% static 'rsvp/birthday/aaron/images/mobile-motif-03.png' %}" />
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3 data-aos="fade-down"  class="font-krub-r"><span>remember</span></h3>
-                        <h2 data-aos="fade-down" >the Time & Place</h2>
+                        <h3 data-aos="fade-down" class="font-krub-r"><span>remember</span></h3>
+                        <h2 data-aos="fade-down">the Time & Place</h2>
                         <div data-aos="fade-up"  class="box mt-m-15p mt-lg-5p bg-white">
                             <div class="row">
                                 <div class="col-lg-3 pt-m-15p pb-m-15p">
                                     <div class="boxc">
-                                        <div class="day">Sat</div>
-                                        <div class="title">18 April 2020</div>
-                                        <p>18.00 PM</p>
+                                        <div class="day">{{ x.dap_day }}</div>
+                                        <div class="title">{{ x.dap_date }}</div>
+                                        <p>{{ x.dap_time }}</p>
                                     </div>
-                                    <img class="img-fluid d-none d-lg-block motif4" src="images/motif-05.png" />
+                                    <img class="img-fluid d-none d-lg-block motif4" src="{% static 'rsvp/birthday/aaron/images/motif-05.png' %}" />
                                 </div>
                                 <div class="col-lg-6 pt-m-15p pb-m-15p pt-lg-5p pb-lg-5p">
-                                    <div class="title">Marina Village</div>
+                                    <div class="title">{{ x.dap_place }}</div>
                                     <p>
-                                        Baja Room<br />
-                                        939 Quivira Way, San Diego<br />
-                                        California 92109
+                                        {{ x.dap_address }}
                                     </p>
                                 </div>
                                 <div class="col-lg-3 pt-m-15p pb-m-15p">
                                     <div class="boxc">
-                                        <img class="img-fluid mb-lg-10p" src="images/icon-01.png" />
+                                        <img class="img-fluid mb-lg-10p" src="{% static 'rsvp/birthday/aaron/images/icon-01.png' %}" />
                                         <div class="title">Dresscode</div>
-                                        <p>Colorful</p>                                        
+                                        <p>{{ x.dap_dress }}</p>                                        
                                     </div>
-                                    <img class="img-fluid d-none d-lg-block motif2" src="images/motif-03.png" />
-                                    <img class="img-fluid d-none d-lg-block motif3" src="images/motif-04.png" />
-                                    <img class="img-fluid d-none d-lg-block motif5" src="images/motif-06.png" />
+                                    <img class="img-fluid d-none d-lg-block motif2" src="{% static 'rsvp/birthday/aaron/images/motif-03.png' %}" />
+                                    <img class="img-fluid d-none d-lg-block motif3" src="{% static 'rsvp/birthday/aaron/images/motif-04.png' %}" />
+                                    <img class="img-fluid d-none d-lg-block motif5" src="{% static 'rsvp/birthday/aaron/images/motif-06.png' %}" />
                                 </div>
-                                <img class="img-fluid d-block d-lg-none mmotif1" src="images/mobile-motif-01.png" />
-                                <img class="img-fluid d-block d-lg-none mmotif2" src="images/mobile-motif-02.png" />
+                                <img class="img-fluid d-block d-lg-none mmotif1" src="{% static 'rsvp/birthday/aaron/images/mobile-motif-01.png' %}" />
+                                <img class="img-fluid d-block d-lg-none mmotif2" src="{% static 'rsvp/birthday/aaron/images/mobile-motif-02.png' %}" />
                             </div>
                         </div>
                     </div>
@@ -232,11 +233,11 @@
                             <label class="d-block w-m-80p ma-m mb-lg-2p">Are you bringing extra mouths to feed?</label>
                             <div class="guest w-lg-100p mb-m-10p mb-lg-4p">
                                 <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                    <img class="img-fluid" src="images/arrow-left.png" />
+                                    <img class="img-fluid" src="{% static 'rsvp/birthday/aaron/images/arrow-left.png' %}" />
                                 </a>
                                 <input type="number" name="your-guest" id="spinner" value="0" placeholder="0" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
                                 <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                    <img class="img-fluid" src="images/arrow-right.png" />
+                                    <img class="img-fluid" src="{% static 'rsvp/birthday/aaron/images/arrow-right.png' %}" />
                                 </a>
                             </div>
                             <input type="submit" class="button-form mb-m-10p mb-lg-5p" data-toggle="modal" data-target="#ebrochure" value="Submit" />
@@ -247,7 +248,7 @@
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-lg-12 text-center pt-m-15p pt-lg-5p pb-lg-10p pl-lg-0 pr-lg-0">
-                                                <img class="img-fluid w-lg-100p motif" src="images/motif-09.png" />
+                                                <img class="img-fluid w-lg-100p motif" src="{% static 'rsvp/birthday/aaron/images/motif-09.png' %}" />
                                                 <div class="box bs">
                                                     <a class="close button-default" data-dismiss="modal">X</a>
                                                     <h3 class="font-krub-r"><span>see you there</span></h3>
@@ -264,7 +265,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <a target="_blank" href="E Invitation.pdf">Download Invitation</a>
+                        <a target="_blank" href="{{ x.inv_pdf.url }}">Download Invitation</a>
                     </div>
                 </div>
             </div>
@@ -274,11 +275,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                        <img class="img-fluid w-lg-100p d-none d-lg-block motif" src="images/motif-07.png" />
-                        <img class="img-fluid w-lg-100p d-block d-lg-none motif" src="images/mobile-motif-04.png" />
-                        <img class="img-fluid motif2" src="images/motif-08.png" />
-                        <img class="img-fluid d-none d-lg-block w-lg-100p" src="images/images-12.png" />
-                        <img class="img-fluid bg d-block d-lg-none w-lg-100p" src="images/mobile-images-02.png" />
+                        <img class="img-fluid w-lg-100p d-none d-lg-block motif" src="{% static 'rsvp/birthday/aaron/images/motif-07.png' %}" />
+                        <img class="img-fluid w-lg-100p d-block d-lg-none motif" src="{% static 'rsvp/birthday/aaron/images/mobile-motif-04.png' %}" />
+                        <img class="img-fluid motif2" src="{% static 'rsvp/birthday/aaron/images/motif-08.png' %}" />
+                        <img class="img-fluid d-none d-lg-block w-lg-100p" src="{% static 'rsvp/birthday/aaron/images/images-12.png' %}" />
+                        <img class="img-fluid bg d-block d-lg-none w-lg-100p" src="{% static 'rsvp/birthday/aaron/images/mobile-images-02.png' %}" />
                         <div class="boxc text-center">
                             <div data-aos="fade-up"  class="subtitle">the</div>
                             <div data-aos="fade-up"  class="title mb-lg-5p">Wish List</div>
@@ -308,18 +309,15 @@
             </div>
         </footer>
     </div>
-    <!-- Features JS -->
-    <script type="text/javascript" src="../../features/animatecss/wow.min.js"></script>
+
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
-    <!-- Node Modules JS -->
-    <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../node_modules/owl.carousel/dist/owl.carousel.js"></script>
-    <!-- Custom JS -->
-    <script type="text/javascript" src="app.js"></script>
+    {% compress js %}
+        {% include 'static/js.html' %}
+        <script type="text/javascript" src="{% static 'rsvp/birthday/aaron/app.js' %}"></script>
+    {% endcompress %}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 </body>
 </html>
