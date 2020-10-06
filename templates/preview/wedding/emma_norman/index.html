@@ -1,23 +1,28 @@
 {% load static %}
 {% load compress %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Template Wedding | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <link rel="shortcut icon" href="{% static 'rsvp/wedding/emma_norman/images/ico.ico' %}">
     <!-- Customize css -->
-
     {% compress css %}
-            {% include 'static/css.html' %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+        <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/emma_norman/style-wedding-4.css' %}">
     {% endcompress %}
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
     <div id="homepage">
         <!-- Navbar -->
         <nav>
@@ -102,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img data-aos="fade-up" data-aos-once="true" data-aos-offset="-1400" class="img-fluid w-lg-100p d-none d-lg-block z-index-1 position-relative" src="{% static 'rsvp/wedding/emma_norman/images/images-0' %}2.png" />
+                        <img data-aos="fade-up" data-aos-once="true" data-aos-offset="-1400" class="img-fluid w-lg-100p d-none d-lg-block z-index-1 position-relative" src="{% static 'rsvp/wedding/emma_norman/images/images-02.png' %}" />
                     </div>
                     <div class="col-lg-5 pt-m-20p pb-m-20p pl-m-10p pr-m-10p pt-lg-10p brief">
                         <!-- <i>Classically Elegant Wedding</i> -->
@@ -264,31 +269,31 @@
             </div>
         </section>
         <!-- Modal -->
-    <div class="modal fade popup-submit" id="thankyou" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-xl p-lg-0 p-4" role="document">
-            <img class="button-close" src="{% static 'rsvp/wedding/emma_norman/images/close-bu' %}tton-05-05.png" alt="fluorescent adolescent">
-          <div class="modal-content py-5  thank-you px-lg-5">
-              <div class="row">
-                <div class="col-lg-6 offset-1 py-5">
-                <h2 class="text-gray font-weight-bold mb-0">
-                    ThankYou<br>
-                    For The<br>
-                    RSVP 
-                </h2>
-                <p class="text-gray my-5">
-                    We have save your seat and sent you<br>
-                    an email for your rsvp bookings. We<br>
-                    really appreciate you participating in<br>
-                    our very special day.
-                </p>
-                </div>
-                <div class="col-lg-5 px-lg-2 px-5">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/emma_norman/images/popup-im' %}age-content-04-04.png" alt="float on modest mouse">
+        <div class="modal fade popup-submit" id="thankyou" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl p-lg-0 p-4" role="document">
+                <img class="button-close" src="{% static 'rsvp/wedding/emma_norman/images/close-button-05-05.png' %}" alt="fluorescent adolescent">
+                <div class="modal-content py-5  thank-you px-lg-5">
+                    <div class="row">
+                        <div class="col-lg-6 offset-1 py-5">
+                            <h2 class="text-gray font-weight-bold mb-0">
+                                ThankYou<br>
+                                For The<br>
+                                RSVP 
+                            </h2>
+                            <p class="text-gray my-5">
+                                We have save your seat and sent you<br>
+                                an email for your rsvp bookings. We<br>
+                                really appreciate you participating in<br>
+                                our very special day.
+                            </p>
+                        </div>
+                        <div class="col-lg-5 px-lg-2 px-5">
+                            <img class="img-fluid" src="{% static 'rsvp/wedding/emma_norman/images/popup-image-content-04-04.png' %}" alt="float on modest mouse">
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
         <!-- Footer -->
         <footer>
             <div class="container-fluid pt-m-10p pb-m-15p pl-m-10p pr-m-10p py-lg-4 pl-lg-5p pr-lg-5p">
@@ -303,22 +308,20 @@
             </div>
         </footer>
     </div>
-
+    
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
-    <!-- Node Modules JS -->
-
-    {% include 'static/js.html' %}
-    <!-- Custom JS -->
     {% compress js %}
+        {% include 'static/js.html' %}
         <script type="text/javascript" src="{% static 'rsvp/wedding/emma_norman/app.js' %}"></script>
     {% endcompress %}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1500,
-            });
-        </script>
+    <script>
+        AOS.init({
+            duration: 1500,
+        });
+    </script>
 </body>
 </html>
