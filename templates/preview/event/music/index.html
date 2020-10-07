@@ -6,15 +6,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
-    <title>Template Event 8 | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <title>Template Event | Homepage</title>
+    <link rel="shortcut icon" href="{% static 'rsvp/event/music/images/ico.ico' %}">
     <!-- Customize css -->
-    {% compress css %}
-        {% include 'static/css.html' %}
-        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/music/style_event_8.css' %}">
-    {% endcompress %}
-    <!-- Features css -->
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/music/style_event_8.css' %}">">
+    <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target="#navbar-example" data-offset="1">
@@ -63,7 +65,7 @@
             <div class="row d-lg-none">
                 <div class="col-2 offset-10 text-center pr-4 pt-3">
                     <div class="menu-icon">
-                        <img class="img-fluid" src="images/menu-icon-07.png">
+                        <img class="img-fluid" src="{% static 'rsvp/event/music/images/menu-icon-07.png' %}">
                     </div>
                 </div>
                 <div class="side-menu text-center">
@@ -114,8 +116,8 @@
         <div class="row">
             <div class="col-lg-12 content-header">
                 <div class="content text-center">
-                    <img data-aos="fade-up" class="d-block mx-auto my-2 logo-ismaya" src="images/ismaya-logo-03.png">
-                    <img data-aos="fade-down" class="d-block mx-auto logo-sountopia" src="images/soundtopia-logo-04.png">
+                    <img data-aos="fade-up" class="d-block mx-auto my-2 logo-ismaya" src="{% static 'rsvp/event/music/images/ismaya-logo-03.png' %}">
+                    <img data-aos="fade-down" class="d-block mx-auto logo-sountopia" src="{% static 'rsvp/event/music/images/soundtopia-logo-04.png' %}">
                     <p  data-aos="zoom-out" data-aos-offset="-350" class="d-block mx-auto text-white font-montserrat-semibold my-3">
                         ICE BSD HALL 5  <span class="mx-2">|</span>  7 - 9 . JULY . 2019
                     </p>
@@ -133,7 +135,7 @@
                         LIVE TODAY”
                     </h1>
                 </div>
-                <img data-aos="fade-up" class="img-fluid" src="images/videos-content-05.jpg">
+                <img data-aos="fade-up" class="img-fluid" src="{% static 'rsvp/event/music/images/videos-content-05.jpg' %}">
             </div>
         </div>
     </div>
@@ -151,27 +153,27 @@
             <div data-aos="fade-up" class="col-lg-10 offset-lg-1 px-lg-0">
                 <div  id="lineup" class="carousel-lineup owl-theme">
                     <div class="item">
-                        <img src="images/line-up-image-08.png">
+                        <img src="{% static 'rsvp/event/music/images/line-up-image-08.png' %}">
                         <h1 class="text-white text-center font-montserrat-semibold">
                             Marshmello
                         </h1>
                     </div>
                     <div class="item">
-                        <img src="images/line-up-image-09.png">
+                        <img src="{% static 'rsvp/event/music/images/line-up-image-09.png' %}">
                         <h1 class="text-white text-center font-montserrat-semibold">
                             Calvin<br>
                             Harris
                         </h1>
                     </div>
                     <div class="item">
-                        <img src="images/line-up-image-10.png">
+                        <img src="{% static 'rsvp/event/music/images/line-up-image-10.png' %}">
                         <h1 class="text-white text-center font-montserrat-semibold">
                             Mamank<br>
                             DJ
                         </h1>
                     </div>
                     <div class="item">
-                        <img src="images/line-up-image-10.png">
+                        <img src="{% static 'rsvp/event/music/images/line-up-image-10.png' %}">
                         <h1 class="text-white text-center font-montserrat-semibold">
                             Julian<br>
                             Kurniawan
@@ -517,7 +519,7 @@
                 </p>
             </div>
             <div data-aos="fade-up" class="col-lg-7 px-0">
-                <img class="img-fluid w-100 mt-lg-0 mt-5" src="images/about-content-03.jpg">
+                <img class="img-fluid w-100 mt-lg-0 mt-5" src="{% static 'rsvp/event/music/images/about-content-03.jpg' %}">
             </div>
         </div>
     </div>
@@ -534,13 +536,13 @@
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL SPIRIT
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-05.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-05.png' %}">
                     </div>
                     <div class="col-lg-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL ENERGY DRINK
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-06.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-06.png' %}">
                     </div>
                 </div>
                 <div class="row d-none d-lg-flex">
@@ -548,19 +550,19 @@
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL ENERGY DRINK
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-07.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-07.png' %}">
                     </div>
                     <div class="col-lg-4 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL ON-DEMAND APP
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-08.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-08.png' %}">
                     </div>
                     <div class="col-lg-4 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL NOODLE PARTNER
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-09.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-09.png' %}">
                     </div>
                 </div>
                 <div class="row d-lg-none">
@@ -568,31 +570,31 @@
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL SPIRIT
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-05.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-05.png' %}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL ENERGY DRINK
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-06.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-06.png' %}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL ENERGY DRINK
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-07.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-07.png' %}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL ON-DEMAND APP
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-08.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-08.png' %}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             OFFICIAL NOODLE PARTNER
                         </h6>
-                        <img class="img-logos" src="images/sponsors-logo-09.png">
+                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-09.png' %}">
                     </div>
                 </div>
             </div>
@@ -612,7 +614,7 @@
                 </p>
             </div>
             <div class="offset-lg-5 col-lg-2 order-lg-2 order-1 text-center py-lg-0 py-3">
-                <a href="#" class="border-light-blue text-light-blue rounded-button py-1 px-3">
+                <a href="{% url 'music_create' x.theme_url %}" class="border-light-blue text-light-blue rounded-button py-1 px-3">
                     CREATE A SITE
                 </a>
             </div>
@@ -640,7 +642,7 @@
                         <h1 class="text-dark-blue">
                              See You There!
                         </h1>
-                        <img class="my-4" src="images/submit-line-05.png">
+                        <img class="my-4" src="{% static 'rsvp/event/music/images/submit-line-05.png' %}">
                         <h3 class="text-white mx-lg-0 mx-4 px-lg-0 px-1 font-jost-light d-none d-lg-block">
                             We will take notes of your attendance,<br>
                             please check your email for further notice.
@@ -655,16 +657,15 @@
         </div>
       </div>
     </div>
-    <!-- Features JS -->
+
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
     {% compress js %}
         {% include 'static/js.html' %}
-        <!-- Custom JS -->
         <script type="text/javascript" src="{% static 'rsvp/event/music/app.js' %}"></script>
     {% endcompress %}
-    <!-- Custom JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>

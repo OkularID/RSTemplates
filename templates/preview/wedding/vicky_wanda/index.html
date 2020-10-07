@@ -5,15 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Template Wedding | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <link rel="shortcut icon" href="{% static 'rsvp/wedding/vicky_wanda/images/ico.ico' %}">
     <!-- Customize css -->
-    {% compress css %}
-        {% include 'static/css.html' %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/vicky_wanda/style-wedding-6.css' %}">
-    {% endcompress %}
-    <!-- Features css -->
+    <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -336,42 +339,42 @@
                                             <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/images-08.png' %}" />
                                         </div>
                                         <div class="gallery__thumbs">
-                                            <a  href="images/images-08.png' %}" data-gallery="thumb" class="is-active">
+                                            <a  href="{% static 'rsvp/wedding/vicky_wanda/images/images-08.png' %}" data-gallery="thumb" class="is-active">
                                                 <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/images-08.png' %}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="images/images-09.png' %}" data-gallery="thumb">
+                                            <a href="{% static 'rsvp/wedding/vicky_wanda/images/images-09.png' %}" data-gallery="thumb">
                                                 <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/images-09.png' %}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="images/images-10.png' %}" data-gallery="thumb">
+                                            <a href="{% static 'rsvp/wedding/vicky_wanda/images/images-10.png' %}" data-gallery="thumb">
                                                 <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/images-10.png' %}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="images/images-11.png' %}" data-gallery="thumb">
+                                            <a href="{% static 'rsvp/wedding/vicky_wanda/images/images-11.png' %}" data-gallery="thumb">
                                                 <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/images-11.png' %}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="images/images-12.png' %}" data-gallery="thumb">
+                                            <a href="{% static 'rsvp/wedding/vicky_wanda/images/images-12.png' %}" data-gallery="thumb">
                                                 <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/images-12.png' %}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="images/images-13.png' %}" data-gallery="thumb">
+                                            <a href="{% static 'rsvp/wedding/vicky_wanda/images/images-13.png' %}" data-gallery="thumb">
                                                 <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/images-13.png' %}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
@@ -651,7 +654,7 @@
                                     <p>All Rights Reserved © This website is made by Reservasi Dulu</p>
                                 </div>                
                                 <div class="order-1 order-lg-2 col-12 mb-m-5p mtext-center col-lg-4 text-right">
-                                    <a href="" class="button-footer">Create a Site</a>
+                                    <a href="{% url 'vicky_wanda_create' x.theme_url %}" class="button-footer">Create a Site</a>
                                 </div>
                             </div>
                         </div>
@@ -660,16 +663,15 @@
         <!-- End Right Column -->
         </div>
     </div>
-    <!-- Features JS -->
+
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
     {% compress js %}
-    {% include 'static/js.html' %}
-    <!-- Custom JS -->
-    <script type="text/javascript" src="{% static 'rsvp/wedding/vicky_wanda/app.js' %}"></script>
+        {% include 'static/js.html' %}
+        <script type="text/javascript" src="{% static 'rsvp/wedding/vicky_wanda/app.js' %}"></script>
     {% endcompress %}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 </body>
 </html>

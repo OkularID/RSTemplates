@@ -4,17 +4,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Template Wedding | Homepage</title>
-    <link rel="shortcut icon" href="{% static 'img/ico.ico  ' %}">
-
+    <link rel="shortcut icon" href="{% static 'rsvp/wedding/jack_jane/images/ico.ico' %}">
     <!-- Customize css -->
-    {% compress css %}
-        {% include 'static/css.html' %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/jack_jane/style-wedding-5.css' %}">
-    {% endcompress %}
-    <!-- Features css -->
-
+    <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -457,25 +459,26 @@
                         <p>All Rights Reserved © This website is made by <b>Reservasi Dulu</b></p>
                     </div>                
                     <div class="col-12 mtext-center col-lg-4 text-right">
-                        <a href="" class="button-footer">Create a Site</a>
+                        <a href="{% url 'jack_jane_create' x.theme_url %}" class="button-footer">Create a Site</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-    <!-- Features JS -->
-    {% compress js %}
-    <script type="text/javascript" src="{% static 'rsvp/wedding/jack_jane/app.js' %}"></script>
-       <script>
-            new WOW().init();
-        </script>
-    {% endcompress %}
 
+    <!-- Customize js -->
+    <script>
+        new WOW().init();
+    </script>
+    {% compress js %}
+        {% include 'static/js.html' %}
+        <script type="text/javascript" src="{% static 'rsvp/wedding/jack_jane/app.js' %}"></script>
+    {% endcompress %}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                duration: 1500,
-            });
-        </script>
+    <script>
+        AOS.init({
+            duration: 1500,
+        });
+    </script>
 </body>
 </html>

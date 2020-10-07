@@ -5,16 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Template Wedding | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <link rel="shortcut icon" href="{% static 'rsvp/wedding/liam_felicia/images/ico.ico' %}">
     <!-- Customize css -->
-    {% compress css %}
-        {% include 'static/css.html' %}
-        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/liam_felicia/style-wedding-3.css' %}">
-    {% endcompress %}
-    <!-- Features css -->
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/liam_felicia/style-wedding-3.css' %}">
+    <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -343,23 +345,21 @@
                         <p class="mb-lg-0">All Rights Reserved © This website is made by Reservasi Dulu</p>
                     </div>
                     <div class="col-lg-2 pr-lg-5">
-                        <a class="button-default" href="">Create a Site</a>
+                        <a class="button-default" href="{% url 'liam_felicia_create' x.theme_url %}">Create a Site</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-    <!-- Features JS -->
+
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
     {% compress js %}
         {% include 'static/js.html' %}
-        <!-- Custom JS -->
         <script type="text/javascript" src="{% static 'rsvp/wedding/liam_felicia/app.js' %}"></script>
     {% endcompress %}
-    <!-- Custom JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 </body>
 </html>
