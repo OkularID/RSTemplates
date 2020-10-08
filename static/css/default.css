@@ -1479,3 +1479,72 @@
   .owl-dots .owl-dot{outline: none !important;}
   .owl-dots .owl-dot.active span{background: #f8b133 !important;}
   .owl-dots .owl-dot:hover span{background: #f8b133 !important;}
+
+
+/* Preview Navigation */
+  .preview-checkout{
+    position: relative;
+    z-index: 5;
+    margin-bottom: -7px;
+    padding: 10px 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+  }
+  .preview-checkout p{
+    display: inline-block;
+    margin-right: 10px;
+    font-family: "Montserrat SemiBold";
+    font-size :  14px !important;
+    line-height : 24px;
+  }
+  .preview-checkout .pc-logo{
+    margin: -5px 5px 0;
+    width: 150px;
+  }
+  .preview-checkout .pc-button{
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .preview-checkout .pc-button p{
+    position: absolute;
+    margin: 0 auto;
+    top: 25%;
+    left: 0;
+    right: 0;
+    font-family: "Montserrat SemiBold";
+    font-size: 14px !important;
+    letter-spacing: 0.5px;
+  }
+  .preview-checkout .pc-button p:hover{
+    color: #494949 !important;
+    transition: .5s;
+  }
+  .preview-checkout .pc-button img{width: 130px;}
+  .preview-checkout .pc-motif{
+    position: absolute;
+    z-index: -1;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+  }
+  @media screen and (max-width: 846px) {
+    .preview-checkout{padding: 10px 0;}
+    .preview-checkout p{
+      margin: 0 0 5px;
+      font-size: 7px !important;
+    }
+    .preview-checkout .pc-logo{
+      margin: -2px 3px 0;
+      width: 100px;
+    }
+    .preview-checkout .pc-button p{font-size: 10px !important;}
+    .preview-checkout .pc-button img{width: 110px;}
+    .preview-checkout .pc-motif{
+      height: 12vh;
+      object-fit: cover;
+    }
+  }

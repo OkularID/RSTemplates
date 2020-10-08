@@ -1269,7 +1269,34 @@ ul.messages, .alert{display: none;}
     .user-content.login-content .btn-whiteoutline,
     .user-content.login-content .btn-rectangle{padding: 5%;}
 }
-/*=================================================MOBILE=================================================
+/*=================================================MOBILE=================================================*/
+
+/* Templates Thumbnail Price */
+  .templatesthumbnail-price{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    font-family: "Montserrat Bold";
+    font-size: 16px !important;
+    color: #ffb64d !important;
+  }
+  @media screen and (max-width: 846px){
+    .templatesthumbnail-price{
+      position: relative;
+      margin-top: 5px;
+      top: unset;
+      transform: unset;
+      right: unset;
+    }
+  }
+
+/* Navigation Profile Picture */
+#navigation.account .nav-pp{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
 
 /* Privacy Policy and TOS */
 .policy-content .title,.tos-content .title{margin-bottom: 5%;text-align: center;}

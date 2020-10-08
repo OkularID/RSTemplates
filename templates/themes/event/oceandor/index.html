@@ -7,14 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
     <title>Template Event | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <link rel="shortcut icon" href="{% static 'rsvp/event/oceandor/images/ico.ico' %}">
     <!-- Customize css -->
-    {% compress css %}
-        {% include 'static/css.html' %}
-        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/oceandor/style-event-3.css' %}">
-    {% endcompress %}
-    <!-- Features css -->
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/oceandor/style-event-3.css' %}">
+    <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -64,10 +66,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="w-lg-100p h-lg-100vh">
-                            <img data-aos="fade-left" class="img-fluid images" src="images/images-01.png" />
+                            <img data-aos="fade-left" class="img-fluid images" src="{% static 'rsvp/event/oceandor/images/images-01.png' %}" />
                             <div class="boxc">
                                 <div data-aos="fade-right">
-                                <img class="img-fluid logo" src="images/logo.png" />
+                                <img class="img-fluid logo" src="{% static 'rsvp/event/oceandor/images/logo.png' %}" />
                                 <h1>Grand<br />Opening</h1>
                                 <h5>OUR FIRST OFFLINE STORE</h5>
                                 <a class="button-default" href="">LET’S GET INTO IT!</a>
@@ -84,7 +86,7 @@
                 <div class="row">
                     <div class="col-lg-5 pt-m-0 pb-m-10p pl-m-15p pr-m-15p pt-lg-5p pb-lg-20p pl-lg-5p pr-lg-0">
                         <div class="motif"></div>
-                        <img data-aos="zoom-out" class="img-fluid images w-lg-100p" src="images/images-02.png" />
+                        <img data-aos="zoom-out" class="img-fluid images w-lg-100p" src="{% static 'rsvp/event/oceandor/images/images-02.png' %}" />
                     </div>
                     <div class="col-lg-7 pt-m-0 pl-m-15p pr-m-15p pt-lg-5p pb-lg-20p pl-lg-5p pr-lg-5p">
                         <h2>About <span>Oceandor</span></h2>
@@ -95,8 +97,8 @@
                         </div>
                         <a class="button-default" href="">VISIT OUR TIKIPIDIA STORE</a>
                         <div class="motif2 d-none d-lg-block"></div>
-                        <img data-aos="fade-up" class="img-fluid images2 d-none d-lg-block" src="images/images-03.png" />
-                        <img data-aos="fade-left" class="img-fluid images3 d-none d-lg-block" src="images/images-04.png" />
+                        <img data-aos="fade-up" class="img-fluid images2 d-none d-lg-block" src="{% static 'rsvp/event/oceandor/images/images-03.png' %}" />
+                        <img data-aos="fade-left" class="img-fluid images3 d-none d-lg-block" src="{% static 'rsvp/event/oceandor/images/images-04.png' %}" />
                     </div>
                 </div>
             </div>
@@ -106,7 +108,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0 mtext-center">
-                        <img class="img-fluid images w-lg-100p" src="images/images-05.png" />
+                        <img class="img-fluid images w-lg-100p" src="{% static 'rsvp/event/oceandor/images/images-05.png' %}" />
                         <div class="boxc">
                             <div data-aos="fade-right">
                             <h2>25 October 2020</h2>
@@ -135,7 +137,7 @@
                                 <div class="content-box animated fadeIn">
                                     <div class="row">
                                         <div class="col-lg-3 pl-lg-0">
-                                            <img class="img-fluid images d-none d-lg-block" src="images/images-06.png" />
+                                            <img class="img-fluid images d-none d-lg-block" src="{% static 'rsvp/event/oceandor/images/images-06.png' %}" />
                                         </div>
                                         <div class="col-lg-4 mb-m-5p pl-m-10p pr-m-10p pt-lg-2p pr-lg-10p">
                                             <h2>Special<br /><span>Guests</span></h2>
@@ -144,7 +146,7 @@
                                             </p>
                                         </div>
                                         <div class="col-lg-5 pl-m-10p pr-m-10p">
-                                            <img class="img-fluid images2" src="images/images-07.png" />
+                                            <img class="img-fluid images2" src="{% static 'rsvp/event/oceandor/images/images-07.png' %}" />
                                             <div class="guest">DAFT PUNK</div>
                                         </div>
                                     </div>
@@ -154,7 +156,7 @@
                                 <div class="content-box animated fadeIn">
                                     <div class="row">
                                         <div class="col-lg-3 pl-lg-0">
-                                            <img class="img-fluid images d-none d-lg-block" src="images/images-06.png" />
+                                            <img class="img-fluid images d-none d-lg-block" src="{% static 'rsvp/event/oceandor/images/images-06.png' %}" />
                                         </div>
                                         <div class="col-lg-4 mb-m-5p pl-m-10p pr-m-10p pt-lg-2p pr-lg-10p">
                                             <h2>Special<br /><span>Guests</span></h2>
@@ -163,7 +165,7 @@
                                             </p>
                                         </div>
                                         <div class="col-lg-5 pl-m-10p pr-m-10p">
-                                            <img class="img-fluid images2" src="images/images-07.png" />
+                                            <img class="img-fluid images2" src="{% static 'rsvp/event/oceandor/images/images-07.png' %}" />
                                             <div class="guest">DAFT PUNK</div>
                                         </div>
                                     </div>
@@ -179,8 +181,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pt-m-65vh pt-lg-15p pl-lg-0 pr-lg-0">
-                        <img class="img-fluid images d-none d-lg-block w-lg-100p" src="images/images-08.png" />
-                        <img class="img-fluid images d-block d-lg-none w-lg-100p" src="images/images-09.png" />
+                        <img class="img-fluid images d-none d-lg-block w-lg-100p" src="{% static 'rsvp/event/oceandor/images/images-08.png' %}" />
+                        <img class="img-fluid images d-block d-lg-none w-lg-100p" src="{% static 'rsvp/event/oceandor/images/images-09.png' %}" />
                         <div  data-aos="fade-up" data-aos-offset="950" class="boxc">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -205,11 +207,11 @@
                                                 <label class="mb-m-0">Will you bring anyone to the event?</label>
                                                 <div class="guest">
                                                     <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                                        <img class="img-fluid" src="images/form-arrow-left.png" />
+                                                        <img class="img-fluid" src="{% static 'rsvp/event/oceandor/images/form-arrow-left.png' %}" />
                                                     </a>
                                                     <input type="number" name="your-guest" id="spinner" value="0" placeholder="0" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
                                                     <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                                        <img class="img-fluid" src="images/form-arrow-right.png" />
+                                                        <img class="img-fluid" src="{% static 'rsvp/event/oceandor/images/form-arrow-right.png' %}" />
                                                     </a>
                                                 </div>
                                             </div>
@@ -223,7 +225,7 @@
                                                 <input type="text" name="your-name" class="form-control" required />
                                             </div>
                                             <div class="col-lg-12 pl-m-0 pr-lg-0">
-                                                <!-- <input type="submit" class="button-default" value="SUBMIT" /> -->
+                                                {#<!-- <input type="submit" class="button-default" value="SUBMIT" /> -->#}
                                                 <input type="submit" class="button-default" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
                                                 <a class="button-default fr" target="_blank" href="e-invitation go fashion.pdf">DOWNLOAD INVITATION</a>
                                                 <div class="modal fade" id="ebrochure">
@@ -233,7 +235,7 @@
                                                                 <div class="row">
                                                                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
                                                                         <a class="close" data-dismiss="modal">
-                                                                            <img class="img-fluid" src="images/icon.png" />
+                                                                            <img class="img-fluid" src="{% static 'rsvp/event/oceandor/images/icon.png' %}" />
                                                                         </a>
                                                                         <div class="boxc">
                                                                             <h2>Thak you for<br />your <span>participation!</span></h2>
@@ -244,7 +246,7 @@
                                                                                 We’ll see you then!
                                                                             </p>
                                                                         </div>
-                                                                        <img class="img-fluid images" src="images/images-10.png" />
+                                                                        <img class="img-fluid images" src="{% static 'rsvp/event/oceandor/images/images-10.png' %}" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -269,23 +271,21 @@
                         <p>All rights served © This website is made by <b>Reservasi Dulu</b></p>
                     </div>                
                     <div class="order-1 order-lg-2 col-12 mb-m-5p mtext-center col-lg-4 text-right">
-                        <a href="" class="button-footer">CREATE A SITE</a>
+                        <a href="{% url 'oceandor_create' x.theme_url %}" class="button-footer">CREATE A SITE</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-    <!-- Features JS -->
+
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
     {% compress js %}
         {% include 'static/js.html' %}
-        <!-- Custom JS -->
         <script type="text/javascript" src="{% static 'rsvp/event/oceandor/app.js' %}"></script>
     {% endcompress %}
-    <!-- Custom JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 </body>
 </html>

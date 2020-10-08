@@ -37,16 +37,12 @@
                         <a href="/themes/preview/{{ x.theme_url }}">
                             <img class="templatesthumbnail-image" src="{{ x.theme_img.url }}" alt="reservasidulu" />
                         </a>
-                        <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ x.theme_name}}</a>
-                        <p>{{ x.theme_category }} Template</p>
-                        {#<a class="templatesthumbnail-category" href="">{{ x.theme_category }} Template</a>#}
+                        <div class="col-lg-12 p-0">
+                            <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ x.theme_name}}</a>
+                            <a class="templatesthumbnail-category" href="/{{ x.theme_category | lower }}">{{ x.theme_category }} Templates</a>
+                            <div class="templatesthumbnail-price">Rp. {{ x.theme_price }},-</div>
+                        </div>
                     </div>
-
-                    {#<div class="col-lg-4 pb-lg-35">#}
-                        {#<a href="/themes/preview/{{ x.theme_url }}"><div class="box">#}
-                            {#<img class="_thumb" src="{{ x.theme_img.url }}" alt="">#}
-                        {#</div></a>#}
-                    {#</div>#}
                 {% endfor %}
 
                 <!-- Mobile -->
@@ -58,7 +54,8 @@
                                     <img class="templatesthumbnail-image" src="{{ x.theme_img.url }}" alt="reservasidulu" />
                                 </a>
                                 <a class="templatesthumbnail-title" href="/themes/preview/{{ x.theme_url }}">{{ x.theme_name}}</a>
-                                {#<a class="templatesthumbnail-category" href="/{{ x.theme_category | lower }}">{{ x.theme_category }} Templates</a>#}
+                                <a class="templatesthumbnail-category" href="/{{ x.theme_category | lower }}">{{ x.theme_category }} Templates</a>
+                                <div class="templatesthumbnail-price">Rp. {{ x.theme_price }},-</div>
                             </div>
                         {% endfor %}
                     </div>

@@ -5,16 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">   
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Template Wedding | Homepage</title>
-    <link rel="shortcut icon" href="images/ico.ico">
+    <link rel="shortcut icon" href="{% static 'rsvp/wedding/steve_sharon/images/ico.ico' %}">
     <!-- Customize css -->
-    {% compress css %}
-        {% include 'static/css.html' %}
-        <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/steve_sharon/style-wedding-9.css' %}">
-    {% endcompress %}
-    <!-- Features css -->
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/steve_sharon/style-wedding-9.css' %}">
+    <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -23,8 +25,8 @@
         <nav>
             <div class="container-fluid">
                 <div class="row d-none d-lg-block">
-                    <a href="index.html"><img data-aos="fade-down" class="img-fluid logo" src="images/logo.png" /></a>
-                    <div data-aos="fade-left" class="offset-lg-3 col-lg-9 pr-lg-0">
+                    <a href="index.html"><img data-aos="fade-down"  data-aos-once="true" class="img-fluid logo" src="{% static 'rsvp/wedding/steve_sharon/images/logo.png' %}" /></a>
+                    <div data-aos="fade-left"  data-aos-once="true" class="offset-lg-3 col-lg-9 pr-lg-0">
                         <ul class="menu">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="#ourstory">Our Story</a></li>
@@ -37,7 +39,7 @@
                 </div>
                 <div class="row d-lg-none pt-3">
                     <div class="col-8">
-                        <a href="index.html"><img class="img-fluid logo" src="images/logo.png" /></a>
+                        <a href="index.html"><img class="img-fluid logo" src="{% static 'rsvp/wedding/steve_sharon/images/logo.png' %}" /></a>
                     </div>
                     <div class="col-4 pr-m-0">
                         <ul class="bars">
@@ -50,7 +52,7 @@
                     </div>
                     <div class="side-nav">
                         <div class="close-div text-right p-3">
-                            <img class="img-fluid close-icon" src="images/close.png" />
+                            <img class="img-fluid close-icon" src="{% static 'rsvp/wedding/steve_sharon/images/close.png' %}" />
                         </div>
                         <ul class="list-unstyled">
                             <li><a href="index.html">Home</a></li>
@@ -65,7 +67,7 @@
                                 <b>Submit Your RSVP</b><br />
                                 and Join Our Celebration
                             </h6>
-                            <a href="#rsvp"><img class="img-fluid" src="images/arrow-01.png" /></a>
+                            <a href="#rsvp"><img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-01.png' %}" /></a>
                         </div>
                     </div>
                 </div>
@@ -76,9 +78,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                        <img data-aos="zoom-out" class="img-fluid images w-lg-100p" src="images/images-01.png" />
+                        <img data-aos="zoom-out"  data-aos-once="true" class="img-fluid images w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-01.png' %}" />
                         <div class="title">
-                            <h1 data-aos="fade-up">
+                            <h1 data-aos="fade-up"  data-aos-once="true">
                                 Through
                                 Thick
                                 and Thin
@@ -89,10 +91,10 @@
                                 <b>Submit Your RSVP</b><br />
                                 and Join Our Celebration
                             </h6>
-                            <a href="#rsvp"><img class="img-fluid" src="images/arrow-01.png" /></a>
+                            <a href="#rsvp"><img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-01.png' %}" /></a>
                         </div>
                         <div class="link-gallery">
-                            <a class="button-default" href="#gallery">See more pictures <img class="img-fluid" src="images/arrow-02.png" /></a>
+                            <a class="button-default" href="#gallery">See more pictures <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-02.png' %}" /></a>
                         </div>
                     </div>
                 </div>
@@ -103,14 +105,14 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6 pt-m-25p pb-m-10p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p">
-                        <img data-aos="fade-up" class="img-fluid" src="images/images-02.png" />
+                        <img data-aos="fade-up" data-aos-once="true" class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/images-02.png' %}" />
                     </div>
                     <div class="col-lg-6 pt-m-0 pb-m-20p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pr-lg-5p">
                         <ul id="accordion" class="accordion">
                           <li>
-                            <div class="link"  data-aos="fade-up">
+                            <div class="link"  data-aos="fade-up" data-aos-once="true">
                                 <h5>OUR STORY</h5>
-                                <img class="img-fluid" src="images/arrow-04.png" />
+                                <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-04.png' %}" />
                             </div>
                             <div class="submenu">
                                 <p>
@@ -119,9 +121,9 @@
                             </div>
                           </li>
                           <li>
-                            <div class="link" data-aos="fade-up">
+                            <div class="link" data-aos="fade-up" data-aos-once="true">
                                 <h5>STEVE ROBERTS</h5>
-                                <img class="img-fluid" src="images/arrow-04.png" />
+                                <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-04.png' %}" />
                             </div>
                             <div class="submenu">
                                 <p>
@@ -131,9 +133,9 @@
                             </div>
                           </li>
                           <li>
-                            <div class="link" data-aos="fade-up">
+                            <div class="link" data-aos="fade-up"  data-aos-once="true">
                                 <h5>SHARON CARTIER</h5>
-                                <img class="img-fluid" src="images/arrow-04.png" />
+                                <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-04.png' %}" />
                             </div>
                             <div class="submenu">
                                 <p>
@@ -155,28 +157,28 @@
                         <ul class="nav nav-tabs" id="myTab2" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link" id="tabweddingceremony-tab" data-toggle="tab" href="#tabweddingceremony" role="tab" aria-controls="tabweddingceremony">
-                                    <img class="img-fluid arrow-left mr-lg-5p" src="images/arrow-05.png" />
+                                    <img class="img-fluid arrow-left mr-lg-5p" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-05.png' %}" />
                                     Wedding Ceremony
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="tabweddingparty-tab" data-toggle="tab" href="#tabweddingparty" role="tab" aria-controls="tabweddingparty">
                                     Wedding Party
-                                    <img class="img-fluid arrow-right ml-lg-5p" src="images/arrow-06.png" />
+                                    <img class="img-fluid arrow-right ml-lg-5p" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-06.png' %}" />
                                 </a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent2">
-                            <div class="tab-pane" id="tabweddingceremony" role="tabpanel" aria-labelledby="tabweddingceremony-tab">
+                            <div class="tab-pane fade" id="tabweddingceremony" role="tabpanel" aria-labelledby="tabweddingceremony-tab">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-lg-6 padbrief">
                                             <div class="row pt-lg-5p pb-lg-5p">
-                                                <div class="col-lg-7 pb-lg-5p" data-aos="fade-right">
+                                                <div class="col-lg-7 pb-lg-5p" data-aos="fade-right" data-aos-once="true">
                                                     <h5>OUR WEDDING CEREMONY</h5>
                                                 </div>
                                                 <div class="col-lg-5 p-0">
-                                                    <a class="button-default d-none d-lg-block" href="">See location <img class="img-fluid" src="images/arrow-03.png" /></a>
+                                                    <a class="button-default d-none d-lg-block" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
                                                 </div>
                                                 <div class="col-lg-12 brief pb-m-10p pb-lg-5p">
                                                     <div class="row st">
@@ -205,20 +207,20 @@
                                                 </div>
                                                 <div class="col-lg-5"></div>
                                                 <div class="col-12">
-                                                    <a class="button-default d-block d-lg-none" href="">See location <img class="img-fluid" src="images/arrow-03.png" /></a>
+                                                    <a class="button-default d-block d-lg-none" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 padimg" data-aos="fade-left">
+                                        <div class="col-lg-6 padimg" data-aos="fade-left" data-aos-once="true">
                                             <div class="wrap">
-                                                <img class="img-fluid images w-lg-100p" src="images/images-04.png" />
+                                                <img class="img-fluid images w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-04.png' %}" />
                                             </div>
-                                            <img class="img-fluid motif" src="images/motif-01.png" />
+                                            <img class="img-fluid motif" src="{% static 'rsvp/wedding/steve_sharon/images/motif-01.png' %}" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="tabweddingparty" role="tabpanel" aria-labelledby="tabweddingparty-tab">
+                            <div class="tab-pane fade" id="tabweddingparty" role="tabpanel" aria-labelledby="tabweddingparty-tab">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-lg-6 padbrief">
@@ -227,7 +229,7 @@
                                                     <h5>OUR WEDDING GARDEN PARTY</h5>
                                                 </div>
                                                 <div class="col-lg-5 p-0">
-                                                    <a class="button-default d-none d-lg-block" href="">See location <img class="img-fluid" src="images/arrow-03.png" /></a>
+                                                    <a class="button-default d-none d-lg-block" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
                                                 </div>
                                                 <div class="col-lg-12 brief pb-m-10p pb-lg-5p">
                                                     <div class="row st">
@@ -256,22 +258,22 @@
                                                 </div>
                                                 <div class="col-lg-5 mtext-center">
                                                     <p>
-                                                        The Dresscode Will Be<br /><br />
+                                                        The Dresscode Will Be :<br /><br />
                                                         <b>Simple Minimal Formal Attire</b><br />
                                                         No Complicated Sequence,<br />
                                                         Plain Sophisticated look
                                                     </p>
                                                 </div>
                                                 <div class="col-12">
-                                                    <a class="button-default d-block d-lg-none" href="">See location <img class="img-fluid" src="images/arrow-03.png" /></a>
+                                                    <a class="button-default d-block d-lg-none" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 padimg">
                                             <div class="wrap">
-                                                <img class="img-fluid images w-lg-100p" src="images/images-05.png" />
+                                                <img class="img-fluid images w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-05.png' %}" />
                                             </div>
-                                            <img class="img-fluid motif" src="images/motif-01.png" />
+                                            <img class="img-fluid motif" src="{% static 'rsvp/wedding/steve_sharon/images/motif-01.png' %}" />
                                         </div>
                                     </div>
                                 </div>
@@ -285,15 +287,15 @@
         <section id="accommodation">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="order-2 order-lg-1 col-lg-6 pl-lg-0 pr-lg-0">
-                        <img data-aos="zoom-out" class="img-fluid w-lg-100p" src="images/images-06.png" />
+                    <div class="order-2 order-lg-1 col-lg-6 pl-lg-0 pr-lg-0 border-bottom-gray">
+                        <img data-aos="zoom-out" data-aos-once="true" class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-06.png' %}" />
                     </div>
-                    <div class="order-1 order-lg-2 col-lg-6 pt-m-15p pb-m-15p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p">
-                        <h5 data-aos="fade-left" class="mb-lg-5p">
+                    <div class="order-1 order-lg-2 col-lg-6 pt-m-15p pb-m-15p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p border-bottom-gray">
+                        <h5 data-aos="fade-left" data-aos-once="true" class="mb-lg-5p">
                             ACCOMODATION:<br />
                             THE CONFIDANTE
                         </h5>
-                        <h6 data-aos="fade-up" class="mb-lg-3p"><b>1 Night Stay | </b>1 Suite Bedroom</h6>
+                        <h6 data-aos="fade-up"  data-aos-once="true" class="mb-lg-3p"><b>1 Night Stay | </b>1 Suite Bedroom</h6>
                         <div class="w-lg-100p mb-m-10p mb-lg-5p line-grey"></div>
                         <p>
                             While you’re attending our party we will also provide your accommodation. The Confidante is famous for its service and quality, for attending our celebration you will be equipped with 2 nights’ stay in The Confidante with a Large 2-bed hotel room.
@@ -301,7 +303,7 @@
                         <p>
                             The Confidante also provides you each 1 breakfast/day, just don’t forget to mention our name “Steve & Sharon Wedding” when you are reserving for a room.
                         </p><br />
-                        <a class="button-default" href="">See location <img class="img-fluid" src="images/arrow-02.png" /></a>
+                        <a class="button-default" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-02.png' %}" /></a>
                     </div>
                 </div>
             </div>
@@ -310,9 +312,9 @@
         <section id="gallery">
             <div class="container-fluid">
                 <div class="row">
-                    <img class="img-fluid motif" src="images/motif-02.png" />
+                    <img class="img-fluid motif" src="{% static 'rsvp/wedding/steve_sharon/images/motif-02.png' %}" />
                     <div class="col-lg-12 pt-m-15p pl-m-10p pr-m-10p pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
-                        <div  data-aos="fade-right" class="w-m-100p w-lg-40p">
+                        <div  data-aos="fade-right" data-aos-once="true" class="w-m-100p w-lg-40p">
                             <h5 class="mb-lg-5p">
                                 OUR TOGETHERNESS,<br />
                                 CAPTURED.
@@ -322,36 +324,44 @@
                             </p>
                         </div>
                     </div>
-                    <div  data-aos="fade-up" class="col-lg-12 pb-m-15p pb-lg-5p pl-lg-10p pr-lg-10p">
+                    <div  data-aos="fade-up" data-aos-once="true" class="col-lg-12 pb-m-15p pb-lg-5p pl-lg-10p pr-lg-10p">
                         <div class="three-carousel owl-theme">
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="images/images-07.png" />
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-07.png' %}" data-toggle="modal" data-target="#item_1" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="images/images-08.png" />
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-08.png' %}" data-toggle="modal" data-target="#item_2" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="images/images-09.png" />
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-09.png' %}" data-toggle="modal" data-target="#item_3" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="images/images-10.png" />
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-10.png' %}"  data-toggle="modal" data-target="#item_4" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="images/images-11.png" />
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-11.png' %}" data-toggle="modal" data-target="#item_5" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="images/images-12.png" />
+                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-12.png' %}" data-toggle="modal" data-target="#item_6" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- The Popups -->
+        <!-- Modal -->
+        <div class="modal fade" id="item_1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog moda-xl" role="document">
+                    <img class="gallery-close" src="{% static 'rsvp/wedding/steve_sharon/images/close-02.png' %}" alt="">
+                    <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-07.png' %}" data-toggle="modal" data-target="#item_1" />                    
+            </div>
+        </div>
         <!-- Section Countdown -->
         <section id="countdown">
             <div class="container-fluid bg-lightblue">
                 <div class="row">
-                    <img class="img-fluid motif" src="images/motif-03.png" />
+                    <img class="img-fluid motif" src="{% static 'rsvp/wedding/steve_sharon/images/motif-03.png' %}" />
                     <div class="col-lg-12 pt-m-15p pb-m-15p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p text-center">
                         <h5 class="mb-m-10p mb-lg-5p">COUNTDOWN TO THE BEGINNING OF OUR JOURNEY AHEAD</h5>
                         <div class="row">
@@ -387,8 +397,8 @@
         <section id="rsvp">
             <div class="container-fluid bg-lightblue">
                 <div class="row">
-                    <img class="img-fluid motif" src="images/motif-04.png" />
-                    <img class="img-fluid motif2" src="images/motif-05.png" />
+                    <img class="img-fluid motif" src="{% static 'rsvp/wedding/steve_sharon/images/motif-04.png' %}" />
+                    <img class="img-fluid motif2" src="{% static 'rsvp/wedding/steve_sharon/images/motif-05.png' %}" />
                     <div class="col-lg-12 pb-m-15p pl-m-10p pr-m-10p pt-lg-3p pb-lg-5p pl-lg-10p pr-lg-10p">
                         <div class="bg-white w-lg-100p pt-m-15p pb-m-15p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p">
                             <div class="row">
@@ -424,11 +434,11 @@
                                                 <td>
                                                     <div class="guest">
                                                         <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                                            <img class="img-fluid" src="images/form-01.png" />
+                                                            <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/form-01.png' %}" />
                                                         </a>
                                                         <input type="number" name="your-guest" id="spinner" value="0" placeholder="0" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
                                                         <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                                            <img class="img-fluid" src="images/form-02.png" />
+                                                            <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/form-02.png' %}" />
                                                         </a>
                                                     </div>
                                                 </td>
@@ -437,20 +447,20 @@
                                         <div class="col-lg-12 pl-lg-0 pr-lg-0">
                                             <div class="button-wrap d-block d-lg-none">
                                                 <input type="submit" class="button-default" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
-                                                <img class="img-fluid" src="images/arrow-02.png" />
+                                                <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-02.png' %}" />
                                             </div>
-                                            <a class="button-default" href="">DOWNLOAD INVITATION <img class="img-fluid" src="images/form-03.png" /></a>
+                                            <a class="button-default" href="invitation.pdf" target="_blank">Download Invitation <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/form-03.png' %}" /></a>
                                             <div class="button-wrap d-none d-lg-block">
                                                 <input type="submit" class="button-default" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
-                                                <img class="img-fluid" src="images/arrow-02.png" />
+                                                <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-02.png' %}" />
                                             </div>
                                                 <div class="modal fade" id="ebrochure">
                                                     <div class="modal-dialog modal-dialog-centered">
                                                         <div class="modal-content">
                                                             <a class="close" data-dismiss="modal">
-                                                                <img class="img-fluid" src="images/close-02.png" />
+                                                                <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/close-02.png' %}" />
                                                             </a>
-                                                            <img class="img-fluid motif-popup" src="images/popup.png" />
+                                                            <img class="img-fluid motif-popup" src="{% static 'rsvp/wedding/steve_sharon/images/popup.png' %}" />
                                                             <div class="container-fluid">
                                                                 <div class="row">
                                                                     <div class="col-lg-12">
@@ -480,29 +490,27 @@
         </section>
         <!-- Footer -->
         <footer>
-            <div class="container-fluid pt-m-10p pb-m-10p pl-m-10p pr-m-10p pt-lg-30 pb-lg-30 pl-lg-5p pr-lg-5p">
+            <div class="container-fluid pt-m-10p pb-m-10p pl-m-10p pr-m-10p py-lg-4 pl-lg-5p pr-lg-5p">
                 <div class="row">
                     <div class="order-2 order-lg-1 col-12 mb-m-0 mtext-center col-lg-8">
                         <p>All Rights Reserved © This website is made by Reservasi Dulu</p>
                     </div>                
                     <div class="order-1 order-lg-2 col-12 mb-m-5p mtext-center col-lg-4 text-right">
-                        <a href="" class="button-footer">Create a Site</a>
+                        <a href="{% url 'steve_sharon_create' x.theme_url %}" class="button-footer">Create a Site</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-    <!-- Features JS -->
+
+    <!-- Customize js -->
     <script>
         new WOW().init();
     </script>
     {% compress js %}
-    {% include 'static/js.html' %}
-    <!-- Custom JS -->
-    <script type="text/javascript" src="{% static 'rsvp/wedding/steve_sharon/app.js' %}"></script>
-{% endcompress %}
-<!-- Custom JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+        {% include 'static/js.html' %}
+        <script type="text/javascript" src="{% static 'rsvp/wedding/steve_sharon/app.js' %}"></script>
+    {% endcompress %}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
