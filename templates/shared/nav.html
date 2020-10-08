@@ -20,14 +20,6 @@
                     <div class="col-lg-2 text-right">
                         <a href="{% url 'logout' %}"><img class="img-fluid" src="{% static 'img/account-icon.png' %}" /></a>
                     </div>
-                    
-                    <div class="offset-lg-2 col-lg-7 line">
-                        <h5><b>{{ user.username }}</b></h5>
-                        <p class="mb-lg-0">{{ user.first_name }} {{ user.last_name }}</p>
-                    </div>
-                    <div class="col-lg-3 text-right">
-                        <a href="{% url 'logout' %}"><img class="img-fluid" src="{% static 'img/account-icon.png' %}" /></a>
-                    </div>
                 </div>
             </div>
         </div>
