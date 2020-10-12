@@ -30,35 +30,6 @@
     {% endif %}
 {% endwith %}
 
-{# message 1 #}
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-
-{# message 2 #}
-{% if messages %}
-    <div class="alert alert-success messages">
-        {% for message in messages %}
-            <span{% if message.tags %} class="{{ message.tags }}"{% endif %}>
-            {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
-            {{ message }}<br/>
-            </span>
-        {% endfor %}
-    </div>
-{% endif %}
-
-{# message 3 #}
-{% if messages %}
-  <ul class="messages">
-    {% for message in messages %}
-      <li class="{{ message.tags }}">{{ message }}</li>
-    {% endfor %}
-  </ul>
-{% endif %}
 
 {% block content %}
     {# content goes here #}

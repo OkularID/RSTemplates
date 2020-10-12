@@ -9,7 +9,7 @@
                     <li><a class="nav_custom{% if url_name == 'my_products' %} active {% endif %}" href="{% url 'my_products' %}">My Invitation</a></li>
                     <li><a class="nav_custom{% if url_name == 'my_guests' %} active {% endif %}" href="{% url 'my_guests' %}">My Guests</a></li>
                     <li><a class="nav_custom{% if url_name == 'account' %} active {% endif %}" href="{% url 'account' %}">Profile</a></li>
-                    <li><a class="" href="">Login Info</a></li>
+                    <li><a class="nav_custom{% if url_name == 'change_pass' %} active {% endif %}" href="{% url 'change_pass' %}">Login Info</a></li>
                 </ul>
             </div>
         </div>

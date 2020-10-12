@@ -20,14 +20,13 @@
                         <div class="container-fluid card">
                             <div class="row">
                                 <div class="col-lg-3">
-                                    <img class="img-fluid" src="{{ i.theme.theme_img.url }}" alt="reservasidulu" />
+                                    <img class="img-fluid" src="{{ i.theme.theme_thumbnail.url }}" alt="reservasidulu" />
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="boxc info">
                                         <div class="title">{{ i.theme.theme_name }}</div>
                                         <div class="category">{{ i.theme.theme_category }}</div>
-                                        <div class="date">created: {{ i.theme_data.created }}</div>
-                                        {#<div class="date">{{ i.theme_data.created }}</div>#}
+                                        <div class="date">created: {{ i.theme.created }}</div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
