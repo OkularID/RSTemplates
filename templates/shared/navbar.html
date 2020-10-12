@@ -7,32 +7,6 @@
 
 {% load static %}
 {#    <div class="preloader"></div>#}
-
-<style>
-    ul.messages {
-        background-color: red;
-        color: blue;
-        display: block !important;
-        z-index: 1030;
-        position: relative;
-        margin: 0 auto;
-        width: 400px;
-        height: 400px;
-        list-style-type: none;
-    }
-    ul.message li {
-
-    }
-</style>
-    {% if messages %}
-    <ul class="messages" >
-        {% for message in messages %}
-        <li style="background-color: blue" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-
-
     <nav id="navigation" class="fadein">
         <div class="container-fluid padres pt-lg-20 pb-lg-20 pl-lg-5p pr-lg-5p">
             {% with url_name=request.resolver_match.url_name %}
