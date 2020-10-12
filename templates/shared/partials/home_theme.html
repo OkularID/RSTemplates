@@ -1,4 +1,5 @@
 {% load static %}
+{% load humanize %}
         <div class="container-fluid pos-rel pb-lg-15p pl-lg-10p pr-lg-10p pt-m-25p pb-m-30p home-template slideanim">
             <div class="row">
                 <div class="col-lg-12 pb-m-10p pb-lg-50 text-center">
@@ -13,7 +14,7 @@
                         <div class="col-lg-12 p-0">
                             <a class="templatesthumbnail-title" href="/themes/preview/{{ i.theme_url }}">{{ i.theme_name}}</a>
                             <a class="templatesthumbnail-category" href="/{{ i.theme_category | lower }}">{{ i.theme_category }} Templates</a>
-                            <div class="templatesthumbnail-price">Rp. {{ i.theme_price }},-</div>
+                            <div class="templatesthumbnail-price">Rp. {{ i.theme_price | intcomma }},-</div>
                         </div>
                     </div>
                 {% endfor %}
@@ -27,7 +28,7 @@
                                 </a>
                                 <a class="templatesthumbnail-title" href="/themes/preview/{{ i.theme_url }}">{{ i.theme_name}}</a>
                                 <a class="templatesthumbnail-category" href="/{{ i.theme_category | lower }}">{{ i.theme_category }} Templates</a>
-                                <div class="templatesthumbnail-price">Rp. {{ i.theme_price }},-</div>
+                                <div class="templatesthumbnail-price">Rp. {{ i.theme_price | intcomma }},-</div>
                             </div>
                         {% endfor %}
                     </div>

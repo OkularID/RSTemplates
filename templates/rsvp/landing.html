@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load humanize %}
 
 {% block content %}
     <title>{% block title %} All Templates | ReservasiDulu {% endblock %}</title>
@@ -112,7 +112,7 @@
                         <div class="col-lg-12 p-0">
                             <a class="templatesthumbnail-title" href="/themes/preview/{{ bitch.theme_url }}">{{ bitch.theme_name}}</a>
                             <a class="templatesthumbnail-category" href="/{{ bitch.theme_category | lower }}">{{ bitch.theme_category }} Templates</a>
-                            <div class="templatesthumbnail-price">Rp. {{ bitch.theme_price }},-</div>
+                            <div class="templatesthumbnail-price">Rp. {{ bitch.theme_price | intcomma }},-</div>
                         </div>
                     </div>
                 {% endfor %}
@@ -128,7 +128,7 @@
                                 </a>
                                 <a class="templatesthumbnail-title" href="/themes/preview/{{ bitch.theme_url }}">{{ bitch.theme_name}}</a>
                                 <a class="templatesthumbnail-category" href="/{{ bitch.theme_category | lower }}">{{ bitch.theme_category }} Templates</a>
-                                <div class="templatesthumbnail-price">Rp. {{ bitch.theme_price }},-</div>
+                                <div class="templatesthumbnail-price">Rp. {{ bitch.theme_price | intcomma }},-</div>
                             </div>
                         {% endfor %}
                     </div>
