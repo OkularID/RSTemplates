@@ -14,7 +14,7 @@
                         <a href="{% url 'account' %}"><img class="nav-pp" src="{{user.profile.picture.url}}" /></a>
                     </div>
                     <div class="col-lg-5 line">
-                        <a class="font-darkgrey" href="{% url 'account' %}"><h5><b>{{ user.username }}</b></h5></a>
+                        <a class="font-darkgrey" href="{% url 'account' %}"><h5 class="mb-lg-0"><b>{{ user.username }}</b></h5></a>
                         <a class="font-darkgrey" href="{% url 'account' %}"><p class="mb-lg-0">{{ user.first_name }} {{ user.last_name }}</p></a>
                     </div>
                     <div class="col-lg-2 text-right">
