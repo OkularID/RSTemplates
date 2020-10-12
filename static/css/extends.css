@@ -391,32 +391,41 @@
     .login-content .wrap form input{padding: 1.5% 2%;}
     .profile-content .wrap form .btn-rectangle{margin-left: 2.5%;}
   /* My Products */
-    .my-product-content .wrap{
+    .my-product-content .wrap,
+    .my-guest-content .wrap{
       border-radius: .25rem;
       border: 1px solid rgba(0,0,0,.125);
     }
-    .my-product-content .wrap .card{
+    .my-product-content .wrap .card,
+    .my-guest-content .wrap .card{
       padding: 5%;
       background: #fff;
       border: none;
     }
     .my-product-content .wrap .card:nth-child(even){background: #f5f5f5;}
-    .my-product-content .wrap .card .info{left: 5%;}
-    .my-product-content .wrap .card .title{
+    .my-product-content .wrap .card .info,
+    .my-guest-content .wrap .card .info{left: 5%;}
+    .my-guest-content .wrap .card .info{top: 35%;}
+    .my-product-content .wrap .card .title,
+    .my-guest-content .wrap .card .title{
       font-family: "Montserrat Bold";
       font-size: 24px;
     }
-    .my-product-content .wrap .card .category{
+    .my-product-content .wrap .card .category,
+    .my-guest-content .wrap .card .category{
       margin-bottom: 1%;
       font-family: "Montserrat Regular";
       font-size: 16px;
     }
-    .my-product-content .wrap .card .date{
+    .my-product-content .wrap .card .date,
+    .my-guest-content .wrap .card .date{
       font-family: "Montserrat Regular";
       font-size: 14px;
     }
     .my-product-content .wrap .card .btn-whiteoutline,
-    .my-product-content .wrap .card .btn-rectangle{
+    .my-product-content .wrap .card .btn-rectangle,
+    .my-guest-content .wrap .card .btn-whiteoutline,
+    .my-guest-content .wrap .card .btn-rectangle{
       margin: 0 auto 5%;
       padding: 2%;
       width: 50%;
@@ -1176,23 +1185,32 @@ ul.messages, .alert{display: none;}
       font-size: 30px !important;
     }
     /* User Content */
-    .my-product-content .wrap .card{padding: 10%;}
-    .my-product-content .wrap .card img{margin-bottom: 5%;}
-    .my-product-content .wrap .card .boxc{
+    .my-product-content .wrap .card,
+    .my-guest-content .wrap .card{padding: 10%;}
+    .my-product-content .wrap .card img,
+    .my-guest-content .wrap .card img{margin-bottom: 5%;}
+    .my-product-content .wrap .card .boxc,
+    .my-guest-content .wrap .card .boxc{
       position: relative;
       top: unset;
       transform: unset;
       left: 0;
     }
-    .my-product-content .wrap .card .boxc.info{margin-bottom: 10%;}
-    .my-product-content .wrap .card .boxc.info .title{font-size: 22px;}
-    .my-product-content .wrap .card .boxc.info .category{margin-bottom: 3%;}
+    .my-product-content .wrap .card .boxc.info,
+    .my-guest-content .wrap .card .boxc.info{margin-bottom: 10%;}
+    .my-product-content .wrap .card .boxc.info .title,
+    .my-guest-content .wrap .card .boxc.info .title{font-size: 22px;}
+    .my-product-content .wrap .card .boxc.info .category,
+    .my-guest-content .wrap .card .boxc.info .category{margin-bottom: 3%;}
     .my-product-content .wrap .card .btn-whiteoutline,
-    .my-product-content .wrap .card .btn-rectangle{
+    .my-product-content .wrap .card .btn-rectangle,
+    .my-guest-content .wrap .card .btn-whiteoutline,
+    .my-guest-content .wrap .card .btn-rectangle{
       display: inline-block;
       width: 46%;
     }
-    .my-product-content .wrap .card .btn-whiteoutline{margin-right: 5%;}
+    .my-product-content .wrap .card .btn-whiteoutline,
+    .my-guest-content .wrap .card .btn-whiteoutline{margin-right: 5%;}
   /* Page My Product Edit */
     .user-content h3{
       margin-bottom: 7% !important;
