@@ -131,10 +131,10 @@
         <div class="row">
             <div class="col-lg-12 content-header">
                 <div class="content text-center">
-                    <img data-aos="fade-up" class="d-block mx-auto my-2 logo-ismaya" src="{% static 'rsvp/event/music/images/ismaya-logo-03.png' %}">
-                    <img data-aos="fade-down" class="d-block mx-auto logo-sountopia" src="{% static 'rsvp/event/music/images/soundtopia-logo-04.png' %}">
-                    <p  data-aos="zoom-out" data-aos-offset="-350" class="d-block mx-auto text-white font-montserrat-semibold my-3">
-                        ICE BSD HALL 5  <span class="mx-2">|</span>  7 - 9 . JULY . 2019
+                    <img data-aos="fade-up" class="d-block mx-auto my-2 logo-ismaya" src="{{ x.banner_logo1.url }}">
+                    <img data-aos="fade-down" class="d-block mx-auto logo-sountopia" src="{{ x.banner_logo2.url }}">
+                    <p data-aos="zoom-out" data-aos-offset="-350" class="d-block mx-auto text-white font-montserrat-semibold my-3">
+                        {{ x.banner_at }} {{ x.banner_room }}  <span class="mx-2">|</span>  {{ x.banner_date }}
                     </p>
                 </div>
             </div>
@@ -145,12 +145,11 @@
             <div class="col-lg-11 container-videos offset-lg-1 px-4 px-lg-2">
                 <div class="content">
                     <h1 data-aos="fade-left" class="text-blue font-montserrat-semibold font-55-px">
-                        “WE ARE<br> 
-                        THE FUTURE<br> 
-                        LIVE TODAY”
+                        {{ x.brief_title }}
                     </h1>
                 </div>
-                <img data-aos="fade-up" class="img-fluid" src="{% static 'rsvp/event/music/images/videos-content-05.jpg' %}">
+                <video data-aos="fade-up" class="img-fluid" src="{{ x.brief_video.url }}"></video>
+                {#<img data-aos="fade-up" class="img-fluid" src="{% static 'rsvp/event/music/images/videos-content-05.jpg' %}">#}
             </div>
         </div>
     </div>
@@ -168,30 +167,27 @@
             <div data-aos="fade-up" class="col-lg-10 offset-lg-1 px-lg-0">
                 <div  id="lineup" class="carousel-lineup owl-theme">
                     <div class="item">
-                        <img src="{% static 'rsvp/event/music/images/line-up-image-08.png' %}">
+                        <img src="{{ x.lineup_image1.url }}">
                         <h1 class="text-white text-center font-montserrat-semibold">
-                            Marshmello
+                            {{ x.lineup_name1 }}
                         </h1>
                     </div>
                     <div class="item">
-                        <img src="{% static 'rsvp/event/music/images/line-up-image-09.png' %}">
+                        <img src="{{ x.lineup_image2.url }}">
                         <h1 class="text-white text-center font-montserrat-semibold">
-                            Calvin<br>
-                            Harris
+                            {{ x.lineup_name2 }}
                         </h1>
                     </div>
                     <div class="item">
-                        <img src="{% static 'rsvp/event/music/images/line-up-image-10.png' %}">
+                        <img src="{{ x.lineup_image3.url }}">
                         <h1 class="text-white text-center font-montserrat-semibold">
-                            Mamank<br>
-                            DJ
+                            {{ x.lineup_name3 }}
                         </h1>
                     </div>
                     <div class="item">
-                        <img src="{% static 'rsvp/event/music/images/line-up-image-10.png' %}">
+                        <img src="{{ x.lineup_image4.url }}">
                         <h1 class="text-white text-center font-montserrat-semibold">
-                            Julian<br>
-                            Kurniawan
+                            {{ x.lineup_name4 }}
                         </h1>
                     </div>
                 </div>
@@ -213,43 +209,39 @@
                 <div class="row my-lg-5">
                     <div data-aos="fade-up" class="col-lg-6 my-lg-0 my-3">
                         <h4 class="text-blue font-montserrat-semibold mb-0 mb-lg-1">
-                            GENERAL ADMISSION
+                            {{ x.ticket_title1 }}
                         </h4>
                         <p class="text-gray font-montserrat mb-1">
-                            (1 DAY PASS)
+                            {{ x.ticket_brief1 }}
                         </p>
                         <div class="price d-flex">
                             <div class="value pl-lg-3 pr-lg-5 px-2">
                                 <p class="text-blue font-montserrat-semibold mb-0">
                                     STARTING FROM
                                 </p>
-                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> 500K</h1>
+                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> {{ x.ticket_price1 }}</h1>
                             </div>
                             <div class="book-now bg-blue pt-lg-4 px-lg-4 pt-4 px-3">
-                                <h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">
-                                    BOOK NOW
-                                </h6>
+                                <a href="{{ x.ticket_link1 }}"><h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">BOOK NOW</h6></a>
                             </div>
                         </div>
                     </div>
                     <div data-aos="fade-up" class="col-lg-6 my-lg-0 my-3">
                         <h4 class="text-blue font-montserrat-semibold mb-0 mb-lg-1">
-                            GENERAL ADMISSION
+                            {{ x.ticket_title2 }}
                         </h4>
                         <p class="text-gray font-montserrat mb-1">
-                            (1 DAY PASS)
+                            {{ x.ticket_brief2 }}
                         </p>
                         <div class="price d-flex">
                             <div class="value pl-lg-3 pr-lg-5 px-2">
                                 <p class="text-blue font-montserrat-semibold mb-0">
                                     STARTING FROM
                                 </p>
-                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> 500K</h1>
+                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> {{ x.ticket_price2 }}</h1>
                             </div>
                             <div class="book-now bg-blue pt-lg-4 px-lg-4 pt-4 px-3">
-                                <h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">
-                                    BOOK NOW
-                                </h6>
+                                <a href="{{ x.ticket_link2 }}"><h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">BOOK NOW</h6></a>
                             </div>
                         </div>
                     </div>
@@ -257,43 +249,39 @@
                 <div class="row my-lg-5">
                     <div data-aos="fade-up" class="col-lg-6 my-lg-0 my-3">
                         <h4 class="text-blue font-montserrat-semibold mb-0 mb-lg-1">
-                            GENERAL ADMISSION
+                            {{ x.ticket_title3 }}
                         </h4>
                         <p class="text-gray font-montserrat mb-1">
-                            (1 DAY PASS)
+                            {{ x.ticket_brief3 }}
                         </p>
                         <div class="price d-flex">
                             <div class="value pl-lg-3 pr-lg-5 px-2">
                                 <p class="text-blue font-montserrat-semibold mb-0">
                                     STARTING FROM
                                 </p>
-                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> 500K</h1>
+                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> {{ x.ticket_price3 }}</h1>
                             </div>
                             <div class="book-now bg-blue pt-lg-4 px-lg-4 pt-4 px-3">
-                                <h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">
-                                    BOOK NOW
-                                </h6>
+                                <a href="{{ x.ticket_link3 }}"><h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">BOOK NOW</h6></a>
                             </div>
                         </div>
                     </div>
                     <div data-aos="fade-up" class="col-lg-6 my-lg-0 my-3">
                         <h4 class="text-blue font-montserrat-semibold mb-0 mb-lg-1">
-                            GENERAL ADMISSION
+                            {{ x.ticket_title4 }}
                         </h4>
                         <p class="text-gray font-montserrat mb-1">
-                            (1 DAY PASS)
+                            {{ x.ticket_brief4 }}
                         </p>
                         <div class="price d-flex">
                             <div class="value pl-lg-3 pr-lg-5 px-2">
                                 <p class="text-blue font-montserrat-semibold mb-0">
                                     STARTING FROM
                                 </p>
-                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> 500K</h1>
+                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> {{ x.ticket_price4 }}</h1>
                             </div>
                             <div class="book-now bg-blue pt-lg-4 px-lg-4 pt-4 px-3">
-                                <h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">
-                                    BOOK NOW
-                                </h6>
+                                <a href="{{ x.ticket_link4 }}"><h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">BOOK NOW</h6></a>
                             </div>
                         </div>
                     </div>
@@ -301,43 +289,39 @@
                 <div class="row my-lg-5">
                     <div data-aos="fade-up" class="col-lg-6 my-lg-0 my-3">
                         <h4 class="text-blue font-montserrat-semibold mb-0 mb-lg-1">
-                            GENERAL ADMISSION
+                            {{ x.ticket_title5 }}
                         </h4>
                         <p class="text-gray font-montserrat mb-1">
-                            (1 DAY PASS)
+                            {{ x.ticket_brief5 }}
                         </p>
                         <div class="price d-flex">
                             <div class="value pl-lg-3 pr-lg-5 px-2">
                                 <p class="text-blue font-montserrat-semibold mb-0">
                                     STARTING FROM
                                 </p>
-                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> 500K</h1>
+                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> {{ x.ticket_price5 }}</h1>
                             </div>
                             <div class="book-now bg-blue pt-lg-4 px-lg-4 pt-4 px-3">
-                                <h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">
-                                    BOOK NOW
-                                </h6>
+                                <a href="{{ x.ticket_link5 }}"><h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">BOOK NOW</h6></a>
                             </div>
                         </div>
                     </div>
                     <div data-aos="fade-up" class="col-lg-6 my-lg-0 my-3">
                         <h4 class="text-blue font-montserrat-semibold mb-0 mb-lg-1">
-                            GENERAL ADMISSION
+                            {{ x.ticket_title6 }}
                         </h4>
                         <p class="text-gray font-montserrat mb-1">
-                            (1 DAY PASS)
+                            {{ x.ticket_brief6 }}
                         </p>
                         <div class="price d-flex">
                             <div class="value pl-lg-3 pr-lg-5 px-2">
                                 <p class="text-blue font-montserrat-semibold mb-0">
                                     STARTING FROM
                                 </p>
-                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> 500K</h1>
+                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> {{ x.ticket_price6 }}</h1>
                             </div>
                             <div class="book-now bg-blue pt-lg-4 px-lg-4 pt-4 px-3">
-                                <h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">
-                                    BOOK NOW
-                                </h6>
+                                <a href="{{ x.ticket_link6 }}"><h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">BOOK NOW</h6></a>
                             </div>
                         </div>
                     </div>
@@ -345,43 +329,39 @@
                 <div class="row my-lg-5">
                     <div data-aos="fade-up" class="col-lg-6 my-lg-0 my-3">
                         <h4 class="text-blue font-montserrat-semibold mb-0 mb-lg-1">
-                            GENERAL ADMISSION
+                            {{ x.ticket_title7 }}
                         </h4>
                         <p class="text-gray font-montserrat mb-1">
-                            (1 DAY PASS)
+                            {{ x.ticket_brief7 }}
                         </p>
                         <div class="price d-flex">
                             <div class="value pl-lg-3 pr-lg-5 px-2">
                                 <p class="text-blue font-montserrat-semibold mb-0">
                                     STARTING FROM
                                 </p>
-                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> 500K</h1>
+                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> {{ x.ticket_price7 }}</h1>
                             </div>
                             <div class="book-now bg-blue pt-lg-4 px-lg-4 pt-4 px-3">
-                                <h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">
-                                    BOOK NOW
-                                </h6>
+                                <a href="{{ x.ticket_link7 }}"><h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">BOOK NOW</h6></a>
                             </div>
                         </div>
                     </div>
                     <div data-aos="fade-up"  class="col-lg-6 my-lg-0 my-3">
                         <h4 class="text-blue font-montserrat-semibold mb-0 mb-lg-1">
-                            GENERAL ADMISSION
+                            {{ x.ticket_title8 }}
                         </h4>
                         <p class="text-gray font-montserrat mb-1">
-                            (1 DAY PASS)
+                            {{ x.ticket_brief8 }}
                         </p>
                         <div class="price d-flex">
                             <div class="value pl-lg-3 pr-lg-5 px-2">
                                 <p class="text-blue font-montserrat-semibold mb-0">
                                     STARTING FROM
                                 </p>
-                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> 500K</h1>
+                                <h1 class="text-blue font-55-px font-montserrat-semibold"><sup class="font-montserrat-semibold">IDR</sup> {{ x.ticket_price8 }}</h1>
                             </div>
                             <div class="book-now bg-blue pt-lg-4 px-lg-4 pt-4 px-3">
-                                <h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">
-                                    BOOK NOW
-                                </h6>
+                                <a href="{{ x.ticket_link8 }}"><h6 class="text-white font-montserrat-semibold mt-lg-3 mt-2">BOOK NOW</h6></a>
                             </div>
                         </div>
                     </div>
@@ -404,65 +384,53 @@
                 <div class="row border-bottom-white pb-lg-4">
                     <div class="col-lg-9 pt-lg-4">
                         <h1 class="text-white font-montserrat-semibold mt-lg-1">
-                            E-VOUCHER EXCHANGE<br>
-                            GUIDELINE AVAILABLE NOW
+                            {{ x.update_title_hl }}
                         </h1>
                     </div>
                     <div class="col-lg-3">
                         <p class="text-light-gray mb-0 mt-3">
-                            Read the guideline
-                            FIRST prior to
-                            exchanging
-                            your e-vouchers<br> 
+                            {{ x.update_brief_hl }}
                         </p>
-                        <a class="text-light-blue" href="">......READ MORE </a>
+                        <a class="text-light-blue" href="{{ x.update_link_hl }}">......READ MORE </a>
                     </div>
                 </div>
                 <div class="row my-lg-5">
                     <div class="col-lg-6 my-lg-3">
                         <h5 class="text-white font-montserrat-semibold">
-                            SOUNTOPIA APP IS<br>
-                            NOW AVAILABLE 
+                            {{ x.update_title1 }}
                         </h5>
                         <p class="text-light-gray">
-                            Download now for free on App Store and<br>
-                            PLAY STORE!  <a class="text-light-blue" href="">.......READ MORE</a> 
+                            {{ x.update_brief1 }}  <a class="text-light-blue" href="{{ x.update_link1 }}">.......READ MORE</a> 
                         </p>
                     </div>
                     <div class="col-lg-6 my-lg-3">
                         <h5 class="text-white font-montserrat-semibold">
-                            SOUNTOPIA APP IS<br>
-                            NOW AVAILABLE 
+                            {{ x.update_title2 }}
                         </h5>
                         <p class="text-light-gray">
-                            Download now for free on App Store and<br>
-                            PLAY STORE!  <a class="text-light-blue" href="">.......READ MORE</a> 
+                            {{ x.update_brief2 }}  <a class="text-light-blue" href="{{ x.update_link2 }}">.......READ MORE</a> 
                         </p>
                     </div>
                     <div class="col-lg-6 my-lg-3">
                         <h5 class="text-white font-montserrat-semibold">
-                            SOUNTOPIA APP IS<br>
-                            NOW AVAILABLE 
+                            {{ x.update_title3 }}
                         </h5>
                         <p class="text-light-gray">
-                            Download now for free on App Store and<br>
-                            PLAY STORE!  <a class="text-light-blue" href="">.......READ MORE</a> 
+                            {{ x.update_brief3 }}  <a class="text-light-blue" href="{{ x.update_link3 }}">.......READ MORE</a> 
                         </p>
                     </div>
                     <div class="col-lg-6 my-lg-3">
                         <h5 class="text-white font-montserrat-semibold">
-                            SOUNTOPIA APP IS<br>
-                            NOW AVAILABLE 
+                            {{ x.update_title4 }}
                         </h5>
                         <p class="text-light-gray">
-                            Download now for free on App Store and<br>
-                            PLAY STORE!  <a class="text-light-blue" href="">.......READ MORE</a> 
+                            {{ x.update_brief4 }}  <a class="text-light-blue" href="{{ x.update_link4 }}">.......READ MORE</a> 
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-center py-4">
-                        <a href="#" class="text-white border-white px-3 py-2 rounded-button">
+                        <a href="{{ x.update_more_link }}" class="text-white border-white px-3 py-2 rounded-button">
                             MORE UPDATES
                         </a>
                     </div>
@@ -479,20 +447,18 @@
                     </h1>
                 </div>
                     <h1 class="text-light-blue pt-lg-5 pt-3 mt-lg-5 ml-lg-5 pl-5">
-                        ICE BSD
+                        {{ x.banner_at }}
                     </h1>
                     <h3 class="text-light-blue ml-lg-5 pl-5">
-                        HALL 5
+                        {{ x.banner_room }}
                     </h3>
                     <p class="text-gray mt-lg-5 mt-3 ml-lg-5 pl-5">
-                        Jl. BSD Grand Boulevard Max<br>
-                        well Raya No.1, Pagendangan,<br>
-                        Kec. Pagedangan, Tangerang,<br>
-                        Banten 15339<br>
+                        {{ x.venue_address }}
                     </p>
             </div>
             <div class="col-lg-7 pt-4 pr-0 pl-lg-2 pl-0">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15862.918108214062!2d106.6369675!3d-6.2992282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x34406ed8b098f478!2sIndonesia%20Convention%20Exhibition%20(ICE)%20BSD%20City!5e0!3m2!1sen!2sid!4v1593501784293!5m2!1sen!2sid" class="w-100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                {{ x.venue_maps }}
+                {#<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15862.918108214062!2d106.6369675!3d-6.2992282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x34406ed8b098f478!2sIndonesia%20Convention%20Exhibition%20(ICE)%20BSD%20City!5e0!3m2!1sen!2sid!4v1593501784293!5m2!1sen!2sid" class="w-100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>#}
             </div>
         </div>
     </div>
@@ -501,7 +467,7 @@
             <div data-aos="fade-left" class="col-lg-12">
                 <div class="title pt-lg-4">
                     <h1 class="text-white font-russo offset-lg-2 d-none d-lg-block">
-                        ABOUT SOUNTOPIA
+                        ABOUT {{ x.banner_event_name }}
                     </h1>
                     <h1 class="text-white font-russo offset-lg-2 d-lg-none mt-2">
                         ABOUT US
@@ -512,29 +478,17 @@
         <div class="row mt-5">
             <div class="col-lg-5 left-content">
                 <h1 class="text-white font-montserrat-semibold mb-lg-5 mb-0">
-                    BRING THE<br>
-                    MAGICAL NIGHTS<br>
-                    THROUGH MUSIC<br>
+                    {{ x.about_title }}
                 </h1>
-                <p class="text-white mt-5 mt-lg-5">
-                    South East Asia largest EDM festival - Sountopia turns<br>
-                    5 this year! Starting from 2015, the festival has been<br>
-                    held anually in the month of November as a two-days<br>
-                    festival until it expanded into a three-days festival in<br>
-                    2017 with more DJs.<br>
-                </p>
-                <p class="text-white">
-                    The festival uphoalds the value of Unity through music.<br>
-                    A wide spectrum of sub-genres under the dance music<br>
-                    category are given a platform through the multiple stages<br>
-                    in the festival.<br>
-                </p>
+                <div class="font-white">
+                    {{ x.about_brief }}
+                </div>
                 <p class="mt-5">
-                    <a class="bg-blue text-white font-montserrat-semibold px-lg-5 px-5 py-2 rounded-button" href="#">LINEUP</a> <a class="bg-blue text-white font-montserrat-semibold px-lg-5 px-5 py-2 rounded-button ml-lg-5 ml-3" href="#">TICKETS</a>
+                    <a class="bg-blue text-white font-montserrat-semibold px-lg-5 px-5 py-2 rounded-button" href="#lineup">LINEUP</a> <a class="bg-blue text-white font-montserrat-semibold px-lg-5 px-5 py-2 rounded-button ml-lg-5 ml-3" href="#tickets">TICKETS</a>
                 </p>
             </div>
             <div data-aos="fade-up" class="col-lg-7 px-0">
-                <img class="img-fluid w-100 mt-lg-0 mt-5" src="{% static 'rsvp/event/music/images/about-content-03.jpg' %}">
+                <img class="img-fluid w-100 mt-lg-0 mt-5" src="{{ x.about_image.url }}">
             </div>
         </div>
     </div>
@@ -549,67 +503,67 @@
                 <div class="row d-none d-lg-flex">
                     <div class="col-lg-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL SPIRIT
+                            {{ x.sponsors_title1 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-05.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo1.url }}">
                     </div>
                     <div class="col-lg-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL ENERGY DRINK
+                            {{ x.sponsors_title2 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-06.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo2.url }}">
                     </div>
                 </div>
                 <div class="row d-none d-lg-flex">
                     <div class="col-lg-4 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL ENERGY DRINK
+                            {{ x.sponsors_title3 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-07.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo3.url }}">
                     </div>
                     <div class="col-lg-4 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL ON-DEMAND APP
+                            {{ x.sponsors_title4 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-08.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo4.url }}">
                     </div>
                     <div class="col-lg-4 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL NOODLE PARTNER
+                            {{ x.sponsors_title5 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-09.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo5.url }}">
                     </div>
                 </div>
                 <div class="row d-lg-none">
                     <div class="col-lg-12 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL SPIRIT
+                            {{ x.sponsors_title1 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-05.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo1.url }}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL ENERGY DRINK
+                            {{ x.sponsors_title2 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-06.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo2.url }}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL ENERGY DRINK
+                            {{ x.sponsors_title3 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-07.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo3.url }}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL ON-DEMAND APP
+                            {{ x.sponsors_title4 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-08.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo4.url }}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
-                            OFFICIAL NOODLE PARTNER
+                            {{ x.sponsors_title5 }}
                         </h6>
-                        <img class="img-logos" src="{% static 'rsvp/event/music/images/sponsors-logo-09.png' %}">
+                        <img class="img-logos" src="{{ x.sponsors_logo5.url }}">
                     </div>
                 </div>
             </div>
@@ -629,7 +583,7 @@
                 </p>
             </div>
             <div class="offset-lg-5 col-lg-2 order-lg-2 order-1 text-center py-lg-0 py-3">
-                <a href="{% url 'music_create' x.theme_url %}" class="border-light-blue text-light-blue rounded-button py-1 px-3">
+                <a href="" class="border-light-blue text-light-blue rounded-button py-1 px-3">
                     CREATE A SITE
                 </a>
             </div>

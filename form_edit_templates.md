@@ -73,46 +73,6 @@
 
 
 ```
-## Templates Wedding
-	- dylan_rose
-	- emma_norman
-		<!-- Logo -->
-		1. Logo 						= {{ x.img_logo.url }}
-		<!-- Banner -->
-		2. Banner 1 					= {{ x.img_background1.url }}
-		3. Banner 2						= {{ x.img_background2.url }}
-		4. Banner 3						= {{ x.img_background3.url }}
-		<!-- Our Story -->
-		5. Quote 						= {{ x.about_quote }}
-		6. Quote By 					= {{ x.about_quote_by }}
-		7. Our Story Image 1			= {{ x.about_img1.url }}
-		8. Our Story Image 2			= {{ x.about_img2.url }}
-		9. Our Story Title 				= {{ x.about_title }}
-		10. Our Story Brief 			= {{ x.about }}
-		<!-- Invitation -->
-		11. Ceremony Background			= {{ x.ceremony_img.url }}
-		12. Ceremony Time 				= {{ x.ceremony_time }}
-		13. Ceremony Location			= {{ x.ceremony_location }}
-		14. Reception Background		= {{ x.reception_img.url }}
-		15. Reception Time	 			= {{ x.reception_time }}
-		16. Reception Location			= {{ x.reception_location }}
-		<!-- Gallery -->
-		17. Gallery Title 				= {{ x.gallery_title }}
-		18. Gallery Brief				= {{ x.gallery_text }}
-		19. Gallery Image 1				= {{ x.gallery1.url }}
-		20. Gallery Image 2				= {{ x.gallery2.url }}
-		21. Gallery Image 3				= {{ x.gallery3.url }}
-		22. Gallery Image 4				= {{ x.gallery4.url }}
-		<!-- RSVP -->
-		23. RSVP Background				= {{ x.rsvp_img.url }}
-	- jack_jane
-	- liam_felicia
-	- lucas_eli
-	- natasha_bruce
-	- peter_mary
-	- steve_sharon
-	- vicky_wanda
-	- victor_karla
 
 ## Templates Birthday
 	- aaron
@@ -382,37 +342,178 @@
 		<!-- RSVP -->
 		24. Invitation PDF				= {{ x.inv_pdf.url }}
 	- lacasadepapel
+		<!-- Banner -->
+		1. Banner Background 			= {{ x.banner_bg.url }}
+		2. Banner Background Mobile		= {{ x.banner_bg_mobile.url }}
+		3. Banner Title 1				= {{ x.banner_title1 }}
+		4. Banner Title 2				= {{ x.banner_title2 }}
+		5. Banner Sub Title				= {{ x.banner_subtitle }}
+		<!-- Brief -->
+		6. Brief Title 					= {{ x.brief_title }}
+		7. Brief Description			= {{ x.brief_desc }}
+		8. Brief Date					= {{ x.brief_date }}
+		9. Brief Time			 		= {{ x.brief_time }}
+		10. Brief Dresscode				= {{ x.brief_dress }}
+		<!-- Location -->
+		11. Location At	 				= {{ x.loc_at }}
+		12. Location Detail 			= {{ x.loc_detail }}
+		13. Location Link	 			= {{ x.loc_link }}
+		14. Location Maps 				= {{ x.loc_maps }}
+		<!-- Rundown -->
+		15. Rundown Background 			= {{ x.rundown_image.url }}
+		16. Rundown Time 1				= {{ x.rundown_time1 }}
+		17. Rundown Event 1				= {{ x.rundown_event1 }}
+		18. Rundown Time 2				= {{ x.rundown_time2 }}
+		19. Rundown Event 2				= {{ x.rundown_event2 }}
+		20. Rundown Time 3				= {{ x.rundown_time3 }}
+		21. Rundown Event 3				= {{ x.rundown_event3 }}
+		22. Rundown Time 4				= {{ x.rundown_time4 }}
+		23. Rundown Event 4				= {{ x.rundown_event4 }}
+		24. Rundown Time 5				= {{ x.rundown_time5 }}
+		25. Rundown Event 5				= {{ x.rundown_event5 }}
+		26. Rundown Time 6				= {{ x.rundown_time6 }}
+		27. Rundown Event 6				= {{ x.rundown_event6 }}
+		28. Rundown Time 7				= {{ x.rundown_time7 }}
+		29. Rundown Event 7				= {{ x.rundown_event7 }}
+		<!-- Partners -->
+		30. Partners Image 1			= {{ x.partners_image1.url }}
+		31. Partners Image 2			= {{ x.partners_image2.url }}
+		32. Partners Image 3			= {{ x.partners_image3.url }}
+		33. Partners Image 4			= {{ x.partners_image4.url }}
+		34. Partners Image 5			= {{ x.partners_image5.url }}
+		35. Partners Image 6			= {{ x.partners_image6.url }}
+		36. Partners Image 7			= {{ x.partners_image7.url }}
+		37. Partners Image 8			= {{ x.partners_image8.url }}
+		38. Partners Image 9			= {{ x.partners_image9.url }}
+		39. Partners Image 10			= {{ x.partners_image10.url }}
+		<!-- Footer -->
+		40. Footer Phone				= {{ x.footer_phone }}
+		41. Footer Email				= {{ x.footer_email }}
+		42. Invitation PDF				= {{ x.inv_pdf.url }}
+	- music
+		<!-- Banner -->
+		1. Banner Logo 1 				= {{ x.banner_logo1.url }}
+		2. Banner Logo 2				= {{ x.banner_logo2.url }}
+		3. Banner Event Name			= {{ x.banner_event_name }}
+		4. Banner At					= {{ x.banner_at }}
+		5. Banner Room					= {{ x.banner_room }}
+		6. Banner Date					= {{ x.banner_date }}
+		<!-- Brief -->
+		7. Brief Title 					= {{ x.brief_title }}
+		8. Brief Video					= {{ x.brief_video.url }}
+		<!-- LineUp -->
+		9. Lineup Name 1 				= {{ x.lineup_name1 }}
+		10. Lineup Image 1				= {{ x.lineup_image1.url }}
+		11. Lineup Name 2 				= {{ x.lineup_name2 }}
+		12. Lineup Image 2				= {{ x.lineup_image2.url }}
+		13. Lineup Name 3 				= {{ x.lineup_name3 }}
+		14. Lineup Image 3				= {{ x.lineup_image3.url }}
+		15. Lineup Name 4 				= {{ x.lineup_name4 }}
+		16. Lineup Image 4				= {{ x.lineup_image4.url }}
+		<!-- Ticket -->
+		17. Ticket Title 1				= {{ x.ticket_title1 }}
+		18. Ticket Brief 1				= {{ x.ticket_brief1 }}
+		19. Ticket Price 1				= {{ x.ticket_price1 }}
+		20. Ticket Link 1 				= {{ x.ticket_link1 }}
+		21. Ticket Title 2				= {{ x.ticket_title2 }}
+		22. Ticket Brief 2				= {{ x.ticket_brief2 }}
+		23. Ticket Price 2				= {{ x.ticket_price2 }}
+		24. Ticket Link 2 				= {{ x.ticket_link2 }}
+		25. Ticket Title 3				= {{ x.ticket_title3 }}
+		26. Ticket Brief 3				= {{ x.ticket_brief3 }}
+		27. Ticket Price 3				= {{ x.ticket_price3 }}
+		28. Ticket Link 3 				= {{ x.ticket_link3 }}
+		29. Ticket Title 4				= {{ x.ticket_title4 }}
+		30. Ticket Brief 4				= {{ x.ticket_brief4 }}
+		31. Ticket Price 4				= {{ x.ticket_price4 }}
+		32. Ticket Link 4 				= {{ x.ticket_link4 }}
+		33. Ticket Title 5				= {{ x.ticket_title5 }}
+		34. Ticket Brief 5				= {{ x.ticket_brief5 }}
+		35. Ticket Price 5				= {{ x.ticket_price5 }}
+		36. Ticket Link 5 				= {{ x.ticket_link5 }}
+		37. Ticket Title 6				= {{ x.ticket_title6 }}
+		38. Ticket Brief 6				= {{ x.ticket_brief6 }}
+		39. Ticket Price 6				= {{ x.ticket_price6 }}
+		40. Ticket Link 6 				= {{ x.ticket_link6 }}
+		41. Ticket Title 7				= {{ x.ticket_title7 }}
+		42. Ticket Brief 7				= {{ x.ticket_brief7 }}
+		43. Ticket Price 7				= {{ x.ticket_price7 }}
+		44. Ticket Link 7 				= {{ x.ticket_link7 }}
+		45. Ticket Title 8				= {{ x.ticket_title8 }}
+		46. Ticket Brief 8				= {{ x.ticket_brief8 }}
+		47. Ticket Price 8				= {{ x.ticket_price8 }}
+		48. Ticket Link 8 				= {{ x.ticket_link8 }}
+		<!-- Update -->
+		49. Update More Update Link		= {{ x.update_more_link }}
+		50. Update Title Highlight		= {{ x.update_title_hl }}
+		51. Update Brief Highlight		= {{ x.update_brief_hl }}
+		52. Update Link Highlight		= {{ x.update_link_hl }}
+		53. Update Title 1				= {{ x.update_title1 }}
+		54. Update Brief 1				= {{ x.update_brief1 }}
+		55. Update Link 1				= {{ x.update_link1 }}
+		56. Update Title 2				= {{ x.update_title2 }}
+		57. Update Brief 2				= {{ x.update_brief2 }}
+		58. Update Link 2				= {{ x.update_link2 }}
+		59. Update Title 3				= {{ x.update_title3 }}
+		60. Update Brief 3				= {{ x.update_brief3 }}
+		61. Update Link 3				= {{ x.update_link3 }}
+		62. Update Title 4				= {{ x.update_title4 }}
+		63. Update Brief 4				= {{ x.update_brief4 }}
+		64. Update Link 4				= {{ x.update_link4 }}
+		<!-- Venue -->
+		65. Venue Address				= {{ x.venue_address }}
+		66. Venue Maps 					= {{ x.venue_maps }}
+		<!-- About -->
+		67. About Title 				= {{ x.about_title }}
+		68. About Description			= {{ x.about_brief }}
+		69. About Image 				= {{ x.about_image.url }}
+		<!-- Sponsors -->
+		70. Sponsors Title 1			= {{ x.sponsors_title1 }}
+		71. Sponsors Logo 1				= {{ x.sponsors_logo1.url }}
+		72. Sponsors Title 2			= {{ x.sponsors_title2 }}
+		73. Sponsors Logo 2				= {{ x.sponsors_logo2.url }}
+		74. Sponsors Title 3			= {{ x.sponsors_title3 }}
+		75. Sponsors Logo 3				= {{ x.sponsors_logo3.url }}
+		76. Sponsors Title 4			= {{ x.sponsors_title4 }}
+		77. Sponsors Logo 4				= {{ x.sponsors_logo4.url }}
+		78. Sponsors Title 5			= {{ x.sponsors_title5 }}
+		79. Sponsors Logo 5				= {{ x.sponsors_logo5.url }}
+	- oceandor
 		<!-- Logo -->
 		1. Logo 						= {{ x.img_logo.url }}
 		<!-- Banner -->
-		2. Banner Sub Title				= {{ x.banner_subtitle }}
-		3. Banner Title 				= {{ x.banner_title }}
-		4. Banner Background 			= {{ x.banner_bg.url }}
-		5. Banner Background Mobile		= {{ x.banner_bg_mobile.url }}
+		2. Banner Title 				= {{ x.banner_title }}
+		3. Banner Sub Title				= {{ x.banner_subtitle }}
+		4. Banner Button Text 			= {{ x.banner_button_text }}
+		5. Banner Button Link 			= {{ x.banner_button_link }}
+		6. Banner Image 				= {{ x.banner_image.url }}
 		<!-- About -->
-		6. About Name 					= {{ x.about_name }}
-		7. About Age 					= {{ x.about_age }}
-		8. About Image 1				= {{ x.about_image1.url }}
-		9. About Image 2				= {{ x.about_image2.url }}
-		10. About Image 3				= {{ x.about_image3.url }}
-		11. About Image 4				= {{ x.about_image4.url }}
-		12. About Image 5				= {{ x.about_image5.url }}
-		13. About Image 6				= {{ x.about_image6.url }}
-		14. About Image 7				= {{ x.about_image7.url }}
-		15. About Image 8				= {{ x.about_image8.url }}
-		16. About Image 9				= {{ x.about_image9.url }}
-		17. About Image 10				= {{ x.about_image10.url }}
+		7. About Name 					= {{ x.about_name }}
+		8. About Brief 					= {{ x.about_brief }}
+		9. About Button Text 			= {{ x.about_button_text }}
+		10. About Button Link 			= {{ x.about_button_link }}
+		11. About Image Highlight		= {{ x.about_image_hl.url }}
+		12. About Image 1				= {{ x.about_image1.url }}
+		13. About Image 2				= {{ x.about_image2.url }}
 		<!-- Date and Place -->
-		18. Date and Place Day			= {{ x.dap_day }}
-		19. Date and Place Date			= {{ x.dap_date }}
-		20. Date and Place Time			= {{ x.dap_time }}
-		21. Date and Place Place		= {{ x.dap_place }}
-		22. Date and Place Address		= {{ x.dap_address }}
-		23. Date and Place Dresscode	= {{ x.dap_dress }}
+		14. Date and Place Date			= {{ x.dap_date }}
+		15. Date and Place Time			= {{ x.dap_time }}
+		16. Date and Place Place		= {{ x.dap_place }}
+		17. Date and Place Address		= {{ x.dap_address }}
+		18. Date and Place Maps Link	= {{ x.dap_maps }}
+		19. Date and Place Background	= {{ x.dap_bg.url }}
+		<!-- Guest -->
+		20. Guest Name 1				= {{ x.guest_name1 }}
+		21. Guest Image Left 1			= {{ x.guest_image_l1.url }}
+		22. Guest Image Right 1			= {{ x.guest_image_r1.url }}
+		23. Guest Description 1			= {{ x.guest_desc1 }}
+		24. Guest Name 2				= {{ x.guest_name2 }}
+		25. Guest Image Left 2			= {{ x.guest_image_l2.url }}
+		26. Guest Image Right 2			= {{ x.guest_image_r2.url }}
+		27. Guest Description 2			= {{ x.guest_desc2 }}
 		<!-- RSVP -->
-		24. Invitation PDF				= {{ x.inv_pdf.url }}
-	- music
-	- oceandor
+		28. RSVP Brief 					= {{ x.rsvp_brief }}
+		29. Invitation PDF				= {{ x.inv_pdf.url }}
 	- seminary
 		<!-- Logo -->
 		1. Logo 						= {{ x.img_logo.url }}
@@ -548,6 +649,57 @@
 		124. Sponsors Image 5			= {{ x.sponsor_image5.url }}
 		<!-- RSVP -->
 		125. Invitation PDF				= {{ x.inv_pdf.url }}
+
+## Templates Wedding
+	- dylan_rose
+	- emma_norman
+		<!-- Logo -->
+		1. Logo 						= {{ x.img_logo.url }}
+		<!-- Banner -->
+		2. Banner 1 					= {{ x.img_background1.url }}
+		3. Banner 2						= {{ x.img_background2.url }}
+		4. Banner 3						= {{ x.img_background3.url }}
+		<!-- Our Story -->
+		5. Quote 						= {{ x.about_quote }}
+		6. Quote By 					= {{ x.about_quote_by }}
+		7. Our Story Image 1			= {{ x.about_img1.url }}
+		8. Our Story Image 2			= {{ x.about_img2.url }}
+		9. Our Story Title 				= {{ x.about_title }}
+		10. Our Story Brief 			= {{ x.about }}
+		<!-- Invitation -->
+		11. Ceremony Background			= {{ x.ceremony_img.url }}
+		12. Ceremony Time 				= {{ x.ceremony_time }}
+		13. Ceremony Location			= {{ x.ceremony_location }}
+		14. Reception Background		= {{ x.reception_img.url }}
+		15. Reception Time	 			= {{ x.reception_time }}
+		16. Reception Location			= {{ x.reception_location }}
+		<!-- Gallery -->
+		17. Gallery Title 				= {{ x.gallery_title }}
+		18. Gallery Brief				= {{ x.gallery_text }}
+		19. Gallery Image 1				= {{ x.gallery1.url }}
+		20. Gallery Image 2				= {{ x.gallery2.url }}
+		21. Gallery Image 3				= {{ x.gallery3.url }}
+		22. Gallery Image 4				= {{ x.gallery4.url }}
+		<!-- RSVP -->
+		23. RSVP Background				= {{ x.rsvp_img.url }}
+	- jack_jane
+	- liam_felicia
+	- lucas_eli
+	- natasha_bruce
+	- peter_mary
+	- steve_sharon
+	- vicky_wanda
+	- victor_karla
+
+## Free
+	- anastasia
+	- christine
+	- diana_ross
+	- dylan_rose
+	- natasha_bruce
+	- steve_sharon
+
+
 
 ## Template Preview
 	- Wedding
