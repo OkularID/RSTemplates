@@ -74,6 +74,8 @@
 
 ```
 
+# Templates Theme
+
 ## Templates Birthday
 	- aaron
 		<!-- Logo -->
@@ -703,68 +705,34 @@
 
 ## Template Preview
 	- Wedding
-		1. dylan_rose
-		2. emma_norman
-		3. jack_jane
-		4. liam_felicia
-		5. lucas_eli
-		6. natasha_bruce
-		7. peter_mary
-		8. steve_sharon
-		9. vicky_wanda
-		10. victor_karla
+		1. dylan_rose		= input number max 5, input number arrow
+		2. emma_norman		= input number max 5, input number arrow
+		3. jack_jane		= input number max 5, input number arrow
+		4. liam_felicia		= input number max 5, input number arrow
+		5. lucas_eli		= input number max 5, input number arrow
+		6. natasha_bruce	= input number max 5, input number arrow
+		7. peter_mary		= input number max 5, input number arrow
+		8. steve_sharon		= input number max 5, input number arrow
+		9. vicky_wanda		= input number max 5, input number arrow
+		10. victor_karla	= input number max 5, input number arrow
 	- Birthday
-		1. aaron
-		2. anastasia
-		3. christine
-		4. diana_ross
+		1. aaron			= input number max 5, input number arrow
+		2. anastasia		= input number max 5, input number arrow
+		3. christine		= input number max 5, input number arrow
+		4. diana_ross		= input number max 5, input number arrow
 	- Event
-		1. 10year_reunion
-		2. 20year_reunion
-		3. brotherfield
-		4. christmas_dinner
-		5. lacasadepapel
-		6. music
-		7. oceandor
-		8. seminary
+		1. 10year_reunion	= input number max 5, input number arrow
+		2. 20year_reunion	= input number max 5, input number arrow
+		3. brotherfield		= input number max 5, input number arrow
+		4. christmas_dinner	= input number max 5, input number arrow
+		5. lacasadepapel	= input number max 5, input number arrow
+		6. music			= input number max 5, input number arrow
+		7. oceandor			= input number max 5, input number arrow
+		8. seminary			= input number max 5, input number arrow
 	- Free
-		1. anastasia
-		2. christine
-		3. diana_ross
-		4. dylan_rose
-		5. natasha_bruce
-		6. steve_sharon
-
-## Template Themes
-	- Wedding
-		1. dylan_rose
-		2. emma_norman
-		3. jack_jane
-		4. liam_felicia
-		5. lucas_eli
-		6. natasha_bruce
-		7. peter_mary
-		8. steve_sharon
-		9. vicky_wanda
-		10. victor_karla
-	- Birthday
-		1. aaron
-		2. anastasia
-		3. christine
-		4. diana_ross
-	- Event
-		1. 10year_reunion
-		2. 20year_reunion
-		3. brotherfield
-		4. christmas_dinner
-		5. lacasadepapel
-		6. music
-		7. oceandor
-		8. seminary
-	- Free
-		1. anastasia
-		2. christine
-		3. diana_ross
-		4. dylan_rose
-		5. natasha_bruce
-		6. steve_sharon
+		1. anastasia		= input number max 5, input number arrow
+		2. christine		= input number max 5, input number arrow
+		3. diana_ross		= input number max 5, input number arrow
+		4. dylan_rose		= input number max 5, input number arrow
+		5. natasha_bruce	= input number max 5, input number arrow
+		6. steve_sharon		= input number max 5, input number arrow
