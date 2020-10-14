@@ -119,6 +119,7 @@ input[type=number] {
 .input-number-arrow{width: 30%;}
 .input-number-arrow #step-decrement{left: -20px;}
 .input-number-arrow #step-increment{right: -20px;}
+.home-bottom-content input[type=number]{border: none;}
 .home-bottom-content .bottom-line{
 	border-top: 1px solid #6d6d70;
 }
