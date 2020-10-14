@@ -9,14 +9,14 @@
     <title>Template Wedding | Homepage</title>
     <link rel="shortcut icon" href="{% static 'rsvp/wedding/peter_marry/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/peter_marry/style-wedding-2.css' %}">
     <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/peter_marry/style-wedding-2.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -420,12 +420,15 @@
                 <div class="form-group ml-lg-5 row">
                     <label class="col-lg-5 col-6 px-0 name-text pt-lg-2">ADDITIONAL GUEST</label>
                     <div class="col-lg-7 col-6 px-0 pl-2">
-                      <input class="form-control" type="number" name="your-guest" id="spinner" value="1" placeholder="1" min="1" max="10" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
-                        <a role="button" id="step-increment" class="btn btn-default pt-0" aria-label="add 1" aria-labelledby="step-increment label-text">
-                            <h4 class="text-dark-blue mb-0">
-                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                            </h4>
-                        </a>
+                        <div class="guest input-number-arrow">
+                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_PeterMary-09.png' %}" />
+                            </a>
+                            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_PeterMary-10.png' %}" />
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group ml-lg-5 py-5 mb-0">

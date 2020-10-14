@@ -504,7 +504,10 @@
 		text-transform: uppercase;
 		color: #EBD8CF;
 	}
-	#rsvp form input{padding: 25px 15px;}
+	#rsvp form input{
+		padding: 15px 10px !important;
+		height: auto;
+	}
 	#rsvp form .button-default{
 		outline: none;
 	}

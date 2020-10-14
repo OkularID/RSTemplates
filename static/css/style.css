@@ -1334,7 +1334,7 @@
   /* Section RSVP */
   .tour-rsvp .boxv{top: 30%;}
   .tour-rsvp .image{
-    background-size: cover !important;
+    background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
     background-position: top left !important;
     position: absolute;

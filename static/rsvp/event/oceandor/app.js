@@ -32,19 +32,19 @@ $(document).ready(function() {
     responsive:{
       0: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/event/oceandor/images/arrow-left.png'>","<img src='/static/rsvp/event/oceandor/images/arrow-right.png'>"],
         dots: false,
         nav: true
       },
       600: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/event/oceandor/images/arrow-left.png'>","<img src='/static/rsvp/event/oceandor/images/arrow-right.png'>"],
         dots: false,
         nav: true
       },
       1000: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/event/oceandor/images/arrow-left.png'>","<img src='/static/rsvp/event/oceandor/images/arrow-right.png'>"],
         dots: false,
         nav: true
       }
@@ -62,19 +62,19 @@ $(document).ready(function() {
     responsive:{
       0: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/event/oceandor/images/arrow-left.png'>","<img src='/static/rsvp/event/oceandor/images/arrow-right.png'>"],
         dots: false,
         nav: true
       },
       600: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/event/oceandor/images/arrow-left.png'>","<img src='/static/rsvp/event/oceandor/images/arrow-right.png'>"],
         dots: false,
         nav: true
       },
       1000: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/event/oceandor/images/arrow-left.png'>","<img src='/static/rsvp/event/oceandor/images/arrow-right.png'>"],
         dots: false,
         nav: true
       }

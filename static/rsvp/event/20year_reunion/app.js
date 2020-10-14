@@ -32,7 +32,7 @@ $('.nav-event .menu-icon').click(function() {
   });
   $('.carousel-header').addClass('owl-carousel owl-theme').owlCarousel({
     margin: 50,
-    navText: ["<img src='images/arrow-05.png'>","<img src='images/arrow-06.png'>"],
+    navText: ["<img src='/static/rsvp/event/20year_reunion/images/arrow-05.png'>","<img src='/static/rsvp/event/20year_reunion/images/arrow-06.png'>"],
     loop: true,
     responsiveClass: true,
     responsive:{

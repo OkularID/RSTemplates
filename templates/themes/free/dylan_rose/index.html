@@ -9,14 +9,14 @@
     <title>Template Free | Homepage</title>
     <link rel="shortcut icon" href="{% static 'rsvp/free/dylan_rose/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/free/dylan_rose/style-wedding-8.css' %}">
     <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/free/dylan_rose/style-wedding-8.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -146,7 +146,7 @@
                       </a>
                       </div>
                       <div class="col-lg-3 col-2 pl-0 pr-lg-3 pr-0">
-                        <input class="w-100 form-control bg-white text-center" disabled type="number" name="qty" id="spinner" value="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
+                        <input class="w-100 form-control bg-white text-center" disabled type="number" name="qty" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
                       </div>
                       <div class="col-lg-2 col-1 px-0">
                         <a role="button" id="step-increment" class="btn btn-default  mt-1" aria-label="add 1" aria-labelledby="step-increment label-text">

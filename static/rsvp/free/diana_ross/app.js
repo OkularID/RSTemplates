@@ -306,7 +306,7 @@ $(document).ready(function() {
         items: 1,
         dots: false,
         loop: true,
-        navText: ["<img src='images/nav-carousel-07.png'>","<img src='images/nav-carousel-08.png'>"],
+        navText: ["<img src='/static/rsvp/free/diana_ross/images/nav-carousel-07.png'>","<img src='/static/rsvp/free/diana_ross/images/nav-carousel-08.png'>"],
         nav: true
       },
       600: {

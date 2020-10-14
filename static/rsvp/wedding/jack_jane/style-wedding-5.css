@@ -329,17 +329,7 @@
             -moz-appearance:textfield; /* Firefox */
         }
         #rsvp form .guest{border-bottom: 1px solid #819e82;}
-        #rsvp form .guest input[type=number]{
-            padding: .375rem .75rem;
-            width: 85%;
-            background: transparent;
-            border: none;
-        }
-        #rsvp form .guest a{
-            margin: 0;
-            padding: 0 0 3px 30px;
-            border: none;
-        }
+        #rsvp form .guest input[type=number]{border: none;}
         .popup-thankyou .content-background{
             background-image: url(images/bg-content-popup-03.jpg);
             height: 660px;
@@ -443,7 +433,6 @@
         	}
         	#rsvp form table tr td:first-child{padding-bottom: 0;}
         	#rsvp form table tr td:last-child{padding-bottom: 10%;}
-            #rsvp form .guest input[type="number"]{width: 75%;}
             #rsvp form .button-green{padding: 4% 50px;}
         }
         .popup-thankyou .content-background{

@@ -496,7 +496,7 @@
         #rsvp form input[type=email],
         #rsvp form input[type=number]{
             margin-bottom: 3%;
-            padding: 10px 15px;
+            padding: 10px 15px !important;
             height: auto;
             background: #fff;
             border: none;

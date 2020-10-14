@@ -9,14 +9,14 @@
     <title>Template Event | Homepage</title>
     <link rel="shortcut icon" href="{% static 'rsvp/event/brotherfield/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/brotherfield/style_grand_opening.css' %}">
     <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/brotherfield/style_grand_opening.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -387,12 +387,13 @@
                         <p class="text-white">
                             Will you bring anyone to the event?<br>
                         </p>
-                        <div class="position-relative">
-                            <input class="form-control rounded-pill" type="number" name="your-guest" id="spinner" value="1" placeholder="1" min="1" max="10" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
-                            <a role="button" id="step-increment" class="btn btn-default pt-1" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                <h5 class="text-dgreen">
-                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                                </h5>
+                        <div class="guest input-number-arrow">
+                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_Grand-Opening-Food-23.png' %}" />
+                            </a>
+                            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_Grand-Opening-Food-24.png' %}" />
                             </a>
                         </div>
                     </div>

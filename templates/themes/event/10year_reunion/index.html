@@ -9,14 +9,14 @@
     <title>Template Event | Homepage</title>
     <link rel="shortcut icon" href="{% static 'rsvp/event/10year_reunion/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/10year_reunion/style_event_5.css' %}">
     <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/10year_reunion/style_event_5.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target="#navbar-example" data-offset="1">
@@ -346,12 +346,13 @@
                 <p class="text-blue">
                     Will you bring additional guest(s)?
                 </p>
-                <div class="position-relative">
-                    <input class="form-control w-50 mx-auto" type="number" name="your-guest" id="spinner" value="1" placeholder="1" min="1" max="10" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
+                <div class="guest input-number-arrow w-50 mx-auto">
+                    <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_Reunion-10years-19.png' %}" />
+                    </a>
+                    <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
                     <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                        <h6 class="text-blue">
-                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        </h6>
+                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_Reunion-10years-20.png' %}" />
                     </a>
                 </div>
                 <a class="d-inline-block mt-5 mb-4" href="#" data-toggle="modal" data-target="#form-submit">

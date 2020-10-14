@@ -119,19 +119,19 @@ $(document).ready(function() {
     responsive:{
       0: {
         items: 1,
-        navText: ["<img src='images/arrow-07.png'>","<img src='images/arrow-08.png'>"],
+        navText: ["<img src='/static/rsvp/free/steve_sharon/images/arrow-07.png'>","<img src='/static/rsvp/free/steve_sharon/images/arrow-08.png'>"],
         dots: false,
         nav: false
       },
       600: {
         items: 1,
-        navText: ["<img src='images/arrow-07.png'>","<img src='images/arrow-08.png'>"],
+        navText: ["<img src='/static/rsvp/free/steve_sharon/images/arrow-07.png'>","<img src='/static/rsvp/free/steve_sharon/images/arrow-08.png'>"],
         dots: false,
         nav: true
       },
       1000: {
         items: 3,
-        navText: ["<img src='images/arrow-07.png'>","<img src='images/arrow-08.png'>"],
+        navText: ["<img src='/static/rsvp/free/steve_sharon/images/arrow-07.png'>","<img src='/static/rsvp/free/steve_sharon/images/arrow-08.png'>"],
         dots: false,
         nav: true
       }
