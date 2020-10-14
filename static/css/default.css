@@ -1654,3 +1654,27 @@
       object-fit: cover;
     }
   }
+
+
+/* New Template Button */
+.input-number-arrow{position: relative;}
+.input-number-arrow input[type=number]{
+  -moz-appearance: textfield;
+  padding: 0 !important;
+}
+.input-number-arrow #step-decrement{
+  position: absolute;
+  padding: .375rem .75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 50px;
+}
+.input-number-arrow #step-increment{
+  position: absolute;
+  padding: .375rem .75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 50px;
+}

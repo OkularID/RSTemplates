@@ -9,14 +9,14 @@
     <title>Template Free | Homepage</title>
     <link rel="shortcut icon" href="{% static 'rsvp/free/christine/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/free/christine/style-birthday-3.css' %}">
     <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/free/christine/style-birthday-3.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -132,7 +132,7 @@
                         <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
                           <i class="fa fa-caret-left text-coral"></i>
                         </a>
-                          <input class="" disabled type="number" name="qty" id="spinner" value="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
+                          <input class="" disabled type="number" name="qty" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
                           <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
                             <i class="fa fa-caret-right text-coral"></i>
                           </a>

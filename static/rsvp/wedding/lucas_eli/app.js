@@ -32,19 +32,19 @@ $(document).ready(function() {
     responsive:{
       0: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/wedding/lucas_eli/images/arrow-left.png'>","<img src='/static/rsvp/wedding/lucas_eli/images/arrow-right.png'>"],
         dots: true,
         nav: true
       },
       600: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/wedding/lucas_eli/images/arrow-left.png'>","<img src='/static/rsvp/wedding/lucas_eli/images/arrow-right.png'>"],
         dots: true,
         nav: true
       },
       1000: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/wedding/lucas_eli/images/arrow-left.png'>","<img src='/static/rsvp/wedding/lucas_eli/images/arrow-right.png'>"],
         dots: true,
         nav: true
       }
@@ -58,19 +58,19 @@ $(document).ready(function() {
     responsive:{
       0: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/wedding/lucas_eli/images/arrow-left.png'>","<img src='/static/rsvp/wedding/lucas_eli/images/arrow-right.png'>"],
         dots: true,
         nav: true
       },
       600: {
         items: 1,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/wedding/lucas_eli/images/arrow-left.png'>","<img src='/static/rsvp/wedding/lucas_eli/images/arrow-right.png'>"],
         dots: true,
         nav: true
       },
       1000: {
         items: 3,
-        navText: ["<img src='images/arrow-left.png'>","<img src='images/arrow-right.png'>"],
+        navText: ["<img src='/static/rsvp/wedding/lucas_eli/images/arrow-left.png'>","<img src='/static/rsvp/wedding/lucas_eli/images/arrow-right.png'>"],
         dots: true,
         nav: true
       }

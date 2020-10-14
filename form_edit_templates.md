@@ -62,14 +62,15 @@
         <link rel="stylesheet" href="https://dev.reservasidulu.com/static/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
 
 
-        <link rel="stylesheet" type="text/css" href="/static/css/animation.css">
-        <link rel="stylesheet" type="text/css" href="/static/css/default.css">
-        <link rel="stylesheet" type="text/css" href="/static/rsvp/birthday/aaron/style-birthday-4.css">
+
         <link rel="stylesheet" href="/static/features/animatecss/animate.min.css">
         <link rel="stylesheet" href="/static/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/static/node_modules/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="/static/node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="/static/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/animation.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/default.css">
+        <link rel="stylesheet" type="text/css" href="/static/rsvp/birthday/aaron/style-birthday-4.css">
 
 
 ```
@@ -701,38 +702,36 @@
 	- natasha_bruce
 	- steve_sharon
 
-
-
-## Template Preview
+## Template Name
 	- Wedding
-		1. dylan_rose		= input number max 5, input number arrow
-		2. emma_norman		= input number max 5, input number arrow
-		3. jack_jane		= input number max 5, input number arrow
-		4. liam_felicia		= input number max 5, input number arrow
-		5. lucas_eli		= input number max 5, input number arrow
-		6. natasha_bruce	= input number max 5, input number arrow
-		7. peter_mary		= input number max 5, input number arrow
-		8. steve_sharon		= input number max 5, input number arrow
-		9. vicky_wanda		= input number max 5, input number arrow
-		10. victor_karla	= input number max 5, input number arrow
+		1. dylan_rose		= wedding_8
+		2. emma_norman		= wedding_4
+		3. jack_jane		= wedding_5
+		4. liam_felicia		= wedding_3
+		5. lucas_eli		= wedding_10
+		6. natasha_bruce	= wedding_1
+		7. peter_mary		= wedding_2
+		8. steve_sharon		= wedding_9
+		9. vicky_wanda		= wedding_6
+		10. victor_karla	= wedding_victor
 	- Birthday
-		1. aaron			= input number max 5, input number arrow
-		2. anastasia		= input number max 5, input number arrow
-		3. christine		= input number max 5, input number arrow
-		4. diana_ross		= input number max 5, input number arrow
+		1. aaron			= birthday_4 
+		2. anastasia		= birthday_2 
+		3. christine		= birthday_3 
+		4. diana_ross		= birthday_1 
 	- Event
-		1. 10year_reunion	= input number max 5, input number arrow
-		2. 20year_reunion	= input number max 5, input number arrow
-		3. brotherfield		= input number max 5, input number arrow
-		4. christmas_dinner	= input number max 5, input number arrow
-		5. lacasadepapel	= input number max 5, input number arrow
-		6. music			= input number max 5, input number arrow
-		7. oceandor			= input number max 5, input number arrow
-		8. seminary			= input number max 5, input number arrow
+		1. 10year_reunion	= event_5
+		2. 20year_reunion	= event_6
+		3. brotherfield		= grand_opening
+		4. christmas_dinner	= event_7
+		5. lacasadepapel	= gala_dinner
+		6. music			= event_8
+		7. oceandor			= event_3
+		8. seminary			= event_4
 	- Free
-		1. anastasia		= input number max 5, input number arrow
-		2. christine		= input number max 5, input number arrow
-		3. diana_ross		= input number max 5, input number arrow
-		4. dylan_rose		= input number max 5, input number arrow
-		5. natasha_bruce	= input number max 5, input number arrow
-		6. steve_sharon		= input number max 5, input number arrow
+		1. anastasia		= birthday_2_free
+		2. christine		= birthday_3_free
+		3. diana_ross		= birthday_1_free
+		4. dylan_rose		= wedding_8_free
+		5. natasha_bruce	= wedding_1_free
+		6. steve_sharon		= wedding_9_free

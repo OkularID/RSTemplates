@@ -9,14 +9,14 @@
     <title>Template Event | Homepage</title>
     <link rel="shortcut icon" href="{% static 'rsvp/event/seminary/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/seminary/style_event_4.css' %}">
     <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/event/seminary/style_event_4.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target="#navbar-example" data-offset="1">
@@ -1016,12 +1016,13 @@
                 <p class="text-white font-montserrat-extrabold">
                     EXTRA GUEST
                 </p>
-                <div class="position-relative">
-                    <input class="form-control" type="number" name="your-guest" id="spinner" value="1" placeholder="1" min="1" max="10" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
+                <div class="guest input-number-arrow">
+                    <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_Seminar-Event-17.png' %}" />
+                    </a>
+                    <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
                     <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                        <h6 class="text-white">
-                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        </h6>
+                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_Seminar-Event-18.png' %}" />
                     </a>
                 </div>
             </div>

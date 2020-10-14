@@ -9,14 +9,14 @@
     <title>Template Wedding | Homepage</title>
     <link rel="shortcut icon" href="{% static 'rsvp/wedding/natasha_bruce/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/natasha_bruce/style-wedding-1.css' %}">
     <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/natasha_bruce/style-wedding-1.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -502,17 +502,20 @@
                         <p class="text-gray mb-0">
                            ADDITIONAL GUEST
                         </p>
-                        <input class="form-control" type="number" name="your-guest" id="spinner" value="1" placeholder="1" min="1" max="10" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
-                        <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                            <h3 class="text-dgreen">
-                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                            </h3>
-                        </a>
+                        <div class="guest input-number-arrow">
+                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_BruceNatasha-07.png' %}" />
+                            </a>
+                            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_BruceNatasha-08.png' %}" />
+                            </a>
+                        </div>
                     </div>
-                <div class="text-center w-50 float-right">
-                    <input type="submit" class="button-cyan d-block w-100" data-toggle="modal" data-target="#exampleModal" value="SUBMIT"><br>
-                    <a href="wedding-1-einvitation-02.jpg' %}" class="button-cyan d-block">DOWNLOAD INVITATION</a>
-                </div>
+                    <div class="text-center w-50 float-right">
+                        <input type="submit" class="button-cyan d-block w-100" data-toggle="modal" data-target="#exampleModal" value="SUBMIT"><br>
+                        <a href="wedding-1-einvitation-02.jpg' %}" class="button-cyan d-block">DOWNLOAD INVITATION</a>
+                    </div>
                 </form>
             </div>
         </div>

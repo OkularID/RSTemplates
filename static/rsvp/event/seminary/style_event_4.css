@@ -192,6 +192,8 @@ input[type=number] {
 .rsvp input::placeholder{
 	color: #fff;
 }
+.input-number-arrow #step-decrement{left: -10px;}
+.input-number-arrow #step-increment{right: -10px;}
 .footer .button{
 	color: #fff;
 	border: 2px solid #fff;

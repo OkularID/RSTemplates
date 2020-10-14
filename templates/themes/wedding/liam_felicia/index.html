@@ -9,14 +9,14 @@
     <title>Template Wedding | Homepage</title>
     <link rel="shortcut icon" href="{% static 'rsvp/wedding/liam_felicia/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/liam_felicia/style-wedding-3.css' %}">
     <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/liam_felicia/style-wedding-3.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -304,7 +304,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="your-with">who else is coming with you?*</label>
-                                <input type="text" class="form-control" id="your-with" name="your-with" required>
+                                <div class="guest input-number-arrow">
+                                    <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_LiamFeli-03.png' %}" />
+                                    </a>
+                                    <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+                                    <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_LiamFeli-04.png' %}" />
+                                    </a>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="your-message">message</label>

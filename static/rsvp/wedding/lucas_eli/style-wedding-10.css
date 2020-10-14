@@ -509,7 +509,8 @@
 		}
 		#rsvp form input{
 			margin-bottom: 5%;
-			padding: 7% 5%;
+			padding: 10px 5% !important;
+			height: auto;
 			font-family: "Avenir Medium";
 			font-size: 18px !important;
 			line-height: 38px !important;

@@ -18,7 +18,7 @@ $(document).ready(function(){
 
   $('.carousel-gallery').addClass('owl-carousel owl-theme').owlCarousel({
     margin: 50,
-    navText: ["<img src='images/nav-carousel-06.png'>","<img src='images/nav-carousel-07.png'>"],
+    navText: ["<img src='/static/rsvp/event/seminary/images/nav-carousel-06.png'>","<img src='/static/rsvp/event/seminary/images/nav-carousel-07.png'>"],
     loop: true,
     responsiveClass: true,
     responsive:{
@@ -43,7 +43,7 @@ $(document).ready(function(){
   })
   $('.carousel-sponsors').addClass('owl-carousel owl-theme').owlCarousel({
     margin: 50,
-    navText: ["<img src='images/nav-carousel-06.png'>","<img src='images/nav-carousel-07.png'>"],
+    navText: ["<img src='/static/rsvp/event/seminary/images/nav-carousel-06.png'>","<img src='/static/rsvp/event/seminary/images/nav-carousel-07.png'>"],
     loop: true,
     responsiveClass: true,
     responsive:{
@@ -66,7 +66,7 @@ $(document).ready(function(){
   })
   $('.carousel-mobile-speakers').addClass('owl-carousel owl-theme').owlCarousel({
     margin: 50,
-    navText: ["<img src='images/nav-carousel-06.png'>","<img src='images/nav-carousel-07.png'>"],
+    navText: ["<img src='/static/rsvp/event/seminary/images/nav-carousel-06.png'>","<img src='/static/rsvp/event/seminary/images/nav-carousel-07.png'>"],
     loop: true,
     responsiveClass: true,
     responsive:{
@@ -89,7 +89,7 @@ $(document).ready(function(){
   })
   $('.carousel-mobile-schedule').addClass('owl-carousel owl-theme').owlCarousel({
     margin: 50,
-    navText: ["<img class='w-50' src='images/nav-carousel-06.png'>","<img class='w-50' src='images/nav-carousel-07.png'>"],
+    navText: ["<img class='w-50' src='/static/rsvp/event/seminary/images/nav-carousel-06.png'>","<img class='w-50' src='/static/rsvp/event/seminary/images/nav-carousel-07.png'>"],
     loop: true,
     responsiveClass: true,
     responsive:{

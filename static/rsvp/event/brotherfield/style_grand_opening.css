@@ -216,10 +216,13 @@ input[type=number] {
 	margin-right: -50px;
 
 }
-#step-increment{
-	position: absolute;
-	right: 0;
-	top: 0;
+.input-number-arrow{width: 50%;}
+.input-number-arrow #step-decrement{left: -20px;}
+.input-number-arrow #step-increment{right: -20px;}
+.input-number-arrow input[type=number]{
+	color: #fff;
+	background: transparent;
+	border: none;
 }
   @media screen and (max-width: 846px) {
   	p, a, label, th, td, li, input{

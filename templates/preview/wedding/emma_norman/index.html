@@ -9,14 +9,14 @@
     <title>Template Wedding | Homepage</title>
     <link rel="shortcut icon" href="{% static 'rsvp/wedding/emma_norman/images/ico.ico' %}">
     <!-- Customize css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/emma_norman/style-wedding-4.css' %}">
     <link rel="stylesheet" href="{% static 'features/animatecss/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rsvp/wedding/emma_norman/style-wedding-4.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
@@ -253,7 +253,15 @@
                                     </div>
                                     <div class="form-group col-lg-6 mb-lg-0 pl-m-5 pl-lg-5p">
                                         <label for="your-guest">Number of Guest</label>
-                                        <input type="text" class="form-control" id="your-guest" name="your-guest" required>
+                                        <div class="guest input-number-arrow">
+                                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-05.png' %}" />
+                                            </a>
+                                            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+                                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-06.png' %}" />
+                                            </a>
+                                        </div>
                                     </div>
                                     <div class="form-group col-lg-12 mb-m-0 pt-lg-5p text-right">
                                         <button type="submit" class="button-default" data-toggle="modal" data-target="#thankyou">Submit</button>
