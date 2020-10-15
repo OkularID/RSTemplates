@@ -57,7 +57,7 @@ let countDown = new Date('May 19, 2020 00:00:00').getTime(),
   $('.carousel-guest').addClass('owl-carousel owl-theme').owlCarousel({
     loop: true,
     responsiveClass: true,
-    navText: ["<img src='/static/rsvp/event/brotherfield/images/nav-guest-17.png'>","<img src='/static/rsvp/event/brotherfield/images/nav-guest-18.png'>"],
+    navText: ["<img src='images/nav-guest-17.png'>","<img src='images/nav-guest-18.png'>"],
     responsive:{
       0: {
         items: 1,
