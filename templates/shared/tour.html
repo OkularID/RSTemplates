@@ -42,11 +42,11 @@
             <div id="tour-template" class="container-fluid pos-rel pt-lg-0 pb-lg-15p pl-lg-10p pr-lg-10p pl-m-0 pr-m-0 tour-template">
                 <div class="row">
                     <div class="col-lg-12">
-                        <img class="img-fluid frame d-none d-lg-block" src="{% static 'img/03-tour/tour-images-01.png' %}" alt="reservasidulu">
+                        <img class="img-fluid frame d-none d-lg-block" src="{{ x.section_img.url }}" alt="reservasidulu">
                         <img class="ornament-01 d-none d-lg-block" src="{% static 'img/03-tour/tour-images-02.png' %}" />
                         <img class="ornament-02 d-none d-lg-block" src="{% static 'img/03-tour/tour-images-03.png' %}" />
-                        <img class="img-fluid frame d-block d-lg-none" src="{% static 'img/mobile/mobile-tour-03.png' %}" alt="reservasidulu">
-                        <div class="content" style="background: url({{ x.section_img.url }});"></div>
+                        <img class="img-fluid frame d-block d-lg-none" src="{{ x.section_img.url }}" alt="reservasidulu">
+                        {#<!-- <div class="content" style="background: url({{ x.section_img.url }});"></div> -->#}
                         <div class="box1 home-steps slideanim">
                             <div class="tabs-tour-rsvp">
                                 <ul id="nav-box" class="mb-lg-30 mb-m-10p slideanim">
