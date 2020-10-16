@@ -294,7 +294,7 @@
 		11. Venue Maps 					= {{ x.venue_maps }}
 		12. Venue Start					= {{ x.venue_start }}
 		13. Venue End					= {{ x.venue_end }}
-		14. Venue At						= {{ x.venue_at }}
+		14. Venue At					= {{ x.venue_at }}
 		15. Venue Address				= {{ x.venue_address }}
 		16. Venue Dresscode				= {{ x.venue_dress }}
 		<!-- Menus -->
@@ -655,6 +655,40 @@
 
 ## Templates Wedding
 	- dylan_rose
+		<!-- Logo -->
+		1. Logo 						= {{ x.img_logo.url }}
+		<!-- Banner -->
+		2. Banner Background 			= {{ x.banner_bg.url }}
+		3. Banner Background Mobile		= {{ x.banner_bg_mobile.url }}
+		<!-- Story -->
+		4. Story Image 					= {{ x.story_image.url }}
+		5. Story Brief 					= {{ x.story_brief }}
+		<!-- Venue -->
+		6. Venue Ceremony Day			= {{ x.vc_day }}
+		7. Venue Ceremony Date			= {{ x.vc_date }}
+		8. Venue Ceremony Time			= {{ x.vc_time }}
+		9. Venue Ceremony Address		= {{ x.vc_address }}
+		10. Venue Ceremony Dresscode	= {{ x.vc_dress }}
+		11. Venue Ceremony Image		= {{ x.vc_image.url }}
+		12. Venue Reception Day			= {{ x.vr_day }}
+		13. Venue Reception Date		= {{ x.vr_date }}
+		14. Venue Reception Time		= {{ x.vr_time }}
+		15. Venue Reception Address		= {{ x.vr_address }}
+		16. Venue Reception Dresscode	= {{ x.vr_dress }}
+		17. Venue Reception Image		= {{ x.vr_image.url }}
+		<!-- Accommodation -->
+		18. Accommodation Image			= {{ x.acm_image.url }}
+		19. Accommodation Place			= {{ x.acm_place }}
+		20. Accommodation Address		= {{ x.acm_address }}
+		21. Accommodation Note			= {{ x.acm_note }}
+		<!-- Memories -->
+		22. Memories Brief				= {{ x.memories_brief }}
+		23. Memories Image 1			= {{ x.memories_image1.url }}
+		24. Memories Image 2			= {{ x.memories_image2.url }}
+		25. Memories Image 3			= {{ x.memories_image3.url }}
+		26. Memories Image 4			= {{ x.memories_image4.url }}
+		<!-- RSVP -->
+		27. Invitation PDF				= {{ x.inv_pdf.url }}
 	- emma_norman
 		<!-- Logo -->
 		1. Logo 						= {{ x.img_logo.url }}
@@ -685,22 +719,439 @@
 		22. Gallery Image 4				= {{ x.gallery4.url }}
 		<!-- RSVP -->
 		23. RSVP Background				= {{ x.rsvp_img.url }}
+		24. Invitation PDF				= {{ x.inv_pdf.url }}
 	- jack_jane
+		<!-- Logo -->
+		1. Logo 						= {{ x.img_logo.url }}
+		<!-- Banner -->
+		2. Banner Date 					= {{ x.banner_date }}
+		3. Banner Background 1 			= {{ x.banner_bg1.url }}
+		4. Banner Background 2			= {{ x.banner_bg2.url }}
+		5. Banner Background 3			= {{ x.banner_bg3.url }}
+		<!-- About -->
+		6. About Image 1				= {{ x.about_image1.url }}
+		7. About Place 					= {{ x.about_place }}
+		8. About Address 				= {{ x.about_address }}
+		9. About Day 	 				= {{ x.about_day }}
+		10. About Date 	 				= {{ x.about_date }}
+		11. About Time 	 				= {{ x.about_time }}
+		12. About Name 1	 			= {{ x.about_name1 }}
+		13. About Brief 1				= {{ x.about_brief1 }}
+		14. About Name 2	 			= {{ x.about_name2 }}
+		15. About Brief 2				= {{ x.about_brief2 }}
+		16. About Image 2				= {{ x.about_image2.url }}
+		<!-- Album -->
+		17. Album Image 1 				= {{ x.album_image1.url }}
+		18. Album Image 2				= {{ x.album_image2.url }}
+		19. Album Image 3				= {{ x.album_image3.url }}
+		20. Album Image 4				= {{ x.album_image4.url }}
+		21. Album Image 5				= {{ x.album_image5.url }}
+		<!-- RSVP -->
+		22. RSVP Image 					= {{ x.rsvp_image.url }}
+		25. Invitation PDF				= {{ x.inv_pdf.url }}
 	- liam_felicia
+		<!-- Logo -->
+		1. Initial Logo					= {{ x.initial_logo }}
+		<!-- Banner -->
+		2. Banner Title 				= {{ x.banner_title }}
+		3. Banner Background 			= {{ x.banner_bg.url }}
+		<!-- About -->
+		4. About Image					= {{ x.about_image.url }}
+		6. About Title 					= {{ x.about_title }}
+		7. About Brief 					= {{ x.about_brief }}
+		<!-- Venue -->
+		8. Venue Ceremony Image			= {{ x.vc_image.url }}
+		9. Venue Ceremony Day			= {{ x.vc_day }}
+		10. Venue Ceremony Date			= {{ x.vc_date }}
+		11. Venue Ceremony Time			= {{ x.vc_time }}
+		12. Venue Ceremony Place		= {{ x.vc_place }}
+		13. Venue Ceremony Address		= {{ x.vc_address }}
+		14. Venue Reception Image		= {{ x.vr_image.url }}
+		15. Venue Reception Day			= {{ x.vr_day }}
+		16. Venue Reception Date		= {{ x.vr_date }}
+		17. Venue Reception Time		= {{ x.vr_time }}
+		18. Venue Reception Place		= {{ x.vr_place }}
+		19. Venue Reception Address		= {{ x.vr_address }}
+		<!-- Accommodation -->
+		20. Accommodation Image			= {{ x.acm_image.url }}
+		21. Accommodation Place			= {{ x.acm_place }}
+		22. Accommodation Address		= {{ x.acm_address }}
+		23. Accommodation Note			= {{ x.acm_note }}
+		<!-- Gallery -->
+		24. Gallery Image 1				= {{ x.gallery_image1.url }}
+		25. Gallery Image 2				= {{ x.gallery_image2.url }}
+		26. Gallery Image 3				= {{ x.gallery_image3.url }}
+		27. Gallery Image 4				= {{ x.gallery_image4.url }}
+		28. Gallery Image 5				= {{ x.gallery_image5.url }}
+		<!-- RSVP -->
+		29. Invitation PDF				= {{ x.inv_pdf.url }}
 	- lucas_eli
+		<!-- Banner -->
+		1. Banner Date	 				= {{ x.banner_date }}
+		2. Banner Title 				= {{ x.banner_title }}
+		3. Banner Background 			= {{ x.banner_bg.url }}
+		4. Banner Background Mobile		= {{ x.banner_bg_mobile.url }}
+		<!-- Story -->
+		5. Story Brief 					= {{ x.story_brief }}
+		6. Story First Time Meet		= {{ x.story_meet }}
+		7. Story First Time Date At		= {{ x.story_date_at }}
+		8. Story Have Know Each Other	= {{ x.story_know_each_other }}
+		9. Story Pet Name				= {{ x.story_pet }}
+		10. Story Common Hobby			= {{ x.story_hobby }}
+		11. Story Engaged At			= {{ x.story_engaged }}
+		<!-- Gallery -->
+		12. Gallery Image 1				= {{ x.gallery_image1.url }}
+		13. Gallery Image 2				= {{ x.gallery_image2.url }}
+		14. Gallery Image 3				= {{ x.gallery_image3.url }}
+		15. Gallery Image 4				= {{ x.gallery_image4.url }}
+		16. Gallery Image 5				= {{ x.gallery_image5.url }}
+		17. Gallery Image 6				= {{ x.gallery_image6.url }}
+		18. Gallery Image 7				= {{ x.gallery_image7.url }}
+		19. Gallery Image 8				= {{ x.gallery_image8.url }}
+		20. Gallery Image 9				= {{ x.gallery_image9.url }}
+		<!-- Venue -->
+		21. Venue Maps Image			= {{ x.vmaps_image.url }}
+		22. Venue Ceremony Image		= {{ x.vc_image.url }}
+		23. Venue Ceremony Date			= {{ x.vc_date }}
+		24. Venue Ceremony Day			= {{ x.vc_day }}
+		25. Venue Ceremony Time			= {{ x.vc_time }}
+		26. Venue Ceremony Location		= {{ x.vc_loc }}
+		27. Venue Ceremony Dresscode	= {{ x.vc_dress }}
+		28. Venue Ceremony Parking	 	= {{ x.vc_parking }}
+		29. Venue Reception Image		= {{ x.vr_image.url }}
+		30. Venue Reception Date		= {{ x.vr_date }}
+		31. Venue Reception Day			= {{ x.vr_day }}
+		32. Venue Reception Time		= {{ x.vr_time }}
+		33. Venue Reception Location	= {{ x.vr_loc }}
+		34. Venue Reception Dresscode	= {{ x.vr_dress }}
+		35. Venue Reception Parking	 	= {{ x.vr_parking }}
+		<!-- Accommodation -->
+		36. Accommodation Image			= {{ x.acm_image.url }}
+		37. Accommodation Place			= {{ x.acm_place }}
+		38. Accommodation Address		= {{ x.acm_address }}
+		39. Accommodation Note			= {{ x.acm_note }}
+		<!-- RSVP -->
+		40. RSVP Popup Image			= {{ x.rsvp_popup_img.url }}
+		41. RSVP Popup PIC Name			= {{ x.rsvp_popup_name }}
+		42. RSVP Popup PIC Phone		= {{ x.rsvp_popup_phone }}
+		43. Invitation PDF				= {{ x.inv_pdf.url }}
 	- natasha_bruce
+		<!-- Logo -->
+		1. Logo 						= {{ x.img_logo.url }}
+		<!-- Banner -->
+		2. Banner Background 			= {{ x.banner_bg.url }}
+		3. Banner Background Mobile		= {{ x.banner_bg_mobile.url }}
+		<!-- Story -->
+		4. Story Image 1				= {{ x.story_image1.url }}
+		5. Story Image 2				= {{ x.story_image2.url }}
+		6. Story Description			= {{ x.story_desc }}
+		<!-- About -->
+		7. About Groom Name				= {{ x.about_gr_name }}
+		8. About Groom Brief			= {{ x.about_gr_brief }}
+		9. About Groom Image			= {{ x.about_gr_image.url }}
+		10. About Groom Image Mobile	= {{ x.about_gr_image_mobile.url }}
+		11. About Bride Name			= {{ x.about_br_name }}
+		12. About Bride Brief			= {{ x.about_br_brief }}
+		13. About Bride Image			= {{ x.about_br_image.url }}
+		14. About Bride Image Mobile	= {{ x.about_br_image_mobile.url }}
+		<!-- Venue -->
+		15. Venue Ceremony Image		= {{ x.vc_image.url }}
+		16. Venue Ceremony Place		= {{ x.vc_place }}
+		17. Venue Ceremony Day			= {{ x.vc_day }}
+		18. Venue Ceremony Date			= {{ x.vc_date }}
+		19. Venue Ceremony Time			= {{ x.vc_time }}
+		20. Venue Ceremony Address		= {{ x.vc_address }}
+		21. Venue Ceremony Dresscode	= {{ x.vc_dress }}
+		22. Venue Ceremony Maps Link	= {{ x.vc_maps_link }}
+		23. Venue Reception Image		= {{ x.vr_image.url }}
+		24. Venue Reception Place		= {{ x.vr_place }}
+		25. Venue Reception Day			= {{ x.vr_day }}
+		26. Venue Reception Date		= {{ x.vr_date }}
+		27. Venue Reception Time		= {{ x.vr_time }}
+		28. Venue Reception Address		= {{ x.vr_address }}
+		29. Venue Reception Dresscode	= {{ x.vr_dress }}
+		30. Venue Reception Maps Link	= {{ x.vr_maps_link }}
+		<!-- Accommodation -->
+		31. Accommodation Image			= {{ x.acm_image.url }}
+		32. Accommodation Place			= {{ x.acm_place }}
+		33. Accommodation Sub Title		= {{ x.acm_subtitle }}
+		34. Accommodation Brief			= {{ x.acm_brief }}
+		35. Accommodation Maps Link		= {{ x.acm_maps_link }}
+		<!-- Gallery -->
+		36. Gallery Image 1				= {{ x.gallery_image1.url }}
+		37. Gallery Image 2				= {{ x.gallery_image2.url }}
+		38. Gallery Image 3				= {{ x.gallery_image3.url }}
+		39. Gallery Image 4				= {{ x.gallery_image4.url }}
+		<!-- RSVP -->
+		40. Invitation PDF				= {{ x.inv_pdf.url }}
 	- peter_mary
+		<!-- Logo -->
+		1. Logo 						= {{ x.img_logo.url }}
+		2. Groom Name 					= {{ x.groom_name }}
+		3. Bride Name 					= {{ x.bride_name }}
+		<!-- Banner -->
+		4. Banner Background 			= {{ x.banner_bg.url }}
+		5. Banner Background Mobile		= {{ x.banner_bg_mobile.url }}
+		<!-- About -->
+		6. About Title 1				= {{ x.about_title1 }}
+		7. About Brief 1				= {{ x.about_brief1 }}
+		8. About Image Text	1 			= {{ x.about_image_text1 }}
+		9. About Image 1				= {{ x.about_image1.url }}
+		10. About Image Mobile 1		= {{ x.about_image1_mobile.url }}
+		11. About Image 2				= {{ x.about_image2.url }}
+		12. About Title 2				= {{ x.about_title2 }}
+		13. About Brief 2				= {{ x.about_brief2 }}
+		14. About Image 3				= {{ x.about_image3.url }}
+		15. About Image Mobile 3		= {{ x.about_image3_mobile.url }}
+		16. About Title 3				= {{ x.about_title3 }}
+		17. About Brief 3				= {{ x.about_brief3 }}
+		<!-- Venue -->
+		18. Venue Image 				= {{ x.venue_image.url }}
+		19. Venue Ceremony Date			= {{ x.vc_date }}
+		20. Venue Ceremony Place		= {{ x.vc_place }}
+		21. Venue Ceremony Address		= {{ x.vc_address }}
+		22. Venue Ceremony Time			= {{ x.vc_time }}
+		23. Venue Reception Date		= {{ x.vr_date }}
+		24. Venue Reception Place		= {{ x.vr_place }}
+		25. Venue Reception Address		= {{ x.vr_address }}
+		26. Venue Reception Time		= {{ x.vr_time }}
+		27. Venue Reception Dresscode	= {{ x.vr_dress }}
+		<!-- Gallery -->
+		7. Gallery Brief				= {{ x.gallery_brief }}
+		28. Gallery Image 1				= {{ x.gallery_image1.url }}
+		29. Gallery Image 2				= {{ x.gallery_image2.url }}
+		30. Gallery Image 3				= {{ x.gallery_image3.url }}
+		31. Gallery Image 4				= {{ x.gallery_image4.url }}
+		32. Gallery Image 5				= {{ x.gallery_image5.url }}
+		33. Gallery Image 6				= {{ x.gallery_image6.url }}
+		34. Gallery Image 7				= {{ x.gallery_image7.url }}
+		35. Gallery Image 8				= {{ x.gallery_image8.url }}
+		<!-- Accommodation -->
+		36. Accommodation Image			= {{ x.acm_image.url }}
+		37. Accommodation Place			= {{ x.acm_place }}
+		38. Accommodation Brief			= {{ x.acm_brief }}
+		39. Accommodation Maps Link		= {{ x.acm_maps_link }}
+		<!-- RSVP -->
+		40. Invitation PDF				= {{ x.inv_pdf.url }}
 	- steve_sharon
+		<!-- Logo -->
+		1. Logo 						= {{ x.img_logo.url }}
+		<!-- Banner -->
+		2. Banner Title 				= {{ x.banner_title }}
+		3. Banner Background 			= {{ x.banner_bg.url }}
+		<!-- Story -->
+		4. Story Image 					= {{ x.story_image.url }}
+		5. Story Brief 					= {{ x.story_brief }}
+		6. Story Groom Name 			= {{ x.story_gr_name }}
+		7. Story Groom Brief			= {{ x.story_gr_brief }}
+		8. Story Bride Name 			= {{ x.story_br_name }}
+		9. Story Bride Brief			= {{ x.story_br_brief }}
+		<!-- Venue -->
+		10. Venue Ceremony Title		= {{ x.vc_title }}
+		11. Venue Ceremony Maps Link	= {{ x.vc_maps_link }}
+		12. Venue Ceremony Date			= {{ x.vc_date }}
+		13. Venue Ceremony Month Year	= {{ x.vc_my }}
+		14. Venue Ceremony Time			= {{ x.vc_time }}
+		15. Venue Ceremony Place		= {{ x.vc_place }}
+		16. Venue Ceremony Address		= {{ x.vc_address }}
+		17. Venue Ceremony Image		= {{ x.vc_image.url }}
+		18. Venue Reception Title		= {{ x.vr_title }}
+		19. Venue Reception Maps Link	= {{ x.vr_maps_link }}
+		20. Venue Reception Date		= {{ x.vr_date }}
+		21. Venue Reception Month Year	= {{ x.vr_my }}
+		22. Venue Reception Time		= {{ x.vr_time }}
+		23. Venue Reception Place		= {{ x.vr_place }}
+		24. Venue Reception Address		= {{ x.vr_address }}
+		25. Venue Reception Dresscode	= {{ x.vr_dress }}
+		26. Venue Reception Image		= {{ x.vr_image.url }}
+		<!-- Accommodation -->
+		27. Accommodation Image			= {{ x.acm_image.url }}
+		28. Accommodation Place			= {{ x.acm_place }}
+		29. Accommodation Sub Title		= {{ x.acm_subtitle }}
+		30. Accommodation Brief			= {{ x.acm_brief }}
+		31. Accommodation Maps Link		= {{ x.acm_maps_link }}
+		<!-- Gallery -->
+		32. Gallery Brief				= {{ x.gallery_brief }}
+		33. Gallery Image 1				= {{ x.gallery_image1.url }}
+		34. Gallery Image 2				= {{ x.gallery_image2.url }}
+		35. Gallery Image 3				= {{ x.gallery_image3.url }}
+		36. Gallery Image 4				= {{ x.gallery_image4.url }}
+		37. Gallery Image 5				= {{ x.gallery_image5.url }}
+		38. Gallery Image 6				= {{ x.gallery_image6.url }}
+		<!-- RSVP -->
+		39. Invitation PDF				= {{ x.inv_pdf.url }}
 	- vicky_wanda
+		<!-- Logo -->
+		1. Logogram						= {{ x.img_logogram.url }}
+		1. Logotype						= {{ x.img_logotype.url }}
+		1. Logotype Mobile	 			= {{ x.img_logotype_mobile.url }}
+		<!-- Banner -->
+		3. Banner Title 				= {{ x.banner_title }}
+		4. Banner Background 			= {{ x.banner_bg.url }}
+		<!-- About -->
+		4. About Groom Image			= {{ x.about_gr_image.url }}
+		7. About Groom Brief			= {{ x.about_gr_brief }}
+		4. About Our Story Image		= {{ x.about_os_image.url }}
+		5. About Our Story Brief 		= {{ x.about_os_brief }}
+		4. About Bride Image			= {{ x.about_br_image.url }}
+		7. About Bride Brief			= {{ x.about_br_brief }}
+		<!-- Venue -->
+		13. Venue Ceremony Month 		= {{ x.vc_month }}
+		12. Venue Ceremony Date			= {{ x.vc_date }}
+		13. Venue Ceremony Year	 		= {{ x.vc_year }}
+		15. Venue Ceremony Place		= {{ x.vc_place }}
+		16. Venue Ceremony Address		= {{ x.vc_address }}
+		17. Venue Ceremony Image		= {{ x.vc_image.url }}
+		11. Venue Ceremony Maps Link	= {{ x.vc_maps_link }}
+		13. Venue Reception Month 		= {{ x.vr_month }}
+		12. Venue Reception Date		= {{ x.vr_date }}
+		13. Venue Reception Year	 	= {{ x.vr_year }}
+		15. Venue Reception Place		= {{ x.vr_place }}
+		16. Venue Reception Address		= {{ x.vr_address }}
+		16. Venue Reception Dresscode	= {{ x.vr_dress }}
+		17. Venue Reception Image		= {{ x.vr_image.url }}
+		11. Venue Reception Maps Link	= {{ x.vr_maps_link }}
+		<!-- Accommodation -->
+		27. Accommodation Image			= {{ x.acm_image.url }}
+		27. Accommodation Image Mobile	= {{ x.acm_image_mobile.url }}
+		28. Accommodation Place			= {{ x.acm_place }}
+		29. Accommodation Sub Title		= {{ x.acm_subtitle }}
+		30. Accommodation Brief			= {{ x.acm_brief }}
+		30. Accommodation Note			= {{ x.acm_note }}
+		31. Accommodation Maps Link		= {{ x.acm_maps_link }}
+		<!-- Gallery -->
+		33. Gallery Image 1				= {{ x.gallery_image1.url }}
+		34. Gallery Image 2				= {{ x.gallery_image2.url }}
+		35. Gallery Image 3				= {{ x.gallery_image3.url }}
+		36. Gallery Image 4				= {{ x.gallery_image4.url }}
+		37. Gallery Image 5				= {{ x.gallery_image5.url }}
+		38. Gallery Image 6				= {{ x.gallery_image6.url }}
+		<!-- RSVP -->
+		33. RSVP Image 					= {{ x.rsvp_image.url }}
+		39. Invitation PDF				= {{ x.inv_pdf.url }}
 	- victor_karla
+		<!-- Logo -->
+		1. Logo 						= {{ x.img_logo.url }}
+		<!-- Invite -->
+		2. Invite Brief 				= {{ x.invite_brief }}
+		<!-- Story -->
+		3. Story Background				= {{ x.story_bg.url }}
+		4. Story Brief Mobile			= {{ x.story_brief_mobile }}
+		<!-- Gallery -->
+		5. Gallery Image Thumbnail		= {{ x.gallery_image_thumbnail.url }}
+		6. Gallery Image Thumbnail Mobile = {{ x.gallery_image_thumbnail_mobile.url }}
+		7. Gallery Image 1				= {{ x.gallery_image1.url }}
+		8. Gallery Image 2				= {{ x.gallery_image2.url }}
+		9. Gallery Image 3				= {{ x.gallery_image3.url }}
+		10. Gallery Image 4				= {{ x.gallery_image4.url }}
+		11. Gallery Image 5				= {{ x.gallery_image5.url }}
+		12. Gallery Image 6				= {{ x.gallery_image6.url }}
+		13. Gallery Image 7				= {{ x.gallery_image7.url }}
+		14. Gallery Image 8				= {{ x.gallery_image8.url }}
+		15. Gallery Image 9				= {{ x.gallery_image9.url }}
+		<!-- Venue -->
+		16. Venue Accommodation Place	= {{ x.va_place }}
+		17. Venue Accommodation Brief	= {{ x.va_brief }}
+		18. Venue Accommodation Address	= {{ x.va_address }}
+		19. Venue Accommodation Note	= {{ x.va_note }}
+		20. Venue Reception Place		= {{ x.vr_place }}
+		21. Venue Reception Address		= {{ x.vr_address }}
+		22. Venue Reception Date		= {{ x.vr_date }}
+		23. Venue Reception Time 		= {{ x.vr_time }}
+		24. Venue Reception Dresscode	= {{ x.vr_dress }}
+		25. Venue Reception Note		= {{ x.vr_note }}
+		26. Venue Ceremony Place		= {{ x.vc_place }}
+		27. Venue Ceremony Address		= {{ x.vc_address }}
+		28. Venue Ceremony Date			= {{ x.vc_date }}
+		29. Venue Ceremony Time 		= {{ x.vc_time }}
+		30. Venue Ceremony Dresscode	= {{ x.vc_dress }}
+		31. Venue Ceremony Note			= {{ x.vc_note }}
+		<!-- RSVP -->
+		32. Invitation PDF				= {{ x.inv_pdf.url }}
 
 ## Free
 	- anastasia
+		1. Name							= {{ x.name }}
+		2. Age 				 			= {{ x.age }}
+		3. Image 						= {{ x.image.url }}
+		4. Date 						= {{ x.date }}
+		5. Day 							= {{ x.day }}
+		6. Time 						= {{ x.time }}
+		7. Place 						= {{ x.place }}
+		8. Address 						= {{ x.address }}
+		9. Dresscode 					= {{ x.dress }}
 	- christine
+		1. Name							= {{ x.name }}
+		2. Age 				 			= {{ x.age }}
+		3. Image 						= {{ x.image.url }}
+		4. Day 							= {{ x.day }}
+		5. Date 						= {{ x.date }}
+		6. Time 						= {{ x.time }}
+		7. Place 						= {{ x.place }}
+		8. Address 						= {{ x.address }}
+		9. Dresscode 					= {{ x.dress }}
 	- diana_ross
+		1. Name							= {{ x.name }}
+		2. Image 						= {{ x.image.url }}
+		3. Image Mobile					= {{ x.image_mobile.url }}
+		4. Date 						= {{ x.date }}
+		5. Month						= {{ x.month }}
+		6. Year							= {{ x.year }}
+		7. Time 						= {{ x.time }}
+		8. Place 						= {{ x.place }}
+		9. Place Image					= {{ x.place_image.url }}
+		10. Address 					= {{ x.address }}
+		11. Note 						= {{ x.note }}
+		12. Note Image					= {{ x.note_image.url }}
+		13. Dresscode 					= {{ x.dress }}
+		14. Content Date 				= {{ x.ct_date }}
+		15. Content Place				= {{ x.ct_place }}
+		16. Content Note				= {{ x.ct_note }}
 	- dylan_rose
+		1. Name	Groom					= {{ x.name_groom }}
+		2. Name	Bride					= {{ x.name_bride }}
+		3. Logo 						= {{ x.logo.url }}
+		4. Image 						= {{ x.image.url }}
+		5. Image Mobile					= {{ x.image_mobile.url }}
+		6. Venue Ceremony Day			= {{ x.vc_day }}
+		7. Venue Ceremony Date			= {{ x.vc_date }}
+		8. Venue Ceremony Time			= {{ x.vc_time }}
+		9. Venue Ceremony Address		= {{ x.vc_address }}
+		10. Venue Ceremony Dresscode	= {{ x.vc_dress }}
+		12. Venue Reception Day			= {{ x.vr_day }}
+		13. Venue Reception Date		= {{ x.vr_date }}
+		14. Venue Reception Time		= {{ x.vr_time }}
+		15. Venue Reception Address		= {{ x.vr_address }}
+		16. Venue Reception Dresscode	= {{ x.vr_dress }}
 	- natasha_bruce
+		1. Name	Groom					= {{ x.name_groom }}
+		2. Name	Bride					= {{ x.name_bride }}
+		3. Image 						= {{ x.image.url }}
+		4. Image Mobile					= {{ x.image_mobile.url }}
+		5. Venue Ceremony Place			= {{ x.vc_place }}
+		6. Venue Ceremony Date			= {{ x.vc_date }}
+		7. Venue Ceremony Time			= {{ x.vc_time }}
+		8. Venue Ceremony Brief			= {{ x.vc_brief }}
+		9. Venue Reception Place		= {{ x.vr_place }}
+		10. Venue Reception Date		= {{ x.vr_date }}
+		11. Venue Reception Time		= {{ x.vr_time }}
+		12. Venue Reception Brief		= {{ x.vr_brief }}
 	- steve_sharon
+		1. Name	Groom					= {{ x.name_groom }}
+		2. Name	Bride					= {{ x.name_bride }}
+		3. Image 						= {{ x.image.url }}
+		4. Venue Ceremony Place 		= {{ x.vc_place }}
+		5. Venue Ceremony Address		= {{ x.vc_address }}
+		6. Venue Ceremony Date			= {{ x.vc_date }}
+		7. Venue Ceremony Month			= {{ x.vc_month }}
+		8. Venue Ceremony Year			= {{ x.vc_year }}
+		9. Venue Ceremony Time			= {{ x.vc_time }}
+		10. Venue Party Place 			= {{ x.vp_place }}
+		11. Venue Party Address			= {{ x.vp_address }}
+		12. Venue Party Date			= {{ x.vp_date }}
+		13. Venue Party Month			= {{ x.vp_month }}
+		14. Venue Party Year			= {{ x.vp_year }}
+		15. Venue Party Time			= {{ x.vp_time }}
 
 ## Template Name
 	- Wedding

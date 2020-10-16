@@ -39,7 +39,7 @@
         <div class="container-fluid birthday-3-free">
             <div class="row">
                 <div class="col-lg-5 pl-5 pr-0">
-                    <img class="img-fluid w-100" src="{% static 'rsvp/free/images/content-free-06.png' %}" alt="">
+                    <img class="img-fluid w-100" src="{{ x.image.url }}" alt="">
                 </div>
                 <div class="col-lg-7 py-lg-5">
                     <div class="offset-lg-1">
@@ -53,14 +53,14 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <h1 class="text-coral font-100px basic-shadow name">
-                                    Christine’s
+                                    {{ x.name }}’s
                                 </h1>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-5 offset-lg-4 offset-3">
                                 <h1 class="font-bluesky basic-shadow font-50px birthday">
-                                    3 <sup>rd</sup> <strong>Birthday</strong>
+                                    {{ x.age }} <strong>Birthday</strong>
                                 </h1>
                             </div>
                         </div>
@@ -70,24 +70,23 @@
                             <div class="row">
                                 <div class="col-lg-5 offset-lg-0 col-4 offset-1 pr-0">
                                 <h1 class="font-50px font-lightgrey SAT">
-                                    SAT
+                                    {{ x.day }}
                                 </h1>
                                 </div>
                                 <div class="col-lg-7 col-7 pl-0">
                                     <p class="font-lightgrey mb-0">
-                                        25 April 2020
+                                        {{ x.date }}
                                     </p>
                                     <h4 class="font-lightgrey">
-                                        5.30 PM
+                                        {{ x.time }}
                                     </h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-5 pl-0 text-center">
                             <p class="font-lightgrey">
-                                Marina Village Baja Room<br>
-                                939 Quivira Way, San Diego<br>
-                                California 92109
+                                {{ x.place }}<br>
+                                {{ x.address }}
                             </p>
                         </div>
                     </div>
@@ -95,7 +94,7 @@
                         <div class="col-lg-10 text-center">
                             <img src="{% static 'rsvp/free/images/dress-icon-red-05.png' %}" alt="">
                             <span class="font-lightgrey ml-3">
-                                Black and white
+                                {{ x.dress }}
                             </span>
                         </div>
                     </div>

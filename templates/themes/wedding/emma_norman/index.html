@@ -57,7 +57,7 @@
                 <div class="row d-lg-none pt-3">
                     <div class="col-12 text-center">
                         <a class="logo" href="index.html">
-                            <img class="img-fluid" src="{% static 'rsvp/wedding/emma_norman/images/logo.png' %}" />
+                            <img class="img-fluid" src="{{ x.img_logo.url }}" />
                         </a>
                     </div>
                     <div class="side-nav">
@@ -293,6 +293,7 @@
                                     </div>
                                     <div class="form-group col-lg-12 mb-m-0 pt-lg-5p text-right">
                                         <button type="submit" class="button-default">Submit</button>
+                                        <a href="{{ x.inv_pdf.url }}" class="button-download">Download Invitation</a>
                                     </div>
                                 </div>
                             </form>

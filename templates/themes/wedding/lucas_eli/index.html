@@ -76,15 +76,15 @@
                         <img class="motif d-none d-lg-block" src="{% static 'rsvp/wedding/lucas_eli/images/motif-01.png' %}" />
                         <img class="motif d-block d-lg-none" src="{% static 'rsvp/wedding/lucas_eli/images/mobile-motif-01.png' %}" />
                         <img class="motif3 d-block d-lg-none" src="{% static 'rsvp/wedding/lucas_eli/images/mobile-motif-03.png' %}" />
-                        <img class="img-fluid images w-lg-100p d-none d-lg-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-01.png' %}" />
-                        <img class="img-fluid images w-lg-100p d-block d-lg-none" src="{% static 'rsvp/wedding/lucas_eli/images/mobile-images-01.png' %}" />
+                        <img class="img-fluid images w-lg-100p d-none d-lg-block" src="{{ x.banner_bg.url }}" />
+                        <img class="img-fluid images w-lg-100p d-block d-lg-none" src="{{ x.banner_bg_mobile.url }}" />
                         <img class="motif2 d-none d-lg-block" src="{% static 'rsvp/wedding/lucas_eli/images/motif-02.png' %}" />
                         <img class="motif3 d-none d-lg-block" src="{% static 'rsvp/wedding/lucas_eli/images/motif-03.png' %}" />
                         <img class="motif2 d-block d-lg-none" src="{% static 'rsvp/wedding/lucas_eli/images/mobile-motif-02.png' %}" />
                         <div class="boxc text-center">
                             <div data-aos="fade-up" data-aos-once="true">
-                                <h6>OCTOBER 18TH 2020</h6>
-                                <h1>Lucas & Eliza</h1>
+                                <h6>{{ x.banner_date }}</h6>
+                                <h1>{{ x.banner_title }}</h1>
                             </div>
                         </div>
                         <!-- Section Mobile Menu -->
@@ -108,9 +108,7 @@
                     <div class="col-lg-12 pl-m-10p pr-m-10p pt-lg-5p pb-lg-10p pl-lg-5p pr-lg-5p text-center">
                         <h6 class="mb-m-10p mb-lg-3p">OUR STORY</h6>
                         <div data-aos="fade-up" data-aos-once="true" class="w-m-100p w-lg-70p ma-lg">
-                            <p>
-                                Once upon a time, we stumbled upon this beautiful city in Manila, Malaysia. And ever since we met we just clicked right away, we do everything together, we’ve been through so much together, and now we’re the most grateful to soon called each other husband and wife.
-                            </p>
+                            {{ x.story_brief }}
                         </div>
                     </div>
                     <div class="col-lg-12 pb-m-20p pl-m-10p pr-m-10p pb-lg-10p pl-lg-5p pr-lg-5p mtext-center">
@@ -134,7 +132,7 @@
                                                     <p>The first time we met was on.....</p>
                                                 </div>
                                                 <div class="detail">
-                                                    <div class="val">the boat in Manila, Malaysia</div>
+                                                    <div class="val">{{ x.story_meet }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -145,7 +143,7 @@
                                                     <p>Our first date was at....</p>
                                                 </div>
                                                 <div class="detail">
-                                                    <div class="val">2012, at Malaysia Bird’s Zoo</div>
+                                                    <div class="val">{{ x.story_date_at }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -156,7 +154,7 @@
                                                     <p>We have known each other for....</p>
                                                 </div>
                                                 <div class="detail">
-                                                    <div class="val">5 years</div>
+                                                    <div class="val">{{ x.story_know_each_other }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -167,7 +165,7 @@
                                                     <p>We have a pet name....</p>
                                                 </div>
                                                 <div class="detail">
-                                                    <div class="val">called Nemo</div>
+                                                    <div class="val">{{ x.story_pet }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -178,7 +176,7 @@
                                                     <p>Our common hobby is....</p>
                                                 </div>
                                                 <div class="detail">
-                                                    <div class="val">to cook</div>
+                                                    <div class="val">{{ x.story_hobby }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -189,7 +187,7 @@
                                                     <p>We got engaged at....</p>
                                                 </div>
                                                 <div class="detail">
-                                                    <div class="val">2019</div>
+                                                    <div class="val">{{ x.story_engaged }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -202,7 +200,7 @@
                                             <p>The first time we met was on.....</p>
                                         </div>
                                         <div class="detail">
-                                            <div class="val">the boat in Manila, Malaysia</div>
+                                            <div class="val">{{ x.story_meet }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +211,7 @@
                                             <p>Our first date was at....</p>
                                         </div>
                                         <div class="detail"> 
-                                            <div class="val">2012, at Malaysia Bird’s Zoo</div>
+                                            <div class="val">{{ x.story_date_at }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -224,7 +222,7 @@
                                             <p>We have known each other for....</p>
                                         </div>
                                         <div class="detail">
-                                            <div class="val">5 years</div>
+                                            <div class="val">{{ x.story_know_each_other }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +233,7 @@
                                             <p>We have a pet name....</p>
                                         </div>
                                         <div class="detail">
-                                            <div class="val">called Nemo</div>
+                                            <div class="val">{{ x.story_pet }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -246,7 +244,7 @@
                                             <p>Our common hobby is....</p>
                                         </div>
                                         <div class="detail">
-                                            <div class="val">to cook</div>
+                                            <div class="val">{{ x.story_hobby }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -257,7 +255,7 @@
                                             <p>We got engaged at....</p>
                                         </div>
                                         <div class="detail">
-                                            <div class="val">2019</div>
+                                            <div class="val">{{ x.story_engaged }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -282,83 +280,63 @@
                             <div class="item">
                                 <div class="wrap">
                                     <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-02.png' %}" data-toggle="modal" data-target="#images_1" />
+                                        <img class="img-fluid" src="{{ x.gallery_image1.url }}" data-toggle="modal" data-target="#images_1" />
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="wrap">
                                     <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-03.png' %}"  data-toggle="modal" data-target="#images_2" />
+                                        <img class="img-fluid" src="{{ x.gallery_image2.url }}" data-toggle="modal" data-target="#images_2" />
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="wrap">
                                     <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-04.png' %}" data-toggle="modal" data-target="#images_3"  />
+                                        <img class="img-fluid" src="{{ x.gallery_image3.url }}" data-toggle="modal" data-target="#images_3"  />
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="wrap">
                                     <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-02.png' %}"  data-toggle="modal" data-target="#images_4" />
+                                        <img class="img-fluid" src="{{ x.gallery_image4.url }}" data-toggle="modal" data-target="#images_4" />
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="wrap">
                                     <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-03.png' %}"  data-toggle="modal" data-target="#images_5" />
+                                        <img class="img-fluid" src="{{ x.gallery_image5.url }}" data-toggle="modal" data-target="#images_5" />
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="wrap">
                                     <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-04.png' %}"  data-toggle="modal" data-target="#images_6" />
-                                    </div>
-                                </div>
-                            </div><div class="item">
-                                <div class="wrap">
-                                    <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-02.png' %}"  data-toggle="modal" data-target="#images_7" />
+                                        <img class="img-fluid" src="{{ x.gallery_image6.url }}" data-toggle="modal" data-target="#images_6" />
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="wrap">
                                     <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-03.png' %}"  data-toggle="modal" data-target="#images_8" />
+                                        <img class="img-fluid" src="{{ x.gallery_image7.url }}" data-toggle="modal" data-target="#images_7" />
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="wrap">
                                     <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-04.png' %}"  data-toggle="modal" data-target="#images_9" />
+                                        <img class="img-fluid" src="{{ x.gallery_image8.url }}" data-toggle="modal" data-target="#images_8" />
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="wrap">
                                     <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-02.png' %}" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="wrap">
-                                    <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-03.png' %}" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="wrap">
-                                    <div class="boximg">
-                                        <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-04.png' %}" />
+                                        <img class="img-fluid" src="{{ x.gallery_image9.url }}" data-toggle="modal" data-target="#images_9" />
                                     </div>
                                 </div>
                             </div>
@@ -366,12 +344,12 @@
                         <div class="col-12 py-0 d-block d-lg-none">
                             <div class="wrap">
                                 <div class="boximg">
-                                    <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-02.png' %}" />
+                                    <img class="img-fluid" src="{{ x.gallery_image1.url }}" />
                                 </div>
                             </div>
                             <div class="wrap">
                                 <div class="boximg">
-                                    <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/images-03.png' %}" />
+                                    <img class="img-fluid" src="{{ x.gallery_image2.url }}" />
                                 </div>
                             </div>
                             <a class="button-default" href="">VIEW ALL</a>
@@ -389,59 +367,59 @@
                         <img class="img-fluid motif" src="{% static 'rsvp/wedding/lucas_eli/images/motif-06.png' %}" />
                         <img class="img-fluid motif2" src="{% static 'rsvp/wedding/lucas_eli/images/motif-07.png' %}" />
                         <h6 class="mb-lg-3p">OUR VENUE</h6>
-                        <img class="img-fluid images w-lg-100p" src="{% static 'rsvp/wedding/lucas_eli/images/images-05.png' %}" />
+                        <img class="img-fluid images w-lg-100p" src="{{ x.vmaps_image.url }}" />
                         <div class="wrap">
                             <div class="row">
                                 <div data-aos="fade-up" data-aos-once="true" data-aos-offset="-4500" class="col-lg-6 mb-m-10p pr-m-0 pl-lg-0 pr-lg-1">
-                                    <img class="img-fluid images" src="{% static 'rsvp/wedding/lucas_eli/images/images-06.png' %}" />
-                                    <div class="date">20 November 2020</div>
-                                    <div class="day">Saturday</div>
+                                    <img class="img-fluid images" src="{{ x.vc_image.url }}" />
+                                    <div class="date">{{ x.vc_date }}</div>
+                                    <div class="day">{{ x.vc_day }}</div>
                                     <img class="img-fluid number" src="{% static 'rsvp/wedding/lucas_eli/images/icon-07.png' %}" />
                                     <div class="desc text-left">
                                         <h3>Holy Matrimony</h3>
                                         <table>
                                             <tr>
                                                 <td><p>TIME</p></td>
-                                                <td><h5>10AM to 12PM</h5></td>
+                                                <td><h5>{{ x.vc_time }}</h5></td>
                                             </tr>
                                             <tr>
                                                 <td><p>LOCATION</p></td>
-                                                <td><h5>La Brea Community Church</h5></td>
+                                                <td><h5>{{ x.vc_loc }}</h5></td>
                                             </tr>
                                             <tr>
                                                 <td><p>DRESS CODE</p></td>
-                                                <td><h5>Formal Wear</h5></td>
+                                                <td><h5>{{ x.vc_dress }}</h5></td>
                                             </tr>
                                             <tr>
                                                 <td><p>PARKING</p></td>
-                                                <td><h5>Free Valet on Site</h5></td>
+                                                <td><h5>{{ x.vc_parking }}</h5></td>
                                             </tr>
                                         </table>
                                     </div>
                                 </div>
                                 <div data-aos="fade-up" data-aos-once="true" data-aos-offset="-4500" class="col-lg-6 pl-m-0 pl-lg-1 pr-lg-0">
-                                    <img class="img-fluid images" src="{% static 'rsvp/wedding/lucas_eli/images/images-07.png' %}" />
-                                    <div class="date">21 November 2020</div>
-                                    <div class="day">Sunday</div>
+                                    <img class="img-fluid images" src="{{ x.vr_image.url }}" />
+                                    <div class="date">{{ x.vr_date }}</div>
+                                    <div class="day">{{ x.vr_day }}</div>
                                     <img class="img-fluid number" src="{% static 'rsvp/wedding/lucas_eli/images/icon-08.png' %}" />
                                     <div class="desc text-left">
                                         <h3>Wedding Reception</h3>
                                         <table>
                                             <tr>
                                                 <td><p>TIME</p></td>
-                                                <td><h5>6PM to Finish</h5></td>
+                                                <td><h5>{{ x.vr_time }}</h5></td>
                                             </tr>
                                             <tr>
                                                 <td><p>LOCATION</p></td>
-                                                <td><h5>Palladio Banquet Hall</h5></td>
+                                                <td><h5>{{ x.vr_loc }}</h5></td>
                                             </tr>
                                             <tr>
                                                 <td><p>DRESS CODE</p></td>
-                                                <td><h5>Evening Wear</h5></td>
+                                                <td><h5>{{ x.vr_dress }}</h5></td>
                                             </tr>
                                             <tr>
                                                 <td><p>PARKING</p></td>
-                                                <td><h5>Free Valet on Site</h5></td>
+                                                <td><h5>{{ x.vr_parking }}</h5></td>
                                             </tr>
                                         </table>
                                     </div>
@@ -460,12 +438,12 @@
                     <div class="col-lg-12 pt-lg-5p pb-lg-0 pl-lg-0 pr-lg-0 text-center">
                         <h6 class="mb-m-15p mb-lg-5p">ACCOMMODATION</h6>
                         <div class="w-lg-100p pos-rel text-right">
-                            <img class="img-fluid images" src="{% static 'rsvp/wedding/lucas_eli/images/images-08.png' %}" />
+                            <img class="img-fluid images" src="{{ x.acm_image.url }}" />
                             <img class="img-fluid motif d-none d-lg-block" src="{% static 'rsvp/wedding/lucas_eli/images/motif-08.png' %}" />
                             <img class="img-fluid motif d-block d-lg-none" src="{% static 'rsvp/wedding/lucas_eli/images/mobile-motif-06.png' %}" />
                             <div class="boxc text-left">
                                 <div data-aos="fade-right" data-aos-once="true" data-aos-offset="-5000">
-                                    <h3>Palihotel</h3>
+                                    <h3>{{ x.acm_place }}</h3>
                                     <table>
                                         <tr>
                                             <td>
@@ -473,14 +451,13 @@
                                             </td>
                                             <td>
                                                 <h5>
-                                                    7950 Melrose Ave,<br />
-                                                    Los Angeles, CA 90046.
+                                                    {{ x.acm_address }}
                                                 </h5>
                                             </td>
                                         </tr>
                                     </table>
                                     <p>
-                                        Your convenience is one of our priorities, we have booked you a room. Please mention Lucas & Eliza when you reserve the room.
+                                        {{ x.acm_note }}
                                     </p>
                                 </div>
                             </div>
@@ -528,7 +505,7 @@
                                 </a>
                             </div>
                             <a href="#" class="button-default d-block text-center" data-toggle="modal" data-target="#ebrochure">Submit</a>
-                            <a href="invitation.pdf" class="button-download">Download Invitation</a>
+                            <a href="{{ x.inv_pdf.url }}" class="button-download">Download Invitation</a>
                             <div class="modal fade" id="ebrochure">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
@@ -538,7 +515,7 @@
                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/close.png' %}" />
                                                 </a>
                                                 <img class="img-fluid motif" src="{% static 'rsvp/wedding/lucas_eli/images/popup-motif-01.png' %}" />
-                                                <img class="img-fluid motif2" src="{% static 'rsvp/wedding/lucas_eli/images/popup-motif-02.png' %}" />
+                                                <img class="img-fluid motif2" src="{{ x.rsvp_popup_img.url }}" />
                                                 <img class="img-fluid motif3" src="{% static 'rsvp/wedding/lucas_eli/images/popup-motif-03.png' %}" />
                                                 <div class="col-lg-12 text-center">
                                                     <div class="w-m-100p w-lg-65p ma-lg">
@@ -546,7 +523,7 @@
                                                         <p>
                                                             Thank you for submitting. We will process your RSVP immediately. We are looking forward to see you on our special day. If there is more we can do to make this experience more enjoyable, please do not hesistate to reach our PIC.
                                                         </p>
-                                                        <a class="button-popup" href="">PIC: Wanda 099-800-9999</a>
+                                                        <a class="button-popup" href="">PIC: {{ x.rsvp_popup_name }} {{ x.rsvp_popup_phone }}</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -565,7 +542,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white text-right" data-dismiss="modal">&times;</h2>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-02.png' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.gallery_image1.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -575,7 +552,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white text-right" data-dismiss="modal">&times;</h2>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-03.png' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.gallery_image2.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -585,7 +562,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white text-right" data-dismiss="modal">&times;</h2>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-04.png' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.gallery_image3.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -595,7 +572,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white text-right" data-dismiss="modal">&times;</h2>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-02.png' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.gallery_image4.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -605,7 +582,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white text-right" data-dismiss="modal">&times;</h2>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-03.png' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.gallery_image5.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -615,7 +592,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white text-right" data-dismiss="modal">&times;</h2>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-04.png' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.gallery_image6.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -625,7 +602,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white text-right" data-dismiss="modal">&times;</h2>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-02.png' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.gallery_image7.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -635,7 +612,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white text-right" data-dismiss="modal">&times;</h2>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-03.png' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.gallery_image8.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -645,7 +622,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h2 class="text-white text-right" data-dismiss="modal">&times;</h2>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/lucas_eli/images/images-04.png' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.gallery_image9.url }}" alt="images">
                     </div>
                 </div>
             </div>

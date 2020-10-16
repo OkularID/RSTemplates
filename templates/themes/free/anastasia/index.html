@@ -38,38 +38,37 @@
     <div class="container-fluid header-section-free py-lg-5">
         <div class="row">
             <div class="col-lg-4 offset-lg-1 pt-lg-5">
-              <img class="img-fluid" src="{% static 'rsvp/free/anastasia/images/image-content-free-06.jpg' %}" alt="">
+              <img class="img-fluid" src="{{ x.image.url }}" alt="">
             </div>
             <div class="col-lg-7 px-5">
                 <div class="title">
                   <h1 class="font-allura">
-                    Anastasia’s
-                    <span class="font-playfair">18th birthday</span>
+                    {{ x.name }}’s
+                    <span class="font-playfair">{{ x.age }} birthday</span>
                   </h1>
                 </div>
                 <div class="row">
                   <div class="col-lg-4 text-center date-content">
                     <p class="text-alexa-grey font-proxima mb-0">
-                      25.04.2020
+                      {{ x.date }}
                     </p>
                     <h1 class="text-gray font-proxima mb-0">
-                      SAT
+                      {{ x.day }}
                     </h1>
                     <h6 class="text-alexa-grey font-proxima mb-0">
-                      5.30 PM
+                      {{ x.time }}
                     </h6>
                   </div>
                   <div class="col-lg-4 place-content">
                     <p class="text-gray text-center">
-                      Marina Village Baja Room<br>
-                      939 Quivira Way, San Diego<br>
-                      California 92109<br>
+                      {{ x.place }}<br>
+                      {{ x.address }}<br>
                     </p>
                   </div>
                   <div class="col-lg-4">
                     <p class="text-gray text-center">
                       Dresscode<br>
-                      Black and White
+                      {{ x.dress }}
                     </p>
                   </div>
                 </div>
