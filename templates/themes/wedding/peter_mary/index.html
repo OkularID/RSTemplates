@@ -39,9 +39,9 @@
         <div class="container-fluid py-lg-5" data-aos="fade-down" data-aos-once="true">
             <div class="row">
                 <div class="col-lg-3 pl-lg-5">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/logo-template-2-02.png' %}">
+                    <img class="img-fluid" src="{{ x.img_logo.url }}">
                     <span class="text-gray ml-lg-3">
-                        PETER & MARY
+                        {{ x.groom_name }} & {{ x.bride_name }}
                     </span>
                 </div>
                 <div class="col-lg-9 pr-lg-5 text-right d-none d-lg-block">
@@ -123,8 +123,8 @@
                         This is the story of how we met.
                     </p>
                 </div>
-                <img class="img-fluid w-100 d-none d-lg-block" src="{% static 'rsvp/wedding/peter_marry/images/header-home-03.png' %}">
-                <img class="img-fluid w-100 d-lg-none img-mobile" src="{% static 'rsvp/wedding/peter_marry/images/mobile-header-01.png' %}">
+                <img class="img-fluid w-100 d-none d-lg-block" src="{{ x.banner_bg.url }}">
+                <img class="img-fluid w-100 d-lg-none img-mobile" src="{{ x.banner_bg_mobile.url }}">
             </div>
         </div>
     </div>
@@ -132,69 +132,57 @@
         <div class="row py-5">
             <div data-aos="fade-right" data-aos-once="true" class="col-lg-4 offset-lg-1 py-lg-5">
                 <h2 class="text-white">
-                    Once upon<br>
-                    a time,
+                    {{ x.about_title1 }}
                 </h2>
             </div>
             <div data-aos="fade-up" data-aos-once="true" class="col-lg-4 offset-lg-3 py-lg-5">
-                <p class="text-white mt-lg-4 d-none d-lg-block">
-                    There’s a lonely girl upon the<br>
-                    hallway and far away is a man<br>
-                    who always have been wishing<br>
-                    to know her for a very long<br>
-                    time. Until he approach her and<br>
-                    his first word was:
-                </p>
-                <p class="text-white my-4 d-lg-none">
-                    There’s a lonely girl upon the
-                    hallway and far away is a man
-                    who always have been wishing
-                    to know her for a very long
-                    time. Until he approach her and
-                    his first word was:
-                </p>
+                <div class="text-white mt-lg-4 d-none d-lg-block">
+                    {{ x.about_brief1 }}
+                </div>
+                <div class="text-white my-4 d-lg-none">
+                    {{ x.about_brief1 }}
+                </div>
             </div>
         </div>
         <div class="row" data-aos="fade-down">
             <div class="col-lg-12 px-0">
-                <img data-aos="fade-down" data-aos-once="true" class="img-fluid w-100 d-none d-lg-block" src="{% static 'rsvp/wedding/peter_marry/images/about-us-04.jpg' %}">
-                <img class="img-fluid w-100 d-lg-none" src="{% static 'rsvp/wedding/peter_marry/images/mobile-about-us-04-02.jpg' %}">
+                <img data-aos="fade-down" data-aos-once="true" class="img-fluid w-100 d-none d-lg-block" src="{{ x.about_image1.url }}">
+                <img class="img-fluid w-100 d-lg-none" src="{{ x.about_image1_mobile.url }}">
             </div>
         </div>
     </div>
     <div class="container-fluid inseparable-section">
         <div class="row py-5">
             <div class="col-lg-6 p-lg-5">
-                <img data-aos="zoom-out" data-aos-once="true" class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/inseparable-05.png' %}">
+                <img data-aos="zoom-out" data-aos-once="true" class="img-fluid" src="{{ x.about_image2.url }}">
             </div>
             <div class="col-lg-6 py-5">
                 <h2 data-aos="fade-down" data-aos-once="true" class="text-grayish-blue my-lg-5 mt-5">
-                    Inseparable<br>
-                    Ever Since,
+                    {{ x.about_title2 }}
                 </h2>
-                <p data-aos="fade-left" data-aos-once="true" class="text-white offset-lg-2 d-none d-lg-block">
-                    We kinda already know we were meant for each other no matter how hard the situations are, we stick together till the end, and somehow things will go right again. Each of us didn’t even believe this was happening because it’s surreal how we always get each other back up no matter what happens, and willing to continue to do so. So then I, Peter, proceed and decided that I want Mary to be The One for my life.
-                </p>
-                <p data-aos="fade-left" data-aos-once="true" class="text-white offset-lg-2 d-lg-none mt-5">
-                    We kinda already know we were meant for each other no matter how hard the situations are, we stick together till the end, and somehow things will go right again. Each of us didn’t even believe this was happening because it’s surreal how we always get each other back up no matter what happens, and willing to continue to do so. So then I, Peter, proceed and decided that I want Mary to be The One for my life.
-                </p>
+                <div data-aos="fade-left" data-aos-once="true" class="text-white offset-lg-2 d-none d-lg-block">
+                    {{ x.about_brief2 }}
+                </div>
+                <div data-aos="fade-left" data-aos-once="true" class="text-white offset-lg-2 d-lg-none mt-5">
+                    {{ x.about_brief2 }}
+                </div>
             </div>
         </div>
     </div>
     <div class="container-fluid will-you" data-aos="fade-down" data-aos-once="true">
         <div class="row">
             <div class="col-lg-12 px-0">
-                <img class="img-fluid w-100 d-none d-lg-block" src="{% static 'rsvp/wedding/peter_marry/images/image-3-07.jpg' %}">
-                <img class="img-fluid w-100 d-lg-none" src="{% static 'rsvp/wedding/peter_marry/images/image-3-mobile-03.jpg' %}">
+                <img class="img-fluid w-100 d-none d-lg-block" src="{{ x.about_image3.url }}">
+                <img class="img-fluid w-100 d-lg-none" src="{{ x.about_image3_mobile.url }}">
                 <div class="content">
                     <h2 class="text-white">
-                        Will you marry me?
+                        {{ x.about_title3 }}
                     </h2>
                     <p class="text-white d-none d-lg-block">
-                        He said nervously
+                        {{ x.about_brief3 }}
                     </p>
                     <p class="text-white text-right d-lg-none">
-                        He said nervously
+                        {{ x.about_brief3 }}
                     </p>
                 </div>
             </div>
@@ -208,7 +196,7 @@
     <div id="celebrate" class="container-fluid bg-celebrate">
         <div class="row">
             <div class="col-lg-4 offset-lg-1 py-lg-5 order-4 order-lg-1 col-12">
-                <img data-aos="fade-up" data-aos-once="true" class="image-celebrate img-fluid mt-5" src="{% static 'rsvp/wedding/peter_marry/images/image-celebrate-03.png' %}">
+                <img data-aos="fade-up" data-aos-once="true" class="image-celebrate img-fluid mt-5" src="{{ x.venue_image.url }}">
             </div>
             <div class="col-lg-3 py-lg-5 my-lg-5 section-left order-1 order-lg-2 col-12">
                 <p class="text-white mt-lg-5">
@@ -230,31 +218,31 @@
             <div class="col-lg-3 py-lg-5 my-lg-5 order-2 order-lg-3  pl-lg-5 d-none d-lg-block">
                 <p class="text-white mt-lg-5 pt-lg-5 mb-lg-0">
                     <br>
-                    <strong>PEMBERKATAN</strong><br>
-                    23 September 2020<br>
+                    <strong>CEREMONY</strong><br>
+                    {{ x.vc_date }}<br>
                     <br>
-                    <strong>Spring Chapel</strong><br>
-                    Jl. Tanah Sereal 3 Blok A-B, Jakarta Barat<br>
+                    <strong>{{ x.vc_place }}</strong><br>
+                    {{ x.vc_address }}<br>
                     <br>
-                    09:00 - 10:00 AM
+                    {{ x.vc_time }}
                 </p>
                 <p class="text-white">
                     <br>
                     <strong>WEDDING PARTY</strong><br>
-                    24 september 2020<br>
+                    {{ x.vr_date }}<br>
                     <br>
-                    <strong>Hotel Indonesia</strong><br>
-                    Jl. M.H. Thamrin Kav. No. 122-123, Jakarta Pusat<br>
+                    <strong>{{ x.vr_place }}</strong><br>
+                    {{ x.vr_address }}<br>
                     <br>
-                    11:00 AM - 12:00 PM<br>
+                    {{ x.vr_time }}<br>
                     <br>
-                    Dresscode : Formal<br>
+                    Dresscode : {{ x.vr_dress }}<br>
                 </p>
             </div>
             <div class="col-6 d-lg-none order-2 pr-0">
                 <p class="text-white">
                     <br>
-                    <strong>PEMBERKATAN</strong><br>
+                    <strong>CEREMONY</strong><br>
                     23 September 2020
                     <strong>Spring Chapel</strong><br>
                     Jl. Tanah Sereal 3 Blok A-B, Jakarta Barat<br>
@@ -283,55 +271,53 @@
                 </h2>
             </div>
             <div class="col-lg-3 offset-lg-1 pr-lg-5">
-                <p class="text-grayish-blue mt-lg-3 float-lg-right d-none d-lg-block">
-                    Here are our moments have taken while we are in London. Thank you Axios for being our photographer and to catch these unforgettable moments, we will always continue to treasure these moments from now on.
-                <br>
-                </p>
-                <p class="text-grayish-blue mt-3 float-lg-right d-lg-none">
-                    Here are our moments have taken while we are in London. Thank you Axios for being our photographer and to catch these unforgettable moments, we will always continue to treasure these moments from now on.
-                <br>
-                </p>
+                <div class="text-grayish-blue mt-lg-3 float-lg-right d-none d-lg-block">
+                    {{ x.gallery_brief }}<br>
+                </div>
+                <div class="text-grayish-blue mt-3 float-lg-right d-lg-none">
+                    {{ x.gallery_brief }}<br>
+                </div>
             </div>
         </div>
         <div class="row offset-lg-1 pb-lg-5 d-none d-lg-flex">
             <div data-aos="fade-up" class="p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo1">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-03.jpg' %}">
+                    <img class="img-fluid" src="{{ x.gallery_image1.url }}">
                 </a>
             </div>
             <div data-aos="fade-up" data-aos-once="true" class="p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo2">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-04.jpg' %}">
+                    <img class="img-fluid" src="{{ x.gallery_image2.url }}">
                 </a>
             </div>
             <div  data-aos="fade-up" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo3">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-05.jpg' %}">
+                    <img class="img-fluid" src="{{ x.gallery_image3.url }}">
                 </a>
             </div>
             <div  data-aos="fade-up" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo4">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-06.jpg' %}">
+                    <img class="img-fluid" src="{{ x.gallery_image4.url }}">
                 </a>
             </div>
             <div data-aos="fade-down"  data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo5">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-07.jpg' %}">
+                    <img class="img-fluid" src="{{ x.gallery_image5.url }}">
                 </a>
             </div>
             <div data-aos="fade-down" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo6">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-08.jpg' %}">
+                    <img class="img-fluid" src="{{ x.gallery_image6.url }}">
                 </a>
             </div>
             <div data-aos="fade-down" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo7">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-09.jpg' %}">
+                    <img class="img-fluid" src="{{ x.gallery_image7.url }}">
                 </a>
             </div>
             <div data-aos="fade-down" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo8">
-                    <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-10.jpg' %}">
+                    <img class="img-fluid" src="{{ x.gallery_image8.url }}">
                 </a>
             </div>
         </div>
@@ -339,42 +325,42 @@
             <div class="carousel-gallery owl-theme">
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo1">
-                        <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-03.jpg' %}">
+                        <img class="img-fluid" src="{{ x.gallery_image1.url }}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo2">
-                        <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-04.jpg' %}">
+                        <img class="img-fluid" src="{{ x.gallery_image2.url }}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo3">
-                        <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-05.jpg' %}">
+                        <img class="img-fluid" src="{{ x.gallery_image3.url }}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo4">
-                        <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-06.jpg' %}">
+                        <img class="img-fluid" src="{{ x.gallery_image4.url }}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo5">
-                        <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-07.jpg' %}">
+                        <img class="img-fluid" src="{{ x.gallery_image5.url }}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo6">
-                        <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-08.jpg' %}">
+                        <img class="img-fluid" src="{{ x.gallery_image6.url }}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo7">
-                        <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-09.jpg' %}">
+                        <img class="img-fluid" src="{{ x.gallery_image7.url }}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo8">
-                        <img class="img-fluid" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-10.jpg' %}">
+                        <img class="img-fluid" src="{{ x.gallery_image8.url }}">
                     </a>
                 </div>
             </div>
@@ -434,26 +420,22 @@
                 <div class="form-group ml-lg-5 py-5 mb-0">
                     <div class="col-lg-12 text-center pb-lg-5">
                         <input type="submit" class="button-submit mb-4" value="SUBMIT" data-toggle="modal" data-target="#exampleModal"><br><br>
-                        <a class="button-submit" href="wedding-2-einvitation-02.jpg' %}">DOWNLOAD INVITATION</a>
+                        <a class="button-submit" href="{{ x.inv_pdf.url }}">DOWNLOAD INVITATION</a>
                     </div>
                 </div>
             </div>
             <div id="accommodation-m" class="col-lg-5 pt-lg-4 text-center accomodation pt-lg-0 pt-5">
-                <img data-aos="fade-down" data-aos-once="true" class="img-fluid mb-lg-0 mb-4" src="{% static 'rsvp/wedding/peter_marry/images/accomodation-2-05.png' %}">
+                <img data-aos="fade-down" data-aos-once="true" class="img-fluid mb-lg-0 mb-4" src="{{ x.acm_image.url }}">
                 <p class="text-dark-blue font-weight-bold mb-0">
                     ACCOMMODATION
                 </p>
                 <h3 class="text-gray">
-                    Hotel Indonesia
+                    {{ x.acm_place }}
                 </h3>
                 <p class="text-gray my-5">
-                    <strong>By Submitting your RSVP,</strong>  you will be<br>
-                    accommodated with 1 night stay at Hotel<br>
-                    Indonesia. As we also will provide you with<br>
-                    top quality accommodation for celebrating<br>
-                    our journey of the beginning.<br>
+                    {{ x.acm_brief }}<br>
                     <br><br>
-                    <a href="#" class="button-location">SEE LOCATION</a>
+                    <a href="{{ x.acm_maps_link }}" target="_blank" class="button-location">SEE LOCATION</a>
                 </p>
                 <img class="garis d-none d-lg-block" src="{% static 'rsvp/wedding/peter_marry/images/garis-accomodation-06.png' %}">
             </div>
@@ -496,42 +478,42 @@
     <!-- Modal Gallery -->
     <div class="modal fade" id="photo1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-03.jpg' %}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image1.url }}">
       </div>
     </div>
     <div class="modal fade" id="photo2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-04.jpg' %}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image2.url }}">
       </div>
     </div>
     <div class="modal fade" id="photo3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-05.jpg' %}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image3.url }}">
       </div>
     </div>
     <div class="modal fade" id="photo4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-06.jpg' %}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image4.url }}">
       </div>
     </div>
     <div class="modal fade" id="photo5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-07.jpg' %}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image5.url }}">
       </div>
     </div>
     <div class="modal fade" id="photo6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-08.jpg' %}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image6.url }}">
       </div>
     </div>
     <div class="modal fade" id="photo7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-09.jpg' %}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image7.url }}">
       </div>
     </div>
     <div class="modal fade" id="photo8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{% static 'rsvp/wedding/peter_marry/images/image-item-gallery-03.jpg' %}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image8.url }}">
       </div>
     </div>
 

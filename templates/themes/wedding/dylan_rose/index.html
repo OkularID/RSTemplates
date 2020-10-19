@@ -39,7 +39,7 @@
         <nav>
             <div class="d-none d-lg-block">
                 <a class="logo" href="index.html">
-                    <img data-aos="fade-down"  data-aos-once="true" class="img-fluid" src="{% static 'rsvp/wedding/dylan_rose/images/logo.png' %}" />
+                    <img data-aos="fade-down"  data-aos-once="true" class="img-fluid" src="{{ x.img_logo.url }}" />
                 </a>
                 <ul data-aos="fade-right"  data-aos-once="true" class="menu">
                     <li><a href="#ourstory">Our Story</a></li>
@@ -51,7 +51,7 @@
             </div>
             <div class="row d-lg-none">
                 <div class="col-8">
-                    <a href="index.html"><img class="img-fluid logo" src="{% static 'rsvp/wedding/dylan_rose/images/logo.png' %}" /></a>
+                    <a href="index.html"><img class="img-fluid logo" src="{{ x.img_logo.url }}" /></a>
                 </div>
                 <div class="col-4">
                     <ul class="bars">
@@ -81,8 +81,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{% static 'rsvp/wedding/dylan_rose/images/images-01.png' %}" />
-                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="{% static 'rsvp/wedding/dylan_rose/images/mobile-images-01.png' %}" />
+                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{{ x.banner_bg.url }}" />
+                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="{{ x.banner_bg_mobile.url }}" />
                     </div>
                 </div>
             </div>
@@ -93,13 +93,13 @@
                 <div class="row">
                     <img class="img-fluid motif" src="{% static 'rsvp/wedding/dylan_rose/images/icon-01.png' %}" />
                     <div class="col-lg-7 pt-m-15p pb-m-10p pl-m-10p pr-m-10p pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
-                        <img data-aos="flip-left" data-aos-once="true" class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/dylan_rose/images/images-02.png' %}" />
+                        <img data-aos="flip-left" data-aos-once="true" class="img-fluid w-lg-100p" src="{{ x.story_image.url }}" />
                     </div>
                     <div data-aos="fade-up" data-aos-once="true" class="col-lg-5 pt-m-0 pb-m-15p pl-m-10p pr-m-10p pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
                         <div class="boxc">
                             <h3>Our Story</h3>
                             <p>
-                                We got each other by the hands for over 6 years now, and we've been through so much together, to the point where each of us can’t live without one another. We met at the famous romantic city in Paris, France. Now we realized how many things happen throughout the years we’ve been together. And we decided to tie the knot and seal our bond together in a sacred ceremony as well as a wedding party to celebrate our special day.
+                                {{ x.story_brief }}
                             </p>
                         </div>
                     </div>
@@ -118,33 +118,29 @@
                     <div data-aos="fade-right" data-aos-once="true" class="order-2 order-lg-1 col-lg-4 mb-m-0 pb-m-20p pl-m-10p pr-m-10p mb-lg-5p pl-lg-5p">
                         <h5 class="font-green ml-lg-5">Ceremony</h5>
                         <p class="ml-lg-5">
-                            Saturday, <b>22th July 2020</b><br />
-                            <b>11.00 am</b><br />
+                            {{ x.vc_day }}, <b>{{ x.vc_date }}</b><br />
+                            <b>{{ x.vc_time }}</b><br />
                             —<br />
-                            Jl. Pantai Suluban, Pecatu, Kuta Sel.,<br />
-                            Kabupaten Badung, Uluwatu,<br />
-                            Bali, Indonesia<br />
+                            {{ x.vc_address }}<br />
                             —<br />
-                            Dress code: <b>Casual Elegant</b>
+                            Dress code: <b>{{ x.vc_dress }}</b>
                         </p>
                     </div>
                     <div data-aos="flip-left" data-aos-once="true" class="order-1 order-lg-2 col-lg-8 mb-m-0 pb-m-10p pl-m-10p pr-m-10p mb-lg-5p pr-lg-5p">
-                        <img class="img-fluid images" src="{% static 'rsvp/wedding/dylan_rose/images/images-03.png' %}" />
+                        <img class="img-fluid images" src="{{ x.vc_image.url }}" />
                     </div>
                     <div data-aos="flip-right" data-aos-once="true"  class="order-3 order-lg-3 col-lg-8 pb-m-10p pl-m-10p pr-m-10p pl-lg-5p">
-                        <img class="img-fluid images2" src="{% static 'rsvp/wedding/dylan_rose/images/images-04.png' %}" />
+                        <img class="img-fluid images2" src="{{ x.vr_image.url }}" />
                     </div>
                     <div data-aos="fade-left" data-aos-once="true" class="order-4 order-lg-4 col-lg-4 pb-m-20p pl-m-10p pr-m-10p pl-lg-3p pr-lg-3p">
                         <h5 class="font-green">Reception</h5>
                         <p>
-                            Saturday, <b>22th July 2020</b><br />
-                            <b>05.00 pm</b><br />
+                            {{ x.vr_day }}, <b>{{ x.vr_date }}</b><br />
+                            <b>{{ x.vr_time }}</b><br />
                             —<br />
-                            Jl. Pantai Kolang Kaling, Seminyak, Kuta Sel.<br />
-                            Kabupaten Badung,<br />
-                            Bali, Indonesia<br />
+                            {{ x.vr_address }}<br />
                             —<br />
-                            Dress code: <b>Formal</b>
+                            Dress code: <b>{{ x.vr_dress }}</b>
                         </p>
                     </div>
                 </div>
@@ -161,17 +157,16 @@
                             Your convenience is one of our concerns, we have booked you a room at this following place:
                         </p>
                         <div class="w-lg-100p mb-lg-5p line-white"></div>
-                        <h6>The Wyatt Hotel</h6>
+                        <h6>{{ x.acm_place }}</h6>
                         <p>
-                            Kuta, Bali, Indonesia<br />
-                            (212) 555-0123<br />
+                            {{ x.acm_address }}
                         </p>
                         <div class="note">
-                            <p>*Please mention Dylan & Rose wedding when you reserve the room*</p>
+                            <p>{{ x.acm_note }}</p>
                         </div>
                     </div>
                     <div class="col-lg-12 pt-m-20p pb-m-50p pt-lg-5p pb-lg-10p pl-lg-0 pr-lg-0">
-                        <img data-aos="fade-up" data-aos-once="true"  class="img-fluid images" src="{% static 'rsvp/wedding/dylan_rose/images/images-05.png' %}" />
+                        <img data-aos="fade-up" data-aos-once="true"  class="img-fluid images" src="{{ x.acm_image.url }}" />
                     </div>
                 </div>
             </div>
@@ -181,21 +176,20 @@
             <div class="container-fluid pl-lg-5 py-lg-5">
                 <div class="row my-lg-5 d-none d-lg-flex">
                     <div class="col-lg-6 pl-lg-5">
-                        <img src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-03.jpg' %}" data-toggle="modal" data-target="#images_1" alt="">
+                        <img src="{{ x.memories_image1.url }}" data-toggle="modal" data-target="#images_1" alt="">
                         <h3 class="my-lg-5 d-inline-block">
                             Our Memories
                         </h3>
                         <p class="text-gray">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                            Sed fermentum lorem dignissim sapien dapibu
+                            {{ x.memories_brief }}
                         </p>
                     </div>
                     <div class="image-pos">
-                    <img src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-05.jpg' %}" data-toggle="modal" data-target="#images_2" alt="">
+                    <img src="{{ x.memories_image2.url }}" data-toggle="modal" data-target="#images_2" alt="">
                     </div>
                     <div class="col-lg-4 offset-lg-2 text-center">
-                        <img src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-04.jpg' %}" data-toggle="modal" data-target="#images_3" alt="">
-                        <img class="mt-5" src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-06.jpg' %}" data-toggle="modal" data-target="#images_4" alt="">
+                        <img src="{{ x.memories_image3.url }}" data-toggle="modal" data-target="#images_3" alt="">
+                        <img class="mt-5" src="{{ x.memories_image4.url }}" data-toggle="modal" data-target="#images_4" alt="">
                     </div>
                 </div>
                 <div class="row d-lg-none">
@@ -207,16 +201,16 @@
                     <div class="col-lg-12 px-5">
                         <div class="carousel-gallery owl-theme">
                             <div class="item">
-                                <img src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-03.jpg' %}" data-toggle="modal" data-target="#images_1" alt="">
+                                <img src="{{ x.memories_image1.url }}" data-toggle="modal" data-target="#images_1" alt="">
                             </div>
                             <div class="item">
-                                <img src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-05.jpg' %}" data-toggle="modal" data-target="#images_2" alt="">
+                                <img src="{{ x.memories_image2.url }}" data-toggle="modal" data-target="#images_2" alt="">
                             </div>
                             <div class="item">
-                                <img src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-04.jpg' %}" data-toggle="modal" data-target="#images_3" alt="">
+                                <img src="{{ x.memories_image3.url }}" data-toggle="modal" data-target="#images_3" alt="">
                             </div>
                             <div class="item">
-                                <img src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-06.jpg' %}" data-toggle="modal" data-target="#images_4" alt="">
+                                <img src="{{ x.memories_image4.url }}" data-toggle="modal" data-target="#images_4" alt="">
                             </div>
                         </div>
                         <p class="font-grey mb-5">
@@ -234,7 +228,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-03.jpg' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.memories_image1.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -244,7 +238,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-05.jpg' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.memories_image2.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -254,7 +248,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-04.jpg' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.memories_image3.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -264,7 +258,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                        <img class="mx-auto d-block" src="{% static 'rsvp/wedding/dylan_rose/images/gallery-new-content-06.jpg' %}" alt="images">
+                        <img class="mx-auto d-block" src="{{ x.memories_image4.url }}" alt="images">
                     </div>
                 </div>
             </div>
@@ -327,7 +321,7 @@
                                 </div>
                                 <div class="form-group col-lg-12 pt-m-10p mb-m-0 pt-lg-5p text-right">
                                     <button type="submit" class="button-default">Submit</button><br><br>
-                                    <a href="invitation.pdf" class="button-download">
+                                    <a href="{{ x.inv_pdf.url }}" class="button-download">
                                         Download Invitation
                                     </a>
                                 </div>

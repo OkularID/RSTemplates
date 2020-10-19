@@ -40,10 +40,9 @@
         <nav>
             <div class="container-fluid">
                 <div class="row d-none d-lg-block">
-                    <a href="index.html"><img data-aos="fade-down"  data-aos-once="true" class="img-fluid logo" src="{% static 'rsvp/wedding/steve_sharon/images/logo.png' %}" /></a>
+                    <a href="index.html"><img data-aos="fade-down"  data-aos-once="true" class="img-fluid logo" src="{{ x.img_logo.url }}" /></a>
                     <div data-aos="fade-left"  data-aos-once="true" class="offset-lg-3 col-lg-9 pr-lg-0">
                         <ul class="menu">
-                            <li><a href="index.html">Home</a></li>
                             <li><a href="#ourstory">Our Story</a></li>
                             <li><a href="#dateandtime">Date & Time</a></li>
                             <li><a href="#accommodation">Accommodation</a></li>
@@ -54,7 +53,7 @@
                 </div>
                 <div class="row d-lg-none pt-3">
                     <div class="col-8">
-                        <a href="index.html"><img class="img-fluid logo" src="{% static 'rsvp/wedding/steve_sharon/images/logo.png' %}" /></a>
+                        <a href="index.html"><img class="img-fluid logo" src="{{ x.img_logo.url }}" /></a>
                     </div>
                     <div class="col-4 pr-m-0">
                         <ul class="bars">
@@ -70,7 +69,6 @@
                             <img class="img-fluid close-icon" src="{% static 'rsvp/wedding/steve_sharon/images/close.png' %}" />
                         </div>
                         <ul class="list-unstyled">
-                            <li><a href="index.html">Home</a></li>
                             <li><a href="#ourstory">Our Story</a></li>
                             <li><a href="#dateandtime">Date & Time</a></li>
                             <li><a href="#accommodation">Accommodation</a></li>
@@ -93,12 +91,10 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                        <img data-aos="zoom-out"  data-aos-once="true" class="img-fluid images w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-01.png' %}" />
+                        <img data-aos="zoom-out"  data-aos-once="true" class="img-fluid images w-lg-100p" src="{{ x.banner_bg.url }}" />
                         <div class="title">
                             <h1 data-aos="fade-up"  data-aos-once="true">
-                                Through
-                                Thick
-                                and Thin
+                                {{ x.banner_title }}
                             </h1>
                         </div>
                         <div class="link-rsvp">
@@ -120,7 +116,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6 pt-m-25p pb-m-10p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p">
-                        <img data-aos="fade-up" data-aos-once="true" class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/images-02.png' %}" />
+                        <img data-aos="fade-up" data-aos-once="true" class="img-fluid" src="{{ x.story_image.url }}" />
                     </div>
                     <div class="col-lg-6 pt-m-0 pb-m-20p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pr-lg-5p">
                         <ul id="accordion" class="accordion">
@@ -130,33 +126,27 @@
                                 <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-04.png' %}" />
                             </div>
                             <div class="submenu">
-                                <p>
-                                    It’s been over 7 years since we walk this path together. We met at the famous Egypt Monument, The Great Pyramid. We also share the same hobby which is traveling, and beyond our hobby, we’ve shared the same interest in a lot of things as well, which makes us so compatible with each other in many ways.
-                                </p>
+                                {{ x.story_brief }}
                             </div>
                           </li>
                           <li>
                             <div class="link" data-aos="fade-up" data-aos-once="true">
-                                <h5>STEVE ROBERTS</h5>
+                                <h5>{{ x.story_gr_name }}</h5>
                                 <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-04.png' %}" />
                             </div>
                             <div class="submenu">
-                                <p>
-                                    Steve is a funny guy, I thought everybody knows this about him even when you first meet him. He always gives such a strong impression when it comes to his personality. He is constantly bright as the sun, and it’s amazing how he radiates his energy to other people quickly and make me realize how lucky I am to be his wife.<br /><br />
-                                    - Sharon Cartier
-                                </p>
+                                {{ x.story_gr_brief }}<br>
+                                <p>- {{ x.story_br_name }}</p>
                             </div>
                           </li>
                           <li>
                             <div class="link" data-aos="fade-up"  data-aos-once="true">
-                                <h5>SHARON CARTIER</h5>
+                                <h5>{{ x.story_br_name }}</h5>
                                 <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-04.png' %}" />
                             </div>
                             <div class="submenu">
-                                <p>
-                                    When you hear Sharon for the first time, you will think about how kind she is. With everyone! And it is insane how she keeps consistent about her compassion towards the one in need. She is someone that I really look up to. In terms of how she lived her life, how she sees the world, and the way she is very wise in many ways! I’m the luckiest husband ever!<br /><br />
-                                        - Steve Roberts
-                                </p>
+                                {{ x.story_br_brief }}<br>
+                                <p>- {{ x.story_gr_name }}</p>
                             </div>
                           </li>
                         </ul>
@@ -190,45 +180,44 @@
                                         <div class="col-lg-6 padbrief">
                                             <div class="row pt-lg-5p pb-lg-5p">
                                                 <div class="col-lg-7 pb-lg-5p" data-aos="fade-right" data-aos-once="true">
-                                                    <h5>OUR WEDDING CEREMONY</h5>
+                                                    <h5>{{ x.vc_title }}</h5>
                                                 </div>
                                                 <div class="col-lg-5 p-0">
-                                                    <a class="button-default d-none d-lg-block" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
+                                                    <a class="button-default d-none d-lg-block" href="{{ x.vc_maps_link }}">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
                                                 </div>
                                                 <div class="col-lg-12 brief pb-m-10p pb-lg-5p">
                                                     <div class="row st">
                                                         <div class="col-7 col-lg-7">
                                                             <div class="row">
                                                                 <div class="col-5 col-lg-5 pl-lg-0">
-                                                                    <div class="date">23</div>
+                                                                    <div class="date">{{ x.vc_date }}</div>
                                                                 </div>
                                                                 <div class="col-7 col-lg-7 pl-lg-0">
-                                                                    <div class="my">September 2020</div>
+                                                                    <div class="my">{{ x.vc_my }}</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-5 col-lg-5 lineleft">
-                                                            <div class="time">10:00 am till 12:00 pm</div>
+                                                            <div class="time">{{ x.vc_time }}</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-7 mtext-center">
                                                     <p>
                                                         Our Wedding Ceremony will be held at:<br /><br />
-                                                        <b>Grand Chapel of Toronto, Canada</b><br />
-                                                        Holy Spirit Street, 3-5 A<br />
-                                                        Glass Boulevard, Water Village
+                                                        <b>{{ x.vc_place }}</b><br />
+                                                        {{ x.vc_address }}
                                                     </p>
                                                 </div>
                                                 <div class="col-lg-5"></div>
                                                 <div class="col-12">
-                                                    <a class="button-default d-block d-lg-none" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
+                                                    <a class="button-default d-block d-lg-none" href="{{ x.vc_maps_link }}">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 padimg" data-aos="fade-left" data-aos-once="true">
                                             <div class="wrap">
-                                                <img class="img-fluid images w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-04.png' %}" />
+                                                <img class="img-fluid images w-lg-100p" src="{{ x.vc_image.url }}" />
                                             </div>
                                             <img class="img-fluid motif" src="{% static 'rsvp/wedding/steve_sharon/images/motif-01.png' %}" />
                                         </div>
@@ -241,52 +230,49 @@
                                         <div class="col-lg-6 padbrief">
                                             <div class="row pt-lg-5p pb-lg-5p">
                                                 <div class="col-lg-7 pb-lg-5p">
-                                                    <h5>OUR WEDDING GARDEN PARTY</h5>
+                                                    <h5>{{ x.vr_title }}</h5>
                                                 </div>
                                                 <div class="col-lg-5 p-0">
-                                                    <a class="button-default d-none d-lg-block" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
+                                                    <a class="button-default d-none d-lg-block" href="{{ x.vr_maps_link }}">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
                                                 </div>
                                                 <div class="col-lg-12 brief pb-m-10p pb-lg-5p">
                                                     <div class="row st">
                                                         <div class="col-7 col-lg-7">
                                                             <div class="row">
                                                                 <div class="col-5 col-lg-5 pl-lg-0">
-                                                                    <div class="date">24</div>
+                                                                    <div class="date">{{ x.vr_date }}</div>
                                                                 </div>
                                                                 <div class="col-7 col-lg-7 pl-lg-0">
-                                                                    <div class="my">September 2020</div>
+                                                                    <div class="my">{{ x.vr_my }}</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-5 col-lg-5 lineleft">
-                                                            <div class="time">05:00 pm till 07:00 pm</div>
+                                                            <div class="time">{{ x.vr_time }}</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-7 mtext-center">
                                                     <p>
-                                                        Our Wedding Garden Party will be held at:<br /><br />
-                                                        <b>Flower Palace Toronto, Canada</b><br />
-                                                        Legendary Street, 14 B<br />
-                                                        Southern Sea, Ocean Hill
+                                                        Our Wedding Party will be held at:<br /><br />
+                                                        <b>{{ x.vr_place }}</b><br />
+                                                        {{ x.vr_address }}
                                                     </p>
                                                 </div>
                                                 <div class="col-lg-5 mtext-center">
                                                     <p>
                                                         The Dresscode Will Be :<br /><br />
-                                                        <b>Simple Minimal Formal Attire</b><br />
-                                                        No Complicated Sequence,<br />
-                                                        Plain Sophisticated look
+                                                        {{ x.vr_dress }}
                                                     </p>
                                                 </div>
                                                 <div class="col-12">
-                                                    <a class="button-default d-block d-lg-none" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
+                                                    <a class="button-default d-block d-lg-none" href="{{ x.vr_maps_link }}">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-03.png' %}" /></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 padimg">
                                             <div class="wrap">
-                                                <img class="img-fluid images w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-05.png' %}" />
+                                                <img class="img-fluid images w-lg-100p" src="{{ x.vr_image.url }}" />
                                             </div>
                                             <img class="img-fluid motif" src="{% static 'rsvp/wedding/steve_sharon/images/motif-01.png' %}" />
                                         </div>
@@ -303,22 +289,17 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="order-2 order-lg-1 col-lg-6 pl-lg-0 pr-lg-0 border-bottom-gray">
-                        <img data-aos="zoom-out" data-aos-once="true" class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-06.png' %}" />
+                        <img data-aos="zoom-out" data-aos-once="true" class="img-fluid w-lg-100p" src="{{ x.acm_image.url }}" />
                     </div>
                     <div class="order-1 order-lg-2 col-lg-6 pt-m-15p pb-m-15p pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pl-lg-5p pr-lg-5p border-bottom-gray">
                         <h5 data-aos="fade-left" data-aos-once="true" class="mb-lg-5p">
                             ACCOMODATION:<br />
-                            THE CONFIDANTE
+                            {{ x.acm_place }}
                         </h5>
-                        <h6 data-aos="fade-up"  data-aos-once="true" class="mb-lg-3p"><b>1 Night Stay | </b>1 Suite Bedroom</h6>
+                        <h6 data-aos="fade-up"  data-aos-once="true" class="mb-lg-3p">{{ x.acm_subtitle }}</h6>
                         <div class="w-lg-100p mb-m-10p mb-lg-5p line-grey"></div>
-                        <p>
-                            While you’re attending our party we will also provide your accommodation. The Confidante is famous for its service and quality, for attending our celebration you will be equipped with 2 nights’ stay in The Confidante with a Large 2-bed hotel room.
-                        </p>
-                        <p>
-                            The Confidante also provides you each 1 breakfast/day, just don’t forget to mention our name “Steve & Sharon Wedding” when you are reserving for a room.
-                        </p><br />
-                        <a class="button-default" href="https://goo.gl/maps/JkxkeuWMKGTnkxz18">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-02.png' %}" /></a>
+                        {{ x.acm_brief }}<br />
+                        <a class="button-default" href="{{ x.acm_maps_link }}">See location <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-02.png' %}" /></a>
                     </div>
                 </div>
             </div>
@@ -335,29 +316,29 @@
                                 CAPTURED.
                             </h5>
                             <p>
-                                These are our moments from the moment we met until now, thanks to the famous Nezuko Kamado, Japanese Photographer, she captures the most beautiful pictures, and we will always treasure her work. Please enjoy our photograph!
+                                {{ x.gallery_brief }}
                             </p>
                         </div>
                     </div>
                     <div  data-aos="fade-up" data-aos-once="true" class="col-lg-12 pb-m-15p pb-lg-5p pl-lg-10p pr-lg-10p">
                         <div class="three-carousel owl-theme">
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-07.png' %}" data-toggle="modal" data-target="#item_1" />
+                                <img class="img-fluid w-lg-100p" src="{{ x.gallery_image1.url }}" data-toggle="modal" data-target="#item_1" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-08.png' %}" data-toggle="modal" data-target="#item_2" />
+                                <img class="img-fluid w-lg-100p" src="{{ x.gallery_image2.url }}" data-toggle="modal" data-target="#item_2" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-09.png' %}" data-toggle="modal" data-target="#item_3" />
+                                <img class="img-fluid w-lg-100p" src="{{ x.gallery_image3.url }}" data-toggle="modal" data-target="#item_3" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-10.png' %}"  data-toggle="modal" data-target="#item_4" />
+                                <img class="img-fluid w-lg-100p" src="{{ x.gallery_image4.url }}"  data-toggle="modal" data-target="#item_4" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-11.png' %}" data-toggle="modal" data-target="#item_5" />
+                                <img class="img-fluid w-lg-100p" src="{{ x.gallery_image5.url }}" data-toggle="modal" data-target="#item_5" />
                             </div>
                             <div class="item">
-                                <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-12.png' %}" data-toggle="modal" data-target="#item_6" />
+                                <img class="img-fluid w-lg-100p" src="{{ x.gallery_image6.url }}" data-toggle="modal" data-target="#item_6" />
                             </div>
                         </div>
                     </div>
@@ -369,7 +350,42 @@
         <div class="modal fade" id="item_1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog moda-xl" role="document">
                     <img class="gallery-close" src="{% static 'rsvp/wedding/steve_sharon/images/close-02.png' %}" alt="">
-                    <img class="img-fluid w-lg-100p" src="{% static 'rsvp/wedding/steve_sharon/images/images-07.png' %}" data-toggle="modal" data-target="#item_1" />                    
+                    <img class="img-fluid w-lg-100p" src="{{ x.gallery_image1.url }}" data-toggle="modal" data-target="#item_1" />                    
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="item_2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog moda-xl" role="document">
+                    <img class="gallery-close" src="{% static 'rsvp/wedding/steve_sharon/images/close-02.png' %}" alt="">
+                    <img class="img-fluid w-lg-100p" src="{{ x.gallery_image2.url }}" data-toggle="modal" data-target="#item_2" />                    
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="item_3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog moda-xl" role="document">
+                    <img class="gallery-close" src="{% static 'rsvp/wedding/steve_sharon/images/close-02.png' %}" alt="">
+                    <img class="img-fluid w-lg-100p" src="{{ x.gallery_image3.url }}" data-toggle="modal" data-target="#item_3" />                    
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="item_4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog moda-xl" role="document">
+                    <img class="gallery-close" src="{% static 'rsvp/wedding/steve_sharon/images/close-02.png' %}" alt="">
+                    <img class="img-fluid w-lg-100p" src="{{ x.gallery_image4.url }}" data-toggle="modal" data-target="#item_4" />                    
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="item_5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog moda-xl" role="document">
+                    <img class="gallery-close" src="{% static 'rsvp/wedding/steve_sharon/images/close-02.png' %}" alt="">
+                    <img class="img-fluid w-lg-100p" src="{{ x.gallery_image5.url }}" data-toggle="modal" data-target="#item_5" />                    
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="item_6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog moda-xl" role="document">
+                    <img class="gallery-close" src="{% static 'rsvp/wedding/steve_sharon/images/close-02.png' %}" alt="">
+                    <img class="img-fluid w-lg-100p" src="{{ x.gallery_image6.url }}" data-toggle="modal" data-target="#item_6" />                    
             </div>
         </div>
         <!-- Section Countdown -->
@@ -464,7 +480,7 @@
                                                 <input type="submit" class="button-default" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
                                                 <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-02.png' %}" />
                                             </div>
-                                            <a class="button-default" href="invitation.pdf" target="_blank">Download Invitation <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/form-03.png' %}" /></a>
+                                            <a class="button-default" href="{{ x.inv_pdf.url }}" target="_blank">Download Invitation <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/form-03.png' %}" /></a>
                                             <div class="button-wrap d-none d-lg-block">
                                                 <input type="submit" class="button-default" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
                                                 <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/arrow-02.png' %}" />

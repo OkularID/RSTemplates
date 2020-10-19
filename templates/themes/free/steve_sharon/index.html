@@ -44,7 +44,7 @@
                         <div class="row">
                             <div class="col-lg-5 pl-lg-5p pr-0 pt-5 pl-5" data-aos="fade-left">
                                 <div class="wrap">
-                                    <img class="img-fluid images w-lg-100p" src="{% static 'rsvp/free/steve_sharon/images/header-content-08.jpg' %}" />
+                                    <img class="img-fluid images w-lg-100p" src="{{ x.image.url }}" />
                                 </div>
                                 <img class="img-fluid motif" src="{% static 'rsvp/free/steve_sharon/images/motif-01.png' %}" />
                             </div>
@@ -52,7 +52,7 @@
                                 <div class="row">
                                     <div class="col-lg-12 px-lg-5">
                                         <h5 class="font-white">
-                                            Steve & Sharon
+                                            {{ x.name_groom }} & {{ x.name_bride }}
                                             <span class="font-titiliumweb-light font-white font-18px">
                                                 invite you to
                                             </span>
@@ -87,17 +87,16 @@
                                                                             <p class="mb-0">
                                                                                 Our Wedding Ceremony will be held at:
                                                                                 <br><br>
-                                                                                <strong>Grand Chapel of Toronto, Canada</strong><br>
-                                                                                Holy Spirit Street, 3-5 A<br>
-                                                                                Glass Boulevard, Water Village<br>
+                                                                                <strong>{{ x.vc_place }}</strong><br>
+                                                                                {{ x.vc_address }}<br>
                                                                             </p>
                                                                         </div>
                                                                         <div class="col-6 p-4 lineleft">
                                                                             <h5 class="font-white font-titiliumweb-light mb-0">
-                                                                                23 September 2020
+                                                                                {{ x.vc_date }} {{ x.vc_month }} {{ x.vc_year }}
                                                                             </h5>
                                                                             <h5 class="font-white font-titiliumweb-light mb-0">
-                                                                                10:00 till 12:00
+                                                                                {{ x.vc_time }}
                                                                             </h5>
                                                                         </div>
                                                                     </div>
@@ -117,23 +116,22 @@
                                                                 <div class="col-7 col-lg-7">
                                                                     <div class="row">
                                                                         <div class="col-5 col-lg-5 pl-lg-0">
-                                                                            <div class="date">24</div>
+                                                                            <div class="date">{{ x.vc_date }}</div>
                                                                         </div>
                                                                         <div class="col-7 col-lg-7 pl-lg-0">
-                                                                            <div class="my">September 2020</div>
+                                                                            <div class="my">{{ x.vc_month }} {{ x.vc_year }}</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-5 col-lg-5 lineleft">
-                                                                    <div class="time">10:00 am till 07:00 pm</div>
+                                                                    <div class="time">{{ x.vc_time }}</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12 mtext-center">
                                                             <p class="mb-0">
-                                                                <strong>Grand Chapel of Toronto, Canada</strong><br>
-                                                                Holy Spirit Street, 3-5 A<br>
-                                                                Glass Boulevard, Water Village<br>
+                                                                <strong>{{ x.vc_place }}</strong><br>
+                                                                {{ x.vc_address }}<br>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -152,19 +150,18 @@
                                                                     <div class="row">
                                                                         <div class="col-6 pl-lg-0 pt-lg-3 pb-lg-3">
                                                                             <p class="mb-0">
-                                                                                Our Wedding Ceremony will be held at:
+                                                                                Our Wedding Party will be held at:
                                                                                 <br><br>
-                                                                                <strong>Grand Chapel of Toronto, Canada</strong><br>
-                                                                                Holy Spirit Street, 3-5 A<br>
-                                                                                Glass Boulevard, Water Village<br>
+                                                                                <strong>{{ x.vp_place }}</strong><br>
+                                                                                {{ x.vp_address }}<br>
                                                                             </p>
                                                                         </div>
                                                                         <div class="col-6 p-4 lineleft">
                                                                             <h5 class="font-white font-titiliumweb-light mb-0">
-                                                                                23 September 2020
+                                                                                {{ x.vp_date }} {{ x.vp_month }} {{ x.vp_year }}
                                                                             </h5>
                                                                             <h5 class="font-white font-titiliumweb-light mb-0">
-                                                                                10:00 till 12:00
+                                                                                {{ x.vp_time }}
                                                                             </h5>
                                                                         </div>
                                                                     </div>
@@ -184,23 +181,22 @@
                                                                 <div class="col-7 col-lg-7">
                                                                     <div class="row">
                                                                         <div class="col-5 col-lg-5 pl-lg-0">
-                                                                            <div class="date">24</div>
+                                                                            <div class="date">{{ x.vp_date }}</div>
                                                                         </div>
                                                                         <div class="col-7 col-lg-7 pl-lg-0">
-                                                                            <div class="my">September 2020</div>
+                                                                            <div class="my">{{ x.vp_month }} {{ x.vp_year }}</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-5 col-lg-5 lineleft">
-                                                                    <div class="time">10:00 am till 07:00 pm</div>
+                                                                    <div class="time">{{ x.vp_time }}</div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12 mtext-center">
                                                             <p class="mb-0">
-                                                                <strong>Grand Chapel of Toronto, Canada</strong><br>
-                                                                Holy Spirit Street, 3-5 A<br>
-                                                                Glass Boulevard, Water Village<br>
+                                                                <strong>{{ x.vp_place }}</strong><br>
+                                                                {{ x.vp_address }}<br>
                                                             </p>
                                                         </div>
                                                     </div>

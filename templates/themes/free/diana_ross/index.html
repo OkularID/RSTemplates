@@ -39,8 +39,8 @@
         <div class="container-fluid birthday-1-free py-lg-5">
             <div class="row mx-lg-4">
                 <div class="col-lg-6 px-0 px-lg-2">
-                    <img class="img-fluid d-none d-lg-block" src="{% static 'rsvp/free/diana_ross/images/content-free-07.jpg' %}" alt="">
-                    <img class="img-fluid d-lg-none" src="{% static 'rsvp/free/diana_ross/images/content-free-mobile-06.jpg' %}" alt="">
+                    <img class="img-fluid d-none d-lg-block" src="{{ x.image.url }}" alt="">
+                    <img class="img-fluid d-lg-none" src="{{ x.image_mobile.url }}" alt="">
                 </div>
                 <div class="col-lg-6 pl-4">
                     <div class="row">
@@ -48,13 +48,13 @@
                             <div class="wrapper-carousel">
                                 <div class="carousel-free owl-theme">
                                     <div class="item">
-                                        <img class="img-fluid" src="{% static 'rsvp/free/diana_ross/images/content-free-carousel-items-08.png' %}" alt="">
+                                        <img class="img-fluid" src="{{ x.ct_date }}" alt="">
                                     </div>
                                     <div class="item">
-                                        <img class="img-fluid" src="{% static 'rsvp/free/diana_ross/images/content-free-carousel-items-09.png' %}" alt="">
+                                        <img class="img-fluid" src="{{ x.ct_place }}" alt="">
                                     </div>
                                     <div class="item">
-                                        <img class="img-fluid" src="{% static 'rsvp/free/diana_ross/images/content-free-carousel-items-10.png' %}" alt="">
+                                        <img class="img-fluid" src="{{ x.ct_note }}" alt="">
                                     </div>
                                 </div>
                             </div>

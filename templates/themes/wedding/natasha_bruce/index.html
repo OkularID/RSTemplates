@@ -57,7 +57,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img class="w-25" src="{% static 'rsvp/wedding/natasha_bruce/images/logo-template-wedding-1-02.png' %}">
+                                <img class="w-25" src="{{ x.img_logo.url }}">
                             </a>
                         </li>
                         <li class="mx-3">
@@ -81,7 +81,7 @@
             <div class="row d-lg-none pt-3">
                     <div class="col-8 pt-1">
                         <a href="#">
-                            <img class="img-fluid logo-mobile" src="{% static 'rsvp/wedding/natasha_bruce/images/logo-template-wedding-1-02.png' %}">
+                            <img class="img-fluid logo-mobile" src="{{ x.img_logo.url }}">
                         </a>
                     </div>
                     <div class="col-4 text-right">
@@ -131,8 +131,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 px-0 pb-lg-5">
-                <div data-aos="zoom-out"  data-aos-once="true" class="header d-none d-lg-block" style="background-image: url({% static 'rsvp/wedding/natasha_bruce/images/banner-home-03.jpg' %});"></div>
-                <img class="img-fluid w-100 d-lg-none" src="{% static 'rsvp/wedding/natasha_bruce/images/banner-home-mobile-03.jpg' %}">
+                <div data-aos="zoom-out"  data-aos-once="true" class="header d-none d-lg-block" style="background-image: url({{ x.banner_bg.url }});"></div>
+                <img class="img-fluid w-100 d-lg-none" src="{{ x.banner_bg_mobile.url }}">
             </div>
         </div>
     </div>
@@ -145,10 +145,10 @@
                     BEGINS
                 </h3>
                 </div>
-                <img  data-aos="fade-up" data-aos-once="true" class="img-fluid image-title d-none d-lg-block" src="{% static 'rsvp/wedding/natasha_bruce/images/brief-home-14.jpg' %}">
+                <img  data-aos="fade-up" data-aos-once="true" class="img-fluid image-title d-none d-lg-block" src="{{ x.story_image1.url }}">
             </div>
             <div class="col-lg-4 px-4 px-lg-2">
-                <img data-aos="zoom-in-up" data-aos-once="true" class="img-fluid ml-lg-4" src="{% static 'rsvp/wedding/natasha_bruce/images/brief-home-15.jpg' %}">
+                <img data-aos="zoom-in-up" data-aos-once="true" class="img-fluid ml-lg-4" src="{{ x.story_image2.url }}">
             </div>
             <div data-aos="fade-left" data-aos-once="true" class="col-lg-4 pr-lg-0 content-right">
                 <div class="vertical-center w-100">
@@ -157,11 +157,9 @@
                         BEGINS
                     </h3>
                     <hr align="right" class="green">
-                    <p class="ml-lg-20p text-gray mr-5">
-                        It’s a blessing when you meet someone that has the same purpose as you. And it’s what makes us dream-driven, passionate, and eager every day. Because we have that someone that will continue to enjoy the things we do every day, and we are blessed to share that purpose together. Not everyone in this world gets to do something like us.
-                        <br><br>
-                        Bruce and Natasha are both veterinarians, working with the most beautiful animals in the world and have been continuing what they’re doing since 2015. They have been in a relationship for 5 years and it's time to tie the knot. So they invite you to join their special day, and celebrate their journey and their passion.
-                    </p>
+                    <div class="ml-lg-20p text-gray mr-5">
+                        {{ x.story_desc }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,20 +174,16 @@
                             ABOUT THE GROOM
                         </p>
                         <h1 data-aos="zoom-in-left" data-aos-once="true" class="text-yellow title pl-lg-5 ml-lg-5 ml-4">
-                            BRUCE<br>
-                            WAYNE
+                            {{ x.about_gr_name }}
                         </h1>
                         <hr align="left" class="line-style my-lg-4 my-5">    
-                        <p class="text-gray pl-lg-5 ml-lg-5 ml-4 mr-lg-5 pr-lg-3">
-                            Bruce is passionate and loyal personnel. He always taught me to not give up in any situation, he teaches me a lot in life and at the point where he would never let me down in any way. And I’m lucky enough to call him my husband.
-                            <br><br>
-- Natasha
-
-                        </p>
+                        <div class="text-gray pl-lg-5 ml-lg-5 ml-4 mr-lg-5 pr-lg-3">
+                            {{ x.about_gr_brief }}
+                        </div>
                     </div>
                     <div data-aos="fade-left" data-aos-once="true" class="col-lg-7 pr-lg-0 order-lg-2 order-1 pl-4 pl-lg-2">
-                        <img class="img-fluid d-none d-lg-block w-100" src="{% static 'rsvp/wedding/natasha_bruce/images/about-us-bruce-18.png' %}">
-                        <img class="img-fluid d-lg-none" src="{% static 'rsvp/wedding/natasha_bruce/images/about-us-bruce-09.png' %}">
+                        <img class="img-fluid d-none d-lg-block w-100" src="{{ x.about_gr_image.url }}">
+                        <img class="img-fluid d-lg-none" src="{{ x.about_gr_image_mobile.url }}">
                     </div>
                 </div>
               </div>
@@ -200,19 +194,16 @@
                                 ABOUT THE BRIDE
                             </p>
                             <h1 class="text-yellow title pl-lg-5 ml-lg-5 ml-4">
-                                NATASHA<br>
-                                ROMANOFF
+                                {{ x.about_br_name }}
                             </h1>
                             <hr align="left" class="line-style my-lg-4 my-5">    
-                            <p class="text-gray pl-lg-5 ml-lg-5 ml-4">
-                                Natasha is simply amazing, how she is always curious, always willing to learn everything to achieve her dream. She is someone that I looked up to for so long, and maybe she doesn’t even notice! I can’t thank her enough for what she does for me, to keep me strong, and to be what am I today.
-                                <br><br>
-                                -Bruce
-                            </p>
+                            <div class="text-gray pl-lg-5 ml-lg-5 ml-4">
+                                {{ x.about_br_brief }}
+                            </div>
                         </div>
                         <div class="col-lg-7 pr-lg-0 order-lg-2 order-1 pl-4 pl-lg-2">
-                            <img class="img-fluid d-none d-lg-block w-100" src="{% static 'rsvp/wedding/natasha_bruce/images/about-us-natasha-18.png' %}">
-                            <img class="img-fluid d-lg-none" src="{% static 'rsvp/wedding/natasha_bruce/images/about-us-natasha-09.png' %}">
+                            <img class="img-fluid d-none d-lg-block w-100" src="{{ x.about_br_image.url }}">
+                            <img class="img-fluid d-lg-none" src="{{ x.about_br_image_mobile.url }}">
                         </div>
                     </div>
               </div>
@@ -241,45 +232,50 @@
                 </p>
             </div>
             <div class="col-lg-5 px-lg-5 content">
-                <img data-aos="fade-down" data-aos-once="true" class="img-fluid image-left" src="{% static 'rsvp/wedding/natasha_bruce/images/when-and-where-08.jpg' %}">
+                <img data-aos="fade-down" data-aos-once="true" class="img-fluid image-left" src="{{ x.vc_image.url }}">
                 <h3 class="text-dgreen mt-lg-5 mb-lg-4">
-                    CATHEDRAL CHURCH
+                    {{ x.vc_place }}
                 </h3>
                 <p class="text-gray">
                     <span class="font-weight-bold">
-                        23 September 2020
+                        {{ x.vc_day }}, {{ x.vc_date }}
                     </span><br>
                     <span class="font-weight-bold">
-                        09.30 - 10.00 am
+                        {{ x.vc_time }}
                     </span><br>
+                    {{ x.vc_address }}<br />
                     Join us in Our Holy Matrimony and celebrate our wedding blessing!
                 </p>
-                <a class="button-come" href="#">
+                <p class="text-gray">
+                    Dresscode: {{ x.vc_dress }}
+                </p>
+                <a class="button-come" href="{{ x.vc_maps_link }}">
                     SEE LOCATION
                 </a>
             </div>
             <div class="col-lg-5 px-lg-5 content">
                 <div class="mb-lg-5">
                 <h3 class="text-dgreen mb-lg-4">
-                    FLOWER BALLROOM
+                    {{ x.vr_place }}
                 </h3>
                 <p class="text-gray">
                     <span class="font-weight-bold">
-                        23 September 2020
+                        {{ x.vr_day }}, {{ x.vr_date }}
                     </span><br>
                     <span class="font-weight-bold">
-                        17.00 - 19.00 am
+                        {{ x.vr_time }}
                     </span><br>
+                    {{ x.vr_address }}<br />
                     Join us in Our Wedding Reception and be part of the unforgettable celebration of our lives!
                 </p>
                 <p class="text-gray">
-                    Dresscode: Floral Pattern Attire
+                    Dresscode: {{ x.vr_dress }}
                 </p>
-                <a class="button-come" href="#">
+                <a class="button-come" href="{{ x.vr_maps_link }}">
                     SEE LOCATION
                 </a>
                 </div>
-                <img data-aos="fade-up" data-aos-once="true" class="img-fluid image-right" src="{% static 'rsvp/wedding/natasha_bruce/images/when-and-where-09.jpg' %}">
+                <img data-aos="fade-up" data-aos-once="true" class="img-fluid image-right" src="{{ x.vr_image.url }}">
             </div>
             <div data-aos="fade-left" data-aos-once="true" class="col-lg-1 px-lg-0 overflow-hidden">
                 <p class="text-white title-2">
@@ -299,43 +295,46 @@
                 </ul>
                 <div class="tab-content px-3 pb-5" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-holym" role="tabpanel" aria-labelledby="pills-holym-tab">
-                        <img class="img-fluid mt-5" src="{% static 'rsvp/wedding/natasha_bruce/images/when-and-where-08.jpg' %}">
+                        <img class="img-fluid mt-5" src="{{ x.vc_image.url }}">
                         <h3 class="text-dgreen mt-lg-5 mb-lg-4 my-4">
-                            CATHEDRAL CHURCH
+                            {{ x.vc_place }}
                         </h3>
                         <p class="text-gray mb-4">
                             <span class="font-weight-bold">
-                                23 September 2020
+                                {{ x.vc_day }}, {{ x.vc_date }}
                             </span><br>
                             <span class="font-weight-bold">
-                                09.30 - 10.00 am
+                                {{ x.vc_time }}
                             </span><br>
-                            Join us in a holy matrimony of blabla<br>
-                            lorem ipsum dolor sit amet
+                            {{ x.vc_address }}<br />
+                            Join us in Our Holy Matrimony and celebrate our wedding blessing!
                         </p>
-                        <a class="button-white" href="#">
+                        <p class="text-gray">
+                            Dresscode: {{ x.vc_dress }}
+                        </p>
+                        <a class="button-white" href="{{ x.vc_maps_link }}">
                             SEE LOCATION
                         </a>
                   </div>
                   <div class="tab-pane fade" id="pills-wedpart" role="tabpanel" aria-labelledby="pills-wedpart-tab">
-                        <img class="img-fluid mt-5" src="{% static 'rsvp/wedding/natasha_bruce/images/when-and-where-09.jpg' %}">
+                        <img class="img-fluid mt-5" src="{{ x.vr_image.url }}">
                         <h3 class="text-dgreen mt-lg-5 mb-lg-4 my-4">
-                            FLOWER BALLROOM
+                            {{ x.vr_place }}
                         </h3>
                         <p class="text-gray mb-4">
                             <span class="font-weight-bold">
-                                23 September 2020
+                                {{ x.vr_day }}, {{ x.vr_date }}
                             </span><br>
                             <span class="font-weight-bold">
-                                09.30 - 10.00 am
+                                {{ x.vr_time }}
                             </span><br>
-                            Join us in a holy matrimony of blabla<br>
-                            lorem ipsum dolor sit amet
+                            {{ x.vr_address }}<br />
+                            Join us in Our Wedding Reception and be part of the unforgettable celebration of our lives!
                         </p>
                         <p class="text-gray">
-                            Dresscode: Floral Pattern Attire
+                            Dresscode: {{ x.vr_dress }}
                         </p>
-                        <a class="button-white" href="#">
+                        <a class="button-white" href="{{ x.vr_maps_link }}">
                             SEE LOCATION
                         </a>
                   </div>
@@ -346,28 +345,22 @@
     <div id="accommodation" class="container-fluid accomodation">
         <div class="row d-none d-lg-flex">
             <div class="col-lg-5 pl-lg-0">
-                <img data-aos="flip-up"  data-aos-once="true" class="img-fluid ml-lg-5 pl-lg-5" src="{% static 'rsvp/wedding/natasha_bruce/images/accomodation-images-05.png' %}">
+                <img data-aos="flip-up"  data-aos-once="true" class="img-fluid ml-lg-5 pl-lg-5" src="{{ x.acm_image.url }}">
             </div>
             <div data-aos="slide-left" data-aos-once="true" class="col-lg-6 offset-lg-1 pr-lg-0 text-right">
                 <p class="text-gray font-weight-bold mr-lg-5 pr-lg-5">
                     ABOUT THE<br>
                     ACCOMMODATION
                 </p>
-                <h1 class="title text-dgreen mr-lg-5  pr-lg-5">
-                    KAMAYA HOTEL
+                <h1 class="title text-dgreen mr-lg-5 pr-lg-5">
+                    {{ x.acm_place }}
                 </h1>
                 <hr align="right" class="line-accomodation">
                 <p class="text-gray mr-lg-5  pr-lg-5">
-                    <strong>1 Night Stay at Kamaya Bali,<br>
-                    in a Suite Bedroom<br></strong>
+                    {{ x.acm_subtitle }}
                     <br>
-                    Kamaya Bali is famous for its gorgeous<br>
-                    space and serenity within the heart of Bali,<br>
-                    Indonesia, We wanted to welcome you<br>
-                    through our journey to the beginning of<br>
-                    our lives. We hope you enjoy your stay at<br>
-                    Kamaya Bali, Indonesia.<br><br><br>
-                    <a href="#" class="button-location text-right">SEE LOCATION</a>
+                    {{ x.acm_brief }}<br><br><br>
+                    <a href="{{ x.acm_maps_link }}" class="button-location text-right">SEE LOCATION</a>
                 </p>
             </div>
         </div>
@@ -378,22 +371,16 @@
                     ACCOMMODATION
                 </p>
                 <h1 class="title text-dgreen mr-lg-5  pr-lg-5">
-                    KAMAYA HOTEL
+                    {{ x.acm_place }}
                 </h1>
                 <br>
                 <img class="img-fluid ml-lg-5 pl-lg-5" src="{% static 'rsvp/wedding/natasha_bruce/images/accomodation-images-05.png' %}">
                 <p class="text-gray mr-lg-5 pr-lg-5">
                     <br>
-                    <strong>1 Night Stay at Kamaya Bali,<br>
-                    in a Suite Bedroom<br></strong>
+                    {{ x.acm_subtitle }}
                     <br>
-                    Kamaya Bali is famous for its gorgeous<br>
-                    space and serenity within the heart of Bali,<br>
-                    Indonesia, We wanted to welcome you<br>
-                    through our journey to the beginning of<br>
-                    our lives. We hope you enjoy your stay at<br>
-                    Kamaya Bali, Indonesia.<br><br><br>
-                    <a href="#" class="button-location text-right">SEE LOCATION</a>
+                    {{ x.acm_brief }}<br><br><br>
+                    <a href="{{ x.acm_maps_link }}" class="button-location text-right">SEE LOCATION</a>
                 </p>
             </div>
         </div>
@@ -410,16 +397,16 @@
             <div class="col-lg-12 px-lg-0 px-4">
                 <div class="carousel-gallery owl-theme">
                     <div class="item">
-                        <img class="img-fluid" data-toggle="modal" data-target="#images_1" src="{% static 'rsvp/wedding/natasha_bruce/images/slide-bottom-10.jpg' %}">
+                        <img class="img-fluid" data-toggle="modal" data-target="#images_1" src="{{ x.gallery_image1.url }}">
                     </div>
                     <div class="item">
-                        <img class="img-fluid" data-toggle="modal" data-target="#images_2" src="{% static 'rsvp/wedding/natasha_bruce/images/slide-bottom-11.jpg' %}">
+                        <img class="img-fluid" data-toggle="modal" data-target="#images_2" src="{{ x.gallery_image2.url }}">
                     </div>
                     <div class="item">
-                        <img class="img-fluid" data-toggle="modal" data-target="#images_3" src="{% static 'rsvp/wedding/natasha_bruce/images/slide-bottom-12.jpg' %}">
+                        <img class="img-fluid" data-toggle="modal" data-target="#images_3" src="{{ x.gallery_image3.url }}">
                     </div>
                     <div class="item">
-                        <img class="img-fluid" data-toggle="modal" data-target="#images_4" src="{% static 'rsvp/wedding/natasha_bruce/images/slide-bottom-13.jpg' %}">
+                        <img class="img-fluid" data-toggle="modal" data-target="#images_4" src="{{ x.gallery_image4.url }}">
                     </div>
                 </div>
             </div>
@@ -528,7 +515,7 @@
                     </div>
                     <div class="text-center w-50 float-right">
                         <input type="submit" class="button-cyan d-block w-100" data-toggle="modal" data-target="#exampleModal" value="SUBMIT"><br>
-                        <a href="wedding-1-einvitation-02.jpg' %}" class="button-cyan d-block">DOWNLOAD INVITATION</a>
+                        <a href="{{ x.inv_pdf.url }}" class="button-cyan d-block">DOWNLOAD INVITATION</a>
                     </div>
                 </form>
             </div>
@@ -577,7 +564,7 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                      <img class="mx-auto d-block" src="{% static 'rsvp/wedding/natasha_bruce/images/slide-bottom-10.jpg' %}" alt="images">
+                      <img class="mx-auto d-block" src="{{ x.gallery_image1.url }}" alt="images">
                   </div>
               </div>
         </div>
@@ -588,7 +575,7 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                      <img class="mx-auto d-block" src="{% static 'rsvp/wedding/natasha_bruce/images/slide-bottom-11.jpg' %}" alt="images">
+                      <img class="mx-auto d-block" src="{{ x.gallery_image2.url }}" alt="images">
                   </div>
               </div>
         </div>
@@ -599,7 +586,7 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                      <img class="mx-auto d-block" src="{% static 'rsvp/wedding/natasha_bruce/images/slide-bottom-12.jpg' %}" alt="images">
+                      <img class="mx-auto d-block" src="{{ x.gallery_image3.url }}" alt="images">
                   </div>
               </div>
         </div>
@@ -610,7 +597,7 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                      <img class="mx-auto d-block" src="{% static 'rsvp/wedding/natasha_bruce/images/slide-bottom-13.jpg' %}" alt="images">
+                      <img class="mx-auto d-block" src="{{ x.gallery_image4.url }}" alt="images">
                   </div>
               </div>
         </div>
