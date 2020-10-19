@@ -39,15 +39,16 @@
             </div>
             <img class="img-fluid d-block d-lg-none w-m-100p mb-m-15p animated fadeInUp" style="animation-delay: 1s !important;" src="{% static 'img/mobile/mobile-tour-02.png' %}" alt="reservasidulu">
             <!-- Section Template -->
-            <div id="tour-template" class="container-fluid pos-rel pt-lg-0 pb-lg-15p pl-lg-10p pr-lg-10p pl-m-0 pr-m-0 tour-template">
+            <div id="tour-template" class="container-fluid pos-rel pt-lg-0 pb-lg-15p pl-m-0 pr-m-0 tour-template">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-8 col-6">
                         <img class="img-fluid frame d-none d-lg-block" src="{{ x.section_img.url }}" alt="reservasidulu">
                         <img class="ornament-01 d-none d-lg-block" src="{% static 'img/03-tour/tour-images-02.png' %}" />
                         <img class="ornament-02 d-none d-lg-block" src="{% static 'img/03-tour/tour-images-03.png' %}" />
                         <img class="img-fluid frame d-block d-lg-none" src="{{ x.section_img.url }}" alt="reservasidulu">
-                        {#<!-- <div class="content" style="background: url({{ x.section_img.url }});"></div> -->#}
-                        <div class="box1 home-steps slideanim">
+                    </div>
+                    <div class="col-lg-4 col-6 pl-lg-5p pl-m-15">
+                        <div class="home-steps slideanim">
                             <div class="tabs-tour-rsvp">
                                 <ul id="nav-box" class="mb-lg-30 mb-m-10p slideanim">
                                     <a class="nav-tab" target="steps1">

@@ -459,6 +459,7 @@
     .edit-template .card .templates-steps .tab-pane .btn-rectangle{
       padding: 4% 2%;
       font-size: 16px !important;
+      cursor: pointer;
     }
   /* My Guest */
     /* Header Info */
@@ -876,11 +877,16 @@ ul.messages, .alert{display: none;}
       width: 100%;
     }
     /* Template */
+    .tour-template{
+      overflow: hidden !important;
+      padding-top: 20% !important;
+      min-height: 125vh;
+    }
     .tour-template .frame{
-      display: none;
-      margin-left: unset;
-      width: 50%;
-      height: 115vh;
+      float: unset;
+      margin: 0 auto;
+      margin-right: 0;
+      width: 100%;
     }
     .tour-template ul#nav-box{width: 100% !important;}
     .tour-template .box1{
