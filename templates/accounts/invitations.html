@@ -4,7 +4,6 @@
 
 {% block content %}
     <title>{% block title %} My Products | Reservasi Dulu {% endblock %}</title>
-
     <!-- Main -->
     <div id="main-templates" class="main-account">
         <!-- Section User Navigation -->
@@ -30,12 +29,16 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3">
-                                    {#{% for shit in u_theme %}#}
-                                        <div class="boxc">
-                                            <a class="btn-whiteoutline" href="/w/{{ i.theme_site_url }}/update">edit</a>
-                                            <a class="btn-rectangle" href="/w/{{ i.theme_site_url }}">preview</a>
-                                        </div>
-                                    {#{% endfor %}#}
+                                    <div class="boxc">
+                                        <a class="btn-whiteoutline" href="/w/update/{{ i.theme_site_url }}/update">edit</a>
+                                        <a class="btn-rectangle" href="/w/{{ i.theme_site_url }}">preview</a>
+                                    </div>
+{#                                    {% for preview in urls %}#}
+{#                                        <div class="boxc">#}
+{#                                            <a class="btn-whiteoutline" href="/w/update/{{ preview.theme_site_url }}/update">edit</a>#}
+{#                                            <a class="btn-rectangle" href="/w/{{ preview.theme_site_url }}">preview</a>#}
+{#                                        </div>#}
+{#                                    {% endfor %}#}
                                 </div>
                             </div>
                         </div>

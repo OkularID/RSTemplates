@@ -1,5 +1,6 @@
 {% load static %}
 {% load compress %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,19 +22,7 @@
 </head>
 <body>
     <!-- Preview Navigation -->
-    <div class="preview-checkout">
-        <p>Just with <a href="{% url 'home' %}"><img class="pc-logo" src="{% static 'img/logo.png' %}" /></a>, you are one click away to convenience</p>
-        <a class="pc-button" href="">
-            <p class="font-orange">Back to Editor</p>
-            <img src="{% static 'img/04-templates/preview-02.png' %}">
-        </a>
-        <a class="pc-button" href="">
-            <p class="font-white">Check Out</p>
-            <img src="{% static 'img/04-templates/preview-03.png' %}">
-        </a>
-        <img class="pc-motif" src="{% static 'img/04-templates/preview-01.png' %}" />
-    </div>
-    
+    {% include 'themes/poni.html' %}
     <!-- Main Site -->
     <div id="homepage">
         <!-- Navbar -->
@@ -247,50 +236,52 @@
                         <div class="boxc w-m-100p w-lg-80p ma-lg">
                             <form method="post" enctype="multipart/form-data">
                                  {% csrf_token %}
+{#                                {{ form.errors }}#}
 
-                                {{ form.errors }}
-                                <div class="form-row">
-                                    <div class="form-group col-lg-6 mb-lg-0 pr-m-5 pr-lg-5p">
-                                        <label for="{{form.check.id_for_label}}">Are You Attending ?</label>
-                                        <div class="box bg-white mb-m-10p mb-lg-30 pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
-                                            <input type="radio" id="yes" name="{{form.check.name}}" value="yes">
-                                            <label class="radio" for="yes">Yes, I will be there</label><br />
-                                            <input type="radio" id="no" name="{{form.check.name}}" value="no">
-                                            <label class="radio" for="no">Sorry, I can’t come</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-6 mb-lg-0 pl-m-5 pl-lg-5p">
-                                        <label for="{{form.phone.id_for_label}}">{{form.phone.label}}*</label>
-                                        <input type="text" class="form-control" id="{{form.phone.id_for_label}}" name="{{form.phone.name}}" required>
-                                        <label for="{{form.email.id_for_label}}">{{form.email.label}}*</label>
-                                        <input type="email" class="form-control" id="{{form.email.id_for_label}}" name="{{form.email.name}}" required>
-                                    </div>
-                                    <div class="form-group col-lg-6 mb-lg-0 pr-m-5 pr-lg-5p d-none d-lg-block">
-                                        <label for="{{form.name.id_for_label}}">{{form.name.label}}*</label>
-                                        <input type="text" class="form-control" id="{{form.name.id_for_label}}" name="{{form.name.name}}" required>
-                                    </div>
-                                    <div class="form-group col-lg-6 mb-lg-0 pl-m-5 pl-lg-5p">
-                                        <label for="{{form.attending.id_for_label}}">Number of Guest</label>
-                                        <div class="guest input-number-arrow">
-                                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-05.png' %}" />
-                                            </a>
-                                            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-06.png' %}" />
-                                            </a>
-                                        </div>
+                                {{ form.as_table }}
+
+{#                                <div class="form-row">#}
+{#                                    <div class="form-group col-lg-6 mb-lg-0 pr-m-5 pr-lg-5p">#}
+{#                                        <label for="{{form.check.id_for_label}}">Are You Attending ?</label>#}
+{#                                        <div class="box bg-white mb-m-10p mb-lg-30 pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">#}
+{#                                            <input type="radio" id="yes" name="{{form.check.name}}" value="yes">#}
+{#                                            <label class="radio" for="yes">Yes, I will be there</label><br />#}
+{#                                            <input type="radio" id="no" name="{{form.check.name}}" value="no">#}
+{#                                            <label class="radio" for="no">Sorry, I can’t come</label>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="form-group col-lg-6 mb-lg-0 pl-m-5 pl-lg-5p">#}
+{#                                        <label for="{{form.phone.id_for_label}}">{{form.phone.label}}*</label>#}
+{#                                        <input type="text" class="form-control" id="{{form.phone.id_for_label}}" name="{{form.phone.name}}" required>#}
+{#                                        <label for="{{form.email.id_for_label}}">{{form.email.label}}*</label>#}
+{#                                        <input type="email" class="form-control" id="{{form.email.id_for_label}}" name="{{form.email.name}}" required>#}
+{#                                    </div>#}
+{#                                    <div class="form-group col-lg-6 mb-lg-0 pr-m-5 pr-lg-5p d-none d-lg-block">#}
+{#                                        <label for="{{form.name.id_for_label}}">{{form.name.label}}*</label>#}
+{#                                        <input type="text" class="form-control" id="{{form.name.id_for_label}}" name="{{form.name.name}}" required>#}
+{#                                    </div>#}
+{#                                    <div class="form-group col-lg-6 mb-lg-0 pl-m-5 pl-lg-5p">#}
+{#                                        <label for="{{form.attending.id_for_label}}">Number of Guest</label>#}
+{#                                        <div class="guest input-number-arrow">#}
+{#                                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">#}
+{#                                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-05.png' %}" />#}
+{#                                            </a>#}
+{#                                            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">#}
+{#                                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">#}
+{#                                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-06.png' %}" />#}
+{#                                            </a>#}
+{#                                        </div>#}
                                         {#<select class="form-control" id="{{form.attending.id_for_label}}" name="{{form.attending.name}}" required>#}
                                             {#{% for id , name in form.fields.attending.choices%}#}
                                                 {#<option value="{{id}}">{{name}}</option>#}
                                             {#{%endfor%}#}
                                         {#</select>#}
-                                    </div>
-                                    <div class="form-group col-lg-12 mb-m-0 pt-lg-5p text-right">
-                                        <button type="submit" class="button-default">Submit</button>
-                                        <a href="{{ x.inv_pdf.url }}" class="button-download">Download Invitation</a>
-                                    </div>
-                                </div>
+{#                                    </div>#}
+{#                                    <div class="form-group col-lg-12 mb-m-0 pt-lg-5p text-right">#}
+{#                                        <button type="submit" class="button-default">Submit</button>#}
+{#                                        <a href="{{ x.inv_pdf.url }}" class="button-download">Download Invitation</a>#}
+{#                                    </div>#}
+{#                                </div>#}
                             </form>
 
                         </div>
@@ -304,12 +295,12 @@
                 <div class="row">
                     <div class="col-12 mb-m-10p mtext-center col-lg-8">
                         <p>All Rights Reserved © This website is made by <b>Reservasi Dulu</b></p>
-                    </div>                
+                    </div>
                     <div class="col-12 mtext-center col-lg-4 text-right">
                         {#<a href="" class="button-footer">Share</a>#}
                             {#<a href="{% url 'emma_norman_update' site_url %}" class="button-footer">Edit</a>#}
                             {#<a href="" class="button-footer">Delete</a>#}
-                        
+
                     </div>
                 </div>
             </div>
