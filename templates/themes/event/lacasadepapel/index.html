@@ -21,18 +21,7 @@
 </head>
 <body>
     <!-- Preview Navigation -->
-    <div class="preview-checkout">
-        <p>Just with <a href="{% url 'home' %}"><img class="pc-logo" src="{% static 'img/logo.png' %}" /></a>, you are one click away to convenience</p>
-        <a class="pc-button" href="">
-            <p class="font-orange">Back to Editor</p>
-            <img src="{% static 'img/04-templates/preview-02.png' %}">
-        </a>
-        <a class="pc-button" href="">
-            <p class="font-white">Check Out</p>
-            <img src="{% static 'img/04-templates/preview-03.png' %}">
-        </a>
-        <img class="pc-motif" src="{% static 'img/04-templates/preview-01.png' %}" />
-    </div>
+    {% include 'themes/poni.html' %}
     
     <!-- Main Site -->    
     <div class="nav-wedding position-absolute">
