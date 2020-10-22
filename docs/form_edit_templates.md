@@ -226,7 +226,7 @@
 		30. Rundown Time 9				= {{ x.rundown_time9 }}
 		31. Rundown Event 9				= {{ x.rundown_event9 }}
 		<!-- RSVP -->
-		31. Invitation PDF				= {{ x.inv_pdf.url }}
+		32. Invitation PDF				= {{ x.inv_pdf.url }}
 	- 20year_reunion
 		<!-- Logo -->
 		1. Logo 						= {{ x.img_logo.url }}
@@ -314,21 +314,21 @@
 		28. Invitation PDF				= {{ x.inv_pdf.url }}
 	- christmas_dinner
 		<!-- Banner -->
-		3. Banner Title 				= {{ x.banner_title }}
+		1. Banner Title 				= {{ x.banner_title }}
 		<!-- About -->
 		2. About Sub Title				= {{ x.about_subtitle }}
 		3. About Title 					= {{ x.about_title }}
 		4. About Background 			= {{ x.about_bg.url }}
 		<!-- Date and Place -->
-		18. Date and Place Day			= {{ x.dap_day }}
-		19. Date and Place Date			= {{ x.dap_date }}
-		20. Date and Place Time			= {{ x.dap_time }}
-		21. Date and Place Place		= {{ x.dap_place }}
-		22. Date and Place Address		= {{ x.dap_address }}
-		22. Date and Place Contact		= {{ x.dap_contact }}
-		23. Date and Place Dresscode	= {{ x.dap_dress }}
-		22. Date and Place Things		= {{ x.dap_things }}
-		11. Date and Place Maps 		= {{ x.dap_maps }}
+		5. Date and Place Day			= {{ x.dap_day }}
+		6. Date and Place Date			= {{ x.dap_date }}
+		7. Date and Place Time			= {{ x.dap_time }}
+		8. Date and Place Place		= {{ x.dap_place }}
+		9. Date and Place Address		= {{ x.dap_address }}
+		10. Date and Place Contact		= {{ x.dap_contact }}
+		11. Date and Place Dresscode	= {{ x.dap_dress }}
+		12. Date and Place Things		= {{ x.dap_things }}
+		13. Date and Place Maps 		= {{ x.dap_maps }}
 		<!-- Rundown -->
 		14. Rundown Time 1				= {{ x.rundown_time1 }}
 		15. Rundown Event 1				= {{ x.rundown_event1 }}
@@ -343,7 +343,7 @@
 		24. Rundown Time 6				= {{ x.rundown_time6 }}
 		25. Rundown Event 6				= {{ x.rundown_event6 }}
 		<!-- RSVP -->
-		24. Invitation PDF				= {{ x.inv_pdf.url }}
+		26. Invitation PDF				= {{ x.inv_pdf.url }}
 	- lacasadepapel
 		<!-- Banner -->
 		1. Banner Background 			= {{ x.banner_bg.url }}
@@ -748,7 +748,7 @@
 		21. Album Image 5				= {{ x.album_image5.url }}
 		<!-- RSVP -->
 		22. RSVP Image 					= {{ x.rsvp_image.url }}
-		25. Invitation PDF				= {{ x.inv_pdf.url }}
+		23. Invitation PDF				= {{ x.inv_pdf.url }}
 	- liam_felicia
 		<!-- Logo -->
 		1. Initial Logo					= {{ x.initial_logo }}
@@ -757,34 +757,34 @@
 		3. Banner Background 			= {{ x.banner_bg.url }}
 		<!-- About -->
 		4. About Image					= {{ x.about_image.url }}
-		6. About Title 					= {{ x.about_title }}
-		7. About Brief 					= {{ x.about_brief }}
+		5. About Title 					= {{ x.about_title }}
+		6. About Brief 					= {{ x.about_brief }}
 		<!-- Venue -->
-		8. Venue Ceremony Image			= {{ x.vc_image.url }}
-		9. Venue Ceremony Day			= {{ x.vc_day }}
-		10. Venue Ceremony Date			= {{ x.vc_date }}
-		11. Venue Ceremony Time			= {{ x.vc_time }}
-		12. Venue Ceremony Place		= {{ x.vc_place }}
-		13. Venue Ceremony Address		= {{ x.vc_address }}
-		14. Venue Reception Image		= {{ x.vr_image.url }}
-		15. Venue Reception Day			= {{ x.vr_day }}
-		16. Venue Reception Date		= {{ x.vr_date }}
-		17. Venue Reception Time		= {{ x.vr_time }}
-		18. Venue Reception Place		= {{ x.vr_place }}
-		19. Venue Reception Address		= {{ x.vr_address }}
+		7. Venue Ceremony Image			= {{ x.vc_image.url }}
+		8. Venue Ceremony Day			= {{ x.vc_day }}
+		9. Venue Ceremony Date			= {{ x.vc_date }}
+		10. Venue Ceremony Time			= {{ x.vc_time }}
+		11. Venue Ceremony Place		= {{ x.vc_place }}
+		12. Venue Ceremony Address		= {{ x.vc_address }}
+		13. Venue Reception Image		= {{ x.vr_image.url }}
+		14. Venue Reception Day			= {{ x.vr_day }}
+		15. Venue Reception Date		= {{ x.vr_date }}
+		16. Venue Reception Time		= {{ x.vr_time }}
+		17. Venue Reception Place		= {{ x.vr_place }}
+		18. Venue Reception Address		= {{ x.vr_address }}
 		<!-- Accommodation -->
-		20. Accommodation Image			= {{ x.acm_image.url }}
-		21. Accommodation Place			= {{ x.acm_place }}
-		22. Accommodation Address		= {{ x.acm_address }}
-		23. Accommodation Note			= {{ x.acm_note }}
+		19. Accommodation Image			= {{ x.acm_image.url }}
+		20. Accommodation Place			= {{ x.acm_place }}
+		21. Accommodation Address		= {{ x.acm_address }}
+		22. Accommodation Note			= {{ x.acm_note }}
 		<!-- Gallery -->
-		24. Gallery Image 1				= {{ x.gallery_image1.url }}
-		25. Gallery Image 2				= {{ x.gallery_image2.url }}
-		26. Gallery Image 3				= {{ x.gallery_image3.url }}
-		27. Gallery Image 4				= {{ x.gallery_image4.url }}
-		28. Gallery Image 5				= {{ x.gallery_image5.url }}
+		23. Gallery Image 1				= {{ x.gallery_image1.url }}
+		24. Gallery Image 2				= {{ x.gallery_image2.url }}
+		25. Gallery Image 3				= {{ x.gallery_image3.url }}
+		26. Gallery Image 4				= {{ x.gallery_image4.url }}
+		27. Gallery Image 5				= {{ x.gallery_image5.url }}
 		<!-- RSVP -->
-		29. Invitation PDF				= {{ x.inv_pdf.url }}
+		28. Invitation PDF				= {{ x.inv_pdf.url }}
 	- lucas_eli
 		<!-- Banner -->
 		1. Banner Date	 				= {{ x.banner_date }}
@@ -917,22 +917,22 @@
 		26. Venue Reception Time		= {{ x.vr_time }}
 		27. Venue Reception Dresscode	= {{ x.vr_dress }}
 		<!-- Gallery -->
-		7. Gallery Brief				= {{ x.gallery_brief }}
-		28. Gallery Image 1				= {{ x.gallery_image1.url }}
-		29. Gallery Image 2				= {{ x.gallery_image2.url }}
-		30. Gallery Image 3				= {{ x.gallery_image3.url }}
-		31. Gallery Image 4				= {{ x.gallery_image4.url }}
-		32. Gallery Image 5				= {{ x.gallery_image5.url }}
-		33. Gallery Image 6				= {{ x.gallery_image6.url }}
-		34. Gallery Image 7				= {{ x.gallery_image7.url }}
-		35. Gallery Image 8				= {{ x.gallery_image8.url }}
+		28. Gallery Brief				= {{ x.gallery_brief }}
+		29. Gallery Image 1				= {{ x.gallery_image1.url }}
+		30. Gallery Image 2				= {{ x.gallery_image2.url }}
+		31. Gallery Image 3				= {{ x.gallery_image3.url }}
+		32. Gallery Image 4				= {{ x.gallery_image4.url }}
+		33. Gallery Image 5				= {{ x.gallery_image5.url }}
+		34. Gallery Image 6				= {{ x.gallery_image6.url }}
+		35. Gallery Image 7				= {{ x.gallery_image7.url }}
+		36. Gallery Image 8				= {{ x.gallery_image8.url }}
 		<!-- Accommodation -->
-		36. Accommodation Image			= {{ x.acm_image.url }}
-		37. Accommodation Place			= {{ x.acm_place }}
-		38. Accommodation Brief			= {{ x.acm_brief }}
-		39. Accommodation Maps Link		= {{ x.acm_maps_link }}
+		37. Accommodation Image			= {{ x.acm_image.url }}
+		38. Accommodation Place			= {{ x.acm_place }}
+		39. Accommodation Brief			= {{ x.acm_brief }}
+		40. Accommodation Maps Link		= {{ x.acm_maps_link }}
 		<!-- RSVP -->
-		40. Invitation PDF				= {{ x.inv_pdf.url }}
+		41. Invitation PDF				= {{ x.inv_pdf.url }}
 	- steve_sharon
 		<!-- Logo -->
 		1. Logo 						= {{ x.img_logo.url }}
@@ -983,52 +983,52 @@
 	- vicky_wanda
 		<!-- Logo -->
 		1. Logogram						= {{ x.img_logogram.url }}
-		1. Logotype						= {{ x.img_logotype.url }}
-		1. Logotype Mobile	 			= {{ x.img_logotype_mobile.url }}
+		2. Logotype						= {{ x.img_logotype.url }}
+		3. Logotype Mobile	 			= {{ x.img_logotype_mobile.url }}
 		<!-- Banner -->
-		3. Banner Title 				= {{ x.banner_title }}
-		4. Banner Background 			= {{ x.banner_bg.url }}
+		4. Banner Title 				= {{ x.banner_title }}
+		5. Banner Background 			= {{ x.banner_bg.url }}
 		<!-- About -->
-		4. About Groom Image			= {{ x.about_gr_image.url }}
+		6. About Groom Image			= {{ x.about_gr_image.url }}
 		7. About Groom Brief			= {{ x.about_gr_brief }}
-		4. About Our Story Image		= {{ x.about_os_image.url }}
-		5. About Our Story Brief 		= {{ x.about_os_brief }}
-		4. About Bride Image			= {{ x.about_br_image.url }}
-		7. About Bride Brief			= {{ x.about_br_brief }}
+		8. About Our Story Image		= {{ x.about_os_image.url }}
+		9. About Our Story Brief 		= {{ x.about_os_brief }}
+		10. About Bride Image			= {{ x.about_br_image.url }}
+		11. About Bride Brief			= {{ x.about_br_brief }}
 		<!-- Venue -->
-		13. Venue Ceremony Month 		= {{ x.vc_month }}
-		12. Venue Ceremony Date			= {{ x.vc_date }}
-		13. Venue Ceremony Year	 		= {{ x.vc_year }}
+		12. Venue Ceremony Month 		= {{ x.vc_month }}
+		13. Venue Ceremony Date			= {{ x.vc_date }}
+		14. Venue Ceremony Year	 		= {{ x.vc_year }}
 		15. Venue Ceremony Place		= {{ x.vc_place }}
 		16. Venue Ceremony Address		= {{ x.vc_address }}
 		17. Venue Ceremony Image		= {{ x.vc_image.url }}
-		11. Venue Ceremony Maps Link	= {{ x.vc_maps_link }}
-		13. Venue Reception Month 		= {{ x.vr_month }}
-		12. Venue Reception Date		= {{ x.vr_date }}
-		13. Venue Reception Year	 	= {{ x.vr_year }}
-		15. Venue Reception Place		= {{ x.vr_place }}
-		16. Venue Reception Address		= {{ x.vr_address }}
-		16. Venue Reception Dresscode	= {{ x.vr_dress }}
-		17. Venue Reception Image		= {{ x.vr_image.url }}
-		11. Venue Reception Maps Link	= {{ x.vr_maps_link }}
+		18. Venue Ceremony Maps Link	= {{ x.vc_maps_link }}
+		19. Venue Reception Month 		= {{ x.vr_month }}
+		20. Venue Reception Date		= {{ x.vr_date }}
+		21. Venue Reception Year	 	= {{ x.vr_year }}
+		22. Venue Reception Place		= {{ x.vr_place }}
+		23. Venue Reception Address		= {{ x.vr_address }}
+		24. Venue Reception Dresscode	= {{ x.vr_dress }}
+		25. Venue Reception Image		= {{ x.vr_image.url }}
+		26. Venue Reception Maps Link	= {{ x.vr_maps_link }}
 		<!-- Accommodation -->
 		27. Accommodation Image			= {{ x.acm_image.url }}
-		27. Accommodation Image Mobile	= {{ x.acm_image_mobile.url }}
-		28. Accommodation Place			= {{ x.acm_place }}
-		29. Accommodation Sub Title		= {{ x.acm_subtitle }}
-		30. Accommodation Brief			= {{ x.acm_brief }}
-		30. Accommodation Note			= {{ x.acm_note }}
-		31. Accommodation Maps Link		= {{ x.acm_maps_link }}
+		28. Accommodation Image Mobile	= {{ x.acm_image_mobile.url }}
+		29. Accommodation Place			= {{ x.acm_place }}
+		30. Accommodation Sub Title		= {{ x.acm_subtitle }}
+		31. Accommodation Brief			= {{ x.acm_brief }}
+		32. Accommodation Note			= {{ x.acm_note }}
+		33. Accommodation Maps Link		= {{ x.acm_maps_link }}
 		<!-- Gallery -->
-		33. Gallery Image 1				= {{ x.gallery_image1.url }}
-		34. Gallery Image 2				= {{ x.gallery_image2.url }}
-		35. Gallery Image 3				= {{ x.gallery_image3.url }}
-		36. Gallery Image 4				= {{ x.gallery_image4.url }}
-		37. Gallery Image 5				= {{ x.gallery_image5.url }}
-		38. Gallery Image 6				= {{ x.gallery_image6.url }}
+		34. Gallery Image 1				= {{ x.gallery_image1.url }}
+		35. Gallery Image 2				= {{ x.gallery_image2.url }}
+		36. Gallery Image 3				= {{ x.gallery_image3.url }}
+		37. Gallery Image 4				= {{ x.gallery_image4.url }}
+		38. Gallery Image 5				= {{ x.gallery_image5.url }}
+		39. Gallery Image 6				= {{ x.gallery_image6.url }}
 		<!-- RSVP -->
-		33. RSVP Image 					= {{ x.rsvp_image.url }}
-		39. Invitation PDF				= {{ x.inv_pdf.url }}
+		40. RSVP Image 					= {{ x.rsvp_image.url }}
+		41. Invitation PDF				= {{ x.inv_pdf.url }}
 	- victor_karla
 		<!-- Logo -->
 		1. Logo 						= {{ x.img_logo.url }}
@@ -1118,11 +1118,11 @@
 		8. Venue Ceremony Time			= {{ x.vc_time }}
 		9. Venue Ceremony Address		= {{ x.vc_address }}
 		10. Venue Ceremony Dresscode	= {{ x.vc_dress }}
-		12. Venue Reception Day			= {{ x.vr_day }}
-		13. Venue Reception Date		= {{ x.vr_date }}
-		14. Venue Reception Time		= {{ x.vr_time }}
-		15. Venue Reception Address		= {{ x.vr_address }}
-		16. Venue Reception Dresscode	= {{ x.vr_dress }}
+		11. Venue Reception Day			= {{ x.vr_day }}
+		12. Venue Reception Date		= {{ x.vr_date }}
+		13. Venue Reception Time		= {{ x.vr_time }}
+		14. Venue Reception Address		= {{ x.vr_address }}
+		15. Venue Reception Dresscode	= {{ x.vr_dress }}
 	- natasha_bruce
 		1. Name	Groom					= {{ x.name_groom }}
 		2. Name	Bride					= {{ x.name_bride }}
@@ -1154,52 +1154,41 @@
 		15. Venue Party Time			= {{ x.vp_time }}
 
 ## Template Name
-	- Wedding
-		1. dylan_rose		= wedding_8
-		2. emma_norman		= wedding_4
-		3. jack_jane		= wedding_5
-		4. liam_felicia		= wedding_3
-		5. lucas_eli		= wedding_10
-		6. natasha_bruce	= wedding_1
-		7. peter_mary		= wedding_2
-		8. steve_sharon		= wedding_9
-		9. vicky_wanda		= wedding_6
-		10. victor_karla	= wedding_victor
 	- Birthday
-		1. aaron			= birthday_4 
-		2. anastasia		= birthday_2 
-		3. christine		= birthday_3 
-		4. diana_ross		= birthday_1 
+		1. aaron			= birthday_4 		= Happy Dinosaur
+		2. anastasia		= birthday_2 		= Pastel Party
+		3. christine		= birthday_3 		= Fun Times
+		4. diana_ross		= birthday_1 		= Polka Galore
 	- Event
-		1. 10year_reunion	= event_5
-		2. 20year_reunion	= event_6
-		3. brotherfield		= grand_opening
-		4. christmas_dinner	= event_7
-		5. lacasadepapel	= gala_dinner
-		6. music			= event_8
-		7. oceandor			= event_3
-		8. seminary			= event_4
+		1. 10year_reunion	= event_5			= Classroom
+		2. 20year_reunion	= event_6			= Friendship
+		3. brotherfield		= grand_opening 	= Colors Delight
+		4. christmas_dinner	= event_7			= Christmas Jolly
+		5. lacasadepapel	= gala_dinner		= Royal Invitation
+		6. music			= event_8			= Soundtopia
+		7. oceandor			= event_3			= Statement
+		8. seminary			= event_4			= Tech and Type
+	- Wedding
+		1. dylan_rose		= wedding_8 		= Precious Memories
+		2. emma_norman		= wedding_4 		= Sheer Blush
+		3. jack_jane		= wedding_5 		= Soft Jade
+		4. liam_felicia		= wedding_3 		= Passionate Bond
+		5. lucas_eli		= wedding_10 		= Polaroid Love
+		6. natasha_bruce	= wedding_1 		= Bushes and Leaves
+		7. peter_mary		= wedding_2 		= Scrapbook
+		8. steve_sharon		= wedding_9 		= Blooming Feelings
+		9. vicky_wanda		= wedding_6 		= Terracotta
+		10. victor_karla	= wedding_victor 	= Us Againts The World
 	- Free
-		1. anastasia		= birthday_2_free
-		2. christine		= birthday_3_free
-		3. diana_ross		= birthday_1_free
-		4. dylan_rose		= wedding_8_free
-		5. natasha_bruce	= wedding_1_free
-		6. steve_sharon		= wedding_9_free
+		1. anastasia		= birthday_2_free 	= Pastel Party
+		2. christine		= birthday_3_free 	= Fun Times
+		3. diana_ross		= birthday_1_free 	= Polka Galore
+		4. dylan_rose		= wedding_8_free 	= Precious Memories
+		5. natasha_bruce	= wedding_1_free 	= Bushes and Leaves
+		6. steve_sharon		= wedding_9_free 	= Blooming Feelings
 
 
 ## Template bug
-	- Wedding
-		1. dylan_rose		= https://dev.reservasidulu.com/themes/preview/precious-memories/
-		2. emma_norman		= DONE
-		3. jack_jane		= DONE
-		4. liam_felicia		= DONE
-		5. lucas_eli		= DONE
-		6. natasha_bruce	= https://dev.reservasidulu.com/themes/preview/bushes-and-leaves/
-		7. peter_mary		= https://dev.reservasidulu.com/themes/preview/scrapbook/
-		8. steve_sharon		= DONE
-		9. vicky_wanda		= DONE
-		10. victor_karla	= https://dev.reservasidulu.com/themes/preview/us-againts-the-world/
 	- Birthday
 		1. aaron			= DONE
 		2. anastasia		= https://dev.reservasidulu.com/themes/preview/pastel-party/
@@ -1214,6 +1203,17 @@
 		6. music			= DONE
 		7. oceandor			= DONE
 		8. seminary			= https://dev.reservasidulu.com/themes/preview/tech-and-type/
+	- Wedding
+		1. dylan_rose		= https://dev.reservasidulu.com/themes/preview/precious-memories/
+		2. emma_norman		= DONE
+		3. jack_jane		= DONE
+		4. liam_felicia		= DONE
+		5. lucas_eli		= DONE
+		6. natasha_bruce	= https://dev.reservasidulu.com/themes/preview/bushes-and-leaves/
+		7. peter_mary		= https://dev.reservasidulu.com/themes/preview/scrapbook/
+		8. steve_sharon		= DONE
+		9. vicky_wanda		= DONE
+		10. victor_karla	= https://dev.reservasidulu.com/themes/preview/us-againts-the-world/
 	- Free
 		1. anastasia		= DONE
 		2. christine		= DONE
@@ -1221,3 +1221,38 @@
 		4. dylan_rose		= DONE
 		5. natasha_bruce	= https://dev.reservasidulu.com/themes/preview/free-bushes-and-leaves/
 		6. steve_sharon		= https://dev.reservasidulu.com/themes/preview/free-blooming-feelings/
+
+
+## Template Form
+	- Birthday
+		1. aaron			= 
+		2. anastasia		= 
+		3. christine		= 
+		4. diana_ross		= 
+	- Event
+		1. 10year_reunion	= 
+		2. 20year_reunion	= 
+		3. brotherfield		= 
+		4. christmas_dinner	= 
+		5. lacasadepapel	= 
+		6. music			= 
+		7. oceandor			= 
+		8. seminary			= 
+	- Wedding
+		1. dylan_rose		= 
+		2. emma_norman		= tampilan masih belum sesuai dan masih ada typo
+		3. jack_jane		= 
+		4. liam_felicia		= 
+		5. lucas_eli		= 
+		6. natasha_bruce	= 
+		7. peter_mary		= 
+		8. steve_sharon		= 
+		9. vicky_wanda		= 
+		10. victor_karla	= 
+	- Free
+		1. anastasia		= 
+		2. christine		= 
+		3. diana_ross		= 
+		4. dylan_rose		= 
+		5. natasha_bruce	= 
+		6. steve_sharon		= 

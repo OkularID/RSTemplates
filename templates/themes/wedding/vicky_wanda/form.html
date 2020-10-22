@@ -1,0 +1,264 @@
+{% extends 'base_form.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <!-- Main -->
+    <div id="main-templates" class="main-account">
+        <!-- Section User Navigation -->
+        {% include 'shared/partials/base_form_nav.html' %}
+        <!-- Section User Content -->
+        <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="mb-lg-2p">Edit Templates</h3>
+                    <div class="card">
+                        <div class="container-fluid templates-steps pb-lg-10p">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <!-- Navigation Dots -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step7" data-toggle="tab" aria-controls="step7" role="tab"></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="main_form">
+                                            <div class="tab-pane active" role="tabpanel" id="step1">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/templates-edit-img/section.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Main Info</b></h5>
+                                                                <label>Theme</label>
+                                                                    <input type="text" name="theme" class="form-control" placeholder="Terracotta" disabled />
+                                                                <label>Site URL*</label>
+                                                                    {{ form.site_url }}
+                                                                <label>Title*</label>
+                                                                    {{ form.title }}
+                                                                <label>Logogram*</label>
+                                                                    {{ form.img_logogram }}
+                                                                <label>Logotype*</label>
+                                                                    {{ form.img_logotype }}
+                                                                <label>Logotype Mobile*</label>
+                                                                    {{ form.img_logotype_mobile }}
+                                                                <label>Bride Name*</label>
+                                                                    {{ form.bride_name }}
+                                                                <label>Groom Name*</label>
+                                                                    {{ form.groom_name }}
+                                                                <label>Hastag*</label>
+                                                                    {{ form.hashtag }}
+                                                            </div>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step2">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/edit-template-image-01.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Header</b></h5>
+                                                                <label>Title*</label>
+                                                                    {{ form.banner_title }}
+                                                                <label>Background*</label>
+                                                                    {{ form.banner_bg }}
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step3">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/edit-template-image-02.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>About</b></h5>
+                                                                <label>Groom Image*</label>
+                                                                    {{ form.about_gr_image }}
+                                                                <label>Groom Brief*</label>
+                                                                    {{ form.about_gr_brief }}
+                                                                <label>Our Story Image*</label>
+                                                                    {{ form.about_os_image }}
+                                                                <label>Our Story Brief*</label>
+                                                                    {{ form.about_os_brief }}
+                                                                <label>Bride Image*</label>
+                                                                    {{ form.about_br_image }}
+                                                                <label>Bride Brief*</label>
+                                                                    {{ form.about_br_brief }}
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step4">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/edit-template-image-03.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Venue</b></h5>
+                                                                <label>Ceremony Month*</label>
+                                                                    {{ form.vc_month }}
+                                                                <label>Ceremony Date*</label>
+                                                                    {{ form.vc_date }}
+                                                                <label>Ceremony Year*</label>
+                                                                    {{ form.vc_year }}
+                                                                <label>Ceremony Place*</label>
+                                                                    {{ form.vc_place }}
+                                                                <label>Ceremony Address*</label>
+                                                                    {{ form.vc_address }}
+                                                                <label>Ceremony Image*</label>
+                                                                    {{ form.vc_image }}
+                                                                <label>Ceremony Maps Link*</label>
+                                                                    {{ form.vc_maps_link }}
+                                                                <label>Reception Month*</label>
+                                                                    {{ form.vr_month }}
+                                                                <label>Reception Date*</label>
+                                                                    {{ form.vr_date }}
+                                                                <label>Reception Year*</label>
+                                                                    {{ form.vr_year }}
+                                                                <label>Reception Place*</label>
+                                                                    {{ form.vr_place }}
+                                                                <label>Reception Address*</label>
+                                                                    {{ form.vr_address }}
+                                                                <label>Reception Dresscode*</label>
+                                                                    {{ form.vr_dress }}
+                                                                <label>Reception Image*</label>
+                                                                    {{ form.vr_image }}
+                                                                <label>Reception Maps Link*</label>
+                                                                    {{ form.vr_maps_link }}
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step5">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/edit-template-image-04.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Accommodation</b></h5>
+                                                                <label>Image*</label>
+                                                                    {{ form.acm_image }}
+                                                                <label>Image Mobile*</label>
+                                                                    {{ form.acm_image_mobile }}
+                                                                <label>Place*</label>
+                                                                    {{ form.acm_place }}
+                                                                <label>Sub Title*</label>
+                                                                    {{ form.acm_subtitle }}
+                                                                <label>Brief*</label>
+                                                                    {{ form.acm_brief }}
+                                                                <label>Note*</label>
+                                                                    {{ form.acm_note }}
+                                                                <label>Maps Link*</label>
+                                                                    {{ form.acm_maps_link }}
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step6">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/edit-template-image-05.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Gallery</b></h5>
+                                                                <label>Image 1*</label>
+                                                                    {{ form.gallery_image1 }}
+                                                                <label>Image 2*</label>
+                                                                    {{ form.gallery_image2 }}
+                                                                <label>Image 3*</label>
+                                                                    {{ form.gallery_image3 }}
+                                                                <label>Image 4*</label>
+                                                                    {{ form.gallery_image4 }}
+                                                                <label>Image 5*</label>
+                                                                    {{ form.gallery_image5 }}
+                                                                <label>Image 6*</label>
+                                                                    {{ form.gallery_image6 }}
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step7">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/edit-template-image-05.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>RSVP</b></h5>
+                                                                <label>Image*</label>
+                                                                    {{ form.rsvp_image }}
+                                                                <label>Invitation PDF*</label>
+                                                                    {{ form.inv_pdf }}
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <button type="submit" class="btn-rectangle">Preview Website</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-115vh bg-lightgrey"></div>
+    </div>
+
+{% endblock %}

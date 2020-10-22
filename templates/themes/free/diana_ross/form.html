@@ -1,0 +1,115 @@
+{% extends 'base_form.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <!-- Main -->
+    <div id="main-templates" class="main-account">
+        <!-- Section User Navigation -->
+        {% include 'shared/partials/base_form_nav.html' %}
+        <!-- Section User Content -->
+        <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="mb-lg-2p">Edit Templates</h3>
+                    <div class="card">
+                        <div class="container-fluid templates-steps pb-lg-10p">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <!-- Navigation Dots -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="main_form">
+                                            <div class="tab-pane active" role="tabpanel" id="step1">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/templates-edit-img/section.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Main Info</b></h5>
+                                                                <label>Theme</label>
+                                                                    <input type="text" name="theme" class="form-control" placeholder="Free Polka Galore" disabled />
+                                                                <label>Site URL*</label>
+                                                                    {{ form.site_url }}
+                                                                <label>Site Title*</label>
+                                                                    {{ form.title }}
+                                                                <label>Name*</label>
+                                                                    {{ form.name }}
+                                                                <label>Hastag*</label>
+                                                                    {{ form.hashtag }}
+                                                            </div>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step2">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/edit-template-image-01.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Site</b></h5>
+                                                                <label>Image*</label>
+                                                                    {{ form.image }}
+                                                                <label>Image Mobile*</label>
+                                                                    {{ form.image_mobile }}
+                                                                <label>Date*</label>
+                                                                    {{ form.date }}
+                                                                <label>Month*</label>
+                                                                    {{ form.month }}
+                                                                <label>Year*</label>
+                                                                    {{ form.year }}
+                                                                <label>Time*</label>
+                                                                    {{ form.time }}
+                                                                <label>Place*</label>
+                                                                    {{ form.place }}
+                                                                <label>Place Image*</label>
+                                                                    {{ form.place_image }}
+                                                                <label>Address*</label>
+                                                                    {{ form.address }}
+                                                                <label>Note*</label>
+                                                                    {{ form.note }}
+                                                                <label>Note Image*</label>
+                                                                    {{ form.note_image }}
+                                                                <label>Dresscode*</label>
+                                                                    {{ form.dress }}
+                                                                <label>Content Date*</label>
+                                                                    {{ form.ct_date }}
+                                                                <label>Content Place*</label>
+                                                                    {{ form.ct_place }}
+                                                                <label>Content Note*</label>
+                                                                    {{ form.ct_note }}
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <button type="submit" class="btn-rectangle">Preview Website</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-115vh bg-lightgrey"></div>
+    </div>
+
+{% endblock %}
