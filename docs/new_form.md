@@ -33,6 +33,7 @@
 				* {{ form.dap_dress }}
 			+ RSVP
 				* {{ form.inv_pdf }}
+				
 		2. anastasia
 			+ Main Info
 				* <input type="text" name="theme" class="form-control" placeholder="Pastel Party" disabled />

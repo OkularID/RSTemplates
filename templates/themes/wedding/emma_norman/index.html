@@ -236,55 +236,10 @@
                     </div>
                     <div class="col-lg-7 pt-m-20p pb-m-20p pl-m-10p pr-m-10p bg-pink">
                         <div class="boxc w-m-100p w-lg-80p ma-lg">
-                            <form method="post" enctype="multipart/form-data">
-                                 {% csrf_token %}
-{#                                {{ form.errors }}#}
 
-                                {{ form.as_table }}
-
-{#                                <div class="form-row">#}
-{#                                    <div class="form-group col-lg-6 mb-lg-0 pr-m-5 pr-lg-5p">#}
-{#                                        <label for="{{form.check.id_for_label}}">Are You Attending ?</label>#}
-{#                                        <div class="box bg-white mb-m-10p mb-lg-30 pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">#}
-{#                                            <input type="radio" id="yes" name="{{form.check.name}}" value="yes">#}
-{#                                            <label class="radio" for="yes">Yes, I will be there</label><br />#}
-{#                                            <input type="radio" id="no" name="{{form.check.name}}" value="no">#}
-{#                                            <label class="radio" for="no">Sorry, I can’t come</label>#}
-{#                                        </div>#}
-{#                                    </div>#}
-{#                                    <div class="form-group col-lg-6 mb-lg-0 pl-m-5 pl-lg-5p">#}
-{#                                        <label for="{{form.phone.id_for_label}}">{{form.phone.label}}*</label>#}
-{#                                        <input type="text" class="form-control" id="{{form.phone.id_for_label}}" name="{{form.phone.name}}" required>#}
-{#                                        <label for="{{form.email.id_for_label}}">{{form.email.label}}*</label>#}
-{#                                        <input type="email" class="form-control" id="{{form.email.id_for_label}}" name="{{form.email.name}}" required>#}
-{#                                    </div>#}
-{#                                    <div class="form-group col-lg-6 mb-lg-0 pr-m-5 pr-lg-5p d-none d-lg-block">#}
-{#                                        <label for="{{form.name.id_for_label}}">{{form.name.label}}*</label>#}
-{#                                        <input type="text" class="form-control" id="{{form.name.id_for_label}}" name="{{form.name.name}}" required>#}
-{#                                    </div>#}
-{#                                    <div class="form-group col-lg-6 mb-lg-0 pl-m-5 pl-lg-5p">#}
-{#                                        <label for="{{form.attending.id_for_label}}">Number of Guest</label>#}
-{#                                        <div class="guest input-number-arrow">#}
-{#                                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">#}
-{#                                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-05.png' %}" />#}
-{#                                            </a>#}
-{#                                            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">#}
-{#                                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">#}
-{#                                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-06.png' %}" />#}
-{#                                            </a>#}
-{#                                        </div>#}
-                                        {#<select class="form-control" id="{{form.attending.id_for_label}}" name="{{form.attending.name}}" required>#}
-                                            {#{% for id , name in form.fields.attending.choices%}#}
-                                                {#<option value="{{id}}">{{name}}</option>#}
-                                            {#{%endfor%}#}
-                                        {#</select>#}
-{#                                    </div>#}
-{#                                    <div class="form-group col-lg-12 mb-m-0 pt-lg-5p text-right">#}
-{#                                        <button type="submit" class="button-default">Submit</button>#}
-{#                                        <a href="{{ x.inv_pdf.url }}" class="button-download">Download Invitation</a>#}
-{#                                    </div>#}
-{#                                </div>#}
-                            </form>
+                            <div class="col-lg-8">
+                                {% include 'themes/wedding/emma_norman/attendance.html' %}
+                            </div>
 
                         </div>
                     </div>
