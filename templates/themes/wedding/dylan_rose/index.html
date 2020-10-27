@@ -21,20 +21,10 @@
 </head>
 <body>
     <!-- Preview Navigation -->
-    <div class="preview-checkout">
-        <p>Just with <a href="{% url 'home' %}"><img class="pc-logo" src="{% static 'img/logo.png' %}" /></a>, you are one click away to convenience</p>
-        <a class="pc-button" href="">
-            <p class="font-orange">Back to Editor</p>
-            <img src="{% static 'img/04-templates/preview-02.png' %}">
-        </a>
-        <a class="pc-button" href="">
-            <p class="font-white">Check Out</p>
-            <img src="{% static 'img/04-templates/preview-03.png' %}">
-        </a>
-        <img class="pc-motif" src="{% static 'img/04-templates/preview-01.png' %}" />
-    </div>
+    {% include 'themes/poni.html' %}
     
     <!-- Main Site -->
+    <div class="homepage" class="pos-rel">
         <!-- Navigation -->
         <nav>
             <div class="d-none d-lg-block">
@@ -180,7 +170,7 @@
                         <h3 class="my-lg-5 d-inline-block">
                             Our Memories
                         </h3>
-                        <p class="text-gray">
+                        <p class="text-gray w-lg-60p">
                             {{ x.memories_brief }}
                         </p>
                     </div>
@@ -214,9 +204,7 @@
                             </div>
                         </div>
                         <p class="font-grey mb-5">
-                            Lorem ipsum dolor sit amet, consectetur adip<br>
-                            iscing elit. Sed fermentum lorem dignissim<br>
-                            sapien dapibu
+                            {{ x.memories_brief }}
                         </p>
                     </div>
                 </div>
@@ -344,6 +332,7 @@
                 </div>
             </div>
         </footer>
+    </div>
 
     <!-- Customize js -->
     <script>
