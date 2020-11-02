@@ -315,7 +315,7 @@
             background-size: cover !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
-            padding: 18px 42px;
+            padding: 23px 42px;
             font-family: "Krub Bold";
             font-size: 20px !important;
             text-align: center;
@@ -610,7 +610,7 @@
             #rsvp form label{font-size: 15px !important;}
             #rsvp form label.font-lightgrey{font-size: 13px !important;}
             #rsvp form .button-form{
-                padding: 15px 35px;
+                padding: 16.5px 35px;
                 font-size: 15px !important;
             }
             #rsvp form .button-form, #rsvp a{z-index: 0;}

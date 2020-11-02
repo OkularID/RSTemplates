@@ -722,6 +722,7 @@ ul.messages, .alert{display: none;}
       padding: 10%;
       width: 100%;
     }
+    .home-brief .quote p{width: 100%;}
     .home-brief .quote .motif-01,
     .home-brief .quote .motif-02{width: 10%;}
     .home-brief .quote .motif-01{
@@ -763,6 +764,7 @@ ul.messages, .alert{display: none;}
       text-align: center;
     }
     .home-steps .tabs-home-steps .tabs{width: 80%;}
+    .home-steps .tabs-home-steps .tabs p{width: 100%;}
     /* Background PriceTestimoni */
     #main-home .pricetestimony .background{
       top: 0;

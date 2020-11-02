@@ -40,7 +40,7 @@
 		font-weight: unset !important;
 	}
 	.ts{text-shadow: 2px 2px 3px rgba(74,74,74,0.65);}
-	.bs{box-shadow: 2px 2px 10px rgba(74,74,74,0.65);}
+	.bs{box-shadow: 2px 2px 5px rgba(74,74,74,0.65);}
 	.font-green,.font-green p{color: #00704b;}
 	.font-yellow,.font-yellow p{color: #eec319;}
 	.line-white{border: 2px solid #fff;}
