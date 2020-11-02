@@ -67,19 +67,17 @@ $ ./manage.py runserver
 $ python manage.py runserver
 ```
 
+
+To compress all assets objects, we use compressor init. <br>
+
+```shell script
+./manage.py collectstatic
+
+./manage.py compress
+```
+
+Those command only works if the `DEBUG = False`.
+
+That's all, and you're ready to go.
+
 That's all.
-
-
-### To do list
-- [ ] Pada saat status belum login - tombol get started di highlight dan tombol login di outline
-- [ ] Pada saat status sudah login - tombol account di highlight dan tombol logout di outline
-- [ ] spacing antara menu di navigasi utama dilebarin dikit
-- [ ] perlu tambain bagian demo - seperti https://anrsvp.com/#home di bagian tengah page mereka kasi akses untuk orang test webnya
-- [x] navigasi utama perlu tambain menu FAQ
-- [x] paket produk di homepage linknya belum tersambung
-- [x] send button di contact form ilang
-- [x] warna di lengan baju anak kecil di bagian footer ilang
-- [x] page Tour: bagian header seharusnya “Receiving” bukan “Recieving"
-- [x] page why us: link untuk "show me the templates” salah
-- [x] page why us: bagian bawah ”Lastly but not the last” seharusnya “Last but not the least”
-- [ ] Untuk menu yang sedang dalam aktif page. pastikan di underline
