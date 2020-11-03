@@ -15,7 +15,7 @@
                     <h3 class="mb-lg-2p">My Invitation</h3>
                     <div class="wrap">
                     {% if data %}
-                        {% for i in data %}
+                        {% for i in urls %}
                         <div class="container-fluid card">
                             <div class="row">
                                 <div class="col-lg-3">
@@ -35,8 +35,8 @@
                                     </div>
 {#                                    {% for preview in urls %}#}
 {#                                        <div class="boxc">#}
-{#                                            <a class="btn-whiteoutline" href="/w/update/{{ preview.theme_site_url }}/update">edit</a>#}
-{#                                            <a class="btn-rectangle" href="/w/{{ preview.theme_site_url }}">preview</a>#}
+{#                                            <a class="btn-whiteoutline" href="{{ preview.theme_site_url }}/update">edit</a>#}
+{#                                            <a class="btn-rectangle" href="{{ preview.theme_site_url }}">preview</a>#}
 {#                                        </div>#}
 {#                                    {% endfor %}#}
                                 </div>
