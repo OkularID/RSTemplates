@@ -1092,6 +1092,10 @@
     width: 85%;
     text-align: center;
   }
+  .home-brief .quote p{
+    width: 530px;
+    margin: 0 auto;
+  }
   /* Section Invitation */
   .home-invitation,
   .home-invitation .container-fluid{overflow: unset !important;}
@@ -1170,6 +1174,7 @@
   }
   .home-steps ul#nav-box .nav-tab li:hover .numb,
   .home-steps ul#nav-box .nav-tab.active li .numb{background: #f8b133;}
+  .home-steps .tabs-home-steps .tabs p{width: 380px;}
   /* Section Price */
   #price{position: absolute;top: -40vh;}
   .home-price ul{

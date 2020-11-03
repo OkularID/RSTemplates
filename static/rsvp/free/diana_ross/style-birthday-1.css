@@ -526,7 +526,8 @@
         background-position: center;
     }
     .birthday-1-free input[type="text"], .birthday-1-free input[type="number"]{
-        padding: 5px 10px;
+        -moz-padding: 5px 10px;
+        padding: 5px 10px 5px 15px;
         width: 100%;
         font-size: 15px !important;
         letter-spacing: 0.38px;
@@ -542,6 +543,7 @@
     .birthday-1-free input[type="number"] {
         -moz-appearance: textfield;
         -webkit-appearance: textfield;
+        appearance: textfield;
     }
     .birthday-1-free .submit-birthday{
         padding: 10px 30px;

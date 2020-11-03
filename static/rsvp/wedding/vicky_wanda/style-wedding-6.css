@@ -29,7 +29,7 @@
 	h1, h2, h3, h4, h5, h6, h1 span,h2 span,h3 span,h4 span,h5 span,h6 span{font-family: "Barlow Regular";}
 	h1 span,h2 span,h3 span,h4 span,h5 span,h6 span,p span,a span{font-family: "Barlow SemiBold";}
 	h2{font-size: 40px !important;}
-	h4{font-size: 25px !important;}
+	h4{font-size: 22px !important;}
 	h5{font-size: 18px !important;}
 	p,a,label,th,td,li, input{
 		font-family: "Barlow Regular";
@@ -295,7 +295,7 @@
         }
         #ourstory .nav-tabs .nav-item{
             margin-bottom: unset;
-            padding: 0 15px;
+            padding: 0 10px;
             border-left: 1pt solid #e39c6f;
             border-right: 1pt solid #e39c6f;
         }
@@ -342,10 +342,11 @@
         }
         #dateandtime .nav-tabs .nav-item{
             margin-bottom: unset;
-            padding: 0 10px;
+            padding: 0;
         }
+        #dateandtime .nav-tabs .nav-item:first-child{padding-right: 10px;}
         #dateandtime .nav-tabs .nav-link{
-            padding: 15px 40px;
+            padding: 15px 25px;
             text-align: center;
             font-size: 15px !important;
             color: #fff;
