@@ -1187,6 +1187,73 @@
 		5. natasha_bruce	= wedding_1_free 	= Bushes and Leaves
 		6. steve_sharon		= wedding_9_free 	= Blooming Feelings
 
+## Download Invitation
+	- Birthday
+		1. aaron			= DONE
+		2. anastasia		= Belum ada design nya
+		3. christine		= Belum ada design nya
+		4. diana_ross		= DONE
+	- Event
+		1. 10year_reunion	= DONE
+		2. 20year_reunion	= DONE
+		3. brotherfield		= DONE
+		4. christmas_dinner	= DONE
+		5. lacasadepapel	= Fitur tidak ada
+		6. music			= Fitur tidak ada
+		7. oceandor			= DONE
+		8. seminary			= DONE
+	- Wedding
+		1. dylan_rose		= DONE
+		2. emma_norman		= DONE
+		3. jack_jane		= DONE
+		4. liam_felicia		= DONE
+		5. lucas_eli		= DONE
+		6. natasha_bruce	= DONE
+		7. peter_mary		= DONE
+		8. steve_sharon		= DONE
+		9. vicky_wanda		= DONE
+		10. victor_karla	= DONE
+	- Free
+		1. anastasia		= Fitur tidak ada
+		2. christine		= Fitur tidak ada
+		3. diana_ross		= Fitur tidak ada
+		4. dylan_rose		= Fitur tidak ada
+		5. natasha_bruce	= Fitur tidak ada
+		6. steve_sharon		= Fitur tidak ada
+## Popup RSVP
+	- Birthday
+		1. aaron			= DONE
+		2. anastasia		= DONE
+		3. christine		= DONE
+		4. diana_ross		= DONE
+	- Event
+		1. 10year_reunion	= DONE
+		2. 20year_reunion	= DONE
+		3. brotherfield		= DONE
+		4. christmas_dinner	= DONE
+		5. lacasadepapel	= DONE
+		6. music			= Fitur tidak ada
+		7. oceandor			= DONE
+		8. seminary			= DONE
+	- Wedding
+		1. dylan_rose		= Belum ada design nya
+		2. emma_norman		= DONE
+		3. jack_jane		= DONE
+		4. liam_felicia		= DONE
+		5. lucas_eli		= DONE
+		6. natasha_bruce	= DONE
+		7. peter_mary		= DONE
+		8. steve_sharon		= DONE
+		9. vicky_wanda		= DONE
+		10. victor_karla	= DONE
+	- Free
+		1. anastasia		= Fitur tidak ada
+		2. christine		= Fitur tidak ada
+		3. diana_ross		= Fitur tidak ada
+		4. dylan_rose		= Fitur tidak ada
+		5. natasha_bruce	= Fitur tidak ada
+		6. steve_sharon		= Fitur tidak ada
+
 
 ## Template bug
 	- Birthday
