@@ -37,7 +37,7 @@
     }
 	.font-lightgreen,.font-lightgreen p{color: #819e82 !important;}
 	.button-green{
-		padding: 5px 50px;
+		padding: 5px 30px;
 	    font-family: "Belleza Regular";
 		font-size: 16px !important;
 		letter-spacing: 0.8px;
@@ -52,7 +52,9 @@
 		background: #F1F2F2;
     }
     .button-download{
-		padding: 10px 35px;
+        margin-right: 15px;
+        text-transform: uppercase;
+		padding: 10px 20px;
 	    font-family: "Belleza Regular";
 		font-size: 16px !important;
 		letter-spacing: 0.8px;
