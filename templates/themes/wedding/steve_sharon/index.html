@@ -191,7 +191,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-7 mtext-center">
+                                                <div class="col-lg-7 mtext-center mb-lg-50 mb-m-0">
                                                     <p>
                                                         Our Wedding Ceremony will be held at:<br /><br />
                                                         <b>{{ x.vc_place }}</b><br />
@@ -456,7 +456,7 @@
                                                         <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
                                                             <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/form-01.png' %}" />
                                                         </a>
-                                                        <input type="number" name="your-guest" id="spinner" value="0" placeholder="0" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
+                                                        <input type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
                                                         <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
                                                             <img class="img-fluid" src="{% static 'rsvp/wedding/steve_sharon/images/form-02.png' %}" />
                                                         </a>

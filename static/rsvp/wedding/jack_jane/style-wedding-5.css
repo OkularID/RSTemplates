@@ -347,6 +347,12 @@
             padding-left: 5rem;
         }
 
+#dateandplace .pic, 
+#ourstory .pic{
+    height: 90vh;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 846px) {
 	h1{font-size: 44px !important;}
 	h2{font-size: 40px !important;}
@@ -434,18 +440,19 @@
         	#rsvp form table tr td:first-child{padding-bottom: 0;}
         	#rsvp form table tr td:last-child{padding-bottom: 10%;}
             #rsvp form .button-green{padding: 4% 50px;}
-        }
-        .popup-thankyou .content-background{
-            height: 530px;
-        }
-        .button-download{
-                margin: 20px 0;
-                padding: 15px;
-                text-align: center;
-        }
-        .popup-thankyou .bg-green {
-            padding-top: 3rem;
-            padding-left: 3rem;
-            padding-bottom: 2rem;
-        }
+            .popup-thankyou .content-background{
+                height: 530px;
+            }
+            .button-download{
+                    margin: 20px 0;
+                    padding: 15px;
+                    text-align: center;
+            }
+            .popup-thankyou .bg-green {
+                padding-top: 3rem;
+                padding-left: 3rem;
+                padding-bottom: 2rem;
+            }
+
+    #dateandplace .pic, #ourstory .pic{height: 40vh;}
 }

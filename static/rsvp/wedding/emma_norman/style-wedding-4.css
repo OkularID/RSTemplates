@@ -400,7 +400,7 @@
         }
         .button-download{
             font-family: "Cormorant Medium Italic";
-            padding: 1.4% 5%;
+            padding: 1.3% 5%;
             font-size: 20px !important;
             line-height: 21.33px;
             color: #7c7a7d;
@@ -525,5 +525,8 @@
             .button-download {
                 display: inline-block;
                 margin-top: 20px;
+                padding: 4.5% 7%;
+                width: 100%;
+                text-align: center;
             }
 }

@@ -109,6 +109,7 @@ input[type=number] {
 .time-div{
 	width: 9%;
 }
+#rundown p{font-size: 14px !important;}
 .home-bottom-content input[type=text], .home-bottom-content input[type=text]:focus,.home-bottom-content input[type=number], .home-bottom-content input[type=number]:focus{
 	border: 2px solid #fff;
 	background: none;
@@ -130,9 +131,9 @@ input[type=number] {
 	color: #fff;
 	border: 2px solid #fff;
 	background: none;
-	padding: 5px 18px;
+	padding: 1.4px 18px;
 	display: inline-block;
-	margin-top: 0.5em;
+	margin-top: 16px;
 }
 .content-footer .button-bottom{
 	border: 2px solid #fff;
@@ -141,7 +142,9 @@ input[type=number] {
 	margin: 15px 0;
 	font-size: 11px;
 }
+.content-footer h1{line-height: 42px;}
 .content-footer .location h5{
+	margin-top: -3px;
 	line-height: 30pt;
 }
 .footer .button{
@@ -230,6 +233,7 @@ input[type=number] {
 		width: 12%;
 		margin-left: 4%;
 	}
+	#rundown p{font-size: 10px !important;}
 	.owl-theme .owl-dots .owl-dot span{
 		background: #0a102a !important;
 		border: 1px solid #fff;
@@ -275,4 +279,5 @@ input[type=number] {
 	.save-seat{
 		padding-top: 50px;
 	}
+	.submit-dinner{margin-top: 0;}
 }

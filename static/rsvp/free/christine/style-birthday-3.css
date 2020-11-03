@@ -33,7 +33,7 @@
 	}
 	p,a,label,th,td,li, input, span{
 		font-family: "Proxima Nova";
-	  	font-size: 20px;
+	  	font-size: 18px;
 	  	line-height: 29px;
 	  	letter-spacing: 0.4px;
 	  	color: #333333;
@@ -354,12 +354,14 @@
 	}
 	.birthday-3-free .title{
 		margin-bottom: -20px;
+		font-size: 18px;
 	}
 	.birthday-3-free .name{
 		margin-bottom: -20px;
 	}
 	.birthday-3-free .birthday{
 		margin-bottom: -20px;
+		font-size: 46px;
 	}
 	.birthday-3-free input[type="number"] {
 		-moz-appearance: textfield;

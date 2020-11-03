@@ -367,11 +367,15 @@
         #dateandtime .tab-content .padbrief{padding: 5%;}
         #dateandtime .tab-content .padimg{padding: 5%;}
         #dateandtime .tab-content h5{
+            font-size: 24px !important;
             line-height: 40px !important;
             letter-spacing: 5.2px;
             color: #fff;
         }
-        #dateandtime .tab-content p{color: #fff !important;}
+        #dateandtime .tab-content p{
+            color: #fff !important;
+            font-size: 14px !important;
+        }
         #dateandtime .tab-content .button-default{
             margin-top: 5%;
             color: #fff !important;
@@ -394,7 +398,7 @@
         #dateandtime .tab-content .brief .my,
         #dateandtime .tab-content .brief .time{
             font-family: "TitilliumWeb Light";
-            font-size: 36px;
+            font-size: 30px;
             line-height: 37px;
             color: #fff;
         }
@@ -736,6 +740,7 @@
 			#dateandtime .tab-content .padbrief{padding: 15% 0 10%;}
 			#dateandtime .tab-content .padimg{padding: 0;}
 			#dateandtime .tab-content h5{
+                font-size: 19px !important;
 				line-height: 30px !important;
 				letter-spacing: 3.8px;
 			}
