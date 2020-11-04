@@ -226,48 +226,9 @@
         </div>
       </div>
       <div class="row offset-lg-2 pl-lg-5 offset-2">
-        <div class="col-lg-5">
-          <p class="text-gray">
-            We are looking forward to see you<br>
-            at the celebration.
-          </p>
-          <p class="text-gray">
-            Are you attending the party?
-          </p>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-              <label class="form-check-label text-gray" for="inlineRadio1">Yes</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-              <label class="form-check-label  text-gray" for="inlineRadio1">No</label>
-            </div>
-          <p class="text-gray pt-lg-3">
-            Fill in your full name and contact lists
-          </p>
-          <p class="text-gray mb-0">Full Name
-          <input type="text" class="form-control w-lg-90p mb-4">
-          <p class="text-gray mb-0">Email Address</p>
-          <input type="email" class="form-control w-lg-90p mb-4">
-          <p class="text-gray mb-0">Phone</p>
-          <input type="text" class="form-control w-lg-90p mb-4">
-          <p class="text-gray pt-lg-3">
-            Will you bring additional guest(s) along with you?
-          </p>
-          <div class="position-relative">
-            <input class="form-control" type="number" name="your-guest" id="spinner" value="1" placeholder="1" min="1" max="10" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
-            <a role="button" id="step-increment" class="btn btn-default pt-1 pt-lg-2" aria-label="add 1" aria-labelledby="step-increment label-text">
-                <h5 class="text-gray">
-                    <i class="fa fa-chevron-down"></i>
-                </h5>
-            </a>
-          </div>
-          <br>
-          <a href="#" class="button-submit" data-toggle="modal" data-target="#form-submit">Submit</a><br><br>
-          <a class="link-rsvp text-gray" href="{{ x.inv_pdf.url }}">Download Invitation</a> <a class="ml-5 link-rsvp text-gray" href="wishlist.html">View Wishlist Idea</a>
-        </div>
-        </div>
+        {% include 'themes/birthday/anastasia/attendance.html' %}
       </div>
+    </div>
     <div class="container-fluid py-3 py-lg-4 footer bg-pink">
       <div class="row">
         <div class="col-lg-1 offset-lg-3 col-1">

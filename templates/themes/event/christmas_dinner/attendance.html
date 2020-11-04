@@ -1,0 +1,39 @@
+{% load static %}
+{% load compress %}
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <div class="row">
+        <div class="col-lg-12 mb-lg-5p">
+            <label>Are you attending the Christmas gathering?</label>
+            <div class="radio-toolbar">
+                {{ form_class.check }}
+            </div>
+        </div>
+        <div class="col-lg-12 mb-lg-5p">
+            <label>Will you bring anoyone to this gathering?</label>
+            <div class="guest">
+                <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                    <img class="img-fluid" src="{% static 'rsvp/event/christmas_dinner/images/form-arrow-left.png' %}" />
+                </a>
+                <input type="number" name="your-guest" id="spinner" value="0" placeholder="0" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
+                <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                    <img class="img-fluid" src="{% static 'rsvp/event/christmas_dinner/images/form-arrow-right.png' %}" />
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-lg-5p">
+            <label class="mb-lg-3p">Please  fill the following details:</label><br />
+            <label>Full Name</label>
+            {{ form_class.name }}
+            <label>Email</label>
+            {{ form_class.email }}
+            <label>Telephone</label>
+            {{ form_class.phone }}
+        </div>
+        <div class="col-lg-12">
+            <input type="submit" class="button-form" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
+            <a class="button-download fr" target="_blank" href="{{ x.inv_pdf.url }}">Download Invitation</a>
+        </div>
+    </div>
+</form>

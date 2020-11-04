@@ -1,0 +1,35 @@
+{% load static %}
+{% load compress %}
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <div class="col-lg-5">
+        <p class="text-gray">We are looking forward to see you<br>at the celebration.</p>
+        <p class="text-gray">Are you attending the party?</p>
+        <div class="form-check form-check-inline">
+            {{ form_class.check }}
+        </div>
+        <p class="text-gray pt-lg-3">Fill in your full name and contact lists</p>
+        <p class="text-gray mb-0">Full Name</p>
+        {{ form_class.name }}
+        <p class="text-gray mb-0">Email Address</p>
+        {{ form_class.email }}
+        <p class="text-gray mb-0">Phone</p>
+        {{ form_class.phone }}
+        <p class="text-gray pt-lg-3">Will you bring additional guest(s) along with you?</p>
+        <div class="row">
+            <div class="col-lg-1 px-0">
+                <a role="button" id="step-decrement" class="btn btn-default pt-3" aria-label="remove 1" aria-labelledby="step-decrement label-text"><i class="fa fa-chevron-left text-gray"></i></a>
+            </div>
+            <div class="col-lg-2 px-0">
+                <input class="w-100 form-control bg-white text-center" disabled type="number" name="your-guest" id="spinner" value="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
+            </div>
+            <div class="col-lg-1 px-0">
+                <a role="button" id="step-increment" class="btn btn-default pt-3" aria-label="add 1" aria-labelledby="step-increment label-text"><i class="fa fa-chevron-right text-gray"></i></a>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="button-submit" data-toggle="modal" data-target="#form-submit">Submit</button><br><br>
+        <a class="link-rsvp text-gray" href="{{ x.inv_pdf.url }}">Download Invitation</a>
+    </div>
+</form>

@@ -1,0 +1,36 @@
+{% load static %}
+{% load compress %}
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <label class="d-block mb-lg-2p">Are you attending the party?</label>
+    <div class="mb-m-10p mb-lg-4p">
+        {{ form_class.check }}
+    </div>
+    <label class="d-block">Fill in your full name and contact lists</label>
+    <div class="row mb-m-10p mb-lg-4p">
+        <div class="col-lg-4">
+            <label class="font-lightgrey">Full Name</label>
+            {{ form_class.name }}
+        </div>
+        <div class="col-lg-4">
+            <label class="font-lightgrey">Email Address</label>
+            {{ form_class.email }}
+        </div>
+        <div class="col-lg-4">
+            <label class="font-lightgrey">Phone</label>
+            {{ form_class.phone }}
+        </div>
+    </div>
+    <label class="d-block w-m-80p ma-m mb-lg-2p">Are you bringing extra mouths to feed?</label>
+    <div class="guest w-lg-100p mb-m-10p mb-lg-4p">
+        <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+            <img class="img-fluid" src="{% static 'rsvp/birthday/aaron/images/arrow-left.png' %}" />
+        </a>
+        <input type="number" name="your-guest" id="spinner" value="0" placeholder="0" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
+        <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+            <img class="img-fluid" src="{% static 'rsvp/birthday/aaron/images/arrow-right.png' %}" />
+        </a>
+    </div>
+    <input type="submit" class="button-form mb-m-10p mb-lg-5p" data-toggle="modal" data-target="#ebrochure" value="Submit" />
+</form>

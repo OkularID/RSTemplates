@@ -1061,57 +1061,7 @@
                 </h2>
             </div>
         </div>
-        <div data-aos="fade-up" class="row my-5">
-            <div class="col-lg-2 pl-lg-5 px-3">
-                <p class="text-white font-montserrat-extrabold">
-                    ARE YOU<br>
-                    ATTENDING?
-                </p>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="YES">
-            </div>
-            <div class="col-lg-3 px-3">
-                <br>
-                <p class="text-white font-montserrat-extrabold">
-                    FULL NAME
-                </p>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Full Name">
-            </div>
-            <div class="col-lg-3 px-3">
-                <br>
-                <p class="text-white font-montserrat-extrabold">
-                    EMAIL
-                </p>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email Address">
-            </div>
-            <div class="col-lg-2 px-3">
-                <br>
-                <p class="text-white font-montserrat-extrabold">
-                    PHONE NUMBER
-                </p>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="+620123 XX">
-            </div>
-            <div class="col-lg-2 pr-lg-5 px-3">
-                <br>
-                <p class="text-white font-montserrat-extrabold">
-                    EXTRA GUEST
-                </p>
-                <div class="guest input-number-arrow">
-                    <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_Seminar-Event-17.png' %}" />
-                    </a>
-                    <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                    <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_Seminar-Event-18.png' %}" />
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="row text-right px-1 py-4">
-            <div class="col-lg-12 text-right px-lg-5">
-                <a target="_blank" href="{{ x.inv_pdf.url }}" class="bg-white px-lg-3 px-3 py-2 mx-lg-1 text-dark-blue rounded-pill font-worksans-extrabold d-inline-block my-lg-0 my-3">DOWNLOAD INVITATION</a>
-                <a href="#" class="bg-white px-lg-3 px-3 py-2 mx-lg-1 text-dark-blue rounded-pill font-worksans-extrabold d-inline-block" data-toggle="modal" data-target="#form-submit">SUBMIT</a>
-            </div>
-        </div>
+        {% include 'themes/event/seminary/attendance.html' %}
     </div>
     <div class="container-fluid bg-dark-blue py-4 footer">
         <div class="row">

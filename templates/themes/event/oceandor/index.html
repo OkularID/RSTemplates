@@ -190,70 +190,7 @@
                                     </p>
                                 </div>
                                 <div class="col-lg-6 pr-3 pr-lg-0">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-lg-12 pl-m-0 mb-lg-2p pr-lg-0">
-                                                <label class="mb-m-0">Are you attending the grand opening?</label>
-                                                <div class="radio-toolbar">
-                                                    <input type="radio" id="radioYES" name="attending" value="yes">
-                                                    <label for="radioYES" class="mr-lg-5p">YES</label>
-                                                    <input type="radio" id="radioNO" name="attending" value="no">
-                                                    <label for="radioNO">NO</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 pl-m-0 pr-lg-0">
-                                                <label class="mb-m-0">Will you bring anyone to the event?</label>
-                                                <div class="guest">
-                                                    <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                                        <img class="img-fluid" src="{% static 'rsvp/event/oceandor/images/form-arrow-left.png' %}" />
-                                                    </a>
-                                                    <input type="number" name="your-guest" id="spinner" value="0" placeholder="0" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
-                                                    <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                                        <img class="img-fluid" src="{% static 'rsvp/event/oceandor/images/form-arrow-right.png' %}" />
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 pl-m-0 mb-lg-10p pr-lg-0">
-                                                <label class="mb-m-0 mb-lg-3p">Fill your name and contact lists:</label><br />
-                                                <label class="font-lightgrey">Full Name</label>
-                                                <input type="text" name="your-name" class="form-control" required />
-                                                <label class="font-lightgrey">Email</label>
-                                                <input type="email" name="your-email" class="form-control" required />
-                                                <label class="font-lightgrey">Telephone</label>
-                                                <input type="text" name="your-name" class="form-control" required />
-                                            </div>
-                                            <div class="col-lg-12 pl-m-0 pr-lg-0">
-                                                {#<!-- <input type="submit" class="button-default" value="SUBMIT" /> -->#}
-                                                <input type="submit" class="button-default" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
-                                                <a class="button-default fr" target="_blank" href="{{ x.inv_pdf.url }}">DOWNLOAD INVITATION</a>
-                                                <div class="modal fade" id="ebrochure">
-                                                    <div class="modal-dialog modal-dialog-centered">
-                                                        <div class="modal-content">
-                                                            <div class="container-fluid">
-                                                                <div class="row">
-                                                                    <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                                                                        <a class="close" data-dismiss="modal">
-                                                                            <img class="img-fluid" src="{% static 'rsvp/event/oceandor/images/icon.png' %}" />
-                                                                        </a>
-                                                                        <div class="boxc">
-                                                                            <h2>Thak you for<br />your <span>participation!</span></h2>
-                                                                            <p class="w-m-100p w-lg-35p">
-                                                                                We will take notes of your attendance to ensure your seat. Please check your email for your seat number and further notice. 
-                                                                            </p>
-                                                                            <p class="w-m-100p w-lg-35p">
-                                                                                We’ll see you then!
-                                                                            </p>
-                                                                        </div>
-                                                                        <img class="img-fluid images" src="{% static 'rsvp/event/oceandor/images/images-10.png' %}" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    {% include 'themes/event/oceandor/attendance.html' %}
                                 </div>
                             </div>
                         </div>

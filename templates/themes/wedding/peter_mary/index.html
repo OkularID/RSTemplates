@@ -357,62 +357,7 @@
     </div>
     <div class="container-fluid rsvp-section">
         <div  id="rsvp" class="row my-lg-5">
-            <div class="col-lg-7 px-lg-5">
-                <h2 class="text-gray my-5 ml-lg-5 pl-lg-5">
-                    Are you coming?
-                </h2>
-                <div class="form-group ml-lg-5 row">
-                    <label class="col-lg-5 col-6 px-0 name-text pt-lg-2">ARE YOU ATTENDING?</label>
-                    <div class="col-lg-7 col-6 px-0 pl-2 pt-2">
-                      <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">No</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group ml-lg-5 row">
-                    <label class="col-lg-5 col-6 px-0 name-text pt-lg-2">FULL NAME</label>
-                    <div class="col-lg-7 col-6 px-0 pl-2">
-                      <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group ml-lg-5 row">
-                    <label class="col-lg-5 col-6 px-0 name-text pt-lg-2">EMAIL</label>
-                    <div class="col-lg-7 col-6 px-0 pl-2">
-                      <input type="email" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group ml-lg-5 row">
-                    <label class="col-lg-5 col-6 px-0 name-text pt-lg-2">PHONE NUMBER</label>
-                    <div class="col-lg-7 col-6 px-0 pl-2">
-                      <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group ml-lg-5 row">
-                    <label class="col-lg-5 col-6 px-0 name-text pt-lg-2">ADDITIONAL GUEST</label>
-                    <div class="col-lg-7 col-6 px-0 pl-2">
-                        <div class="guest input-number-arrow">
-                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_PeterMary-09.png' %}" />
-                            </a>
-                            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_PeterMary-10.png' %}" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group ml-lg-5 py-5 mb-0">
-                    <div class="col-lg-12 text-center pb-lg-5">
-                        <input type="submit" class="button-submit mb-4" value="SUBMIT" data-toggle="modal" data-target="#exampleModal"><br><br>
-                        <a target="_blank" class="button-submit" href="{{ x.inv_pdf.url }}">DOWNLOAD INVITATION</a>
-                    </div>
-                </div>
-            </div>
+            {% include 'themes/wedding/peter_mary/attendance.html' %}
             <div id="accommodation-m" class="col-lg-5 pt-lg-4 text-center accomodation pt-lg-0 pt-5">
                 <img data-aos="fade-down" data-aos-once="true" class="img-fluid mb-lg-0 mb-4" src="{{ x.acm_image.url }}">
                 <p class="text-dark-blue font-weight-bold mb-0">

@@ -512,6 +512,7 @@
 		outline: none;
 	}
 	#rsvp form .add-to-cart{
+		margin-right: 15px;
       	--color: #333333;
       	--icon: var(--color);
       	--cart: #333333;
@@ -790,6 +791,7 @@
 			display: block;
 			text-align: center;
 			margin: auto;
+			width: 100%;
 		}
 		.close-modal {
 			position: absolute;
@@ -798,7 +800,14 @@
 			display: inline-block;
 		}
 		.button-download{
-			margin: 15px;
 			display: inline-block;
+			margin-top: 15px;
+			padding: 15px 32px;
+			width: 100%;
+		}
+		footer{padding: 10%;}
+		footer .col-lg-2.pr-lg-5{
+			margin-top: 20px;
+			text-align: center;
 		}
 }

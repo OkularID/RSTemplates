@@ -338,68 +338,7 @@
     <div class="container-fluid rsvp" id="rsvp">
         <div class="row bg-blue">
             <div class="col-10 offset-1">
-                    <div id="rsvp-d"  data-aos="fade-right" data-aos-offset="-400" class="row wrap-rsvp">
-                        <div class="col-lg-11 offset-lg-1">
-                        <h1 class="text-dark-blue">
-                            Join Us for<br>
-                            the Night
-                        </h1>
-                        </div>
-                        <div class="col-lg-12 px-0 py-3">
-                            <img src="{% static 'rsvp/event/20year_reunion/images/rsvp-line-04.png' %}">
-                        </div>
-                        <div class="col-lg-5 offset-lg-1">
-                            <p class="text-dark-blue">
-                                Are you attending?
-                            </p>
-                                <div class="form-check form-check-inline mb-4">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                  <label class="form-check-label text-dark-blue" for="inlineRadio1">Yes</label>
-                                </div>
-                                <div class="form-check form-check-inline mb-4">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                  <label class="form-check-label text-dark-blue" for="inlineRadio2">No</label>
-                                </div>
-                            <p class="text-dark-blue">
-                                Fill your full name and contact lists
-                            </p>
-                            <p class="text-dark-blue">
-                                Full Name<br>
-                                <input type="text" class="form-control">
-                            </p>
-                            <p class="text-dark-blue">
-                                Email Address<br>
-                                <input type="text" class="form-control">
-                            </p>
-                            <p class="text-dark-blue">
-                                Phone<br>
-                                <input type="text" class="form-control">
-                            </p>
-                        </div>
-                        <div class="col-lg-4 offset-lg-1 content-right">
-                            <p class="text-dark-blue mb-lg-3 mb-3">
-                                Will you bring additional guest(s)?
-                            </p>
-                            <div class="guest input-number-arrow">
-                                <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                    <img class="img-fluid" src="{% static 'img/templates-button/buttons_Friendship-20years-15.png' %}" />
-                                </a>
-                                <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                                <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                    <img class="img-fluid" src="{% static 'img/templates-button/buttons_Friendship-20years-16.png' %}" />
-                                </a>
-                            </div>
-                            <br>
-                            <a href="#" class="bg-purple rounded-pill px-4 py-1 text-white"  data-toggle="modal" data-target="#form-submit">Submit</a>
-                        </div>
-                        <div class="col-lg-12 text-center py-lg-5 py-3">
-                            <a target="_blank" href="{{ x.inv_pdf.url }}" class="text-dark-blue">
-                                <u>
-                                    Download Invitation
-                                </u>
-                            </a>
-                        </div>
-                    </div>
+                {% include 'themes/event/20year_reunion/attendance.html' %}
             </div>
         </div>
     </div>
