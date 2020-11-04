@@ -1187,6 +1187,40 @@
 		5. natasha_bruce	= wedding_1_free 	= Bushes and Leaves
 		6. steve_sharon		= wedding_9_free 	= Blooming Feelings
 
+## Attendance
+	- Birthday
+		1. aaron			= Sudah dibuat, belum dicek tampilannya
+		2. anastasia		= Sudah dibuat, belum dicek tampilannya
+		3. christine		= Sudah dibuat, belum dicek tampilannya
+		4. diana_ross		= Sudah dibuat, belum dicek tampilannya
+	- Event
+		1. 10year_reunion	= Sudah dibuat, belum dicek tampilannya
+		2. 20year_reunion	= Sudah dibuat, belum dicek tampilannya
+		3. brotherfield		= Sudah dibuat, belum dicek tampilannya
+		4. christmas_dinner	= Sudah dibuat, belum dicek tampilannya
+		5. lacasadepapel	= Sudah dibuat, belum dicek tampilannya
+		6. music			= Tidak ada RSVP
+		7. oceandor			= Sudah dibuat, belum dicek tampilannya
+		8. seminary			= Sudah dibuat, belum dicek tampilannya
+	- Wedding
+		1. dylan_rose		= Sudah dibuat, belum dicek tampilannya
+		2. emma_norman		= Sudah dibuat, belum dicek tampilannya
+		3. jack_jane		= Sudah dibuat, belum dicek tampilannya
+		4. liam_felicia		= Sudah dibuat, belum dicek tampilannya
+		5. lucas_eli		= Sudah dibuat, belum dicek tampilannya
+		6. natasha_bruce	= Sudah dibuat, belum dicek tampilannya
+		7. peter_mary		= Sudah dibuat, belum dicek tampilannya
+		8. steve_sharon		= Sudah dibuat, belum dicek tampilannya
+		9. vicky_wanda		= Sudah dibuat, belum dicek tampilannya
+		10. victor_karla	= Sudah dibuat, belum dicek tampilannya
+	- Free
+		1. anastasia		= 
+		2. christine		= 
+		3. diana_ross		= 
+		4. dylan_rose		= 
+		5. natasha_bruce	= 
+		6. steve_sharon		= 
+
 ## Download Invitation
 	- Birthday
 		1. aaron			= DONE

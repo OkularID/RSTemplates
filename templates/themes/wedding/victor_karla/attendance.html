@@ -1,0 +1,74 @@
+{% load static %}
+{% load compress %}
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <div class="form-group row">
+        <div class="col-lg-6">
+            <div class="row py-1">
+                <label class="col-6 col-lg-5 col-form-label">
+                    <p class="text-lgray font-weight-bold">
+                        Are you attending?*
+                    </p>
+                </label>
+                <div class="col-6 col-lg-5">
+                    <div class="form-check form-check-inline">
+                        {{ form_class.check }}
+                    </div>
+                </div>
+            </div>
+            <div class="row py-1">
+                <label class="col-6 col-lg-5 col-form-label">
+                    <p class="text-lgray font-weight-bold">Full Name*</p>
+                </label>
+                <div class="col-6 col-lg-5">
+                    {{ form_class.name }}
+                </div>
+            </div>
+            <div class="row py-1">
+                <label class="col-6 col-lg-5 col-form-label">
+                    <p class="text-lgray font-weight-bold">Email Address*</p>
+                </label>
+                <div class="col-6 col-lg-5">
+                    {{ form_class.email }}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row py-1">
+                <label class="col-6 col-lg-5 col-form-label">
+                    <p class="text-lgray font-weight-bold">Phone Number*</p>
+                </label>
+                <div class="col-6 col-lg-5">
+                    {{ form_class.phone }}
+                </div>
+            </div>
+            <div class="row py-1">
+                <label class="col-6 col-lg-5 col-form-label">
+                    <p class="text-lgray font-weight-bold">
+                        Additional Guest*
+                    </p>
+                </label>
+                <div class="col-6 col-lg-5">
+                    <div class="guest input-number-arrow w-lg-100p mb-lg-4p">
+                        <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                            <img class="img-fluid" src="{% static 'img/templates-button/buttons_VictorKarla-13.png' %}" />
+                        </a>
+                        <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+                        <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                            <img class="img-fluid" src="{% static 'img/templates-button/buttons_VictorKarla-14.png' %}" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-1">
+                <div class="col-lg-10 text-right pt-3">
+                    <a target="__blank" href="{{ x.inv_pdf.url }}" class="button-download mx-3">
+                        Download invitation
+                    </a>
+                    <button type="submit" class="submit-btn" data-toggle="modal" data-target="#form-submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

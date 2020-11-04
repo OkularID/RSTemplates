@@ -1,0 +1,68 @@
+{% load static %}
+{% load compress %}
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <div class="row">
+        <div class="col-lg-12 mb-lg-2p">
+            <label>ARE YOU ATTENDING ?</label>
+            <div class="radio-toolbar">
+                {{ form_class.check }}
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <label class="font-lightgrey">FULL NAME</label>
+            {{ form_class.name }}
+        </div>
+        <div class="col-lg-6">
+            <label class="font-lightgrey">EMAIL</label>
+            {{ form_class.email }}
+        </div>
+        <div class="col-lg-6">
+            <label class="font-lightgrey">PHONE NUMBER</label>
+            {{ form_class.phone }}
+        </div>
+        <div class="col-lg-6">
+            <label class="font-lightgrey">ADDITIONAL GUEST</label>
+            <div class="guest input-number-arrow w-lg-100p mb-lg-4p">
+                <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                    <img class="img-fluid" src="{% static 'img/templates-button/buttons_VickyWanda-11.png' %}" />
+                </a>
+                <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+                <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                    <img class="img-fluid" src="{% static 'img/templates-button/buttons_VickyWanda-12.png' %}" />
+                </a>
+            </div>
+        </div>
+        <div class="col-12 offset-lg-6 col-lg-6 pt-lg-5p pb-lg-5p">
+            <a class="button-cream" target="_blank" href="{{ x.inv_pdf.url }}">DOWNLOAD INVITATION</a>
+            <input type="submit" class="button-lightbrown" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
+            <div class="modal fade" id="ebrochure">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-8 col-lg-6">
+                                    <p>
+                                        Now that you’ve confirmed<br />
+                                        you are coming ...
+                                    </p>
+                                    <h2 class="mb-lg-10p">Thank You <br /><span>So Much!</span></h2>
+                                    <p>
+                                        For supporting and celebrating us in the Celebration of our journey. We can’t wait for you to come and we also wish the best for your life! 
+                                    </p>
+                                </div>
+                                <div class="col-4 col-lg-6">
+                                    <a class="close" data-dismiss="modal">
+                                        <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-09.png' %}" />
+                                    </a>
+                                    <img class="img-fluid motif" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-10.png' %}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

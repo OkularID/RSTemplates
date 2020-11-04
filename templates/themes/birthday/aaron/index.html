@@ -202,60 +202,35 @@
             <div class="container-fluid pt-m-35p pb-m-35p pt-lg-10p pb-lg-10p text-center">
                 <div  id="rsvp-d" class="row">
                     <div class="col-lg-12 mb-lg-10p">
-                        <h2 data-aos="fade-up" >
+                        <h2 data-aos="fade-up" data-aos-once="true">
                             Looking Forward<br/>
                             to Hear <span>Your</span> Response
                         </h2>
                     </div>
                     <div class="col-lg-12 pl-m-10p pr-m-10p">
-                        <form>
-                            <label class="d-block mb-lg-2p">Are you attending the party?</label>
-                            <div class="mb-m-10p mb-lg-4p">
-                                <input type="radio" id="yes" name="gender" value="yes">
-                                <label class="radio mb-lg-0 mr-lg-25" for="yes">Yes</label>
-                                <input type="radio" id="no" name="gender" value="no">
-                                <label class="radio mb-lg-0" for="no">No</label>
-                            </div>
-                            <label class="d-block">Fill in your full name and contact lists</label>
-                            <div class="row mb-m-10p mb-lg-4p">
-                                <div class="col-lg-4">
-                                    <label class="font-lightgrey">Full Name</label>
-                                    <input type="text" name="your-name" class="form-control mb-m-5p" required />
-                                </div>
-                                <div class="col-lg-4">
-                                    <label class="font-lightgrey">Email Address</label>
-                                    <input type="email" name="your-email" class="form-control mb-m-5p" required />
-                                </div>
-                                <div class="col-lg-4">
-                                    <label class="font-lightgrey">Phone</label>
-                                    <input type="text" name="your-phone" class="form-control" required />
-                                </div>
-                            </div>
-                            <label class="d-block w-m-80p ma-m mb-lg-2p">Are you bringing extra mouths to feed?</label>
-                            <div class="guest w-lg-100p mb-m-10p mb-lg-4p">
-                                <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                    <img class="img-fluid" src="{% static 'rsvp/birthday/aaron/images/arrow-left.png' %}" />
-                                </a>
-                                <input type="number" name="your-guest" id="spinner" value="0" placeholder="0" aria-live="polite" tabindex="-1" aria-labelledby="label-text">
-                                <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                    <img class="img-fluid" src="{% static 'rsvp/birthday/aaron/images/arrow-right.png' %}" />
-                                </a>
-                            </div>
-                            <input type="submit" class="button-form mb-m-10p mb-lg-5p" data-toggle="modal" data-target="#ebrochure" value="Submit" />
-                        </form>
+                        {% include 'themes/birthday/aaron/attendance.html' %}
                         <div class="modal fade" id="ebrochure">
                             <div class="modal-dialog modal-dialog-centered modal-lg">
                                 <div class="modal-content">
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="col-lg-12 text-center pt-m-15p pt-lg-5p pb-lg-10p pl-lg-0 pr-lg-0">
-                                                <img class="img-fluid w-lg-100p motif" src="{% static 'rsvp/birthday/aaron/images/motif-09.png' %}" />
+                                                {#<!-- <img class="img-fluid w-lg-100p motif" src="{% static 'rsvp/birthday/aaron/images/motif-09.png' %}" /> -->#}
                                                 <div class="box bs">
                                                     <a class="close button-default" data-dismiss="modal">X</a>
                                                     <h3 class="font-krub-r"><span>see you there</span></h3>
                                                     <h2>At the Party!</h2>
                                                     <div class="font-darkblue">
-                                                        <p>Your presence on my celebration means a lot to me and my family. Cannot wait to see you there!</p>
+                                                        <p>
+                                                            Your presence on my celebration means a lot to me and my family.<br>
+                                                            Cannot wait to see you there! Don’t forget to select the gift you may give<br>
+                                                            from my wishlist, so others will not need to give the same gift as you.
+                                                        </p>
+                                                    </div>
+                                                    <div class="wrap-button py-5">
+                                                        <a href="wishlist.html" class="button-cyan">
+                                                            View my gift wishlist
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>

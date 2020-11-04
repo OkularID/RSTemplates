@@ -1,0 +1,54 @@
+{% load static %}
+{% load compress %}
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <div class="row">
+        <div class="col-lg-6">
+            <p class="text-white">
+                Are you attending the grand opening?<br>
+            </p>
+            <div class="form-check form-check-inline">
+                {{ form_class.check }}
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <p class="text-white">
+                Will you bring anyone to the event?<br>
+            </p>
+            <div class="guest input-number-arrow">
+                <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                    <img class="img-fluid" src="{% static 'img/templates-button/buttons_Grand-Opening-Food-23.png' %}" />
+                </a>
+                <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+                <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                    <img class="img-fluid" src="{% static 'img/templates-button/buttons_Grand-Opening-Food-24.png' %}" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p class="text-white">
+                Fill your name and contact lists:
+            </p>
+            <p class="text-white">
+                Full Name<br>
+                {{ form_class.name }}
+            </p>
+            <p class="text-white">
+                Email<br>
+                {{ form_class.email }}
+            </p>
+            <p class="text-white">
+                Telephone<br>
+                {{ form_class.phone }}
+            </p>
+            <br>
+            <button type="submit" class="rounded-pill bg-yellow text-white px-3 py-2 d-lg-inline d-block text-center mb-3" data-toggle="modal" data-target="#exampleModal">SUBMIT</button>
+            <a target="_blank" href="{{ x.inv_pdf.url }}" class="rounded-pill border-white text-white px-3 py-2 ml-lg-2  d-lg-inline d-block text-center">
+                DOWNLOAD E-INVITATION
+            </a>
+        </div>
+    </div>
+</form>

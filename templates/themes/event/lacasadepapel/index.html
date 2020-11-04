@@ -315,59 +315,7 @@
                         seat by filling the form.<br>
                     </p> 
                 </div>
-                <div class="col-lg-3">
-                    <p class="text-white mb-0">
-                        Are you attending the gala dinner?
-                    </p>
-                    <div class="form-group">
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label text-white" for="inlineRadio1">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label text-white" for="inlineRadio2">No</label>
-                        </div>
-                    </div>
-                    <p class="text-white mb-0">
-                        Will you bring anyone to the event?
-                    </p>
-                    <div class="form-group position-relative my-2">
-                        <div class="guest input-number-arrow">
-                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_Le-Casa-21.png' %}" />
-                            </a>
-                            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                <img class="img-fluid" src="{% static 'img/templates-button/buttons_Le-Casa-22.png' %}" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <p class="text-white">
-                        Fill your name and contact lists
-                    </p>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p class="text-white mb-0">
-                                Full Name
-                            </p>
-                            <input type="text" class="form-control mb-3">
-                            <p class="text-white mb-0">
-                                Email
-                            </p>
-                            <input type="text" class="form-control mb-3">
-                        </div>
-                        <div class="col-lg-6">
-                            <p class="text-white mb-0">
-                                Telephone
-                            </p>
-                            <input type="text" class="form-control mb-4">
-                            <a href="#" class="submit-dinner" data-toggle="modal" data-target="#form-submit">SUBMIT</a>
-                        </div>
-                    </div>
-                </div>
+                {% include 'themes/event/lacasadepapel/attendance.html' %}
             </div>
         </div>
         <div data-aos="fade-up" class="container pt-5" id="our">

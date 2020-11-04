@@ -263,59 +263,7 @@
                         <h2 class="font-white">Let us know if you are attending</h2>
                     </div>
                     <div class="col-lg-7">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="your-attending">are you attending?*</label>
-                                    <div>
-                                        <input type="radio" id="yes" name="gender" value="yes">
-                                        <label class="radio mr-m-10p mr-lg-5p" for="yes">Yes</label>
-                                        <input type="radio" id="no" name="gender" value="no">
-                                        <label class="radio" for="no">No</label>
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="your-email">email address*</label>
-                                    <input type="email" class="form-control" id="your-email" name="your-email" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="your-firstname">First name*</label>
-                                    <input type="text" class="form-control" id="your-firstname" name="your-firstname" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="your-lastname">Last name*</label>
-                                    <input type="text" class="form-control" id="your-lastname" name="your-lastname" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="your-with">who else is coming with you?*</label>
-                                <div class="guest input-number-arrow">
-                                    <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_LiamFeli-03.png' %}" />
-                                    </a>
-                                    <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                                    <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                        <img class="img-fluid" src="{% static 'img/templates-button/buttons_LiamFeli-04.png' %}" />
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="your-message">message</label>
-                                <textarea class="form-control" id="your-message" name="your-message" rows="5"></textarea>
-                            </div>
-                            <div class="button-position">
-                                <button type="submit" class="add-to-cart button-default" data-toggle="modal" data-target="#thankyou" >
-                                    <div class="default">RSVP</div>
-                                    <div class="success">RESERVED</div>
-                                    <div class="dots-animation"></div>
-                                </button>
-                                <a class="button-download" target="_blank" href="{{ x.inv_pdf.url }}">
-                                    Download Invitation
-                                </a>
-                            </div>
-                        </form>
+                        {% include 'themes/wedding/liam_felicia/attendance.html' %}
                     </div>
                     <div class="col-lg-5 title pt-lg-10p text-center">
                         <h2 class="font-white">Let us know if you are attending</h2>

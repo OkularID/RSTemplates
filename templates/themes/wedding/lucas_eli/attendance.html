@@ -1,0 +1,54 @@
+{% load static %}
+{% load compress %}
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <label for="your-firstname">FULL NAME*</label>
+    {{ form_class.name }}
+    <label>YOUR RESPONSE*</label>
+    <div class="radio-toolbar">
+        {{ form_class.check }}
+    </div>
+    <div class="my-lg-3"></div>
+    <label for="your-email">EMAIL*</label>
+    {{ form_class.email }}
+    <label for="your-phone">PHONE NUMBER*</label>
+    {{ form_class.phone }}
+    <label for="your-guest">ADDITIONAL GUEST*</label>
+    <div class="guest input-number-arrow">
+        <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+            <img class="img-fluid" src="{% static 'img/templates-button/buttons_LucalEliza-02.png' %}" />
+        </a>
+        <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+        <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+            <img class="img-fluid" src="{% static 'img/templates-button/buttons_LucalEliza-03.png' %}" />
+        </a>
+    </div>
+    <button type="submit" class="button-default d-block text-center" data-toggle="modal" data-target="#ebrochure">Submit</button>
+    <a target="_blank" href="{{ x.inv_pdf.url }}" class="button-download">Download Invitation</a>
+    <div class="modal fade" id="ebrochure">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="container-fluid pt-lg-10p pb-lg-10p pl-lg-10p pr-lg-10p">
+                    <div class="row">
+                        <a class="close" data-dismiss="modal">
+                            <img class="img-fluid" src="{% static 'rsvp/wedding/lucas_eli/images/close.png' %}" />
+                        </a>
+                        <img class="img-fluid motif" src="{% static 'rsvp/wedding/lucas_eli/images/popup-motif-01.png' %}" />
+                        <img class="img-fluid motif2" src="{{ x.rsvp_popup_img.url }}" />
+                        <img class="img-fluid motif3" src="{% static 'rsvp/wedding/lucas_eli/images/popup-motif-03.png' %}" />
+                        <div class="col-lg-12 text-center">
+                            <div class="w-m-100p w-lg-65p ma-lg">
+                                <h2>Thank you<br />for the RSVP</h2>
+                                <p>
+                                    Thank you for submitting. We will process your RSVP immediately. We are looking forward to see you on our special day. If there is more we can do to make this experience more enjoyable, please do not hesistate to reach our PIC.
+                                </p>
+                                <a class="button-popup">PIC: {{ x.rsvp_popup_name }} {{ x.rsvp_popup_phone }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

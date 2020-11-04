@@ -1,0 +1,42 @@
+{% load static %}
+{% load compress %}
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <div class="col-lg-6 text-center form-rsvp">
+        <p class="text-blue">
+            Are you attending?
+        </p>
+        <div class="position-relative">
+            <div class="form-check form-check-inline">
+                {{ form_class.check }}
+            </div>
+        </div>
+        <p class="text-blue my-3">Fill your full name and contact lists</p> 
+        <p class="text-blue mb-0">Full Name</p>
+        {{ form_class.name }}
+        <p class="text-blue mb-0">Email Address</p>
+        {{ form_class.email }}
+        <p class="text-blue mb-0">Phone</p>
+        {{ form_class.phone }}
+        <p class="text-blue">
+            Will you bring additional guest(s)?
+        </p>
+        <div class="guest input-number-arrow w-50 mx-auto">
+            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                <img class="img-fluid" src="{% static 'img/templates-button/buttons_Reunion-10years-19.png' %}" />
+            </a>
+            <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
+                <img class="img-fluid" src="{% static 'img/templates-button/buttons_Reunion-10years-20.png' %}" />
+            </a>
+        </div>
+        <button type="submit" class="d-inline-block mt-5 mb-4" data-toggle="modal" data-target="#form-submit" style="background:transparent;border:none;">
+            <img src="{% static 'rsvp/event/10year_reunion/images/button-11.png' %}">
+        </button>
+        <br>
+        <a class="d-inline-block" href="{{ x.inv_pdf.url }}" target="_blank">
+            <img src="{% static 'rsvp/event/10year_reunion/images/button-12.png' %}">
+        </a>
+    </div>
+</form>
