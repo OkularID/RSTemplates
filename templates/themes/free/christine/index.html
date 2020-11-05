@@ -94,45 +94,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row pr-lg-5">
-                        <div class="col-lg-4 text-center">
-                            <label class="font-lightgrey">Full Name</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-lg-4 text-center">
-                            <label class="font-lightgrey">Email Address</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col-lg-4 text-center">
-                            <label class="font-lightgrey">Phone</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row mt-4 pr-lg-5">
-                        <div class="col-lg-12 text-center">
-                            <p class="font-lightgrey">
-                                Will you bring additional guest(s) along with you?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row pr-lg-5">
-                        <div class="col-lg-4 mx-auto text-center">
-                        <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                          <i class="fa fa-caret-left text-coral"></i>
-                        </a>
-                          <input class="text-center font-lightgrey font-lg-16" disabled type="number" name="qty" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                          <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                            <i class="fa fa-caret-right text-coral"></i>
-                          </a>
-                        </div>
-                    </div>
-                    <div class="row my-4 pr-lg-5">
-                        <div class="col-lg-12 text-center">
-                            <a href="#" class="button-bluesky">
-                                Submit
-                            </a>
-                        </div>
-                    </div>
+                    {% include 'themes/free/christine/attendance.html' %}
                 </div>
             </div>
         </div>

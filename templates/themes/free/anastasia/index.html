@@ -68,51 +68,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="row pr-5 my-2">
-                  <div class="col">
-                    <label class="text-gray">Full Name</label>
-                    <input type="text" class="form-control" placeholder="First name">
-                  </div>
-                </div>
-                <div class="row pr-5 my-2">
-                  <div class="col">
-                    <label class="text-gray">Full Name</label>
-                    <input type="text" class="form-control" placeholder="First name">
-                  </div>
-                  <div class="col">
-                    <label class="text-gray">Phone</label>
-                    <input type="text" class="form-control" placeholder="First name">
-                  </div>
-                </div>
-                <div class="row my-4 pr-5">
-                  <div class="col-lg-8">
-                    <p class="text-gray">
-                      Will you bring additional guest(s) along with you?
-                    </p>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="row">
-                      <div class="col-lg-2 px-0 offset-lg-2">
-                      <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                        <i class="fa fa-chevron-left"></i>
-                      </a>
-                      </div>
-                      <div class="col-lg-3">
-                        <input class="w-100 text-center" disabled type="number" name="qty" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                      </div>
-                      <div class="col-lg-2 px-0">
-                        <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                          <i class="fa fa-chevron-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div> 
-                </div>
-                <div class="row pr-5">
-                  <div class="col-lg-12">
-                    <a href="#" class="button-submit">Submit</a>
-                  </div>
-                </div>
+                {% include 'themes/free/anastasia/attendance.html' %}
               </div>
             </div>
         </div>
