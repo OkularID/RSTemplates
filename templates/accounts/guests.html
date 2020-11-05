@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load compress %}
+
 
 {% block content %}
 <title>{% block title %} My Guests | Reservasi Dulu {% endblock %}</title>
@@ -22,18 +22,18 @@
                             <div class="container-fluid card">
                                 <div class="row">
                                     <div class="col-lg-3">
-                                        <img class="img-fluid" src="{% static 'img/04-templates/templates-landing-image-03.png' %}" alt="reservasidulu" />
+                                        <img class="img-fluid" src="{{ i.user_attend.theme.theme_thumbnail }}" alt="reservasidulu" />
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="boxc info">
-                                            <div class="title">{{ i.user_attend }}</div>
-                                            <div class="category">Birthday Template</div>
-                                            <div class="date">{{ i.created }}</div>
+                                            <div class="title">{{ i.name }}</div>
+                                            <div class="category">{{ i.user_attend }}</div>
+                                            <div class="date">{{ i.created | date:"d M, Y" }}</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="boxc">
-                                            <a class="btn-whiteoutline" href="my-guest-new2.html">See Details</a>
+                                            <a class="btn-whiteoutline" href="{% url 'guest_detail' i.attending %}">See Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -48,8 +48,8 @@
                             <div class="row">
                                 <div class="col-lg-6 d-none d-lg-block pl-lg-0 pr-lg-5p header-attending">
                                     <h3>Attending</h3>
-                                    <div class="num">2304</div>
-                                    <a href="">See who’s attending</a>
+                                    <div class="num">{{ i.attending }}</div>
+                                    <a href="{% url 'guest_detail' i.attending %}">See who’s attending</a>
                                 </div>
                                 <div class="col-lg-6 d-none d-lg-block pl-lg-5p pr-lg-0 sna">
                                     <div class="container-fluid">
@@ -58,9 +58,9 @@
                                                 <div class="row">
                                                     <div class="col-lg-8">
                                                         <h3>RSVP Submitted</h3>
-                                                        <a href="">See who’ve submitted</a>
+                                                        <a href="{% url 'guest_detail' i.attending %}">See who’ve submitted</a>
                                                     </div>
-                                                    <div class="col-lg-4"><h3 class="num-sm"><span>1907</span></h3></div>
+                                                    <div class="col-lg-4"><h3 class="num-sm"><span>{{ i.attending }}</span></h3></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12 notattending">
