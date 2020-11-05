@@ -308,6 +308,10 @@
         }
         #album .modal .modal-dialog .modal-content .container-fluid{padding: 0;}
         #album .modal .modal-dialog .modal-content .close img{width: 70%;}
+        #album a img.img-fluid{
+            height: 50vh;
+            object-fit: cover;
+        }
     /* RSVP */
         #rsvp form table{width: 100%;}
         #rsvp form table tr td{padding-bottom: 3%;}
