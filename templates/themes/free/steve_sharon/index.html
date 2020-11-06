@@ -199,51 +199,7 @@
                                         <h4 class="font-blue d-lg-none">
                                             RSVP
                                         </h4>
-                                        <form>
-                                            <table>
-                                                <tr>
-                                                    <td colspan="2">
-                                                        <label>
-                                                            Fill in the list below IF you are attending
-                                                        </label>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><label>Full Name</label></td>
-                                                    <td>:<input type="text" name="your-name" class="form-control" required /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><label>Email</label></td>
-                                                    <td>:<input type="email" name="your-email" class="form-control" required /></td>
-                                                    <td><label>Phone No.</label></td>
-                                                    <td>:<input type="text" name="your-phone" class="form-control" required /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><label>Additional Guest</label></td>
-                                                    <td>
-                                                        <div class="guest">
-                                                            <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                                                                <img class="img-fluid" src="{% static 'rsvp/free/steve_sharon/images/form-01.png' %}" />
-                                                            </a>
-                                                            <input type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                                                            <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                                                                <img class="img-fluid" src="{% static 'rsvp/free/steve_sharon/images/form-02.png' %}" />
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                            <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                                                <div class="button-wrap d-block d-lg-none">
-                                                    <input type="submit" class="button-default" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
-                                                    <img class="img-fluid" src="{% static 'rsvp/free/steve_sharon/images/arrow-02.png' %}" />
-                                                </div>
-                                                <div class="button-wrap d-none d-lg-block">
-                                                    <input type="submit" class="button-default" data-toggle="modal" data-target="#ebrochure" value="SUBMIT" />
-                                                    <img class="img-fluid" src="{% static 'rsvp/free/steve_sharon/images/arrow-03.png' %}" />
-                                                </div>
-                                            </div>
-                                        </form>
+                                        {% include 'themes/free/steve_sharon/attendance.html' %}
                                     </div>
                                 </div>
                             </div>

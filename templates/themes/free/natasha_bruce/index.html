@@ -94,51 +94,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col pr-5">
-                        <label class="text-gray">Full Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg pr-5">
-                        <label class="text-gray">Phone Number</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="col-lg pr-5">
-                        <label class="text-gray">Email</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <p class="text-gray mt-2">
-                          Additional Guest
-                        </p>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="row">
-                          <div class="col-lg-2 col-1 px-0">
-                          <a role="button" id="step-decrement" class="btn btn-default mt-1" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                            <i class="fa fa-chevron-left text-gray"></i>
-                          </a>
-                          </div>
-                          <div class="col-lg-3 col-2">
-                            <input class="w-100 form-control bg-white text-center" disabled type="number" name="qty" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                          </div>
-                          <div class="col-lg-2 col-1 px-0">
-                            <a role="button" id="step-increment" class="btn btn-default  mt-1" aria-label="add 1" aria-labelledby="step-increment label-text">
-                              <i class="fa fa-chevron-right text-gray"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <input type="submit" class="button-cyan d-block w-100" data-toggle="modal" data-target="#exampleModal" value="SUBMIT">
-                    </div>
-                </div>
+                {% include 'themes/free/natasha_bruce/attendance.html' %}
             </div>
         </div>
     </div>

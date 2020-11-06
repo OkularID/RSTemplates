@@ -3,42 +3,49 @@
 
 <form method="post" enctype="multipart/form-data">
 {% csrf_token %}
-    <div class="form-row">
-        <div class="form-group col-lg-6 mb-lg-0 pr-m-5 pr-lg-5p">
-            <label for="your-attending">Are You Attending ?</label>
-            <div class="box bg-white mb-m-10p mb-lg-30 pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
-                {{ form_class.check }}
-            </div>
-        </div>
-        <div class="form-group col-12 mb-m-0 pr-m-5 d-block d-lg-none">
-            <label for="your-firstname">Full Name*</label>
+    <div class="row">
+        <div class="col pr-5">
+            <label class="text-gray">Full Name</label>
             {{ form_class.name }}
         </div>
-        <div class="form-group col-lg-6 mb-lg-0 pl-m-5 pl-lg-5p">
-            <label for="your-phone">Phone Number*</label>
+    </div>
+    <div class="row">
+        <div class="col-lg pr-5">
+            <label class="text-gray">Phone Number</label>
             {{ form_class.phone }}
-            <label for="your-email">Email*</label>
+        </div>
+        <div class="col-lg pr-5">
+            <label class="text-gray">Email</label>
             {{ form_class.email }}
         </div>
-        <div class="form-group col-lg-6 mb-lg-0 pr-m-5 pr-lg-5p d-none d-lg-block">
-            <label for="your-firstname">Full Name*</label>
-            {{ form_class.name }}
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <p class="text-gray mt-2">
+            Additional Guest
+            </p>
         </div>
-        <div class="form-group col-lg-6 mb-lg-0 pl-m-5 pl-lg-5p">
-            <label for="your-guest">Number of Guest</label>
-            <div class="guest input-number-arrow">
-                <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
-                    <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-05.png' %}" />
-                </a>
-                <input class="form-control text-center" type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
-                <a role="button" id="step-increment" class="btn btn-default" aria-label="add 1" aria-labelledby="step-increment label-text">
-                    <img class="img-fluid" src="{% static 'img/templates-button/buttons_EmmaNorman-06.png' %}" />
-                </a>
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-lg-2 col-1 px-0">
+                    <a role="button" id="step-decrement" class="btn btn-default mt-1" aria-label="remove 1" aria-labelledby="step-decrement label-text">
+                        <i class="fa fa-chevron-left text-gray"></i>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-2">
+                    <input class="w-100 form-control bg-white text-center" disabled type="number" name="your-guest" id="spinner" value="1" placeholder="1" aria-live="polite" tabindex="-1" aria-labelledby="label-text" min="1" max="5">
+                </div>
+                <div class="col-lg-2 col-1 px-0">
+                    <a role="button" id="step-increment" class="btn btn-default  mt-1" aria-label="add 1" aria-labelledby="step-increment label-text">
+                        <i class="fa fa-chevron-right text-gray"></i>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="form-group col-lg-12 mb-m-0 pt-lg-5p text-right">
-            <button type="submit" class="button-default" data-toggle="modal" data-target="#thankyou">Submit</button>
-            <a target="_blank" href="{{ x.inv_pdf.url }}" class="button-download">Download Invitation</a>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <input type="submit" class="button-cyan d-block w-100" value="SUBMIT">
         </div>
     </div>
 </form>
