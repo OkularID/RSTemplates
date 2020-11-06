@@ -402,9 +402,14 @@
             border: 1px solid #075561;
             border-radius: 0;
 		}
-		#rsvp form input[type="number"] {
-			-moz-appearance: textfield;
-			-webkit-appearance: textfield;
+		#rsvp input[type=number]::-webkit-outer-spin-button,
+		#rsvp input[type=number]::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		#rsvp input[type=number] {
+			-moz-appearance:textfield;
 			background-color: transparent !important;
 		}
         #rsvp form .box{border: 1px solid #075561;}
