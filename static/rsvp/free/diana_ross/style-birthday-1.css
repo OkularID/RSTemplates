@@ -533,15 +533,12 @@
             font-size : 21px !important;
             letter-spacing : 0.53px;
         }
-        #content-wishlist #wishlist-popup .boxc .button-wishlist{
+        #content-wishlist #wishlist-popup .boxc .button-wishlist, #ebrochure .button-wishlist, #wishlist-popup .button-wishlist, #confirm-popup .button-wishlist{
             margin: 3% auto 0;
             cursor: pointer;
             display: block;
-            background: url('images/popup-03.png');
-            background-size: 100% 100% !important;
-            background-repeat: no-repeat !important;
-            background-position: center !important;
-            padding: 55px 10px 10px 0;
+            background-color: #a7dee9;
+            padding: 3.9rem 0;
             width: 150px;
             height: 150px;
             font-size: 18px !important;
@@ -549,6 +546,10 @@
             text-align: center;
             border: none;
             color: #fff !important;
+            border-radius: 50%;
+            -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.18);
+            -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.18);
+            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.18);
         }
 	.birthday-1-free{
         background-image: url(images/bg-bday1-free-06.jpg);
