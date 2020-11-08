@@ -477,6 +477,39 @@
             text-transform: uppercase;
 			float: right;
 		}
+		#ebrochure .modal-content{
+			margin: 0 auto;
+			padding: 10%;
+			width: 80%;
+			text-align: center;
+			text-transform: uppercase;
+			background: #CDAE8A;
+		}
+		#ebrochure .close{
+			position: absolute;
+			top: -30%;
+			right: -15%;
+			opacity: 1;
+			cursor: pointer;
+		}
+		#ebrochure .close:hover{opacity: .5;}
+		#ebrochure .close img{width: 60%;}
+		#ebrochure .modal-content .wrap{
+			margin: 0 auto;
+			width: 420px;
+		}
+		#ebrochure .modal-content .wrap h2{
+			margin-bottom: 10%;
+			font-size : 58px;
+			line-height : 58.7px;
+			color: #fff;
+		}
+		#ebrochure .modal-content .wrap p{
+			font-size : 25px;
+			line-height : 60px;
+			letter-spacing : 7.5px;
+			color: #fff;
+		}
 	
 /* Template */
 		.free-wedding-8{
@@ -664,5 +697,16 @@
 			}
 			.free-wedding-8 .content-right {
 				padding-top: 10px;
+			}
+			#ebrochure .modal-content{
+				padding: 20% 10%;
+				width: 100%;
+			}
+			#ebrochure .close{top: -25%;}
+			#ebrochure .close img{width: 50%;}
+			#ebrochure .modal-content .wrap{width: 100%;}
+			#ebrochure .modal-content .wrap h2{
+				margin-bottom: 2%;
+				font-size: 30px !important;
 			}
 }
