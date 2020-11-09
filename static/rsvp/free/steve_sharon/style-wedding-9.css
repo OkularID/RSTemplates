@@ -57,6 +57,9 @@
 		color: #8aa3c1;
 	}
 	.font-lightgreen,.font-lightgreen p{color: #819e82 !important;}
+	.font-grey{
+		color: #808285 !important;
+	}
 	.line-white{border: 1px solid #fff;}
 	.line-grey{border-bottom: 1px solid #bcbec0;}
 	.button-default{
