@@ -430,6 +430,40 @@
             letter-spacing: 1px;
             text-transform: capitalize;
 		}
+		#rsvp #ebrochure .modal-content{
+			margin: 0 auto;
+			padding: 10%;
+			width: 80%;
+			text-align: center;
+			text-transform: uppercase;
+			background: #CDAE8A;
+		}
+		#rsvp #ebrochure .close{
+			position: absolute;
+			top: -30%;
+			right: -15%;
+			opacity: 1;
+			cursor: pointer;
+		}
+		#rsvp #ebrochure .close:hover{opacity: .5;}
+		#rsvp #ebrochure .close img{width: 60%;}
+		#rsvp #ebrochure .modal-content .wrap{
+			margin: 0 auto;
+			width: 420px;
+		}
+		#rsvp #ebrochure .modal-content .wrap h2{
+			margin-bottom: 10%;
+			font-size : 58px;
+			line-height : 58.7px;
+			color: #fff;
+		}
+		#rsvp #ebrochure .modal-content .wrap p{
+			font-size : 25px;
+			line-height : 60px;
+			letter-spacing : 7.5px;
+			color: #fff;
+		}
+
 	
 
 @media screen and (max-width: 846px) {
@@ -540,5 +574,22 @@
 	        #rsvp form .button-default{
 	        	width: 100%;
 	        	font-size: 17px !important;
+	        }
+	        .button-download{
+	        	display: block;
+	        	width: 100%;
+	        	text-align: center;
+	        	font-size: 16px !important;
+	        }
+	        #rsvp #ebrochure .modal-content{
+	        	padding: 20% 10%;
+	        	width: 100%;
+	        }
+	        #rsvp #ebrochure .close{top: -35%;}
+	        #rsvp #ebrochure .close img{width: 50%;}
+	        #rsvp #ebrochure .modal-content .wrap{width: 100%;}
+	        #rsvp #ebrochure .modal-content .wrap h2{
+	        	margin-bottom: 2%;
+	        	font-size: 30px !important;
 	        }
 }
