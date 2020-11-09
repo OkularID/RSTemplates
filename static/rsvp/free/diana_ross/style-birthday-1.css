@@ -449,12 +449,42 @@
         }
         #rsvp #ebrochure .boxc h2 span{font-size: 30px !important;}
         #rsvp #ebrochure .boxc p{
-            font-size : 21px !important;
+            font-size : 17px !important;
             letter-spacing : 0.53px;
         }
         #rsvp #ebrochure .boxc .button-blue{
             margin: 3% auto 0;
             cursor: pointer;
+        }
+        #content-wishlist #wishlist-popup .boxc .button-wishlist:hover, #ebrochure .button-wishlist:hover, #wishlist-popup .button-wishlist:hover, #confirm-popup .button-wishlist:hover{
+            background-color: #fff;
+            color: #a7dee9 !important;
+        }
+        #ebrochure .button-yellow{
+            margin: 3% auto 0;
+            cursor: pointer;
+            display: block;
+            background-color: #eec319;
+            padding: 2.9rem 0;
+            width: 150px;
+            height: 150px;
+            font-size: 18px !important;
+            letter-spacing: 3.6px;
+            text-align: center;
+            border: none;
+            color: #fff !important;
+            border-radius: 50%;
+            -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.18);
+            -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.18);
+            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.18);
+        }
+        #ebrochure .button-yellow:hover{
+            background-color: #fff;
+            color: #eec319 !important;
+        }
+        #ebrochure .wrap-button{
+            width: 30%;
+            margin: 4rem auto 0;
         }
     /* THANKS */
         #thanks .bg{
@@ -503,15 +533,12 @@
             font-size : 21px !important;
             letter-spacing : 0.53px;
         }
-        #content-wishlist #wishlist-popup .boxc .button-wishlist{
+        #content-wishlist #wishlist-popup .boxc .button-wishlist, #ebrochure .button-wishlist, #wishlist-popup .button-wishlist, #confirm-popup .button-wishlist{
             margin: 3% auto 0;
             cursor: pointer;
             display: block;
-            background: url('images/popup-03.png');
-            background-size: 100% 100% !important;
-            background-repeat: no-repeat !important;
-            background-position: center !important;
-            padding: 55px 10px 10px 0;
+            background-color: #a7dee9;
+            padding: 3.9rem 0;
             width: 150px;
             height: 150px;
             font-size: 18px !important;
@@ -519,6 +546,10 @@
             text-align: center;
             border: none;
             color: #fff !important;
+            border-radius: 50%;
+            -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.18);
+            -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.18);
+            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.18);
         }
 	.birthday-1-free{
         background-image: url(images/bg-bday1-free-06.jpg);
