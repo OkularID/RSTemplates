@@ -22,7 +22,9 @@
 </head>
 <body>
     <!-- Preview Navigation -->
-    {% include 'themes/poni.html' %}
+    {% if data.is_publised is false %}
+        {% include 'themes/poni.html' %}
+    {% endif %}
     
     <!-- Main Site -->
     <div id="homepage" class="pos-rel">
