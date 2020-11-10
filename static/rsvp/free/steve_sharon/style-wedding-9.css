@@ -589,6 +589,11 @@
             position: absolute;
             top: 40%;
             right: 8%;
+		}
+		#dateandtime form table tr:first-child td{border-bottom: 1px solid #fff !important;}
+		#dateandtime form table tr:nth-child(2) td:nth-child(3){
+        	width: 5% !important;
+        	border: unset !important;
         }
 	
 
