@@ -21,8 +21,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
     <!-- Preview Navigation -->
-    {% if data.is_publised is false %}
+    {% if x.is_publised is False %}
         {% include 'themes/poni.html' %}
     {% endif %}
     
@@ -280,8 +281,7 @@
                     <div class="col-12 mtext-center col-lg-4 text-right">
                         {#<a href="" class="button-footer">Share</a>#}
                             {#<a href="{% url 'emma_norman_update' site_url %}" class="button-footer">Edit</a>#}
-                            {#<a href="" class="button-footer">Delete</a>#}
-
+                        {#<a href="" class="button-footer">Delete</a>#}
                     </div>
                 </div>
             </div>
