@@ -909,3 +909,53 @@ footer .mtext-center{text-align: center !important;}
       -webkit-transform: translateY(0%);
     }
 }
+
+/* Popup */
+#ebrochure .modal-lg{max-width: 70%;}
+#ebrochure .boxc{text-align: center;}
+#ebrochure .boxc h2{
+    font-size : 21px !important;
+    line-height : 29.31px !important;
+    letter-spacing : 4.2px;
+}
+#ebrochure .boxc h2 span{font-size: 30px !important;}
+#ebrochure .boxc p{
+    font-size : 17px !important;
+    letter-spacing : 0.53px;
+}
+#ebrochure .boxc .button-blue{
+    margin: 3% auto 0;
+    cursor: pointer;
+}
+@media screen and (max-width: 846px) {
+    #ebrochure .modal-lg{max-width: 100%;}
+    #ebrochure .boxc h2{
+        font-size: 8px !important;
+        line-height: 15.31px !important;
+    }
+    #ebrochure .boxc h2 span{font-size: 23px !important;}
+    #ebrochure .boxc p{
+        margin: 0 auto 10px;
+        width: 180px;
+        font-size: 7px !important;
+        line-height: 16px;
+    }
+    #ebrochure .boxc .wrap-button{
+        margin: 0 auto;
+        width: 100%;
+    }
+    #ebrochure .boxc .wrap-button .button-wishlist{
+        padding: 32px 0 0;
+        width: 80px;
+        height: 80px;
+        font-size: 8px !important;
+        line-height: 11px;
+    }
+    #ebrochure .boxc .wrap-button .button-yellow{
+        padding: 25px 0 0;
+        width: 80px;
+        height: 80px;
+        font-size: 8px !important;
+        line-height: 11px;
+    }
+}
