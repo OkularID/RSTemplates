@@ -197,31 +197,24 @@
                                 </div>
                                 <div class="row" id="rsvp">
                                     <div class="col-lg-12 px-lg-5 py-lg-0 py-5 bg-rsvp px-4">
-                                        <h4 class="font-blue d-lg-none">
-                                            RSVP
-                                        </h4>
+                                        <h4 class="font-blue d-lg-none">RSVP</h4>
+                                        <label class="mt-lg-5p mb-lg-3p">Fill in the list below IF you are attending</label>
                                         <form>
                                             <table>
                                                 <tr>
-                                                    <td colspan="2">
-                                                        <label>
-                                                            Fill in the list below IF you are attending
-                                                        </label>
-                                                    </td>
-                                                </tr>
-                                                <tr>
                                                     <td><label>Full Name</label></td>
-                                                    <td>:<input type="text" name="your-name" class="form-control" required /></td>
+                                                    <td colspan="4">:<input type="text" name="your-name" class="form-control" required /></td>
                                                 </tr>
                                                 <tr>
                                                     <td><label>Email</label></td>
                                                     <td>:<input type="email" name="your-email" class="form-control" required /></td>
+                                                    <td></td>
                                                     <td><label>Phone No.</label></td>
                                                     <td>:<input type="text" name="your-phone" class="form-control" required /></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><label>Additional Guest</label></td>
-                                                    <td>
+                                                    <td colspan="1"><label>Additional Guest</label></td>
+                                                    <td colspan="4" class="pl-lg-2p">
                                                         <div class="guest">
                                                             <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
                                                                 <img class="img-fluid" src="{% static 'rsvp/free/steve_sharon/images/form-01.png' %}" />

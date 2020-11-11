@@ -1,7 +1,15 @@
 {% load static %}
 
     <style type="text/css">
-        #homepage{position: relative;}
+        #hompage{position: relative;}
+        #homepage nav{
+            top: 70px;
+            transition: 0s;
+        }
+        #homepage nav.bg-white{
+            top: 0;
+            transition: 0s;
+        }
     </style>
     <div class="preview-checkout">
         <p>Just with <a href="{% url 'home' %}"><img class="pc-logo" src="{% static 'img/logo.png' %}" /></a>, you are one click away to convenience</p>
@@ -9,7 +17,7 @@
             <p class="font-orange">Back to Editor</p>
             <img src="{% static 'img/04-templates/preview-02.png' %}">
         </a>
-        <a class="pc-button" href="{% url 'checkout_bill' %}">
+        <a class="pc-button" href="">
             <p class="font-white">Check Out</p>
             <img src="{% static 'img/04-templates/preview-03.png' %}">
         </a>

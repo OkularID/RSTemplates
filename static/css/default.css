@@ -1585,69 +1585,72 @@
 
 /* Preview Navigation */
   .preview-checkout{
-    position: relative;
-    z-index: 5;
-    margin-bottom: -7px;
-    padding: 10px 0;
-    width: 100%;
-    background: #fff;
-    text-align: center;
+    position: relative !important;
+    z-index: 5 !important;
+    /*margin-bottom: -7px !important;*/
+    padding: 10px 0 !important;
+    width: 100% !important;
+    background: #fff !important;
+    text-align: center !important;
   }
   .preview-checkout p{
-    display: inline-block;
-    margin-right: 10px;
-    font-family: "Montserrat SemiBold";
+    display: inline-block !important;
+    margin-right: 10px !important;
+    font-family: "Montserrat SemiBold" !important;
     font-size :  14px !important;
-    line-height : 24px;
+    line-height : 24px !important;
+    color: #212529 !important;
   }
   .preview-checkout .pc-logo{
-    margin: -5px 5px 0;
-    width: 150px;
+    margin: -5px 5px 0 !important;
+    width: 150px !important;
   }
   .preview-checkout .pc-button{
-    display: inline-block;
-    position: relative;
-    margin: 0 5px;
-    text-align: center;
-    cursor: pointer;
+    display: inline-block !important;
+    position: relative !important;
+    margin: 0 5px !important;
+    text-align: center !important;
+    cursor: pointer !important;
   }
   .preview-checkout .pc-button p{
-    position: absolute;
-    margin: 0 auto;
-    top: 25%;
-    left: 0;
-    right: 0;
-    font-family: "Montserrat SemiBold";
+    position: absolute !important;
+    margin: 0 auto !important;
+    top: 25% !important;
+    left: 0 !important;
+    right: 0 !important;
+    font-family: "Montserrat SemiBold" !important;
     font-size: 14px !important;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.5px !important;
   }
+  .preview-checkout .pc-button p.font-orange{color: #ffb64d !important;}
+  .preview-checkout .pc-button p.font-white{color: #fff !important;}
   .preview-checkout .pc-button p:hover{
     color: #494949 !important;
-    transition: .5s;
+    transition: .5s !important;
   }
-  .preview-checkout .pc-button img{width: 130px;}
+  .preview-checkout .pc-button img{width: 130px !important;}
   .preview-checkout .pc-motif{
-    position: absolute;
-    z-index: -1;
-    bottom: -11px;
-    left: 0;
-    width: 100%;
+    position: absolute !important;
+    z-index: -1 !important;
+    bottom: -11px !important;
+    left: 0 !important;
+    width: 100% !important;
   }
   @media screen and (max-width: 846px) {
-    .preview-checkout{padding: 10px 0;}
+    .preview-checkout{padding: 10px 0 !important;}
     .preview-checkout p{
-      margin: 0 0 5px;
+      margin: 0 0 5px !important;
       font-size: 7px !important;
     }
     .preview-checkout .pc-logo{
-      margin: -2px 3px 0;
-      width: 100px;
+      margin: -2px 3px 0 !important;
+      width: 100px !important;
     }
     .preview-checkout .pc-button p{font-size: 10px !important;}
-    .preview-checkout .pc-button img{width: 110px;}
+    .preview-checkout .pc-button img{width: 110px !important;}
     .preview-checkout .pc-motif{
-      height: 12vh;
-      object-fit: cover;
+      height: 12vh !important;
+      object-fit: cover !important;
     }
   }
 

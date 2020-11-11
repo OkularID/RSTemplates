@@ -502,8 +502,6 @@
             border-bottom: 1px solid transparent;
         }
         #dateandtime form table tr:last-child td label{margin-top: 0;}
-        #dateandtime form table tr td:first-child{}
-        #dateandtime form table tr td:last-child{}
         #dateandtime form label{
             margin-top: .5rem;
             margin-bottom: 0;
@@ -589,6 +587,11 @@
             position: absolute;
             top: 40%;
             right: 8%;
+		}
+		#dateandtime form table tr:first-child td{border-bottom: 1px solid #fff !important;}
+		#dateandtime form table tr:nth-child(2) td:nth-child(3){
+        	width: 5% !important;
+        	border: unset !important;
         }
 	
 

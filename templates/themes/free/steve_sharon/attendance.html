@@ -5,23 +5,19 @@
 {% csrf_token %}
     <table>
         <tr>
-            <td colspan="2">
-                <label>Fill in the list below IF you are attending</label>
-            </td>
-        </tr>
-        <tr>
             <td><label>Full Name</label></td>
-            <td>:{{ form_class.name }}</td>
+            <td colspan="4">:{{ form_class.name }}</td>
         </tr>
         <tr>
             <td><label>Email</label></td>
             <td>:{{ form_class.email }}</td>
+            <td></td>
             <td><label>Phone No.</label></td>
             <td>:{{ form_class.phone }}</td>
         </tr>
         <tr>
-            <td><label>Additional Guest</label></td>
-            <td>
+            <td colspan="1"><label>Additional Guest</label></td>
+            <td colspan="4" class="pl-lg-2p">
                 <div class="guest">
                     <a role="button" id="step-decrement" class="btn btn-default" aria-label="remove 1" aria-labelledby="step-decrement label-text">
                         <img class="img-fluid" src="{% static 'rsvp/free/steve_sharon/images/form-01.png' %}" />

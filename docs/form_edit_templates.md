@@ -1292,39 +1292,74 @@
 ## Template bug
 	- Birthday
 		1. aaron			= DONE
-		2. anastasia		= https://dev.reservasidulu.com/themes/preview/pastel-party/
+		2. anastasia		= DONE
 		3. christine		= DONE
 		4. diana_ross		= DONE
 	- Event
 		1. 10year_reunion	= DONE
-		2. 20year_reunion	= https://dev.reservasidulu.com/themes/preview/friendship/
-		3. brotherfield		= https://dev.reservasidulu.com/themes/preview/colors-delight/
+		2. 20year_reunion	= DONE
+		3. brotherfield		= DONE
 		4. christmas_dinner	= DONE
-		5. lacasadepapel	= https://dev.reservasidulu.com/themes/preview/royal-invitation/
+		5. lacasadepapel	= DONE
 		6. music			= DONE
 		7. oceandor			= DONE
-		8. seminary			= https://dev.reservasidulu.com/themes/preview/tech-and-type/
+		8. seminary			= DONE
 	- Wedding
-		1. dylan_rose		= https://dev.reservasidulu.com/themes/preview/precious-memories/
+		1. dylan_rose		= DONE
 		2. emma_norman		= DONE
 		3. jack_jane		= DONE
 		4. liam_felicia		= DONE
 		5. lucas_eli		= DONE
-		6. natasha_bruce	= https://dev.reservasidulu.com/themes/preview/bushes-and-leaves/
-		7. peter_mary		= https://dev.reservasidulu.com/themes/preview/scrapbook/
+		6. natasha_bruce	= DONE
+		7. peter_mary		= DONE
 		8. steve_sharon		= DONE
 		9. vicky_wanda		= DONE
-		10. victor_karla	= https://dev.reservasidulu.com/themes/preview/us-againts-the-world/
+		10. victor_karla	= DONE
 	- Free
 		1. anastasia		= DONE
 		2. christine		= DONE
 		3. diana_ross		= DONE
 		4. dylan_rose		= DONE
-		5. natasha_bruce	= https://dev.reservasidulu.com/themes/preview/free-bushes-and-leaves/
-		6. steve_sharon		= https://dev.reservasidulu.com/themes/preview/free-blooming-feelings/
+		5. natasha_bruce	= DONE
+		6. steve_sharon		= DONE
 
 
-## Template Form
+## Template Navbar Preview
+	- Birthday
+		1. aaron			= DONE
+		2. anastasia		= DONE
+		3. christine		= DONE
+		4. diana_ross		= DONE
+	- Event
+		1. 10year_reunion	= 
+		2. 20year_reunion	= 
+		3. brotherfield		= 
+		4. christmas_dinner	= 
+		5. lacasadepapel	= 
+		6. music			= 
+		7. oceandor			= 
+		8. seminary			= 
+	- Wedding
+		1. dylan_rose		= DONE
+		2. emma_norman		= DONE
+		3. jack_jane		= DONE
+		4. liam_felicia		= DONE
+		5. lucas_eli		= DONE
+		6. natasha_bruce	= DONE
+		7. peter_mary		= DONE
+		8. steve_sharon		= DONE
+		9. vicky_wanda		= DONE
+		10. victor_karla	= DONE
+	- Free
+		1. anastasia		= 
+		2. christine		= 
+		3. diana_ross		= 
+		4. dylan_rose		= 
+		5. natasha_bruce	= 
+		6. steve_sharon		= 
+
+
+## Template 
 	- Birthday
 		1. aaron			= 
 		2. anastasia		= 
@@ -1341,7 +1376,7 @@
 		8. seminary			= 
 	- Wedding
 		1. dylan_rose		= 
-		2. emma_norman		= tampilan masih belum sesuai dan masih ada typo
+		2. emma_norman		= 
 		3. jack_jane		= 
 		4. liam_felicia		= 
 		5. lucas_eli		= 
