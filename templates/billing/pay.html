@@ -25,10 +25,10 @@
                                     <form method="post" enctype="multipart/form-data">
                                         {% csrf_token %}
                                         {{ form | crispy }}
-                                        <label for="cvv">CVV</label>
-                                        <input  id="cvv" type="number">
-                                        <label for="exp">Card Expired</label>
-                                        <input id="exp" type="number" maxlength="3">
+{#                                        <label for="cvv">CVV</label>#}
+{#                                        <input  id="cvv" type="number">#}
+{#                                        <label for="exp">Card Expired</label>#}
+{#                                        <input id="exp" type="number" maxlength="3">#}
                                         <button class="btn-rectangle w-lg-a ma-lg mt-lg-15p float-right" type="submit">Checkout</button>
                                     </form>
                                 </div>
