@@ -762,6 +762,42 @@
                 padding: 15px 30px !important;
                 width: 100%;
             }
+            /* new code for input number and popup */
+            #rsvp form #step-decrement{
+                position: absolute;
+                left: 0;
+            }
+            #rsvp form #step-increment{
+                position: absolute;
+                right: 0;
+            }
+            #rsvp #ebrochure .modal-lg{max-width: 100%;}
+            #rsvp #ebrochure .boxc h2{
+                font-size: 8px !important;
+                line-height: 15.31px !important;
+            }
+            #rsvp #ebrochure .boxc h2 span{font-size: 23px !important;}
+            #rsvp #ebrochure .boxc p{
+                margin: 0 auto 10px;
+                width: 180px;
+                font-size: 7px !important;
+                line-height: 16px;
+            }
+            #rsvp #ebrochure .boxc .wrap-button{margin: 0 auto;}
+            #rsvp #ebrochure .boxc .wrap-button .button-wishlist{
+                padding: 32px 0 0;
+                width: 80px;
+                height: 80px;
+                font-size: 8px !important;
+                line-height: 11px;
+            }
+            #rsvp #ebrochure .boxc .wrap-button .button-yellow{
+                padding: 25px 0 0;
+                width: 80px;
+                height: 80px;
+                font-size: 8px !important;
+                line-height: 11px;
+            }
         /* THANKS */
             #thanks .bg{
                 background: url('images/mobile-ornament-thanks-01.png');

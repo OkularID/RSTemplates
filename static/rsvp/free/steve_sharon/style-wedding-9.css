@@ -806,3 +806,67 @@
 				padding: 70px 10px 100px;
 			}
 }
+
+
+/* Popup */
+#rsvp #ebrochure.modal{padding: 0 !important;}
+#rsvp #ebrochure.modal .modal-dialog{max-width: 100%;}
+#rsvp #ebrochure.modal .modal-dialog .modal-content{
+	margin: 0 auto;
+    padding: 5%;
+    width: 60%;
+    border: unset;
+    border-radius: unset;
+    background: #fff;
+}
+#rsvp #ebrochure.modal .modal-dialog .modal-content .close{
+	position: absolute;
+    top: -10%;
+    right: -10%;
+}
+#rsvp #ebrochure.modal .modal-dialog .modal-content .motif-popup{
+	position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%
+}
+#rsvp #ebrochure.modal .modal-dialog .modal-content h4{
+	margin-bottom: 4%;
+    width: 330px;
+    font-size: 30px !important;
+    line-height: 40px;
+    letter-spacing: 5px;
+}
+#rsvp #ebrochure.modal .modal-dialog .modal-content h6{
+	margin-bottom: 4%;
+    width: 200px;
+    font-family: "TitilliumWeb Light";
+    font-size: 15px !important;
+    line-height: 23px !important;
+    color: #8aa3c1;
+}
+#rsvp #ebrochure.modal .modal-dialog .modal-content p{width: 420px;}
+@media screen and (max-width: 846px) {
+	#rsvp #ebrochure.modal .modal-dialog .modal-content{
+		padding: 10% 5%;
+		width: 80%;
+	}
+	#rsvp #ebrochure.modal .modal-dialog .modal-content .close{
+		top: -6%;
+		right: -13%;
+		width: 12%;
+	}
+	#rsvp #ebrochure.modal .modal-dialog .modal-content .motif-popup{display: none;}
+	#rsvp #ebrochure.modal .modal-dialog .modal-content h4{
+		font-size: 19px !important;
+		line-height: 25px;
+		letter-spacing: 3.8px;
+		width: 100%;
+	}
+	#rsvp #ebrochure.modal .modal-dialog .modal-content h6,
+	#rsvp #ebrochure.modal .modal-dialog .modal-content p{
+		width: 100%;
+		font-size: 15px !important;
+		line-height: 23px !important;
+	}	
+}
