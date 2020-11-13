@@ -1376,15 +1376,15 @@
 		8. seminary			= link ngga bisa
 	- Wedding
 		1. dylan_rose		= link ngga bisa
-		2. emma_norman		= preview ngga tampil
+		2. emma_norman		= preview ngga tampil data yang udah diinput
 		3. jack_jane		= inputan tidak muncul
 		4. liam_felicia		= inputan tidak muncul
-		5. lucas_eli		= DONE
-		6. natasha_bruce	= DONE
-		7. peter_mary		= DONE
-		8. steve_sharon		= DONE
-		9. vicky_wanda		= DONE
-		10. victor_karla	= DONE
+		5. lucas_eli		= preview error
+		6. natasha_bruce	= preview error
+		7. peter_mary		= preview error
+		8. steve_sharon		= preview error
+		9. vicky_wanda		= preview error
+		10. victor_karla	= preview error
 	- Free
 		1. anastasia		= link ngga bisa
 		2. christine		= link ngga bisa
