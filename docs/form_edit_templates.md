@@ -1375,7 +1375,7 @@
 		7. oceandor			= link ngga bisa
 		8. seminary			= link ngga bisa
 	- Wedding
-		1. dylan_rose		= link ngga bisa
+		1. dylan_rose		= inputan tidak muncul
 		2. emma_norman		= preview ngga tampil data yang udah diinput
 		3. jack_jane		= inputan tidak muncul
 		4. liam_felicia		= inputan tidak muncul
