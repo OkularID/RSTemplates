@@ -122,30 +122,23 @@
                                                         <div class="col-lg-5">
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Venue</b></h5>
-                                                                <label>Ceremony Day*</label>
-                                                                    {{ form.vc_day }}
-                                                                <label>Ceremony Date*</label>
-                                                                    {{ form.vc_date }}
-                                                                <label>Ceremony Time*</label>
-                                                                    {{ form.vc_time }}
-                                                                <label>Ceremony Address*</label>
-                                                                    {{ form.vc_address }}
-                                                                <label>Ceremony Dresscode*</label>
-                                                                    {{ form.vc_dress }}
-                                                                <label>Ceremony Image*</label>
-                                                                    {{ form.vc_image }}
-                                                                <label>Reception Day*</label>
-                                                                    {{ form.vr_day }}
-                                                                <label>Reception Date*</label>
-                                                                    {{ form.vr_date }}
-                                                                <label>Reception Time*</label>
-                                                                    {{ form.vr_time }}
-                                                                <label>Reception Address*</label>
-                                                                    {{ form.vr_address }}
-                                                                <label>Reception Dresscode*</label>
-                                                                    {{ form.vr_dress }}
-                                                                <label>Reception Image*</label>
-                                                                    {{ form.vr_image }}
+                                                                <label>Date time</label>
+                                                                {{ form.section3_date1 }}
+                                                                <label>Place</label>
+                                                                {{ form.section3_place1 }}
+                                                                <label>Dresscode</label>
+                                                                {{ form.section3_dresscode1 }}
+                                                                <label>Image</label>
+                                                                {{ form.section3_image1 }}
+
+                                                                <label>Image</label>
+                                                                {{ form.section3_image2 }}
+                                                                <label>Date time</label>
+                                                                {{ form.section3_date2 }}
+                                                                <label>Place</label>
+                                                                {{ form.section3_place2 }}
+                                                                <label>Dresscode</label>
+                                                                {{ form.section3_dresscode2 }}
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -163,13 +156,9 @@
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Accommodation</b></h5>
                                                                 <label>Image*</label>
-                                                                    {{ form.acm_image }}
-                                                                <label>Place*</label>
-                                                                    {{ form.acm_place }}
+                                                                    {{ form.accommodation }}
                                                                 <label>Address*</label>
-                                                                    {{ form.acm_address }}
-                                                                <label>Note*</label>
-                                                                    {{ form.acm_note }}
+                                                                    {{ form.accommodation_text }}
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -187,15 +176,15 @@
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Memories</b></h5>
                                                                 <label>Brief*</label>
-                                                                    {{ form.memories_brief }}
+                                                                    {{ form.album_brief }}
                                                                 <label>Image 1*</label>
-                                                                    {{ form.memories_image1 }}
+                                                                    {{ form.album1 }}
                                                                 <label>Image 2*</label>
-                                                                    {{ form.memories_image2 }}
+                                                                    {{ form.album2 }}
                                                                 <label>Image 3*</label>
-                                                                    {{ form.memories_image3 }}
+                                                                    {{ form.album3 }}
                                                                 <label>Image 4*</label>
-                                                                    {{ form.memories_image4 }}
+                                                                    {{ form.album4 }}
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
