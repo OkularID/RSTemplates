@@ -119,16 +119,12 @@
                             <h4 class="font-lightgreen mb-lg-2p">~</h4>
                             <div class="w-m-100p w-lg-65p ma-lg mb-lg-10p">
                                 <p>
-                                    {{ x.about2_text }}
+                                    Our celebration will take place at {{ x.about_place }}.
+                                    {{ x.about_address }}
                                 </p>
-                                {#<p>#}
-                                    {#Our celebration will take place at {{ x.about_place }}.#}
-                                    {#{{ x.about_address }}#}
-                                {#</p>#}
                             </div>
                             <div class="date">
-                                {{ x.about2_time }}
-                                {#{{ x.about_day }}, {{ x.about_date }} — {{ x.about_time }}#}
+                                {{ x.about_day }}, {{ x.about_date }} — {{ x.about_time }}
                             </div>
                         </div>
                     </div>
@@ -182,7 +178,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                        <img class="img-fluid bg w-lg-100p" src="{{ x.section4_background.url }}" />
+                        <img class="img-fluid bg w-lg-100p" src="{{ x.countdown_background.url }}" />
                         <div class="boxc wrap">
                             <div class="container-fluid pl-lg-5p pr-lg-5p">
                                 <div class="row">
@@ -235,54 +231,54 @@
                     </div>
                     <div data-aos="fade-down" data-aos-once="true" data-aos-offset="-1000" class="col-lg-4 pt-lg-15 pb-lg-15 d-none d-lg-block">
                         <a data-toggle="modal" data-target="#images-05">
-                            <img class="img-fluid w-lg-100p" src="{{ x.album1.url }}" />
+                            <img class="img-fluid w-lg-100p" src="{{ x.album_image1.url }}" />
                         </a>
                     </div>
                     <div data-aos="fade-down" data-aos-once="true" data-aos-offset="-1000" class="col-lg-4 pt-lg-15 pb-lg-15 d-none d-lg-block">
                         <a data-toggle="modal" data-target="#images-06">
-                            <img class="img-fluid w-lg-100p" src="{{ x.album2.url }}" />
+                            <img class="img-fluid w-lg-100p" src="{{ x.album_image2.url }}" />
                         </a>
                     </div>
                     <div data-aos="fade-up" data-aos-once="true" data-aos-offset="-1100" class="col-lg-4 pt-lg-15 pb-lg-15 d-none d-lg-block">
                         <a data-toggle="modal" data-target="#images-07">
-                            <img class="img-fluid w-lg-100p" src="{{ x.album3.url }}" />
+                            <img class="img-fluid w-lg-100p" src="{{ x.album_image3.url }}" />
                         </a>
                     </div>
                     <div data-aos="fade-up" data-aos-once="true" data-aos-offset="-1100" class="col-lg-4 pt-lg-15 pb-lg-15 d-none d-lg-block">
                         <a data-toggle="modal" data-target="#images-08">
-                            <img class="img-fluid w-lg-100p" src="{{ x.album4.url }}" />
+                            <img class="img-fluid w-lg-100p" src="{{ x.album_image4.url }}" />
                         </a>
                     </div>
                     <div data-aos="fade-up" data-aos-once="true" data-aos-offset="-1100" class="col-lg-4 pt-lg-15 pb-lg-15 d-none d-lg-block">
                         <a data-toggle="modal" data-target="#images-09">
-                            <img class="img-fluid w-lg-100p" src="{{ x.album5.url }}" />
+                            <img class="img-fluid w-lg-100p" src="{{ x.album_image5.url }}" />
                         </a>
                     </div>
                     <div class="col-12 pl-m-0 pr-m-0 d-block d-lg-none">
                         <div class="one-carousel owl-theme">
                             <div class="item">
                                 <a data-toggle="modal" data-target="#images-05">
-                                    <img class="img-fluid w-lg-100p" src="{{ x.album1.url }}" />
+                                    <img class="img-fluid w-lg-100p" src="{{ x.album_image1.url }}" />
                                 </a>
                             </div>
                             <div class="item">
                                 <a data-toggle="modal" data-target="#images-06">
-                                    <img class="img-fluid w-lg-100p" src="{{ x.album2.url }}" />
+                                    <img class="img-fluid w-lg-100p" src="{{ x.album_image2.url }}" />
                                 </a>
                             </div>
                             <div class="item">
                                 <a data-toggle="modal" data-target="#images-07">
-                                    <img class="img-fluid w-lg-100p" src="{{ x.album3.url }}" />
+                                    <img class="img-fluid w-lg-100p" src="{{ x.album_image3.url }}" />
                                 </a>
                             </div>
                             <div class="item">
                                 <a data-toggle="modal" data-target="#images-08">
-                                    <img class="img-fluid w-lg-100p" src="{{ x.album4.url }}" />
+                                    <img class="img-fluid w-lg-100p" src="{{ x.album_image4.url }}" />
                                 </a>
                             </div>
                             <div class="item">
                                 <a data-toggle="modal" data-target="#images-09">
-                                    <img class="img-fluid w-lg-100p" src="{{ x.album5.url }}" />
+                                    <img class="img-fluid w-lg-100p" src="{{ x.album_image5.url }}" />
                                 </a>
                             </div>
                         </div>
@@ -297,7 +293,7 @@
                                                 <a class="close" data-dismiss="modal">
                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/jack_jane/images/close.png' %}" />    
                                                 </a>
-                                                <img class="img-fluid" src="{{ x.album1.url }}" />
+                                                <img class="img-fluid" src="{{ x.album_image1.url }}" />
                                             </div>
                                         </div>
                                     </div>
@@ -313,7 +309,7 @@
                                                 <a class="close" data-dismiss="modal">
                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/jack_jane/images/close.png' %}" />    
                                                 </a>
-                                                <img class="img-fluid" src="{{ x.album2.url }}" />
+                                                <img class="img-fluid" src="{{ x.album_image2.url }}" />
                                             </div>
                                         </div>
                                     </div>
@@ -329,7 +325,7 @@
                                                 <a class="close" data-dismiss="modal">
                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/jack_jane/images/close.png' %}" />    
                                                 </a>
-                                                <img class="img-fluid" src="{{ x.album3.url }}" />
+                                                <img class="img-fluid" src="{{ x.album_image3.url }}" />
                                             </div>
                                         </div>
                                     </div>
@@ -345,7 +341,7 @@
                                                 <a class="close" data-dismiss="modal">
                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/jack_jane/images/close.png' %}" />    
                                                 </a>
-                                                <img class="img-fluid" src="{{ x.album4.url }}" />
+                                                <img class="img-fluid" src="{{ x.album_image4.url }}" />
                                             </div>
                                         </div>
                                     </div>
@@ -361,7 +357,7 @@
                                                 <a class="close" data-dismiss="modal">
                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/jack_jane/images/close.png' %}" />    
                                                 </a>
-                                                <img class="img-fluid" src="{{ x.album5.url }}" />
+                                                <img class="img-fluid" src="{{ x.album_image5.url }}" />
                                             </div>
                                         </div>
                                     </div>
