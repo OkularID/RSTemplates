@@ -39,6 +39,9 @@
                                             <li role="presentation" class="disabled">
                                                 <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>
                                             </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step7" data-toggle="tab" aria-controls="step7" role="tab"></a>
+                                            </li>
                                         </ul>
                                         <div class="tab-content" id="main_form">
                                             <div class="tab-pane active" role="tabpanel" id="step1">
@@ -191,6 +194,26 @@
                                                                 <h5 class="mb-lg-4p"><b>RSVP</b></h5>
                                                                 <label>Invitation PDF*</label>
                                                                     {{ form.inv_pdf }}
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step7">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/birthday/wishlist-christine.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Wish List</b></h5>
+                                                                <label>Wishlist Name*</label>
+                                                                    {{ form.wishlist_name }}
+                                                                <label>Wishlist Image*</label>
+                                                                    {{ form.wishlist_img }}
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <button type="submit" class="btn-rectangle">Preview Website</button>
