@@ -70,38 +70,17 @@
                                 </h2>
                             </div>
                             <div class="row position-realtive z-index-3">
+                                {% for i in x %}
                                 <div class="col-6 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Baby Stroller</a>
+                                    <a data-toggle="modal" data-target="#{{i.wishlist_name}}">{{i.wishlist_name}}</a>
                                 </div>
-                                <div class="col-6 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Baby Clothes</a>
-                                </div>
-                                <div class="col-6 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Baby Bottles</a>
-                                </div>
-                                <div class="col-6 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Diapers</a>
-                                </div>
-                                <div class="col-6 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Baby Onesies</a>
-                                </div>
-                                <div class="col-6 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Baby Snacks</a>
-                                </div>
-                                <div class="col-6 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Formula Milk</a>
-                                </div>
-                                <div class="col-6 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Baby Shoes</a>
-                                </div>
-                                <div class="col-6 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Baby Toys</a>
-                                </div>
-                                <div class="col-6 offset-lg-4 col-lg-4 py-4 py-lg-5">
-                                    <a data-toggle="modal" data-target="#ebrochure">Others</a>
-                                </div>
+                                {% endfor %}
+                                {# <div class="col-6 offset-lg-4 col-lg-4 py-4 py-lg-5"> #}
+                                    {# <a data-toggle="modal" data-target="#ebrochure">Others</a> #}
+                                {# </div> #}
                             </div>
-                            <div class="modal fade" id="ebrochure">
+                            {% for i in x %}
+                            <div class="modal fade" id="{{i.wishlist_name}}">
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">
                                         <div class="container-fluid">
@@ -112,7 +91,7 @@
                                                     <div class="box bs">
                                                         <a class="close button-default" data-dismiss="modal">X</a>
                                                         <h3 class="mb-m-5 font-krub-r"><span>you choose to give this gift:</span></h3>
-                                                        <h2 class="mb-m-5p mb-lg-5">Baby Snack</h2>
+                                                        <h2 class="mb-m-5p mb-lg-5">{{i.wishlist_name}}<</h2>
                                                         <div class="mt-m-10p mt-lg-5">
                                                             <p>Please input your email address<br> 
                                                                 to continue the confirmation*
@@ -139,6 +118,7 @@
                                     </div>
                                 </div>
                             </div>
+                            {% endfor %}
                             <div class="modal fade" id="ebrochure_thankyou">
                                 <div class="modal-dialog modal-dialog-centered modal-lg">
                                     <div class="modal-content">

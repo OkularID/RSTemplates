@@ -61,62 +61,25 @@
           </div>
           <div class="col-lg-6 wishlist-content">
             <ul class="mx-auto d-block">
+              {% for i in x %}
               <li>
-                <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                  Flamingo Slippers
+                <a href="#" data-toggle="modal" data-target="#{{i.wishlist_name}}">
+                  {{i.wishlist_name}}
                 </a>
               </li>
-              <li>
-                  <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                    Leather Coin Purse
-                  </a>
-              </li>
-              <li>
-                <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                  Scented Candle
-                </a>
-              </li>
-              <li>
-                <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                  Polaroid
-                </a>
-              </li>
-              <li>
-                <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                  Bath Bombs Kit
-                </a>
-              </li>
-              <li>
-                <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                  Mac’s Lipstick
-                </a>
-              </li>
-              <li>
-                <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                  Typo’s Stationary
-                </a>
-              </li>
-              <li>
-                <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                  Headbands
-                </a>
-              </li>
-              <li>
-                <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                  Acrylic nail art
-                </a>
-              </li>
-              <li>
-                <a href="#" data-toggle="modal" data-target="#popup_wishlist">
-                  Others
-                </a>
-              </li>
+              {% endfor %}
+              {# <li> #}
+                {# <a href="#" data-toggle="modal" data-target="#popup_wishlist"> #}
+                 {# Others #}
+                {# </a> #}
+              {# </li> #}
             </ul>
             <img class="divider" src="{% static 'rsvp/birthday/anastasia/images/divider-wishlist-02.png' %}" alt="">
           </div>
         </div>
     </div>
-    <div class="modal fade" id="popup_wishlist">
+    {% for i in x %}
+    <div class="modal fade" id="{{i.wishlist_name}}">
       <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content popup_1">
           <h2 class="text-right mr-4 mt-2" data-dismiss="modal">&times;</h2>
@@ -126,7 +89,7 @@
                       You choose to give this gift:
                     </h2>
                     <h2 class="text-gray font-proxima-bold  text-center">
-                      Flamingo Slippers
+                      {{i.wishlist_name}}
                     </h2>
                     <hr class="bg-muted w-25 my-5">
                     <h3 class="text-gray font-proxima text-center">
@@ -149,6 +112,7 @@
           </div>
       </div>
     </div>
+    {% endfor %}
     <div class="container-fluid py-3 py-lg-4 footer">
       <div class="row">
         <div class="col-lg-1 offset-lg-3 col-1">
