@@ -108,64 +108,27 @@
                             </div>
                             <div class="row">
                                 <ul class="list-unstyled">
-                                    <li class="item-wishlist">
-                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
-                                            BABY STROLLER
-                                        </a>
-                                    </li>
-                                    <li class="item-wishlist">
-                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
-                                            BABY CLOTHES
-                                        </a>
-                                    </li>
-                                    <li class="item-wishlist">
-                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
-                                            PLUSHIES
-                                        </a>
-                                    </li>
-                                    <li class="item-wishlist">
-                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
-                                            BABY ONSIE
-                                        </a>
-                                    </li>
-                                    <li class="item-wishlist">
-                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
-                                            BABY BOTTLE
-                                        </a>
-                                    </li>
-                                    <li class="item-wishlist">
-                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
-                                            BLANKETS
-                                        </a>
-                                    </li>
-                                    <li class="item-wishlist">
-                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
-                                            DIAPER
-                                        </a>
-                                    </li>
-                                    <li class="item-wishlist">
-                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
-                                            STORY BOOK
-                                        </a>
-                                    </li>
-                                    <li class="item-wishlist">
-                                        <a data-toggle="modal" data-target="#email_wishlist" href="#">
-                                            FUN TOYS
-                                        </a>
-                                    </li>
+                                    {# Looping for wishlist item #}
+                                    {% for i in x %}
+                                        <li class="item-wishlist">
+                                            <a data-toggle="modal" data-target="#{{i.wishlist_name}}" href="#">
+                                                {{i.wishlist_name}}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
-                                <div class="col-lg-7">
-                                    <p class="text-white">
-                                        DIDN’T FIND ONE YOU PREFER? CLICK THIS:
-                                    </p>
-                                </div>
-                                <div class="col-lg-5 px-0">
-                                    <div class="item-wishlist custom">
-                                        <a href="#">
-                                            Others
-                                        </a>
-                                    </div>
-                                </div>
+                                {#<div class="col-lg-7">#}
+                                    {#<p class="text-white">#}
+                                        {#DIDN’T FIND ONE YOU PREFER? CLICK THIS:#}
+                                    {#</p>#}
+                                {#</div>#}
+                                {#<div class="col-lg-5 px-0">#}
+                                    {#<div class="item-wishlist custom">#}
+                                        {#<a href="#">#}
+                                            {#Others#}
+                                        {#</a>#}
+                                    {#</div>#}
+                                {#</div>#}
                             </div>
                         </div>
                     </div>
@@ -184,39 +147,43 @@
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="email_wishlist">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-12 text-center pl-lg-0 pr-lg-0">
-                                    <a class="close" data-dismiss="modal">
-                                        <img class="img-fluid icon" src="{% static 'rsvp/birthday/christine/images/popup-03.png' %}" />    
-                                    </a>
-                                    <h3 class="font-grey pt-5 mt-5">You choose to give this gift:</h3>
-                                    <h2 class="font-bluesky"><strong>BABY STROLLER</strong></h2>
-                                    <hr class="bg-muted w-25 my-5">
-                                    <div class="w-lg-75p ma-lg font-grey">
-                                        <p>Please input your email address<br>
-                                            to continue the confirmation*</p>
-                                    </div>
-                                    <div class="form-group px-5 py-4 w-50 mx-auto">
-                                        <input type="text" class="form-control form-text">
-                                    </div>
-                                    <div class="button-wrap pb-3">
-                                        <a href="#" data-toggle="modal" data-target="#wishlist" data-dismiss="modal" class="button-bluesky">
-                                            Confirm the gift
+
+            {# Looping for modal #}
+            {% for i in x %}            
+                <div class="modal fade" id="{{i.wishlist_name}}">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center pl-lg-0 pr-lg-0">
+                                        <a class="close" data-dismiss="modal">
+                                            <img class="img-fluid icon" src="{% static 'rsvp/birthday/christine/images/popup-03.png' %}" />    
                                         </a>
+                                        <h3 class="font-grey pt-5 mt-5">You choose to give this gift:</h3>
+                                        <h2 class="font-bluesky"><strong>{{i.wishlist_name}}</strong></h2>
+                                        <hr class="bg-muted w-25 my-5">
+                                        <div class="w-lg-75p ma-lg font-grey">
+                                            <p>Please input your email address<br>
+                                                to continue the confirmation*</p>
+                                        </div>
+                                        <div class="form-group px-5 py-4 w-50 mx-auto">
+                                            <input type="text" class="form-control form-text">
+                                        </div>
+                                        <div class="button-wrap pb-3">
+                                            <a href="#" data-toggle="modal" data-target="#wishlist" data-dismiss="modal" class="button-bluesky">
+                                                Confirm the gift
+                                            </a>
+                                        </div>
+                                        <p class="text-gray text-center pt-5 font-small">
+                                            <span class="mr-3">*Required</span> Note: you cannot change your gift selection once you’ve confirmed one.
+                                        </p>
                                     </div>
-                                    <p class="text-gray text-center pt-5 font-small">
-                                        <span class="mr-3">*Required</span> Note: you cannot change your gift selection once you’ve confirmed one.
-                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            {% endfor %}
             <div class="modal fade" id="wishlist">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
