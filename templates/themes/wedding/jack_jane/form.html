@@ -119,7 +119,7 @@
                                                                 <label>Image 2*</label>
                                                                     {{ form.about_image2 }}
                                                                 <label>Countdown Background</label>
-                                                                    {{ form.countdown_background.url }}
+                                                                    {{ form.countdown_background }}
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -164,8 +164,8 @@
                                                                 <h5 class="mb-lg-4p"><b>RSVP</b></h5>
                                                                 <label>RSVP Image*</label>
                                                                     {{ form.rsvp_image }}
-                                                                <label>Invitation PDF*</label>
-                                                                    {{ form.inv_pdf }}
+                                                                {#<label>Invitation PDF*</label>#}
+                                                                    {#{{ form.inv_pdf }}#}
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <button type="submit" class="btn-rectangle">Preview Website</button>
