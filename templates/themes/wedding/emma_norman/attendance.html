@@ -1,7 +1,7 @@
 {% load static %}
 {% load compress %}
 
-<form method="post" enctype="multipart/form-data">
+<form method="post" action="{% url 'attendance_form' %}" enctype="multipart/form-data">
 {% csrf_token %}
     <div class="form-row">
         <div class="form-group col-lg-6 mb-lg-0 pr-m-5 pr-lg-5p">
@@ -38,7 +38,7 @@
         </div>
         <div class="form-group col-lg-12 mb-m-0 pt-lg-5p text-right">
             <button type="submit" class="button-default mr-lg-2p" data-toggle="modal" data-target="#thankyou">Submit</button>
-            <a target="_blank" href="{{ x.inv_pdf.url }}" class="button-download">Download Invitation</a>
+{#            <a target="_blank" href="{{ x.inv_pdf.url }}" class="button-download">Download Invitation</a>#}
         </div>
     </div>
 </form>
