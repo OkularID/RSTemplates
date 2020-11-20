@@ -46,7 +46,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img class="w-25" src="{{ x.img_logo.url }}">
+                                <img class="w-25" src="{{img}}{{x.img_logo}}">
                             </a>
                         </li>
                         <li class="mx-3">
@@ -70,7 +70,7 @@
             <div class="row d-lg-none pt-3">
                     <div class="col-8 pt-1">
                         <a href="#">
-                            <img class="img-fluid logo-mobile" src="{{ x.img_logo.url }}">
+                            <img class="img-fluid logo-mobile" src="{{img}}{{x.img_logo}}">
                         </a>
                     </div>
                     <div class="col-4 text-right">
@@ -120,8 +120,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 px-0 pb-lg-5">
-                <div data-aos="zoom-out"  data-aos-once="true" class="header d-none d-lg-block" style="background-image: url({{ x.banner_bg.url }});"></div>
-                <img class="img-fluid w-100 d-lg-none" src="{{ x.banner_bg_mobile.url }}">
+                <div data-aos="zoom-out"  data-aos-once="true" class="header d-none d-lg-block" style="background-image: url({{img}}{{x.banner_bg}});"></div>
+                <img class="img-fluid w-100 d-lg-none" src="{{img}}{{x.banner_bg_mobile}}">
             </div>
         </div>
     </div>
@@ -134,10 +134,10 @@
                     BEGINS
                 </h3>
                 </div>
-                <img  data-aos="fade-up" data-aos-once="true" class="img-fluid image-title d-none d-lg-block" src="{{ x.story_image1.url }}">
+                <img  data-aos="fade-up" data-aos-once="true" class="img-fluid image-title d-none d-lg-block" src="{{img}}{{x.story_image1}}">
             </div>
             <div class="col-lg-4 px-4 px-lg-2">
-                <img data-aos="zoom-in-up" data-aos-once="true" class="img-fluid ml-lg-4" src="{{ x.story_image2.url }}">
+                <img data-aos="zoom-in-up" data-aos-once="true" class="img-fluid ml-lg-4" src="{{img}}{{x.story_image2}}">
             </div>
             <div data-aos="fade-left" data-aos-once="true" class="col-lg-4 pr-lg-0 content-right">
                 <div class="vertical-center w-100">
@@ -171,8 +171,8 @@
                         </div>
                     </div>
                     <div data-aos="fade-left" data-aos-once="true" class="col-lg-7 pr-lg-0 order-lg-2 order-1 pl-4 pl-lg-2">
-                        <img class="img-fluid d-none d-lg-block w-100" src="{{ x.about_gr_image.url }}">
-                        <img class="img-fluid d-lg-none" src="{{ x.about_gr_image_mobile.url }}">
+                        <img class="img-fluid d-none d-lg-block w-100" src="{{img}}{{x.about_gr_image}}">
+                        <img class="img-fluid d-lg-none" src="{{img}}{{x.about_gr_image_mobile}}">
                     </div>
                 </div>
               </div>
@@ -191,8 +191,8 @@
                             </div>
                         </div>
                         <div class="col-lg-7 pr-lg-0 order-lg-2 order-1 pl-4 pl-lg-2">
-                            <img class="img-fluid d-none d-lg-block w-100" src="{{ x.about_br_image.url }}">
-                            <img class="img-fluid d-lg-none" src="{{ x.about_br_image_mobile.url }}">
+                            <img class="img-fluid d-none d-lg-block w-100" src="{{img}}{{x.about_br_image}}">
+                            <img class="img-fluid d-lg-none" src="{{img}}{{x.about_br_image_mobile}}">
                         </div>
                     </div>
               </div>
@@ -221,7 +221,7 @@
                 </p>
             </div>
             <div class="col-lg-5 px-lg-5 content">
-                <img data-aos="fade-down" data-aos-once="true" class="img-fluid image-left" src="{{ x.vc_image.url }}">
+                <img data-aos="fade-down" data-aos-once="true" class="img-fluid image-left" src="{{img}}{{x.vc_image}}">
                 <h3 class="text-dgreen mt-lg-5 mb-lg-4">
                     {{ x.vc_place }}
                 </h3>
@@ -264,7 +264,7 @@
                     SEE LOCATION
                 </a>
                 </div>
-                <img data-aos="fade-up" data-aos-once="true" class="img-fluid image-right" src="{{ x.vr_image.url }}">
+                <img data-aos="fade-up" data-aos-once="true" class="img-fluid image-right" src="{{img}}{{x.vr_image}}">
             </div>
             <div data-aos="fade-left" data-aos-once="true" class="col-lg-1 px-lg-0 overflow-hidden">
                 <p class="text-white title-2">
@@ -284,7 +284,7 @@
                 </ul>
                 <div class="tab-content px-3 pb-5" id="pills-tabContent">
                   <div class="tab-pane fade show active" id="pills-holym" role="tabpanel" aria-labelledby="pills-holym-tab">
-                        <img class="img-fluid mt-5" src="{{ x.vc_image.url }}">
+                        <img class="img-fluid mt-5" src="{{img}}{{x.vc_image}}">
                         <h3 class="text-dgreen mt-lg-5 mb-lg-4 my-4">
                             {{ x.vc_place }}
                         </h3>
@@ -306,7 +306,7 @@
                         </a>
                   </div>
                   <div class="tab-pane fade" id="pills-wedpart" role="tabpanel" aria-labelledby="pills-wedpart-tab">
-                        <img class="img-fluid mt-5" src="{{ x.vr_image.url }}">
+                        <img class="img-fluid mt-5" src="{{img}}{{x.vr_image}}">
                         <h3 class="text-dgreen mt-lg-5 mb-lg-4 my-4">
                             {{ x.vr_place }}
                         </h3>
@@ -334,7 +334,7 @@
     <div id="accommodation" class="container-fluid accomodation">
         <div class="row d-none d-lg-flex">
             <div class="col-lg-5 pl-lg-0">
-                <img data-aos="flip-up"  data-aos-once="true" class="img-fluid ml-lg-5 pl-lg-5" src="{{ x.acm_image.url }}">
+                <img data-aos="flip-up"  data-aos-once="true" class="img-fluid ml-lg-5 pl-lg-5" src="{{img}}{{x.acm_image}}">
             </div>
             <div data-aos="slide-left" data-aos-once="true" class="col-lg-6 offset-lg-1 pr-lg-0 text-right">
                 <p class="text-gray font-weight-bold mr-lg-5 pr-lg-5">
@@ -386,16 +386,16 @@
             <div class="col-lg-12 px-lg-0 px-4">
                 <div class="carousel-gallery owl-theme">
                     <div class="item">
-                        <img class="img-fluid" data-toggle="modal" data-target="#images_1" src="{{ x.gallery_image1.url }}">
+                        <img class="img-fluid" data-toggle="modal" data-target="#images_1" src="{{img}}{{x.gallery_image1}}">
                     </div>
                     <div class="item">
-                        <img class="img-fluid" data-toggle="modal" data-target="#images_2" src="{{ x.gallery_image2.url }}">
+                        <img class="img-fluid" data-toggle="modal" data-target="#images_2" src="{{img}}{{x.gallery_image2}}">
                     </div>
                     <div class="item">
-                        <img class="img-fluid" data-toggle="modal" data-target="#images_3" src="{{ x.gallery_image3.url }}">
+                        <img class="img-fluid" data-toggle="modal" data-target="#images_3" src="{{img}}{{x.gallery_image3}}">
                     </div>
                     <div class="item">
-                        <img class="img-fluid" data-toggle="modal" data-target="#images_4" src="{{ x.gallery_image4.url }}">
+                        <img class="img-fluid" data-toggle="modal" data-target="#images_4" src="{{img}}{{x.gallery_image4}}">
                     </div>
                 </div>
             </div>
@@ -500,7 +500,7 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                      <img class="mx-auto d-block" src="{{ x.gallery_image1.url }}" alt="images">
+                      <img class="mx-auto d-block" src="{{img}}{{x.gallery_image1}}" alt="images">
                   </div>
               </div>
         </div>
@@ -511,7 +511,7 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                      <img class="mx-auto d-block" src="{{ x.gallery_image2.url }}" alt="images">
+                      <img class="mx-auto d-block" src="{{img}}{{x.gallery_image2}}" alt="images">
                   </div>
               </div>
         </div>
@@ -522,7 +522,7 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                      <img class="mx-auto d-block" src="{{ x.gallery_image3.url }}" alt="images">
+                      <img class="mx-auto d-block" src="{{img}}{{x.gallery_image3}}" alt="images">
                   </div>
               </div>
         </div>
@@ -533,7 +533,7 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                      <img class="mx-auto d-block" src="{{ x.gallery_image4.url }}" alt="images">
+                      <img class="mx-auto d-block" src="{{img}}{{x.gallery_image4}}" alt="images">
                   </div>
               </div>
         </div>

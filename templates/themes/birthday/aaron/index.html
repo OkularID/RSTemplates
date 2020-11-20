@@ -30,11 +30,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-3 d-none d-lg-block">
-                        <a href="index.html"><img data-aos="fade-right" class="img-fluid logo" src="{{ x.img_logo.url }}" /></a>
+                        <a href=""><img data-aos="fade-right" class="img-fluid logo" src="{{img}}{{x.img_logo}}" /></a>
                     </div>
                     <div data-aos="fade-left" class="col-lg-9 d-none d-lg-block">
                         <ul class="menu">
-                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="">HOME</a></li>
                             <li><a href="#about">ABOUT</a></li>
                             <li><a href="#dateandplace">DATE & PLACE</a></li>
                             <li><a href="#rsvp-d">RSVP</a></li>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="row pt-3">
                     <div class="col-8 d-lg-none">
-                        <a href="index.html"><img class="img-fluid logo" src="{{ x.img_logo.url }}" /></a>
+                        <a href=""><img class="img-fluid logo" src="{{img}}{{x.img_logo}}" /></a>
                     </div>
                     <div class="col-4 d-lg-none text-right">
                         <h3 class="text-white">
@@ -56,7 +56,7 @@
                             <i class="fa fa-times" aria-hidden="true"></i>
                         </div>
                         <ul class="list-unstyled">
-                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="">HOME</a></li>
                             <li><a href="#about">ABOUT</a></li>
                             <li><a href="#dateandplace">DATE & PLACE</a></li>
                             <li><a href="#rsvp">RSVP</a></li>
@@ -75,8 +75,8 @@
                                 <div data-aos="fade-up" class="subtitle">{{ x.banner_subtitle }}</div>
                                 <div data-aos="fade-up" class="title">{{ x.banner_title }}</div>
                             </div>
-                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{{ x.banner_bg.url }}" />
-                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="{{ x.banner_bg_mobile.url }}" />
+                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{{img}}{{x.banner_bg}}" />
+                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="{{img}}{{x.banner_bg_mobile}}" />
                         <img class="img-fluid w-lg-100p motif" src="{% static 'rsvp/birthday/aaron/images/motif-01.png' %}" />
                     </div>
                 </div>
@@ -90,24 +90,24 @@
                         <h1 class="mb-m-15p mb-lg-5p">{{ x.about_name }}’s <span>{{ x.about_age }}</span> Birthday</h1>
                         <div class="gallery">
                             <div class="box">
-                                <img data-aos="fade-up"  class="img-fluid" src="{{ x.about_image1.url }}" />
-                                <img data-aos="fade-up"  class="img-fluid horizontal" src="{{ x.about_image6.url }}" />
+                                <img data-aos="fade-up"  class="img-fluid" src="{{img}}{{x.about_image1}}" />
+                                <img data-aos="fade-up"  class="img-fluid horizontal" src="{{img}}{{x.about_image6}}" />
                             </div>
                             <div class="box">
-                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{ x.about_image2.url }}" />
-                                <img data-aos="fade-up" class="img-fluid" src="{{ x.about_image7.url }}" />
+                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{img}}{{x.about_image2}}" />
+                                <img data-aos="fade-up" class="img-fluid" src="{{img}}{{x.about_image7}}" />
                             </div>
                             <div class="box">
-                                <img data-aos="fade-up" class="img-fluid" src="{{ x.about_image3.url }}" />
-                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{ x.about_image8.url }}" />
+                                <img data-aos="fade-up" class="img-fluid" src="{{img}}{{x.about_image3}}" />
+                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{img}}{{x.about_image8}}" />
                             </div>
                             <div class="box">
-                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{ x.about_image4.url }}" />
-                                <img data-aos="fade-up" class="img-fluid" src="{{ x.about_image9.url }}" />
+                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{img}}{{x.about_image4}}" />
+                                <img data-aos="fade-up" class="img-fluid" src="{{img}}{{x.about_image9}}" />
                             </div>
                             <div class="box">
-                                <img data-aos="fade-up" class="img-fluid" src="{{ x.about_image5.url }}" />
-                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{ x.about_image10.url }}" />
+                                <img data-aos="fade-up" class="img-fluid" src="{{img}}{{x.about_image5}}" />
+                                <img data-aos="fade-up" class="img-fluid horizontal" src="{{img}}{{x.about_image10}}" />
                             </div>
                         </div>
                         <div class="mgallery d-block d-lg-none">
@@ -115,32 +115,32 @@
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-6">
-                                            <img class="img-fluid" src="{{ x.about_image1.url }}" />
-                                            <img class="img-fluid horizontal" src="{{ x.about_image6.url }}" />
+                                            <img class="img-fluid" src="{{img}}{{x.about_image1}}" />
+                                            <img class="img-fluid horizontal" src="{{img}}{{x.about_image6}}" />
                                         </div>
                                         <div class="col-6">
-                                            <img class="img-fluid horizontal" src="{{ x.about_image2.url }}" />
-                                            <img class="img-fluid" src="{{ x.about_image7.url }}" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <img class="img-fluid" src="{{ x.about_image3.url }}" />
-                                            <img class="img-fluid horizontal" src="{{ x.about_image8.url }}" />
-                                        </div>
-                                        <div class="col-6">
-                                            <img class="img-fluid horizontal" src="{{ x.about_image4.url }}" />
-                                            <img class="img-fluid" src="{{ x.about_image9.url }}" />
+                                            <img class="img-fluid horizontal" src="{{img}}{{x.about_image2}}" />
+                                            <img class="img-fluid" src="{{img}}{{x.about_image7}}" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-6">
-                                            <img class="img-fluid" src="{{ x.about_image5.url }}" />
-                                            <img class="img-fluid horizontal" src="{{ x.about_image10.url }}" />
+                                            <img class="img-fluid" src="{{img}}{{x.about_image3}}" />
+                                            <img class="img-fluid horizontal" src="{{img}}{{x.about_image8}}" />
+                                        </div>
+                                        <div class="col-6">
+                                            <img class="img-fluid horizontal" src="{{img}}{{x.about_image4}}" />
+                                            <img class="img-fluid" src="{{img}}{{x.about_image9}}" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="img-fluid" src="{{img}}{{x.about_image5}}" />
+                                            <img class="img-fluid horizontal" src="{{img}}{{x.about_image10}}" />
                                         </div>
                                         <div class="col-6">
                                             <img class="img-fluid horizontal" src="" />
@@ -241,7 +241,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <a target="_blank" href="{{ x.inv_pdf.url }}">Download Invitation</a>
+                        {#<a target="_blank" href="{{ x.inv_pdf.url }}">Download Invitation</a>#}
                     </div>
                 </div>
             </div>

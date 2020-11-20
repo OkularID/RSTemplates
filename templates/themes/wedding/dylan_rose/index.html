@@ -28,8 +28,8 @@
         <!-- Navigation -->
         <nav>
             <div class="d-none d-lg-block">
-                <a class="logo" href="index.html">
-                    <img data-aos="fade-down"  data-aos-once="true" class="img-fluid" src="{{ x.img_logo.url }}" />
+                <a class="logo" href="">
+                    <img data-aos="fade-down"  data-aos-once="true" class="img-fluid" src="{{img}}{{x.img_logo}}" />
                 </a>
                 <ul data-aos="fade-right"  data-aos-once="true" class="menu">
                     <li><a href="#ourstory">Our Story</a></li>
@@ -41,7 +41,7 @@
             </div>
             <div class="row d-lg-none">
                 <div class="col-8">
-                    <a href="index.html"><img class="img-fluid logo" src="{{ x.img_logo.url }}" /></a>
+                    <a href=""><img class="img-fluid logo" src="{{img}}{{x.img_logo}}" /></a>
                 </div>
                 <div class="col-4">
                     <ul class="bars">
@@ -71,8 +71,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{{ x.banner_bg.url }}" />
-                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="{{ x.banner_bg_mobile.url }}" />
+                        <img class="img-fluid w-lg-100p d-none d-lg-block" src="{{img}}{{x.banner_bg}}" />
+                        <img class="img-fluid w-lg-100p d-block d-lg-none" src="{{img}}{{x.banner_bg_mobile}}" />
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 <div class="row">
                     <img class="img-fluid motif" src="{% static 'rsvp/wedding/dylan_rose/images/icon-01.png' %}" />
                     <div class="col-lg-7 pt-m-15p pb-m-10p pl-m-10p pr-m-10p pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
-                        <img data-aos="flip-left" data-aos-once="true" class="img-fluid w-lg-100p" src="{{ x.story_image.url }}" />
+                        <img data-aos="flip-left" data-aos-once="true" class="img-fluid w-lg-100p" src="{{img}}{{x.story_image}}" />
                     </div>
                     <div data-aos="fade-up" data-aos-once="true" class="col-lg-5 pt-m-0 pb-m-15p pl-m-10p pr-m-10p pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
                         <div class="boxc">
@@ -117,10 +117,10 @@
                         </p>
                     </div>
                     <div data-aos="flip-left" data-aos-once="true" class="order-1 order-lg-2 col-lg-8 mb-m-0 pb-m-10p pl-m-10p pr-m-10p mb-lg-5p pr-lg-5p">
-                        <img class="img-fluid images" src="{{ x.vc_image.url }}" />
+                        <img class="img-fluid images" src="{{img}}{{x.vc_image}}" />
                     </div>
                     <div data-aos="flip-right" data-aos-once="true"  class="order-3 order-lg-3 col-lg-8 pb-m-10p pl-m-10p pr-m-10p pl-lg-5p">
-                        <img class="img-fluid images2" src="{{ x.vr_image.url }}" />
+                        <img class="img-fluid images2" src="{{img}}{{x.vr_image}}" />
                     </div>
                     <div data-aos="fade-left" data-aos-once="true" class="order-4 order-lg-4 col-lg-4 pb-m-20p pl-m-10p pr-m-10p pl-lg-3p pr-lg-3p">
                         <h5 class="font-green">Reception</h5>
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12 pt-m-20p pb-m-50p pt-lg-5p pb-lg-10p pl-lg-0 pr-lg-0">
-                        <img data-aos="fade-up" data-aos-once="true"  class="img-fluid images" src="{{ x.acm_image.url }}" />
+                        <img data-aos="fade-up" data-aos-once="true"  class="img-fluid images" src="{{img}}{{x.acm_image}}" />
                     </div>
                 </div>
             </div>
@@ -166,7 +166,7 @@
             <div class="container-fluid pl-lg-5 py-lg-5">
                 <div class="row my-lg-5 d-none d-lg-flex">
                     <div class="col-lg-6 pl-lg-5">
-                        <img src="{{ x.memories_image1.url }}" data-toggle="modal" data-target="#images_1" alt="">
+                        <img src="{{img}}{{x.memories_image1}}" data-toggle="modal" data-target="#images_1" alt="">
                         <h3 class="my-lg-5 d-inline-block">
                             Our Memories
                         </h3>
@@ -175,11 +175,11 @@
                         </p>
                     </div>
                     <div class="image-pos">
-                    <img src="{{ x.memories_image2.url }}" data-toggle="modal" data-target="#images_2" alt="">
+                    <img src="{{img}}{{x.memories_image2}}" data-toggle="modal" data-target="#images_2" alt="">
                     </div>
                     <div class="col-lg-4 offset-lg-2 text-center">
-                        <img src="{{ x.memories_image3.url }}" data-toggle="modal" data-target="#images_3" alt="">
-                        <img class="mt-5" src="{{ x.memories_image4.url }}" data-toggle="modal" data-target="#images_4" alt="">
+                        <img src="{{img}}{{x.memories_image3}}" data-toggle="modal" data-target="#images_3" alt="">
+                        <img class="mt-5" src="{{img}}{{x.memories_image4}}" data-toggle="modal" data-target="#images_4" alt="">
                     </div>
                 </div>
                 <div class="row d-lg-none">
@@ -191,16 +191,16 @@
                     <div class="col-lg-12 px-5">
                         <div class="carousel-gallery owl-theme">
                             <div class="item">
-                                <img src="{{ x.memories_image1.url }}" data-toggle="modal" data-target="#images_1" alt="">
+                                <img src="{{img}}{{x.memories_image1}}" data-toggle="modal" data-target="#images_1" alt="">
                             </div>
                             <div class="item">
-                                <img src="{{ x.memories_image2.url }}" data-toggle="modal" data-target="#images_2" alt="">
+                                <img src="{{img}}{{x.memories_image2}}" data-toggle="modal" data-target="#images_2" alt="">
                             </div>
                             <div class="item">
-                                <img src="{{ x.memories_image3.url }}" data-toggle="modal" data-target="#images_3" alt="">
+                                <img src="{{img}}{{x.memories_image3}}" data-toggle="modal" data-target="#images_3" alt="">
                             </div>
                             <div class="item">
-                                <img src="{{ x.memories_image4.url }}" data-toggle="modal" data-target="#images_4" alt="">
+                                <img src="{{img}}{{x.memories_image4}}" data-toggle="modal" data-target="#images_4" alt="">
                             </div>
                         </div>
                         <p class="font-grey mb-5">
@@ -216,7 +216,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                        <img class="mx-auto d-block" src="{{ x.memories_image1.url }}" alt="images">
+                        <img class="mx-auto d-block" src="{{img}}{{x.memories_image1}}" alt="images">
                     </div>
                 </div>
             </div>
@@ -226,7 +226,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                        <img class="mx-auto d-block" src="{{ x.memories_image2.url }}" alt="images">
+                        <img class="mx-auto d-block" src="{{img}}{{x.memories_image2}}" alt="images">
                     </div>
                 </div>
             </div>
@@ -236,7 +236,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                        <img class="mx-auto d-block" src="{{ x.memories_image3.url }}" alt="images">
+                        <img class="mx-auto d-block" src="{{img}}{{x.memories_image3}}" alt="images">
                     </div>
                 </div>
             </div>
@@ -246,7 +246,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="text-white text-right" data-dismiss="modal">&times;</h1>
-                        <img class="mx-auto d-block" src="{{ x.memories_image4.url }}" alt="images">
+                        <img class="mx-auto d-block" src="{{img}}{{x.memories_image4}}" alt="images">
                     </div>
                 </div>
             </div>

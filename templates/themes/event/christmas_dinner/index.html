@@ -79,7 +79,7 @@
                                 Jolly
                             </h1>
                             <h5 class="mb-m-5p mb-lg-10p">{{ x.banner_title }}</h5>
-                            <img class="img-fluid logo" src="{{ x.img_logo.url }}" />
+                            <img class="img-fluid logo" src="{{img}}{{x.img_logo}}" />
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                        <img class="img-fluid images w-lg-100p" src="{{ x.about_bg.url }}" />
+                        <img class="img-fluid images w-lg-100p" src="{{img}}{{x.about_bg}}" />
                         <img class="img-fluid ornament1" src="{% static 'rsvp/event/christmas_dinner/images/ornament-06.png' %}" />
                         <img class="img-fluid ornament2 d-block d-lg-none" src="{% static 'rsvp/event/christmas_dinner/images/ornament-05.png' %}" />
                         <div class="wrap">
