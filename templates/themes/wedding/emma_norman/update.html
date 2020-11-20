@@ -12,7 +12,7 @@
         <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="mb-lg-2p">Invitation Form</h3>
+                    <h3 class="mb-lg-2p">Editing {{ form.title }}</h3>
                     <div class="card">
                         <div class="container-fluid templates-steps pb-lg-10p">
                             <div class="row">
@@ -80,9 +80,9 @@
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Header</b></h5>
                                                                 <label>Choose images for you slideshow*</label>
-                                                                    {{ form.img_background1 }}
-                                                                    {{ form.img_background2 }}
-                                                                    {{ form.img_background3 }}
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.img_background1 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.img_background2 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.img_background3 }}"><br><br>
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -100,16 +100,16 @@
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Our Story</b></h5>
                                                                 <label>Choose images for story section</label>
-                                                                    {{ form.about_img1 }}
-                                                                    {{ form.about_img2 }}
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.about_img1 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.about_img2 }}"><br><br>
                                                                 <label>Quotes*</label>
-                                                                    {{ form.about_quote }}
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.about_quote }}"><br><br>
                                                                 <label>Quotes by*</label>
-                                                                    {{ form.about_quote_by }}
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.about_quote_by }}"><br><br>
                                                                 <label>Wedding Theme*</label>
-                                                                    {{ form.about_title }}
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.about_title }}"><br><br>
                                                                 <label>Our Story*</label>
-                                                                    {{ form.about }}
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.about }}"><br><br>
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -128,26 +128,26 @@
                                                                 <h5 class="mb-lg-4p"><b>Date, Time, and Place</b></h5>
                                                                 <label>Ceremony</label>
                                                                 <div class="line-lightgrey w-lg-100p mt-lg-3p mb-lg-5p"></div>
-                                                                    {{ form.ceremony_img }}
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.ceremony_img }}"><br><br>
                                                                 <label>Date and Time*</label>
                                                                 <div class="form-row mb-lg-4p">
                                                                     <div class="col-lg-6">
-                                                                        {{ form.ceremony_time }}
+                                                                    <input type="time" id="fname" name="fname" value="{{ form.ceremony_time }}"><br><br>
                                                                     </div>
                                                                 </div>
                                                                 <label>Location</label>
-                                                                    {{ form.ceremony_location }}
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.ceremony_location }}"><br><br>
                                                                 <label>Reception</label>
                                                                 <div class="line-lightgrey w-lg-100p mt-lg-3p mb-lg-5p"></div>
-                                                                    {{ form.reception_img }}
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.reception_img }}"><br><br>
                                                                 <label>Date and Time*</label>
                                                                 <div class="form-row mb-lg-4p">
                                                                     <div class="col-lg-6">
-                                                                        {{ form.reception_time }}
+                                                                    <input type="time" id="fname" name="fname" value="{{ form.reception_time }}"><br><br>
                                                                     </div>
                                                                 </div>
                                                                 <label>Location</label>
-                                                                    {{ form.reception_location }}
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.reception_location }}"><br><br>
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -165,10 +165,10 @@
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Photo Gallery</b></h5>
                                                                 <label>Choose images for gallery section</label>
-                                                                    {{ form.gallery1 }}
-                                                                    {{ form.gallery2 }}
-                                                                    {{ form.gallery3 }}
-                                                                    {{ form.gallery4 }}
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.gallery1 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.gallery2 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.gallery3 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.gallery4 }}"><br><br>
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -186,7 +186,7 @@
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>RSVP</b></h5>
                                                                 <label>Choose images for RSVP Section</label>
-                                                                {{ form.rsvp_img }}
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.rsvp_img }}"><br><br>
                                                                 <label>RSVP Copy</label>
                                                                 {#<textarea name="ourstory" class="form-control" rows="8"></textarea>#}
                                                             </div>
