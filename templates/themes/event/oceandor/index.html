@@ -70,10 +70,10 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="w-lg-100p h-lg-100vh">
-                            <img data-aos="fade-left" class="img-fluid images" src="{{ x.banner_image.url }}" />
+                            <img data-aos="fade-left" class="img-fluid images" src="{{img}}{{x.banner_image}}" />
                             <div class="boxc">
                                 <div data-aos="fade-right">
-                                <img class="img-fluid logo" src="{{ x.img_logo.url }}" />
+                                <img class="img-fluid logo" src="{{img}}{{x.img_logo}}" />
                                 <h1>{{ x.banner_title }}</h1>
                                 <h5>{{ x.banner_subtitle }}</h5>
                                 <a class="button-default" href="{{ x.banner_button_link }}">{{ x.banner_button_text }}</a>
@@ -90,7 +90,7 @@
                 <div class="row">
                     <div class="col-lg-5 pt-m-0 pb-m-10p pl-m-15p pr-m-15p pt-lg-5p pb-lg-20p pl-lg-5p pr-lg-0">
                         <div class="motif"></div>
-                        <img data-aos="zoom-out" class="img-fluid images w-lg-100p" src="{{ x.about_image_hl.url }}" />
+                        <img data-aos="zoom-out" class="img-fluid images w-lg-100p" src="{{img}}{{x.about_image_hl}}" />
                     </div>
                     <div class="col-lg-7 pt-m-0 pl-m-15p pr-m-15p pt-lg-5p pb-lg-20p pl-lg-5p pr-lg-5p">
                         <h2>About <span>{{ x.about_name }}</span></h2>
@@ -99,8 +99,8 @@
                         </div>
                         <a class="button-default" href="{{ x.about_button_link }}">{{ x.about_button_text }}</a>
                         <div class="motif2 d-none d-lg-block"></div>
-                        <img data-aos="fade-up" class="img-fluid images2 d-none d-lg-block" src="{{ x.about_image1.url }}" />
-                        <img data-aos="fade-left" class="img-fluid images3 d-none d-lg-block" src="{{ x.about_image2.url }}" />
+                        <img data-aos="fade-up" class="img-fluid images2 d-none d-lg-block" src="{{img}}{{x.about_image1}}" />
+                        <img data-aos="fade-left" class="img-fluid images3 d-none d-lg-block" src="{{img}}{{x.about_image2}}" />
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0 pr-lg-0 mtext-center">
-                        <img class="img-fluid images w-lg-100p" src="{{ x.dap_bg.url }}" />
+                        <img class="img-fluid images w-lg-100p" src="{{img}}{{x.dap_bg}}" />
                         <div class="boxc">
                             <div data-aos="fade-right">
                             <h2>{{ x.dap_date }}</h2>
@@ -139,14 +139,14 @@
                                 <div class="content-box animated fadeIn">
                                     <div class="row">
                                         <div class="col-lg-3 pl-lg-0">
-                                            <img class="img-fluid images d-none d-lg-block" src="{{ x.guest_image_l1.url }}" />
+                                            <img class="img-fluid images d-none d-lg-block" src="{{img}}{{x.guest_image_l1}}" />
                                         </div>
                                         <div class="col-lg-4 mb-m-5p pl-m-10p pr-m-10p pt-lg-2p pr-lg-10p">
                                             <h2>Special<br /><span>Guests</span></h2>
                                             {{ x.guest_desc1 }}
                                         </div>
                                         <div class="col-lg-5 pl-m-10p pr-m-10p">
-                                            <img class="img-fluid images2" src="{{ x.guest_image_r1.url }}" />
+                                            <img class="img-fluid images2" src="{{img}}{{x.guest_image_r1}}" />
                                             <div class="guest">{{ x.guest_name1 }}</div>
                                         </div>
                                     </div>
@@ -156,14 +156,14 @@
                                 <div class="content-box animated fadeIn">
                                     <div class="row">
                                         <div class="col-lg-3 pl-lg-0">
-                                            <img class="img-fluid images d-none d-lg-block" src="{{ x.guest_image_l2.url }}" />
+                                            <img class="img-fluid images d-none d-lg-block" src="{{img}}{{x.guest_image_l2}}" />
                                         </div>
                                         <div class="col-lg-4 mb-m-5p pl-m-10p pr-m-10p pt-lg-2p pr-lg-10p">
                                             <h2>Special<br /><span>Guests</span></h2>
                                             {{ x.guest_desc2 }}
                                         </div>
                                         <div class="col-lg-5 pl-m-10p pr-m-10p">
-                                            <img class="img-fluid images2" src="{{ x.guest_image_r2.url }}" />
+                                            <img class="img-fluid images2" src="{{img}}{{x.guest_image_r2}}" />
                                             <div class="guest">{{ x.guest_name2 }}</div>
                                         </div>
                                     </div>
