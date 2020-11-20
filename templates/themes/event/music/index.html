@@ -120,8 +120,8 @@
         <div class="row">
             <div class="col-lg-12 content-header">
                 <div class="content text-center">
-                    <img data-aos="fade-up" class="d-block mx-auto my-2 logo-ismaya" src="{{ x.banner_logo1.url }}">
-                    <img data-aos="fade-down" class="d-block mx-auto logo-sountopia" src="{{ x.banner_logo2.url }}">
+                    <img data-aos="fade-up" class="d-block mx-auto my-2 logo-ismaya" src="{{img}}{{x.banner_logo1}}">
+                    <img data-aos="fade-down" class="d-block mx-auto logo-sountopia" src="{{img}}{{x.banner_logo2}}">
                     <p data-aos="zoom-out" data-aos-offset="-350" class="d-block mx-auto text-white font-montserrat-semibold my-3">
                         {{ x.banner_at }} {{ x.banner_room }}  <span class="mx-2">|</span>  {{ x.banner_date }}
                     </p>
@@ -137,7 +137,8 @@
                         {{ x.brief_title }}
                     </h1>
                 </div>
-                <video data-aos="fade-up" class="img-fluid" src="{{ x.brief_video.url }}"></video>
+                <iframe src="{{ x.brief_video }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="1000" height="500" frameborder="0"></iframe>
+                {#<video data-aos="fade-up" class="img-fluid" src="{{ x.brief_video.url }}"></video>#}
                 {#<img data-aos="fade-up" class="img-fluid" src="{% static 'rsvp/event/music/images/videos-content-05.jpg' %}">#}
             </div>
         </div>
@@ -156,25 +157,25 @@
             <div data-aos="fade-up" class="col-lg-10 offset-lg-1 px-lg-0">
                 <div  id="lineup" class="carousel-lineup owl-theme">
                     <div class="item">
-                        <img src="{{ x.lineup_image1.url }}">
+                        <img src="{{img}}{{x.lineup_image1}}">
                         <h1 class="text-white text-center font-montserrat-semibold">
                             {{ x.lineup_name1 }}
                         </h1>
                     </div>
                     <div class="item">
-                        <img src="{{ x.lineup_image2.url }}">
+                        <img src="{{img}}{{x.lineup_image2}}">
                         <h1 class="text-white text-center font-montserrat-semibold">
                             {{ x.lineup_name2 }}
                         </h1>
                     </div>
                     <div class="item">
-                        <img src="{{ x.lineup_image3.url }}">
+                        <img src="{{img}}{{x.lineup_image3}}">
                         <h1 class="text-white text-center font-montserrat-semibold">
                             {{ x.lineup_name3 }}
                         </h1>
                     </div>
                     <div class="item">
-                        <img src="{{ x.lineup_image4.url }}">
+                        <img src="{{img}}{{x.lineup_image4}}">
                         <h1 class="text-white text-center font-montserrat-semibold">
                             {{ x.lineup_name4 }}
                         </h1>
@@ -477,7 +478,7 @@
                 </p>
             </div>
             <div data-aos="fade-up" class="col-lg-7 px-0">
-                <img class="img-fluid w-100 mt-lg-0 mt-5" src="{{ x.about_image.url }}">
+                <img class="img-fluid w-100 mt-lg-0 mt-5" src="{{img}}{{x.about_image}}">
             </div>
         </div>
     </div>
@@ -494,13 +495,13 @@
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title1 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo1.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo1}}">
                     </div>
                     <div class="col-lg-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title2 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo2.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo2}}">
                     </div>
                 </div>
                 <div class="row d-none d-lg-flex">
@@ -508,19 +509,19 @@
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title3 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo3.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo3}}">
                     </div>
                     <div class="col-lg-4 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title4 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo4.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo4}}">
                     </div>
                     <div class="col-lg-4 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title5 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo5.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo5}}">
                     </div>
                 </div>
                 <div class="row d-lg-none">
@@ -528,31 +529,31 @@
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title1 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo1.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo1}}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title2 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo2.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo2}}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title3 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo3.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo3}}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title4 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo4.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo4}}">
                     </div>
                     <div class="col-6 text-center box-logo">
                         <h6 class="text-white font-montserrat-semibold">
                             {{ x.sponsors_title5 }}
                         </h6>
-                        <img class="img-logos" src="{{ x.sponsors_logo5.url }}">
+                        <img class="img-logos" src="{{img}}{{x.sponsors_logo5}}">
                     </div>
                 </div>
             </div>

@@ -117,8 +117,8 @@
                     {{ x.banner_brief }}
                   </div>
                 </div>
-                <img data-aos="fade-left" class="img-fluid img-desktop float-right d-none d-lg-block" src="{{ x.banner_bg.url }}">
-                <img data-aos="fade-left" class="img-fluid float-right d-lg-none" src="{{ x.banner_bg_mobile.url }}">
+                <img data-aos="fade-left" class="img-fluid img-desktop float-right d-none d-lg-block" src="{{img}}{{x.banner_bg}}">
+                <img data-aos="fade-left" class="img-fluid float-right d-lg-none" src="{{img}}{{x.banner_bg_mobile}}">
             </div>
         </div>
     </div>
@@ -146,19 +146,19 @@
         <div class="offset-lg-1 pl-lg-5 col-lg-9">
           <div class="carousel-gallery owl-theme">
               <div class="item">
-                <img src="{{ x.gallery_image1.url }}" class="img-fluid">
+                <img src="{{img}}{{x.gallery_image1}}" class="img-fluid">
               </div>
               <div class="item">
-                <img src="{{ x.gallery_image2.url }}" class="img-fluid">
+                <img src="{{img}}{{x.gallery_image2}}" class="img-fluid">
               </div>
               <div class="item">
-                <img src="{{ x.gallery_image3.url }}" class="img-fluid">
+                <img src="{{img}}{{x.gallery_image3}}" class="img-fluid">
               </div>
               <div class="item">
-                <img src="{{ x.gallery_image4.url }}" class="img-fluid">
+                <img src="{{img}}{{x.gallery_image4}}" class="img-fluid">
               </div>
               <div class="item">
-                <img src="{{ x.gallery_image5.url }}" class="img-fluid">
+                <img src="{{img}}{{x.gallery_image5}}" class="img-fluid">
               </div>
           </div>
         </div>

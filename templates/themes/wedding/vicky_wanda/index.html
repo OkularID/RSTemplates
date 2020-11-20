@@ -33,7 +33,7 @@
             <nav>
                 <div class="d-none d-lg-block">
                     <a class="logo" href="index.html">
-                        <img data-aos="fade-down" data-aos-once="true" class="img-fluid" src="{{ x.img_logotype.url }}" />
+                        <img data-aos="fade-down" data-aos-once="true" class="img-fluid" src="{{img}}{{x.img_logotype}}" />
                     </a>
                     <ul data-aos="fade-right"  data-aos-once="true" class="menu">
                         <li><a href="#home">HOME</a></li>
@@ -59,7 +59,7 @@
                         <div class="close-div text-right p-3">
                             <img class="img-fluid close-icon" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-07.png' %}" />
                         </div>
-                        <a href="index.html"><img class="img-fluid logo" src="{{ x.img_logotype_mobile.url }}" /></a>
+                        <a href="index.html"><img class="img-fluid logo" src="{{img}}{{x.img_logotype_mobile}}" /></a>
                         <ul class="list-unstyled">
                             <li><a href="#home">HOME</a></li>
                             <li><a href="#ourstory">OUR STORY</a></li>
@@ -82,8 +82,8 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-lg-12 pl-lg-0 pr-lg-0">
-                                    <img data-aos="zoom-out"  data-aos-once="true"  class="img-fluid bg w-lg-100p" src="{{ x.banner_bg.url }}" />
-                                    <img data-aos="fade-down" data-aos-once="true"  class="img-fluid motif" src="{{ x.img_logogram.url }}" />
+                                    <img data-aos="zoom-out"  data-aos-once="true"  class="img-fluid bg w-lg-100p" src="{{img}}{{x.banner_bg}}" />
+                                    <img data-aos="fade-down" data-aos-once="true"  class="img-fluid motif" src="{{img}}{{x.img_logogram}}" />
                                     <div class="boxc text-center">
                                         <div data-aos="fade-down" data-aos-once="true" class="title">{{ x.banner_title }}</div>
                                     </div>
@@ -114,7 +114,7 @@
                                                 <div class="row">
                                                     <img class="img-fluid boxc text-center motif" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-01.png' %}" />
                                                     <div data-aos="fade-up" data-aos-once="true" class="col-lg-6 pl-lg-0 pr-lg-0">
-                                                        <img class="img-fluid w-lg-100p" src="{{ x.about_os_image.url }}" />
+                                                        <img class="img-fluid w-lg-100p" src="{{img}}{{x.about_os_image}}" />
                                                     </div>
                                                     <div data-aos="fade-left" class="col-lg-6 pl-lg-0 pr-lg-0 bg-brown">
                                                         <div class="boxc desc" data-aos-once="true">
@@ -130,7 +130,7 @@
                                                 <div class="row">
                                                     <img class="img-fluid boxc text-center motif" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-02.png' %}" />
                                                     <div class="col-lg-6 pl-lg-0 pr-lg-0">
-                                                        <img class="img-fluid w-lg-100p" src="{{ x.about_gr_image.url }}" />
+                                                        <img class="img-fluid w-lg-100p" src="{{img}}{{x.about_gr_image}}" />
                                                     </div>
                                                     <div class="col-lg-6 pl-lg-0 pr-lg-0 bg-brown">
                                                         <div class="boxc desc">
@@ -146,7 +146,7 @@
                                                 <div class="row">
                                                     <img class="img-fluid boxc text-center motif" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-03.png' %}" />
                                                     <div class="col-lg-6 pl-lg-0 pr-lg-0">
-                                                        <img class="img-fluid w-lg-100p" src="{{ x.about_br_image.url }}" />
+                                                        <img class="img-fluid w-lg-100p" src="{{img}}{{x.about_br_image}}" />
                                                     </div>
                                                     <div class="col-lg-6 pl-lg-0 pr-lg-0 bg-brown">
                                                         <div class="boxc desc">
@@ -165,7 +165,7 @@
                                             <div class="row">
                                                 <img class="img-fluid boxc text-center motif" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-01.png' %}" />
                                                 <div class="col-12">
-                                                    <img class="img-fluid images w-lg-100p" src="{{ x.about_os_image.url }}" />
+                                                    <img class="img-fluid images w-lg-100p" src="{{img}}{{x.about_os_image}}" />
                                                 </div>
                                                 <div class="col-12 pt-m-25p pb-m-15p pl-m-10p pr-m-10p">
                                                     <div class="desc">
@@ -179,7 +179,7 @@
                                             <div class="row">
                                                 <img class="img-fluid boxc text-center motif" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-02.png' %}" />
                                                 <div class="col-12">
-                                                    <img class="img-fluid images w-lg-100p" src="{{ x.about_gr_image.url }}" />
+                                                    <img class="img-fluid images w-lg-100p" src="{{img}}{{x.about_gr_image}}" />
                                                 </div>
                                                 <div class="col-12 pt-m-25p pb-m-15p pl-m-10p pr-m-10p">
                                                     <div class="desc">
@@ -193,7 +193,7 @@
                                             <div class="row">
                                                 <img class="img-fluid boxc text-center motif" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-03.png' %}" />
                                                 <div class="col-12">
-                                                    <img class="img-fluid images w-lg-100p" src="{{ x.about_br_image.url }}" />
+                                                    <img class="img-fluid images w-lg-100p" src="{{img}}{{x.about_br_image}}" />
                                                 </div>
                                                 <div class="col-12 pt-m-25p pb-m-15p pl-m-10p pr-m-10p">
                                                     <div class="desc">
@@ -242,7 +242,7 @@
                                                     </div>
                                                     <div id="dateandtime-d" data-aos="fade-down" data-aos-once="true" data-aos-offset="200" class="order-1 order-lg-2 col-lg-7 pt-m-0 pb-m-0 pl-m-0 pr-m-0 pl-lg-5p pr-lg-5p">
                                                         <div class="wrap">
-                                                            <img class="img-fluid images w-lg-100p" src="{{ x.vc_image.url }}" />
+                                                            <img class="img-fluid images w-lg-100p" src="{{img}}{{x.vc_image}}" />
                                                             <div class="boxc imagelist"></div>
                                                             <a target="_blank" href="{{ x.vc_maps_link }}">
                                                                 <div class="boxc imageov">
@@ -278,7 +278,7 @@
                                                     </div>
                                                     <div class="order-1 order-lg-2 col-lg-7 pt-m-0 pb-m-0 pl-m-0 pr-m-0 pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-5p">
                                                         <div class="wrap">
-                                                            <img class="img-fluid images w-lg-100p" src="{{ x.vr_image.url }}" />
+                                                            <img class="img-fluid images w-lg-100p" src="{{img}}{{x.vr_image}}" />
                                                             <div class="boxc imagelist"></div>
                                                             <a target="_blank" href="{{ x.vr_maps_link }}">
                                                                 <div class="boxc imageov">
@@ -301,8 +301,8 @@
                         <div class="container-fluid bg-lightbrown">
                             <div class="row">
                                 <div data-aos="zoom-out" data-aos-once="true" class="col-lg-12 pl-lg-0 pr-lg-0">
-                                    <img class="img-fluid w-lg-100p d-none d-lg-block" src="{{ x.acm_image.url }}" />
-                                    <img class="img-fluid images w-lg-100p d-block d-lg-none" src="{{ x.acm_image_mobile.url }}" />
+                                    <img class="img-fluid w-lg-100p d-none d-lg-block" src="{{img}}{{x.acm_image}}" />
+                                    <img class="img-fluid images w-lg-100p d-block d-lg-none" src="{{img}}{{x.acm_image_mobile}}" />
                                 </div>
                                 <div class="col-lg-7 pt-m-10p pl-m-10p pr-m-10p pt-lg-5p pb-lg-5p pl-lg-5p pr-lg-0">
                                     <h2 data-aos="fade-right" data-aos-once="true">THE <br /><span>ACCOMMODATION</span></h2>
@@ -325,46 +325,46 @@
                                 <div class="col-12 pl-lg-0 pr-lg-0 d-block d-lg-none">
                                     <div id="js-gallery">
                                         <div class="gallery__hero">
-                                            <img class="img-fluid" src="{{ x.gallery_image1.url }}" />
+                                            <img class="img-fluid" src="{{img}}{{x.gallery_image1}}" />
                                         </div>
                                         <div class="gallery__thumbs">
-                                            <a  href="{{ x.gallery_image1.url }}" data-gallery="thumb" class="is-active">
-                                                <img class="img-fluid" src="{{ x.gallery_image1.url }}" />
+                                            <a  href="{{img}}{{x.gallery_image1}}" data-gallery="thumb" class="is-active">
+                                                <img class="img-fluid" src="{{img}}{{x.gallery_image1}}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="{{ x.gallery_image2.url }}" data-gallery="thumb">
-                                                <img class="img-fluid" src="{{ x.gallery_image2.url }}" />
+                                            <a href="{{img}}{{x.gallery_image2}}" data-gallery="thumb">
+                                                <img class="img-fluid" src="{{img}}{{x.gallery_image2}}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="{{ x.gallery_image3.url }}" data-gallery="thumb">
-                                                <img class="img-fluid" src="{{ x.gallery_image3.url }}" />
+                                            <a href="{{img}}{{x.gallery_image3}}" data-gallery="thumb">
+                                                <img class="img-fluid" src="{{img}}{{x.gallery_image3}}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="{{ x.gallery_image4.url }}" data-gallery="thumb">
-                                                <img class="img-fluid" src="{{ x.gallery_image4.url }}" />
+                                            <a href="{{img}}{{x.gallery_image4}}" data-gallery="thumb">
+                                                <img class="img-fluid" src="{{img}}{{x.gallery_image4}}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="{{ x.gallery_image5.url }}" data-gallery="thumb">
-                                                <img class="img-fluid" src="{{ x.gallery_image5.url }}" />
+                                            <a href="{{img}}{{x.gallery_image5}}" data-gallery="thumb">
+                                                <img class="img-fluid" src="{{img}}{{x.gallery_image5}}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
                                                 </div>
                                             </a>
-                                            <a href="{{ x.gallery_image6.url }}" data-gallery="thumb">
-                                                <img class="img-fluid" src="{{ x.gallery_image6.url }}" />
+                                            <a href="{{img}}{{x.gallery_image6}}" data-gallery="thumb">
+                                                <img class="img-fluid" src="{{img}}{{x.gallery_image6}}" />
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
                                                     <div class="boxc circleborder"></div>
@@ -376,7 +376,7 @@
                                 <div class="col-lg-12 d-none d-lg-block">
                                     <div class="row">
                                         <div data-aos="fade-up" data-aos-once="true" class="col-4 col-lg-4 pl-lg-0 pr-lg-0">
-                                            <img class="img-fluid w-lg-100p" src="{{ x.gallery_image1.url }}" />
+                                            <img class="img-fluid w-lg-100p" src="{{img}}{{x.gallery_image1}}" />
                                             <a data-toggle="modal" data-target="#images-08">
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
@@ -385,7 +385,7 @@
                                             </a>
                                         </div>
                                         <div data-aos="fade-up" data-aos-once="true" class="col-4 col-lg-4 pl-lg-0 pr-lg-0">
-                                            <img class="img-fluid w-lg-100p" src="{{ x.gallery_image2.url }}" />
+                                            <img class="img-fluid w-lg-100p" src="{{img}}{{x.gallery_image2}}" />
                                             <a data-toggle="modal" data-target="#images-09">
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
@@ -394,7 +394,7 @@
                                             </a>
                                         </div>
                                         <div data-aos="fade-up" data-aos-once="true" class="col-4 col-lg-4 pl-lg-0 pr-lg-0">
-                                            <img class="img-fluid w-lg-100p" src="{{ x.gallery_image3.url }}" />
+                                            <img class="img-fluid w-lg-100p" src="{{img}}{{x.gallery_image3}}" />
                                             <a data-toggle="modal" data-target="#images-10">
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
@@ -403,7 +403,7 @@
                                             </a>
                                         </div>
                                         <div data-aos="fade-up" data-aos-once="true" class="col-4 col-lg-4 pl-lg-0 pr-lg-0">
-                                            <img class="img-fluid w-lg-100p" src="{{ x.gallery_image4.url }}" />
+                                            <img class="img-fluid w-lg-100p" src="{{img}}{{x.gallery_image4}}" />
                                             <a data-toggle="modal" data-target="#images-11">
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
@@ -412,7 +412,7 @@
                                             </a>
                                         </div>
                                         <div data-aos="fade-up" data-aos-once="true" class="col-4 col-lg-4 pl-lg-0 pr-lg-0">
-                                            <img class="img-fluid w-lg-100p" src="{{ x.gallery_image5.url }}" />
+                                            <img class="img-fluid w-lg-100p" src="{{img}}{{x.gallery_image5}}" />
                                             <a data-toggle="modal" data-target="#images-12">
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
@@ -421,7 +421,7 @@
                                             </a>
                                         </div>
                                         <div data-aos="fade-up" data-aos-once="true" class="col-4 col-lg-4 pl-lg-0 pr-lg-0">
-                                            <img class="img-fluid w-lg-100p" src="{{ x.gallery_image6.url }}" />
+                                            <img class="img-fluid w-lg-100p" src="{{img}}{{x.gallery_image6}}" />
                                             <a data-toggle="modal" data-target="#images-13">
                                                 <div class="boxc imageov">
                                                     <div class="boxc text">VIEW PHOTO</div>
@@ -438,7 +438,7 @@
                                                                 <a class="close" data-dismiss="modal">
                                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-05.png' %}" />    
                                                                 </a>
-                                                                <img class="img-fluid" src="{{ x.gallery_image1.url }}" />
+                                                                <img class="img-fluid" src="{{img}}{{x.gallery_image1}}" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -454,7 +454,7 @@
                                                                 <a class="close" data-dismiss="modal">
                                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-05.png' %}" />    
                                                                 </a>
-                                                                <img class="img-fluid" src="{{ x.gallery_image2.url }}" />
+                                                                <img class="img-fluid" src="{{img}}{{x.gallery_image2}}" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -470,7 +470,7 @@
                                                                 <a class="close" data-dismiss="modal">
                                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-05.png' %}" />    
                                                                 </a>
-                                                                <img class="img-fluid" src="{{ x.gallery_image3.url }}" />
+                                                                <img class="img-fluid" src="{{img}}{{x.gallery_image3}}" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -486,7 +486,7 @@
                                                                 <a class="close" data-dismiss="modal">
                                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-05.png' %}" />    
                                                                 </a>
-                                                                <img class="img-fluid" src="{{ x.gallery_image4.url }}" />
+                                                                <img class="img-fluid" src="{{img}}{{x.gallery_image4}}" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -502,7 +502,7 @@
                                                                 <a class="close" data-dismiss="modal">
                                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-05.png' %}" />    
                                                                 </a>
-                                                                <img class="img-fluid" src="{{ x.gallery_image5.url }}" />
+                                                                <img class="img-fluid" src="{{img}}{{x.gallery_image5}}" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -518,7 +518,7 @@
                                                                 <a class="close" data-dismiss="modal">
                                                                     <img class="img-fluid" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-05.png' %}" />    
                                                                 </a>
-                                                                <img class="img-fluid" src="{{ x.gallery_image6.url }}" />
+                                                                <img class="img-fluid" src="{{img}}{{x.gallery_image6}}" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -569,7 +569,7 @@
                                 <div class="col-lg-12 pl-m-10p pr-m-10p pt-lg-10p pb-lg-10p pl-lg-10p pr-lg-10p">
                                     <h2 data-aos="fade-right" data-aos-once="true"  class="mb-m-10p mb-lg-15p font-lightbrown">CAN’T WAIT TO <br /><span>SEE YOU THERE!</span></h2>
                                     <img class="img-fluid motif" src="{% static 'rsvp/wedding/vicky_wanda/images/icon-06.png' %}" />
-                                    <img data-aos="fade-up" data-aos-once="true" class="img-fluid images" src="{{ x.rsvp_image.url }}" />
+                                    <img data-aos="fade-up" data-aos-once="true" class="img-fluid images" src="{{img}}{{x.rsvp_image}}" />
                                     {% include 'themes/wedding/vicky_wanda/attendance.html' %}
                                 </div>
                             </div>

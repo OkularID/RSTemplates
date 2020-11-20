@@ -28,7 +28,7 @@
         <div class="container-fluid py-lg-5" data-aos="fade-down" data-aos-once="true">
             <div class="row">
                 <div class="col-lg-3 pl-lg-5">
-                    <img class="img-fluid" src="{{ x.img_logo.url }}">
+                    <img class="img-fluid" src="{{img}}{{x.img_logo}}">
                     <span class="text-gray ml-lg-3">
                         {{ x.groom_name }} & {{ x.bride_name }}
                     </span>
@@ -112,8 +112,8 @@
                         This is the story of how we met.
                     </p>
                 </div>
-                <img class="img-fluid w-100 d-none d-lg-block" src="{{ x.banner_bg.url }}">
-                <img class="img-fluid w-100 d-lg-none img-mobile" src="{{ x.banner_bg_mobile.url }}">
+                <img class="img-fluid w-100 d-none d-lg-block" src="{{img}}{{x.banner_bg}}">
+                <img class="img-fluid w-100 d-lg-none img-mobile" src="{{img}}{{x.banner_bg_mobile}}">
             </div>
         </div>
     </div>
@@ -135,15 +135,15 @@
         </div>
         <div class="row" data-aos="fade-down">
             <div class="col-lg-12 px-0">
-                <img data-aos="fade-down" data-aos-once="true" class="img-fluid w-100 d-none d-lg-block" src="{{ x.about_image1.url }}">
-                <img class="img-fluid w-100 d-lg-none" src="{{ x.about_image1_mobile.url }}">
+                <img data-aos="fade-down" data-aos-once="true" class="img-fluid w-100 d-none d-lg-block" src="{{img}}{{x.about_image1}}">
+                <img class="img-fluid w-100 d-lg-none" src="{{img}}{{x.about_image1_mobile}}">
             </div>
         </div>
     </div>
     <div class="container-fluid inseparable-section">
         <div class="row py-5">
             <div class="col-lg-6 p-lg-5">
-                <img data-aos="zoom-out" data-aos-once="true" class="img-fluid" src="{{ x.about_image2.url }}">
+                <img data-aos="zoom-out" data-aos-once="true" class="img-fluid" src="{{img}}{{x.about_image2}}">
             </div>
             <div class="col-lg-6 py-5">
                 <h2 data-aos="fade-down" data-aos-once="true" class="text-grayish-blue my-lg-5 mt-5">
@@ -161,8 +161,8 @@
     <div class="container-fluid will-you" data-aos="fade-down" data-aos-once="true">
         <div class="row">
             <div class="col-lg-12 px-0">
-                <img class="img-fluid w-100 d-none d-lg-block" src="{{ x.about_image3.url }}">
-                <img class="img-fluid w-100 d-lg-none" src="{{ x.about_image3_mobile.url }}">
+                <img class="img-fluid w-100 d-none d-lg-block" src="{{img}}{{x.about_image3}}">
+                <img class="img-fluid w-100 d-lg-none" src="{{img}}{{x.about_image3_mobile}}">
                 <div class="content">
                     <h2 class="text-white">
                         {{ x.about_title3 }}
@@ -185,7 +185,7 @@
     <div id="celebrate" class="container-fluid bg-celebrate">
         <div class="row">
             <div class="col-lg-4 offset-lg-1 py-lg-5 order-4 order-lg-1 col-12">
-                <img data-aos="fade-up" data-aos-once="true" class="image-celebrate img-fluid mt-5" src="{{ x.venue_image.url }}">
+                <img data-aos="fade-up" data-aos-once="true" class="image-celebrate img-fluid mt-5" src="{{img}}{{x.venue_image}}">
             </div>
             <div class="col-lg-3 py-lg-5 my-lg-5 section-left order-1 order-lg-2 col-12">
                 <p class="text-white mt-lg-5">
@@ -271,42 +271,42 @@
         <div class="row offset-lg-1 pb-lg-5 d-none d-lg-flex">
             <div data-aos="fade-up" class="p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo1">
-                    <img class="img-fluid" src="{{ x.gallery_image1.url }}">
+                    <img class="img-fluid" src="{{img}}{{x.gallery_image1}}">
                 </a>
             </div>
             <div data-aos="fade-up" data-aos-once="true" class="p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo2">
-                    <img class="img-fluid" src="{{ x.gallery_image2.url }}">
+                    <img class="img-fluid" src="{{img}}{{x.gallery_image2}}">
                 </a>
             </div>
             <div  data-aos="fade-up" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo3">
-                    <img class="img-fluid" src="{{ x.gallery_image3.url }}">
+                    <img class="img-fluid" src="{{img}}{{x.gallery_image3}}">
                 </a>
             </div>
             <div  data-aos="fade-up" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo4">
-                    <img class="img-fluid" src="{{ x.gallery_image4.url }}">
+                    <img class="img-fluid" src="{{img}}{{x.gallery_image4}}">
                 </a>
             </div>
             <div data-aos="fade-down"  data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo5">
-                    <img class="img-fluid" src="{{ x.gallery_image5.url }}">
+                    <img class="img-fluid" src="{{img}}{{x.gallery_image5}}">
                 </a>
             </div>
             <div data-aos="fade-down" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo6">
-                    <img class="img-fluid" src="{{ x.gallery_image6.url }}">
+                    <img class="img-fluid" src="{{img}}{{x.gallery_image6}}">
                 </a>
             </div>
             <div data-aos="fade-down" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo7">
-                    <img class="img-fluid" src="{{ x.gallery_image7.url }}">
+                    <img class="img-fluid" src="{{img}}{{x.gallery_image7}}">
                 </a>
             </div>
             <div data-aos="fade-down" data-aos-once="true" class=" p-lg-3">
                 <a href="#" data-toggle="modal" data-target="#photo8">
-                    <img class="img-fluid" src="{{ x.gallery_image8.url }}">
+                    <img class="img-fluid" src="{{img}}{{x.gallery_image8}}">
                 </a>
             </div>
         </div>
@@ -314,42 +314,42 @@
             <div class="carousel-gallery owl-theme">
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo1">
-                        <img class="img-fluid" src="{{ x.gallery_image1.url }}">
+                        <img class="img-fluid" src="{{img}}{{x.gallery_image1}}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo2">
-                        <img class="img-fluid" src="{{ x.gallery_image2.url }}">
+                        <img class="img-fluid" src="{{img}}{{x.gallery_image2}}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo3">
-                        <img class="img-fluid" src="{{ x.gallery_image3.url }}">
+                        <img class="img-fluid" src="{{img}}{{x.gallery_image3}}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo4">
-                        <img class="img-fluid" src="{{ x.gallery_image4.url }}">
+                        <img class="img-fluid" src="{{img}}{{x.gallery_image4}}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo5">
-                        <img class="img-fluid" src="{{ x.gallery_image5.url }}">
+                        <img class="img-fluid" src="{{img}}{{x.gallery_image5}}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo6">
-                        <img class="img-fluid" src="{{ x.gallery_image6.url }}">
+                        <img class="img-fluid" src="{{img}}{{x.gallery_image6}}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo7">
-                        <img class="img-fluid" src="{{ x.gallery_image7.url }}">
+                        <img class="img-fluid" src="{{img}}{{x.gallery_image7}}">
                     </a>
                 </div>
                 <div class="item">
                     <a href="#" data-toggle="modal" data-target="#photo8">
-                        <img class="img-fluid" src="{{ x.gallery_image8.url }}">
+                        <img class="img-fluid" src="{{img}}{{x.gallery_image8}}">
                     </a>
                 </div>
             </div>
@@ -359,7 +359,7 @@
         <div  id="rsvp" class="row my-lg-5">
             {% include 'themes/wedding/peter_mary/attendance.html' %}
             <div id="accommodation-m" class="col-lg-5 pt-lg-4 text-center accomodation pt-lg-0 pt-5">
-                <img data-aos="fade-down" data-aos-once="true" class="img-fluid mb-lg-0 mb-4" src="{{ x.acm_image.url }}">
+                <img data-aos="fade-down" data-aos-once="true" class="img-fluid mb-lg-0 mb-4" src="{{img}}{{x.acm_image}}">
                 <p class="text-dark-blue font-weight-bold mb-0">
                     ACCOMMODATION
                 </p>
@@ -409,42 +409,42 @@
     <!-- Modal Gallery -->
     <div class="modal fade" id="photo1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image1.url }}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{img}}{{x.gallery_image1}}">
       </div>
     </div>
     <div class="modal fade" id="photo2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image2.url }}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{img}}{{x.gallery_image2}}">
       </div>
     </div>
     <div class="modal fade" id="photo3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image3.url }}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{img}}{{x.gallery_image3}}">
       </div>
     </div>
     <div class="modal fade" id="photo4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image4.url }}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{img}}{{x.gallery_image4}}">
       </div>
     </div>
     <div class="modal fade" id="photo5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image5.url }}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{img}}{{x.gallery_image5}}">
       </div>
     </div>
     <div class="modal fade" id="photo6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image6.url }}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{img}}{{x.gallery_image6}}">
       </div>
     </div>
     <div class="modal fade" id="photo7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image7.url }}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{img}}{{x.gallery_image7}}">
       </div>
     </div>
     <div class="modal fade" id="photo8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
-                <img class="img-fluid w-50 mx-auto d-block" src="{{ x.gallery_image8.url }}">
+                <img class="img-fluid w-50 mx-auto d-block" src="{{img}}{{x.gallery_image8}}">
       </div>
     </div>
 
