@@ -164,7 +164,7 @@
 
 
                                             {#Form 1#}
-                                            <form method="post" enctype="multipart/form-data">
+                                            <form method="post" action="{% url 'wishlist_form' %}" enctype="multipart/form-data">
                                             {% csrf_token %}
                                                 <div class="tab-pane" role="tabpanel" id="step5">
                                                     <div class="container-fluid">
