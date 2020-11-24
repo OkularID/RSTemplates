@@ -1,0 +1,467 @@
+{% extends 'base_form.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <!-- Main -->
+    <div id="main-templates" class="main-account">
+        <!-- Section User Navigation -->
+        {% include 'shared/partials/base_form_nav.html' %}
+        <!-- Section User Content -->
+        <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="mb-lg-2p">Editing {{ form.title }}</h3>
+                    <div class="card">
+                        <div class="container-fluid templates-steps pb-lg-10p">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <!-- Navigation Dots -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step7" data-toggle="tab" aria-controls="step7" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step8" data-toggle="tab" aria-controls="step8" role="tab"></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="main_form">
+                                            <div class="tab-pane active" role="tabpanel" id="step1">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Seminary-01.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Main Info</b></h5>
+                                                                <label>Theme</label>
+                                                                <input type="text" name="theme" class="form-control" placeholder="Tech and Type" disabled />
+                                                                <label>Site URL*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.site_url }}" required>
+                                                                <label>Site Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.title }}" required>
+                                                                <label>Logo*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.img_logo }}" required>
+                                                                <label>Name*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.name }}" required>
+                                                                <label>Hastag*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.hashtag }}" required>
+                                                            </div>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step2">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Seminary-02.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Header</b></h5>
+                                                                <label>Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_title }}" required>
+                                                                <label>Date*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_date }}" required>
+                                                                <label>Time*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_time }}" required>
+                                                                <label>At*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_at }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step3">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Seminary-03.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>About</b></h5>
+                                                                <label>Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_title }}" required>
+                                                                <label>Point 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_point1 }}" required>
+                                                                <label>Point 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_point2 }}" required>
+                                                                <label>Point 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_point3 }}" required>
+                                                                <label>Point 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_point4 }}" required>
+                                                                <label>Point 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_point5 }}" required>
+                                                                <label>Point 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_point6 }}" required>
+                                                                <label>Attendees*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_attendees }}" required>
+                                                                <label>Classes*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_classes }}" required>
+                                                                <label>Speakers*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_speakers }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step4">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Seminary-04.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Gallery</b></h5>
+                                                                <label>Image 1*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image1 }}" required>
+                                                                <label>Image Mobile 1*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image_mobile1 }}" required>
+                                                                <label>Image 2*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image2 }}" required>
+                                                                <label>Image Mobile 2*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image_mobile2 }}" required>
+                                                                <label>Image 3*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image3 }}" required>
+                                                                <label>Image Mobile 3*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image_mobile3 }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step5">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Seminary-05.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Speakers</b></h5>
+                                                                <label>Image 1*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.speakers_image1 }}" required>
+                                                                <label>Name 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_name1 }}" required>
+                                                                <label>Title 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_title1 }}" required>
+                                                                <label>Position 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_position1 }}" required>
+                                                                <label>Company 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_company1 }}" required>
+                                                                <label>Date 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_date1 }}" required>
+                                                                <label>Brief 1*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.speakers_brief1 }}</textarea>
+                                                                <label>Facebook 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_fb1 }}" required>
+                                                                <label>Twitter 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_twitter1 }}" required>
+                                                                <label>Whatsapp 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_wa1 }}" required>
+                                                                <label>Instagram 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_ig1 }}" required>
+                                                                <label>Image 2*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.speakers_image2 }}" required>
+                                                                <label>Name 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_name2 }}" required>
+                                                                <label>Title 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_title2 }}" required>
+                                                                <label>Position 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_position2 }}" required>
+                                                                <label>Company 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_company2 }}" required>
+                                                                <label>Date 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_date2 }}" required>
+                                                                <label>Brief 2*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.speakers_brief2 }}</textarea>
+                                                                <label>Facebook 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_fb2 }}" required>
+                                                                <label>Twitter 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_twitter2 }}" required>
+                                                                <label>Whatsapp 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_wa2 }}" required>
+                                                                <label>Instagram 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.speakers_ig2 }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step6">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Seminary-06.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Schedule Home</b></h5>
+                                                                <label>Home Date 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_date1 }}" required>
+                                                                <label>Home Name 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_name1 }}" required>
+                                                                <label>Home Title 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_title1 }}" required>
+                                                                <label>Home Brief 1*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_hm_brief1 }}</textarea>
+                                                                <label>Home Date 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_date2 }}" required>
+                                                                <label>Home Name 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_name2 }}" required>
+                                                                <label>Home Title 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_title2 }}" required>
+                                                                <label>Home Brief 2*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_hm_brief2 }}      </textarea>
+                                                                <label>Home Date 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_date3 }}" required>
+                                                                <label>Home Name 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_name3 }}" required>
+                                                                <label>Home Title 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_title3 }}" required>
+                                                                <label>Home Brief 3*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_hm_brief3 }}</textarea>
+                                                                <label>Home Date 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_date4 }}" required>
+                                                                <label>Home Name 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_name4 }}" required>
+                                                                <label>Home Title 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_title4 }}" required>
+                                                                <label>Home Brief 4*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_hm_brief4 }}</textarea>
+                                                                <label>Home Date 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_date5 }}" required>
+                                                                <label>Home Name 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_name5 }}" required>
+                                                                <label>Home Title 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_title5 }}" required>
+                                                                <label>Home Brief 5*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_hm_brief5 }}</textarea>
+                                                                <label>Home Date 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_date6 }}" required>
+                                                                <label>Home Name 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_name6 }}" required>
+                                                                <label>Home Title 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_hm_title6 }}" required>
+                                                                <label>Home Brief 6*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_hm_brief6 }}</textarea>
+                                                                <h5 class="mt-lg-4p mb-lg-4p"><b>Schedule Profile</b></h5>
+                                                                <label>Profile Date 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_date1 }}" required>
+                                                                <label>Profile Name 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_name1 }}" required>
+                                                                <label>Profile Title 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_title1 }}" required>
+                                                                <label>Profile Brief 1*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_pf_brief1 }}</textarea>
+                                                                <label>Profile Date 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_date2 }}" required>
+                                                                <label>Profile Name 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_name2 }}" required>
+                                                                <label>Profile Title 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_title2 }}" required>
+                                                                <label>Profile Brief 2*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_pf_brief2 }}</textarea>
+                                                                <label>Profile Date 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_date3 }}" required>                                                                
+                                                                <label>Profile Name 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_name3 }}" required>                                                                
+                                                                <label>Profile Title 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_title3 }}" required>                                                                
+                                                                <label>Profile Brief 3*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_pf_brief3 }}</textarea>
+                                                                <label>Profile Date 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_date4 }}" required>
+                                                                <label>Profile Name 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_name4 }}" required>
+                                                                <label>Profile Title 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_title4 }}" required>
+                                                                <label>Profile Brief 4*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_pf_brief4 }}</textarea>
+                                                                <label>Profile Date 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_date5 }}" required>
+                                                                <label>Profile Name 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_name5 }}" required>
+                                                                <label>Profile Title 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_title5 }}" required>
+                                                                <label>Profile Brief 5*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_pf_brief5 }}</textarea>
+                                                                <label>Profile Date 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_date6 }}" required>
+                                                                <label>Profile Name 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_name6 }}" required>
+                                                                <label>Profile Title 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_pf_title6 }}" required>
+                                                                <label>Profile Brief 6*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_pf_brief6 }}</textarea>
+                                                                <h5 class="mt-lg-4p mb-lg-4p"><b>Schedule Contact</b></h5>
+                                                                <label>Contact Date 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_date1 }}" required>
+                                                                <label>Contact Name 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_name1 }}" required>
+                                                                <label>Contact Title 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_title1 }}" required>
+                                                                <label>Contact Brief 1*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_ct_brief1 }}</textarea>
+                                                                <label>Contact Date 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_date2 }}" required>
+                                                                <label>Contact Name 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_name2 }}" required>
+                                                                <label>Contact Title 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_title2 }}" required>
+                                                                <label>Contact Brief 2*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_ct_brief2 }}</textarea>
+                                                                <label>Contact Date 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_date3 }}" required>
+                                                                <label>Contact Name 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_name3 }}" required>
+                                                                <label>Contact Title 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_title3 }}" required>
+                                                                <label>Contact Brief 3*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_ct_brief3 }}</textarea>
+                                                                <label>Contact Date 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_date4 }}" required>
+                                                                <label>Contact Name 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_name4 }}" required>
+                                                                <label>Contact Title 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_title4 }}" required>
+                                                                <label>Contact Brief 4*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_ct_brief4 }}</textarea>
+                                                                <label>Contact Date 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_date5 }}" required>
+                                                                <label>Contact Name 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_name5 }}" required>
+                                                                <label>Contact Title 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_title5 }}" required>
+                                                                <label>Contact Brief 5*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_ct_brief5 }}</textarea>
+                                                                <label>Contact Date 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_date6 }}" required>
+                                                                <label>Contact Name 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_name6 }}" required>
+                                                                <label>Contact Title 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sc_ct_title6 }}" required>
+                                                                <label>Contact Brief 6*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.sc_ct_brief6 }}</textarea>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step7">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Seminary-07.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Location</b></h5>
+                                                                <label>At*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.loc_at }}" required>
+                                                                <label>Detail*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.loc_detail }}" required>
+                                                                <label>Image*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.loc_image }}" required>
+                                                                <label>Maps*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.loc_maps }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step8">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Seminary-08.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Sponsors</b></h5>
+                                                                <label>Image 1*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsor_image1 }}" required>
+                                                                <label>Image 2*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsor_image2 }}" required>
+                                                                <label>Image 3*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsor_image3 }}" required>
+                                                                <label>Image 4*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsor_image4 }}" required>
+                                                                <label>Image 5*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsor_image5 }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step9">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Seminary-09.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>RSVP</b></h5>
+                                                                <label>Invitation PDF*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.inv_pdf }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <button type="submit" class="btn-rectangle">Preview Website</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-115vh bg-lightgrey"></div>
+    </div>
+
+{% endblock %}

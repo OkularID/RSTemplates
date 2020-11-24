@@ -1,0 +1,211 @@
+{% extends 'base_form.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <!-- Main -->
+    <div id="main-templates" class="main-account">
+        <!-- Section User Navigation -->
+        {% include 'shared/partials/base_form_nav.html' %}
+        <!-- Section User Content -->
+        <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="mb-lg-2p">Editing {{ form.title }}</h3>
+                    <div class="card">
+                        <div class="container-fluid templates-steps pb-lg-10p">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <!-- Navigation Dots -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="main_form">
+                                            <div class="tab-pane active" role="tabpanel" id="step1">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-EmmaNorman-01.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Main Info</b></h5>
+                                                                <label>Theme</label>
+                                                                    <input type="text" name="theme" class="form-control" placeholder="Sheer Blush" disabled />
+                                                                <label>Site URL*</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.site_url }}"><br><br>
+                                                                <label>Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.title }}"><br><br>
+                                                                <label>Logo*</label>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.img_logo }}"><br><br>
+                                                                <label>Bride Name*</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.bride_name }}"><br><br>
+                                                                <label>Groom Name*</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.grome_name }}"><br><br>
+                                                                <label>Hastag*</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.hashtag }}"><br><br>
+                                                            </div>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step2">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-EmmaNorman-02.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Header</b></h5>
+                                                                <label>Choose images for you slideshow*</label>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.img_background1 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.img_background2 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.img_background3 }}"><br><br>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step3">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-EmmaNorman-03.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Our Story</b></h5>
+                                                                <label>Choose images for story section</label>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.about_img1 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.about_img2 }}"><br><br>
+                                                                <label>Quotes*</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.about_quote }}"><br><br>
+                                                                <label>Quotes by*</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.about_quote_by }}"><br><br>
+                                                                <label>Wedding Theme*</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.about_title }}"><br><br>
+                                                                <label>Our Story*</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.about }}"><br><br>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step4">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-EmmaNorman-04.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Date, Time, and Place</b></h5>
+                                                                <label>Ceremony</label>
+                                                                <div class="line-lightgrey w-lg-100p mt-lg-3p mb-lg-5p"></div>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.ceremony_img }}"><br><br>
+                                                                <label>Date and Time*</label>
+                                                                <div class="form-row mb-lg-4p">
+                                                                    <div class="col-lg-6">
+                                                                    <input type="time" id="fname" name="fname" value="{{ form.ceremony_time }}"><br><br>
+                                                                    </div>
+                                                                </div>
+                                                                <label>Location</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.ceremony_location }}"><br><br>
+                                                                <label>Reception</label>
+                                                                <div class="line-lightgrey w-lg-100p mt-lg-3p mb-lg-5p"></div>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.reception_img }}"><br><br>
+                                                                <label>Date and Time*</label>
+                                                                <div class="form-row mb-lg-4p">
+                                                                    <div class="col-lg-6">
+                                                                    <input type="time" id="fname" name="fname" value="{{ form.reception_time }}"><br><br>
+                                                                    </div>
+                                                                </div>
+                                                                <label>Location</label>
+                                                                    <input type="text" id="fname" name="fname" value="{{ form.reception_location }}"><br><br>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step5">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-EmmaNorman-05.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Photo Gallery</b></h5>
+                                                                <label>Choose images for gallery section</label>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.gallery1 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.gallery2 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.gallery3 }}"><br><br>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.gallery4 }}"><br><br>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step6">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-EmmaNorman-06.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>RSVP</b></h5>
+                                                                <label>Choose images for RSVP Section</label>
+                                                                    <input type="file" id="fname" name="fname" value="{{ form.rsvp_img }}"><br><br>
+                                                                <label>RSVP Copy</label>
+                                                                {#<textarea name="ourstory" class="form-control" rows="8"></textarea>#}
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <button type="submit" class="btn-rectangle">Preview Website</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-115vh bg-lightgrey"></div>
+    </div>
+
+{% endblock %}

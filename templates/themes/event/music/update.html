@@ -1,0 +1,374 @@
+{% extends 'base_form.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <!-- Main -->
+    <div id="main-templates" class="main-account">
+        <!-- Section User Navigation -->
+        {% include 'shared/partials/base_form_nav.html' %}
+        <!-- Section User Content -->
+        <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="mb-lg-2p">Editing {{ form.title }}</h3>
+                    <div class="card">
+                        <div class="container-fluid templates-steps pb-lg-10p">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <!-- Navigation Dots -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step6=7" data-toggle="tab" aria-controls="step7" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step8" data-toggle="tab" aria-controls="step8" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step9" data-toggle="tab" aria-controls="step9" role="tab"></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="main_form">
+                                            <div class="tab-pane active" role="tabpanel" id="step1">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Music-01.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Main Info</b></h5>
+                                                                <label>Theme</label>
+                                                                <input type="text" name="theme" class="form-control" placeholder="Soundtopia" disabled />
+                                                                <label>Site URL*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.site_url }}" required>
+                                                                <label>Site Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.title }}" required>
+                                                                <label>Logo*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.banner_logo2 }}" required>
+                                                                <label>Name*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_event_name }}" required>
+                                                                <label>Hastag*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.hashtag }}" required>
+                                                            </div>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step2">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Music-02.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Header</b></h5>
+                                                                <label>Logo*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.banner_logo1 }}" required>
+                                                                <label>At*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_at }}" required>
+                                                                <label>Detail Place*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_room }}" required>
+                                                                <label>Date*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_date }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step3">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Music-03.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Brief</b></h5>
+                                                                <label>Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.brief_title }}" required>
+                                                                <label>Video*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.brief_video }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step4">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Music-04.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Line Up</b></h5>
+                                                                <label>Name 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.lineup_name1 }}" required>
+                                                                <label>Image 1*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.lineup_image1 }}" required>
+                                                                <label>Name 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.lineup_name2 }}" required>
+                                                                <label>Image 2*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.lineup_image2 }}" required>
+                                                                <label>Name 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.lineup_name3 }}" required>
+                                                                <label>Image 3*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.lineup_image3 }}" required>
+                                                                <label>Name 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.lineup_name4 }}" required>
+                                                                <label>Image 4*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.lineup_image4 }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step5">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Music-05.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Ticket</b></h5>
+                                                                <label>Title 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_title1 }}" required>
+                                                                <label>Brief 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_brief1 }}" required>
+                                                                <label>Price 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_price1 }}" required>
+                                                                <label>Link 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_link1 }}" required>
+                                                                <label>Title 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_title2 }}" required>
+                                                                <label>Brief 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_brief2 }}" required>
+                                                                <label>Price 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_price2 }}" required>
+                                                                <label>Link 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_link2 }}" required>
+                                                                <label>Title 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_title3 }}" required>
+                                                                <label>Brief 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_brief3 }}" required>
+                                                                <label>Price 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_price3 }}" required>
+                                                                <label>Link 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_link3 }}" required>
+                                                                <label>Title 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_title4 }}" required>
+                                                                <label>Brief 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_brief4 }}" required>
+                                                                <label>Price 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_price4 }}" required>
+                                                                <label>Link 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_link4 }}" required>
+                                                                <label>Title 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_title5 }}" required>
+                                                                <label>Brief 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_brief5 }}" required>
+                                                                <label>Price 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_price5 }}" required>
+                                                                <label>Link 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_link5 }}" required>
+                                                                <label>Title 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_title6 }}" required>
+                                                                <label>Brief 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_brief6 }}" required>
+                                                                <label>Price 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_price6 }}" required>
+                                                                <label>Link 6*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_link6 }}" required>
+                                                                <label>Title 7*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_title7 }}" required>
+                                                                <label>Brief 7*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_brief7 }}" required>
+                                                                <label>Price 7*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_price7 }}" required>
+                                                                <label>Link 7*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_link7 }}" required>
+                                                                <label>Title 8*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_title8 }}" required>
+                                                                <label>Brief 8*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_brief8 }}" required>
+                                                                <label>Price 8*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_price8 }}" required>
+                                                                <label>Link 8*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.ticket_link8 }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step6">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Music-06.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Update</b></h5>
+                                                                <label>More Update Link*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_more_link }}" required>
+                                                                <label>Title Highlight*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_title_hl }}" required>
+                                                                <label>Brief Highlight*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_brief_hl }}" required>
+                                                                <label>Link Highlight*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_link_hl }}" required>
+                                                                <label>Title 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_title1 }}" required>
+                                                                <label>Brief 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_brief1 }}" required>
+                                                                <label>Link 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_link1 }}" required>
+                                                                <label>Title 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_title2 }}" required>
+                                                                <label>Brief 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_brief2 }}" required>
+                                                                <label>Link 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_link2 }}" required>
+                                                                <label>Title 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_title3 }}" required>
+                                                                <label>Brief 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_brief3 }}" required>
+                                                                <label>Link 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_link3 }}" required>
+                                                                <label>Title 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_title4 }}" required>
+                                                                <label>Brief 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_brief4 }}" required>
+                                                                <label>Link 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.update_link4 }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step7">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Music-07.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Venue</b></h5>
+                                                                <label>Address*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.venue_address }}</textarea>
+                                                                <label>Maps*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.venue_maps }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step8">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Music-08.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>About</b></h5>
+                                                                <label>Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_title }}" required>
+                                                                <label>Description*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.about_brief }}</textarea>
+                                                                <label>Image*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.about_image }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step9">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Music-09.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Sponsors</b></h5>
+                                                                <label>Title 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sponsors_title1 }}" required>
+                                                                <label>Logo 1*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsors_logo1 }}" required>
+                                                                <label>Title 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sponsors_title2 }}" required>
+                                                                <label>Logo 2*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsors_logo2 }}" required>
+                                                                <label>Title 3*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sponsors_title3 }}" required>
+                                                                <label>Logo 3*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsors_logo3 }}" required>
+                                                                <label>Title 4*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sponsors_title4 }}" required>
+                                                                <label>Logo 4*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsors_logo4 }}" required>
+                                                                <label>Title 5*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.sponsors_title5 }}" required>
+                                                                <label>Logo 5*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.sponsors_logo5 }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <button type="submit" class="btn-rectangle">Preview Website</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-115vh bg-lightgrey"></div>
+    </div>
+
+{% endblock %}

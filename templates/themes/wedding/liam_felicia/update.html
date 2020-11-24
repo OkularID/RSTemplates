@@ -12,7 +12,7 @@
         <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="mb-lg-2p">Edit Templates</h3>
+                    <h3 class="mb-lg-2p">Editing {{ form.title }}</h3>
                     <div class="card">
                         <div class="container-fluid templates-steps pb-lg-10p">
                             <div class="row">
@@ -36,11 +36,8 @@
                                             <li role="presentation" class="disabled">
                                                 <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab"></a>
                                             </li>
-                                            <li role="presentation" class="disabled">
-                                                <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>
-                                            </li>
                                             {#<li role="presentation" class="disabled">#}
-                                                {#<a href="#step7" data-toggle="tab" aria-controls="step7" role="tab"></a>#}
+                                                {#<a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>#}
                                             {#</li>#}
                                         </ul>
                                         <div class="tab-content" id="main_form">
@@ -48,19 +45,25 @@
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-lg-7">
-                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/birthday/Screenshot-Birthday-DianaRoss-01.png' %}" alt="reservasidulu" />
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-LiamFelicia-01.png' %}" alt="reservasidulu" />
                                                         </div>
                                                         <div class="col-lg-5">
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Main Info</b></h5>
                                                                 <label>Theme</label>
-                                                                    <input type="text" name="theme" class="form-control" placeholder="Polka Galore" disabled />
+                                                                <input type="text" name="theme" class="form-control" placeholder="Passionate Bond" disabled />
                                                                 <label>Site URL*</label>
-                                                                    {{ form.site_url }}
-                                                                <label>Site Title*</label>
-                                                                    {{ form.title }}
-                                                                <label>Name*</label>
-                                                                    {{ form.about_name }}
+                                                                <input type="text" id="fname" name="fname" value="{{ form.site_url }}" required>
+                                                                <label>Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.title }}" required>
+                                                                <label>Initial Groom & Bride*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.initial_logo }}" required>
+                                                                <label>Groom Name*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.groom_name }}" required>
+                                                                <label>Bride Name*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.bride_name }}" required>
+                                                                <label>Hastag*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.hashtag }}" required>
                                                             </div>
                                                             <a class="btn-rectangle next-step">Next Step</a>
                                                         </div>
@@ -71,15 +74,21 @@
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-lg-7">
-                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/birthday/Screenshot-Birthday-DianaRoss-02.png' %}" alt="reservasidulu" />
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-LiamFelicia-02.png' %}" alt="reservasidulu" />
                                                         </div>
                                                         <div class="col-lg-5">
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Header</b></h5>
-                                                                <label>Logo*</label>
-                                                                    {{ form.banner_logo }}
-                                                                <label>Logo Mobile*</label>
-                                                                    {{ form.banner_logo_mobile }}
+                                                                <label>Background*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.banner_bg }}" required>
+                                                                <label>Banner Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_title }}" required>
+                                                                <label>About Image*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.about_image }}" required>
+                                                                <label>About Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_title }}" required>
+                                                                <label>About Brief*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.about_brief }}</textarea>
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -91,15 +100,35 @@
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-lg-7">
-                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/birthday/Screenshot-Birthday-DianaRoss-03.png' %}" alt="reservasidulu" />
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-LiamFelicia-03.png' %}" alt="reservasidulu" />
                                                         </div>
                                                         <div class="col-lg-5">
                                                             <div class="form-wrap">
-                                                                <h5 class="mb-lg-4p"><b>About</b></h5>
-                                                                <label>Brief*</label>
-                                                                    {{ form.about_brief }}
-                                                                <label>Image*</label>
-                                                                    {{ form.about_image }}
+                                                                <h5 class="mb-lg-4p"><b>Venue</b></h5>
+                                                                 <label>Ceremony Image</label>
+                                                                 <input type="file" id="fname" name="fname" value="{{ form.vc_image }}" required>
+                                                                 <label>Ceremony Day</label>
+                                                                 <input type="text" id="fname" name="fname" value="{{ form.vc_day }}" required>
+                                                                 <label>Ceremony Date</label>
+                                                                 <input type="text" id="fname" name="fname" value="{{ form.vc_date }}" required>
+                                                                 <label>Ceremony Time</label>
+                                                                 <input type="text" id="fname" name="fname" value="{{ form.vc_time }}" required>
+                                                                 <label>Ceremony Place</label>
+                                                                 <input type="text" id="fname" name="fname" value="{{ form.vc_place }}" required>
+                                                                 <label>Ceremony Address</label>
+                                                                 <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.vc_address }}</textarea>
+                                                                 <label>Reception Image</label>
+                                                                 <input type="file" id="fname" name="fname" value="{{ form.vr_image }}" required>
+                                                                 <label>Reception Day</label>
+                                                                 <input type="text" id="fname" name="fname" value="{{ form.vr_day }}" required>
+                                                                 <label>Reception Date</label>
+                                                                 <input type="text" id="fname" name="fname" value="{{ form.vr_date }}" required>
+                                                                 <label>Reception Time</label>
+                                                                 <input type="text" id="fname" name="fname" value="{{ form.vr_time }}" required>
+                                                                 <label>Reception Place</label>
+                                                                 <input type="text" id="fname" name="fname" value="{{ form.vr_place }}" required>
+                                                                 <label>Reception Address</label>
+                                                                 <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.vr_address }}</textarea>
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -111,35 +140,19 @@
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-lg-7">
-                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/birthday/Screenshot-Birthday-DianaRoss-04.png' %}" alt="reservasidulu" />
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-LiamFelicia-04.png' %}" alt="reservasidulu" />
                                                         </div>
                                                         <div class="col-lg-5">
                                                             <div class="form-wrap">
-                                                                <h5 class="mb-lg-4p"><b>Date & Place</b></h5>
-                                                                <label>Brief*</label>
-                                                                    {{ form.dap_brief }}
-                                                                <label>Date*</label>
-                                                                    {{ form.dap_date }}
-                                                                <label>Month*</label>
-                                                                    {{ form.dap_month }}
-                                                                <label>Year*</label>
-                                                                    {{ form.dap_year }}
-                                                                <label>Time*</label>
-                                                                    {{ form.dap_time }}
+                                                                <h5 class="mb-lg-4p"><b>Accommodation</b></h5>
+                                                                <label>Image*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.acm_image }}" required>
                                                                 <label>Place*</label>
-                                                                    {{ form.dap_place }}
-                                                                <label>Room*</label>
-                                                                    {{ form.dap_room }}
-                                                                <label>Maps Link*</label>
-                                                                    {{ form.dap_maps }}
-                                                                <label>Image Place*</label>
-                                                                    {{ form.dap_place_image }}
+                                                                <input type="text" id="fname" name="fname" value="{{ form.acm_place }}" required>
+                                                                <label>Address*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.acm_address }}</textarea>
                                                                 <label>Note*</label>
-                                                                    {{ form.dap_desc }}
-                                                                <label>Dresscode*</label>
-                                                                    {{ form.dap_dress }}
-                                                                <label>Image Desc*</label>
-                                                                    {{ form.dap_desc_image }}
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.acm_note }}</textarea>
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                                                             <a class="btn-rectangle next-step">Next Step</a>
@@ -151,43 +164,34 @@
                                                 <div class="container-fluid">
                                                     <div class="row">
                                                         <div class="col-lg-7">
-                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/birthday/Screenshot-Birthday-DianaRoss-05.png' %}" alt="reservasidulu" />
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-LiamFelicia-05.png' %}" alt="reservasidulu" />
                                                         </div>
                                                         <div class="col-lg-5">
                                                             <div class="form-wrap">
                                                                 <h5 class="mb-lg-4p"><b>Gallery</b></h5>
                                                                 <label>Image 1*</label>
-                                                                    {{ form.gallery_image1 }}
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image1 }}" required>
                                                                 <label>Image 2*</label>
-                                                                    {{ form.gallery_image2 }}
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image2 }}" required>
                                                                 <label>Image 3*</label>
-                                                                    {{ form.gallery_image3 }}
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image3 }}" required>
                                                                 <label>Image 4*</label>
-                                                                    {{ form.gallery_image4 }}
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image4 }}" required>
                                                                 <label>Image 5*</label>
-                                                                    {{ form.gallery_image5 }}
-                                                                <label>Image 6*</label>
-                                                                    {{ form.gallery_image6 }}
-                                                                <label>Image 7*</label>
-                                                                    {{ form.gallery_image7 }}
-                                                                <label>Image 8*</label>
-                                                                    {{ form.gallery_image8 }}
-                                                                <label>Image 9*</label>
-                                                                    {{ form.gallery_image9 }}
+                                                                <input type="file" id="fname" name="fname" value="{{ form.gallery_image5 }}" required>
                                                             </div>
                                                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
-                                                            <button type="submit" class="btn-rectangle">Submit & create my wishlist</button>
+                                                            {#<a class="btn-rectangle next-step">Next Step</a>#}
+                                                            <button type="submit" class="btn-rectangle">Preview Website</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            </form>
-                                            {% include 'themes/birthday/diana_ross/wishlist_form.html' %}
                                             {#<div class="tab-pane" role="tabpanel" id="step6">#}
                                                 {#<div class="container-fluid">#}
                                                     {#<div class="row">#}
                                                         {#<div class="col-lg-7">#}
-                                                            {#<img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/birthday/Screenshot-Birthday-DianaRoss-06.png' %}" alt="reservasidulu" />#}
+                                                            {#<img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/wedding/Screenshot-Wedding-LiamFelicia-06.png' %}" alt="reservasidulu" />#}
                                                         {#</div>#}
                                                         {#<div class="col-lg-5">#}
                                                             {#<div class="form-wrap">#}
@@ -196,12 +200,13 @@
                                                                     {#{{ form.inv_pdf }}#}
                                                             {#</div>#}
                                                             {#<a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>#}
-                                                            {#<a class="btn-rectangle next-step">Next Step</a>#}
+                                                            {#<button type="submit" class="btn-rectangle">Preview Website</button>#}
                                                         {#</div>#}
                                                     {#</div>#}
                                                 {#</div>#}
                                             {#</div>#}
-                                            
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

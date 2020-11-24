@@ -1,0 +1,217 @@
+{% extends 'base_form.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <!-- Main -->
+    <div id="main-templates" class="main-account">
+        <!-- Section User Navigation -->
+        {% include 'shared/partials/base_form_nav.html' %}
+        <!-- Section User Content -->
+        <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="mb-lg-2p">Editing {{ form.title }}</h3>
+                    <div class="card">
+                        <div class="container-fluid templates-steps pb-lg-10p">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <!-- Navigation Dots -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step5" data-toggle="tab" aria-controls="step5" role="tab"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step6" data-toggle="tab" aria-controls="step6" role="tab"></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="main_form">
+                                            <div class="tab-pane active" role="tabpanel" id="step1">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Oceandor-01.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Main Info</b></h5>
+                                                                <label>Theme</label>
+                                                                <input type="text" name="theme" class="form-control" placeholder="Statement" disabled />
+                                                                <label>Site URL*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.site_url }}" required>
+                                                                <label>Site Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.title }}" required>
+                                                                <label>Logo*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.img_logo }}" required>
+                                                                <label>Name*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_name }}" required>
+                                                                <label>Hastag*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.hashtag }}" required>
+                                                            </div>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step2">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Oceandor-02.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Header</b></h5>
+                                                                <label>Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_title }}" required>
+                                                                <label>Sub Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_subtitle }}" required>
+                                                                <label>Button Text*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_button_text }}" required>
+                                                                <label>Button Link*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.banner_button_link }}" required>
+                                                                <label>Image*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.banner_image }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step3">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Oceandor-03.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>About</b></h5>
+                                                                <label>Brief*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.about_brief }}</textarea>
+                                                                <label>Button Text*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_button_text }}" required>
+                                                                <label> Button Link*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.about_button_link }}" required>
+                                                                <label> Image Highlight*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.about_image_hl }}" required>
+                                                                <label> Image 1*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.about_image1 }}" required>
+                                                                <label> Image 2*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.about_image2 }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step4">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Oceandor-04.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Date, Time, and Place</b></h5>
+                                                                <label>Date*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.dap_date }}" required>
+                                                                <label>Time*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.dap_time }}" required>
+                                                                <label>Place*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.dap_place }}" required>
+                                                                <label>Address*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.dap_address }}</textarea>
+                                                                <label>Maps Link*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.dap_maps }}" required>
+                                                                <label>Background*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.dap_bg }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step5">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Oceandor-05.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Guests</b></h5>
+                                                                <label>Name 1*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.guest_name1 }}" required>
+                                                                <label>Image Left 1*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.guest_image_l1 }}" required>
+                                                                <label>Image Right 1*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.guest_image_r1 }}" required>
+                                                                <label>Description 1*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.guest_desc1 }}</textarea>
+                                                                <label>Name 2*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.guest_name2 }}" required>
+                                                                <label>Image Left 2*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.guest_image_l2 }}" required>
+                                                                <label>Image Right 2*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.guest_image_r2 }}" required>
+                                                                <label>Description 2*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.guest_desc2 }}</textarea>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step6">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/event/Screenshot-Event-Oceandor-06.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>RSVP</b></h5>
+                                                                <label>RSVP Brief*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.rsvp_brief }}</textarea>
+                                                                <label>Invitation PDF*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.inv_pdf }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <button type="submit" class="btn-rectangle">Preview Website</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-115vh bg-lightgrey"></div>
+    </div>
+
+{% endblock %}

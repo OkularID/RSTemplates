@@ -1,0 +1,113 @@
+{% extends 'base_form.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <!-- Main -->
+    <div id="main-templates" class="main-account">
+        <!-- Section User Navigation -->
+        {% include 'shared/partials/base_form_nav.html' %}
+        <!-- Section User Content -->
+        <div class="container-fluid pos-rel user-content edit-template pt-lg-5p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="mb-lg-2p">Editing {{ form.title }}</h3>
+                    <div class="card">
+                        <div class="container-fluid templates-steps pb-lg-10p">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <!-- Navigation Dots -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active">
+                                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"></a>
+                                            </li>
+                                            <li role="presentation" class="disabled">
+                                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="main_form">
+                                            <div class="tab-pane active" role="tabpanel" id="step1">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/free/Screenshot-Free-DylanRose-01.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Main Info</b></h5>
+                                                                <label>Theme</label>
+                                                                <input type="text" name="theme" class="form-control" placeholder="Free Precious Memories" disabled />
+                                                                <label>Site URL*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.site_url }}" required>
+                                                                <label>Title*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.title }}" required>
+                                                                <label>Logo*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.logo }}" required>
+                                                                <label>Bride Name*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.name_bride }}" required>
+                                                                <label>Groom Name*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.name_groom }}" required>
+                                                                <label>Hastag*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.hashtag }}" required>
+                                                            </div>
+                                                            <a class="btn-rectangle next-step">Next Step</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" role="tabpanel" id="step2">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-7">
+                                                            <img class="img-fluid w-lg-100p" src="{% static 'img/form-edit-template/free/Screenshot-Free-DylanRose-01.png' %}" alt="reservasidulu" />
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="form-wrap">
+                                                                <h5 class="mb-lg-4p"><b>Site</b></h5>
+                                                                <label>Image*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.image }}" required>
+                                                                <label>Image Mobile*</label>
+                                                                <input type="file" id="fname" name="fname" value="{{ form.image_mobile }}" required>
+                                                                <label>Venue Ceremony Day*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.vc_day }}" required>
+                                                                <label>Venue Ceremony Date*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.vc_date }}" required>
+                                                                <label>Venue Ceremony Time*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.vc_time }}" required>
+                                                                <label>Venue Ceremony Address*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.vc_address }}</textarea>
+                                                                <label>Venue Ceremony Dresscode*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.vc_dress }}" required>
+                                                                <label>Venue Reception Day*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.vr_day }}" required>
+                                                                <label>Venue Reception Date*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.vr_date }}" required>
+                                                                <label>Venue Reception Time*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.vr_time }}" required>
+                                                                <label>Venue Reception Address*</label>
+                                                                <textarea id="fname" name="fname" cols="40" rows="10" required>{{ form.vr_address }}</textarea>
+                                                                <label>Venue Reception Dresscode*</label>
+                                                                <input type="text" id="fname" name="fname" value="{{ form.vr_dress }}" required>
+                                                            </div>
+                                                            <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
+                                                            <button type="submit" class="btn-rectangle">Preview Website</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-115vh bg-lightgrey"></div>
+    </div>
+
+{% endblock %}
