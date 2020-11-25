@@ -256,7 +256,7 @@
 		21. Gallery Title 3				= {{ x.gallery_title3 }}
 		22. Gallery Image 3				= {{ x.gallery_image3.url }}
 		23. Gallery Title 4				= {{ x.gallery_title4 }}
-		24. Gallery Image 4				= {{ x.gallery_image14.url }}
+		24. Gallery Image 4				= {{ x.gallery_image4.url }}
 		<!-- Rundown -->
 		25. Rundown Time 1				= {{ x.rundown_time1 }}
 		26. Rundown Event 1				= {{ x.rundown_event1 }}
