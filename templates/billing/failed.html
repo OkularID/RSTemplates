@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load compress %}
+
+{% block content %}
+
+    <title>{% block title %} Payment Status | ReservasiDulu {% endblock %}</title>
+    <div id="main-templates" class="main-account">
+        <div class="container-fluid pos-rel user-content profile-content billing-status-content pt-lg-15p pb-lg-15p pl-lg-5p pr-lg-5p pt-m-30p pl-m-10p pr-m-10p bg-lightgrey">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="">
+                        Something wrong with your payment. Please check your bank account or consider to contact our support.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-lg-100p h-lg-115vh bg-lightgrey"></div>
+    </div>
+
+    {#<title>{% block title %} Payment Status | ReservasiDulu {% endblock %}</title>#}
+    {#<div id="main-contactus">#}
+        {#<div id="contactus-form" class="container-fluid pos-rel pt-lg-5p pb-lg-10p pl-lg-10p pr-lg-10p pb-m-20p contactus-form">#}
+            {#<div class="row">#}
+                {#<div class="col-lg-12">#}
+                    {#<div>#}
+                        {#{%if is_pay is True%}#}
+                            {#<span>Checkout Berhasil</span><br>#}
+                            {#<span>Status : {{payment.status}}</span><br>#}
+                            {#{%if payment.payment_bank == "mandiri" %}#}
+                                {#<span>Bill Key : {{payment.bill_key}}</span><br>#}
+                                {#<span>Biller Code : {{payment.biller_code}}</span>#}
+                            {#{%else%}#}
+
+                                {#<span>Va Number : {{payment.va_number}}</span>#}
+                            {#{% endif%}#}
+                        {#{%else%}#}
+                            {#<span>Checkout Berhasil dipublish</span>#}
+                            {#<br><span>Ini barang Gratis</span>#}
+                        {#{%endif%}#}
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+        {#<div class="w-lg-100p h-lg-115vh"></div>#}
+    {#</div>#}
+
+{% endblock %}
