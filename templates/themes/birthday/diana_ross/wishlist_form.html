@@ -1,4 +1,4 @@
-{% extends 'base_form.html' %}
+{#{% extends 'base_form.html' %}#}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -6,6 +6,7 @@
 
     <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
+
             <div class="tab-pane" role="tabpanel" id="step6">
                 <div class="container-fluid">
                     <div class="row">
@@ -18,7 +19,7 @@
                                 <label>Wishlist Name*</label>
                                     {{ form.wishlist_name }}
                                 <label>Wishlist Image*</label>
-                                    {{ form.wishlist_img }}
+                                    {{ form_w.wishlist_img }}
                             </div>
                             <a class="btn-whiteoutline prev-step mb-lg-4p">Previous Step</a>
                             <button type="submit" class="btn-rectangle">Preview Website</button>
@@ -26,7 +27,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </form>
 
 {% endblock %}
