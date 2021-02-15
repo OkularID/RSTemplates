@@ -2,6 +2,7 @@
 {% load compress %}
 
 {% load static %}
+{% load django_hide %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -15,7 +16,7 @@
                     <div class="wrap">
                         <h2 class="text-center mb-lg-10p"><span>Sign Up</span></h2>
                         <form method="post" enctype="multipart/form-data">
-                            {% csrf_token %}
+                            {% h_csrf_token %}
                             {{ form | crispy }}
                             <input class="btn-form-orange d-lg-block ma-lg" type="submit" value="Sign Up">
                             <p>Already have an account? <a href="{% url 'login' %}">Log In</a> here</p>

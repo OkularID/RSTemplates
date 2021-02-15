@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load compress %}
+{% load django_hide %}
 
 {% block content %}
 <title>{% block title %} Contact | ReservasiDulu {% endblock %}</title>
@@ -37,7 +38,7 @@
                         <h3 class="mb-lg-30"><span>Send</span> Us a Message</h3>
                         <div class="line-darkgrey w-lg-100p mb-lg-30"></div>
                         <form method="post" enctype="multipart/form-data">
-                            {% csrf_token %}
+                            {% h_csrf_token %}
                             {{form.as_p}}
                             <input style="background:url({% static 'img/05-contact-us/contactus-button.png' %}); " class="btn-form-orange float-right" type="submit" value="Submit">
                         </form>
