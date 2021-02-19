@@ -212,6 +212,24 @@
 		top: 20vh;
 		left: 0;
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*
+	ONE IMAGE
 	#brief .box{
 		position: absolute;
 		margin: 0 auto;
@@ -222,6 +240,167 @@
 	}
 	#brief .box p{font-size: 19px !important;}
 	#dateandplace{margin-top: -10vh;}
+	*/
+/*
+===================================================================================================================
+															NEW
+===================================================================================================================
+	*/
+	#brief .wrap{
+		margin: 0 auto;
+		padding: 10% 0 10% 10%;
+		width: 40%;
+	}
+	#brief .ornament-01,
+	#brief .ornament-02,
+	#brief .ornament-03,
+	#brief .ornament-04{
+		position: absolute;
+		z-index: 2;
+		top: 10%;
+		left: 1%;
+	}
+	#brief .ornament-01 .frame,#brief .ornament-02 .frame{width: 41vw;}
+	#brief .ornament-01 .pic,
+	#brief .ornament-02 .pic,
+	#brief .ornament-03 .pic{
+		position: absolute;
+		top: 17%;
+		width: 64%;
+		height: 60vh;
+		transform: rotate(-15deg);
+		left: 17%;
+	}
+	#brief .ornament-01 .pic img,
+	#brief .ornament-02 .pic img,
+	#brief .ornament-03 .pic img{
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	#brief .ornament-02{
+		position: relative;
+		z-index: 3;
+		display: inline-block;
+		margin-left: -15%;
+		top: unset;
+		left: unset;
+	}
+	#brief .ornament-02 .pic{
+		top: 20%;
+		transform: rotate(8deg);
+		left: 14%;
+	}
+	#brief .ornament-03{
+		top: 25%;
+		left: unset;
+		right: 0;
+	}
+	#brief .ornament-03 .frame{width: 46vw;}
+	#brief .ornament-03 .pic{
+		top: 23%;
+		width: 57%;
+		transform: rotate(32deg);
+		left: 25%;
+	}
+	#brief .ornament-04{
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	#dateandplace{
+		position: relative;
+		z-index: 4;
+		margin-top: -10vh;
+	}
+	@media screen and (max-width: 846px) {
+		#brief .wrap{
+			padding: 30% 0 0;
+			width: 70%;
+		}
+		#brief .wrap p{
+			font-size: 9px !important;
+			line-height: 17px; 
+		}
+		#brief .ornament-01,
+		#brief .ornament-02{
+			position: relative;
+			margin: 0;
+			width: 100%;
+			text-align: left;
+		}
+		#brief .ornament-01 .frame{
+			margin-left: -30px;
+			width: 250px;
+		}
+		#brief .ornament-01 .pic{
+			top: 50px;
+			left: 10px;
+			width: 160px;
+			height: 180px;
+		}
+		#brief .ornament-02 .frame{
+			margin-left: 10px;
+			width: 230px;
+		}
+		#brief .ornament-02 .pic{
+			top: 60px;
+			left: 46px;
+			width: 140px;
+			height: 155px;
+		}
+		#brief .ornament-03{
+			z-index: 4;
+			top: unset;
+			bottom: 40px;
+			right: -60px;
+		}
+		#brief .ornament-03 .frame{width: 230px;}
+		#brief .ornament-03 .pic{
+			top: 63px;
+			left: 57px;
+			width: 135px;
+			height: 145px;
+		}
+		#brief .ornament-04{
+			z-index: 1;
+			top: 5%;
+		}
+		#dateandplace{margin-top: 5vh;}
+	}
+/*
+===================================================================================================================
+														NEW
+===================================================================================================================
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	#dateandplace .bg{
 		position: absolute;
 		z-index: -10;
@@ -470,6 +649,19 @@
 			font-size: 14px !important;
 			line-height: 20px;
 		}
+
+
+
+
+
+
+
+
+
+
+
+		/*
+		ONE IMAGE
 		#brief .box{
 			top: 45%;
 			left: 0;
@@ -480,6 +672,18 @@
 			line-height: 17px; 
 		}
 		#dateandplace{margin-top: -4vh;}
+		*/
+
+
+
+
+
+
+
+
+
+
+
 		#dateandplace .motif{top: -24vh;}
 		#dateandplace h2,
 		#rsvp h2{
