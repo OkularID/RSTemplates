@@ -16,7 +16,7 @@ $(document).ready(function(){
         $('#navigation').fadeIn();
       }
     // Ornament hide show on scroll and resize
-      if ($(this).scrollTop() > 2100) {
+      if ($(this).scrollTop() > 2800) {
         $('.home-banner-ornament').addClass('fadeOutLeft');
         $('.home-banner-ornament').removeClass('fadeInLeft');
       } else {
